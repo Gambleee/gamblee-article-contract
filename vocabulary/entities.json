@@ -1,0 +1,5974 @@
+{
+  "contract": "gamblee-article-vocabulary-snapshot",
+  "schema_version": "1.1",
+  "dimension": "entities",
+  "total": 1193,
+  "source": "https://www.staging5.gamblee.com/wp-json/gamblee-core/v1/articles/vocabulary/entities",
+  "items": [
+    {
+      "slug": "provider-100hp-gaming",
+      "name": "100HP Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-10bet",
+      "name": "10Bet",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-155-io",
+      "name": "155.io",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-1foryou",
+      "name": "1ForYou",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-1spin4win",
+      "name": "1Spin4Win",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-1x2-gaming",
+      "name": "1X2 Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-2027-budget",
+      "name": "2027 Budget",
+      "entity_type": "other"
+    },
+    {
+      "slug": "brand-21-casino",
+      "name": "21 Casino",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "brand-247bet",
+      "name": "247Bet",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-2by2-gaming",
+      "name": "2By2 Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-3-oaks-gaming",
+      "name": "3 Oaks Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-4-the-player",
+      "name": "4 The Player",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-5-men-gaming",
+      "name": "5 Men Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-7-mojos",
+      "name": "7 Mojos",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-7777-gaming",
+      "name": "7777 Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-7bet",
+      "name": "7bet",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-7rings-gaming",
+      "name": "7Rings Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-888-gaming",
+      "name": "888 Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-888-holdings-plc",
+      "name": "888 Holdings PLC",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-888-live",
+      "name": "888 Live",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-888africa",
+      "name": "888Africa",
+      "entity_type": "other"
+    },
+    {
+      "slug": "brand-888casino",
+      "name": "888casino",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "brand-888poker",
+      "name": "888poker",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-aardvark-technologies",
+      "name": "Aardvark Technologies",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-aberrant-software",
+      "name": "Aberrant Software",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-absolute-live-gaming",
+      "name": "Absolute Live Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-account-security",
+      "name": "Account Security",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-ace-roll",
+      "name": "Ace Roll",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-acerun",
+      "name": "AceRun",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-ach-echeck",
+      "name": "ACH eCheck",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "other-acr-poker",
+      "name": "ACR Poker",
+      "entity_type": "other"
+    },
+    {
+      "slug": "company-action-commerce-ltd",
+      "name": "Action Commerce LTD",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-ad-lunam",
+      "name": "Ad Lunam",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-addy-power",
+      "name": "addy Power",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-adopt-it",
+      "name": "Adopt It",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-adoptit-publishing",
+      "name": "Adoptit Publishing",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-advantplay",
+      "name": "AdvantPlay",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-ae-sexy",
+      "name": "AE Sexy",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "regulator-agenzia-delle-dogane-e-dei-monopoli-adm",
+      "name": "Agenzia delle Dogane e dei Monopoli (ADM)",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "provider-ags",
+      "name": "AGS",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-agt",
+      "name": "AGT",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-ahti-games",
+      "name": "AHTI Games",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-ainsworth",
+      "name": "Ainsworth",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-air-dice",
+      "name": "Air Dice",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-airtm",
+      "name": "Airtm",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-aktia",
+      "name": "Aktia",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "brand-aladdin-slots",
+      "name": "Aladdin Slots",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "payment-method-alandsbanken",
+      "name": "Ålandsbanken",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "regulator-alberta-gaming-liquor-and-cannabis-aglc",
+      "name": "Alberta Gaming, Liquor and Cannabis (AGLC)",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "regulator-alberta-gaming-liquor-and-cannabis-commission",
+      "name": "Alberta Gaming, Liquor and Cannabis Commission",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "provider-alchemy-gaming",
+      "name": "Alchemy Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "regulator-alcohol-and-gaming-commission-of-ontario-agco",
+      "name": "Alcohol and Gaming Commission of Ontario (AGCO)",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "regulator-alderney-gambling-control-comission",
+      "name": "Alderney Gambling Control Comission",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "other-alejandro-lococo",
+      "name": "Alejandro Lococo",
+      "entity_type": "other"
+    },
+    {
+      "slug": "payment-method-alfa-bank",
+      "name": "Alfa Bank",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "brand-alfobet",
+      "name": "Alfobet",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "brand-all-british-casino",
+      "name": "All British Casino",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-all-for-one-studios",
+      "name": "All For One Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-all41-studios",
+      "name": "All41 Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-allbet-gaming",
+      "name": "Allbet Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-allinspin",
+      "name": "Allinspin",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-allwayspin",
+      "name": "AllWaySpin",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-almond-gaming",
+      "name": "Almond Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-aloha-gaming",
+      "name": "Aloha Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-altea-gaming",
+      "name": "Altea Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-altente",
+      "name": "Altente",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-alwin-games",
+      "name": "Alwin Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-amarix",
+      "name": "Amarix",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-amatic-industries",
+      "name": "Amatic Industries",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-amaya",
+      "name": "Amaya",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-amazing-gaming",
+      "name": "Amazing Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-american-express",
+      "name": "American Express",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-amigo-gaming",
+      "name": "Amigo Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-amigo-slots",
+      "name": "Amigo Slots",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-amigotechs",
+      "name": "Amigotechs",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-amusnet",
+      "name": "Amusnet",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-anakatech",
+      "name": "Anakatech",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-anakatech-interactive-ltd",
+      "name": "Anakatech Interactive LTD",
+      "entity_type": "company"
+    },
+    {
+      "slug": "other-andrii-novak",
+      "name": "Andrii Novak",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-animak-gaming",
+      "name": "Animak Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-animo-studios",
+      "name": "Animo Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "regulator-anjouan-gaming-licence",
+      "name": "Anjouan Gaming Licence",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "company-annexio-jersey-limited",
+      "name": "Annexio (Jersey) Limited",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-apex-gaming",
+      "name": "Apex Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-apollo-games",
+      "name": "Apollo Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-apparat-gaming",
+      "name": "Apparat Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-apple-pay",
+      "name": "Apple Pay",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-arcadem",
+      "name": "Arcadem",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-areavegas",
+      "name": "AreaVegas",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-aristocrat",
+      "name": "Aristocrat",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-armadillo-studios",
+      "name": "Armadillo Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-arrows-edge",
+      "name": "Arrows Edge",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-ash-gaming",
+      "name": "Ash Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-asia-gaming",
+      "name": "Asia Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-aspect-gaming",
+      "name": "Aspect Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-aspire-global-international-ltd",
+      "name": "Aspire Global International LTD",
+      "entity_type": "company"
+    },
+    {
+      "slug": "payment-method-astropay",
+      "name": "AstroPay",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-asylum-labs",
+      "name": "Asylum Labs",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-atlantic-digital",
+      "name": "Atlantic Digital",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-atmosphere",
+      "name": "Atmosphere",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-atomic-city",
+      "name": "Atomic City",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-atomic-slot-lab",
+      "name": "Atomic Slot Lab",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-atsupachi",
+      "name": "Atsupachi",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-august-gaming",
+      "name": "August Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-aurify-gaming",
+      "name": "Aurify Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-aurum-signature-studios",
+      "name": "Aurum Signature Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-authentic-gaming",
+      "name": "Authentic Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-automat-games",
+      "name": "Automat Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "regulator-autorite-nationale-des-jeux-anj",
+      "name": "Autorité nationale des jeux (ANJ)",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "provider-avatarux-studios",
+      "name": "AvatarUX Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-aviatrix",
+      "name": "Aviatrix",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-awager",
+      "name": "Awager",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-axial-studio",
+      "name": "Axial Studio",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-backseat-gaming",
+      "name": "Backseat Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-bad-dingo",
+      "name": "Bad Dingo",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-bakoo",
+      "name": "Bakoo",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-baldazzi-styl-art",
+      "name": "Baldazzi Styl Art",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-bally",
+      "name": "Bally",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-bally-wulff-technologies",
+      "name": "Bally Wulff Technologies",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-ballys-corporation",
+      "name": "Bally's Corporation",
+      "entity_type": "company"
+    },
+    {
+      "slug": "company-ballys-intralot-s-a",
+      "name": "Bally's Intralot S.A.",
+      "entity_type": "company"
+    },
+    {
+      "slug": "other-ballys",
+      "name": "Bally’s",
+      "entity_type": "other"
+    },
+    {
+      "slug": "other-ballys-intralot",
+      "name": "Bally’s Intralot",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-baltic-studios",
+      "name": "Baltic Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-baltimore",
+      "name": "Baltimore",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-banana-whale-studios",
+      "name": "Banana Whale Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-bancontact-mistercash",
+      "name": "Bancontact Mistercash",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-bang-bang-games",
+      "name": "Bang Bang Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-bank-cash-deposit",
+      "name": "Bank Cash Deposit",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-bank-transfer",
+      "name": "Bank Transfer",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-bankid",
+      "name": "BankID",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "brand-barbados-bingo",
+      "name": "Barbados Bingo",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-barbara-bang",
+      "name": "Barbara Bang",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-barclays",
+      "name": "Barclays",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-barcrest",
+      "name": "Barcrest",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-barry-diller",
+      "name": "Barry Diller",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-barstruck",
+      "name": "Barstruck",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-barz",
+      "name": "Barz",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-bb-games",
+      "name": "BB Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-bc-game",
+      "name": "BC.GAME",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "payment-method-beeline",
+      "name": "Beeline",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-begame",
+      "name": "BeGame",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-belatra-games",
+      "name": "Belatra Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "regulator-belgian-gaming-commission",
+      "name": "Belgian Gaming Commission",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "provider-bell-fruit-games",
+      "name": "Bell-Fruit Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-bet-365-software",
+      "name": "Bet 365 Software",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-bet-construct",
+      "name": "Bet Construct",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-bet-digital",
+      "name": "Bet Digital",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-bet-games",
+      "name": "Bet Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-bet-st-george",
+      "name": "Bet St George",
+      "entity_type": "other"
+    },
+    {
+      "slug": "other-bet-at-home",
+      "name": "bet-at-home",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-bet2tech",
+      "name": "Bet2Tech",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-bet365",
+      "name": "bet365",
+      "entity_type": "other"
+    },
+    {
+      "slug": "other-betfair",
+      "name": "Betfair",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-betixon",
+      "name": "Betixon",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-betmaze",
+      "name": "Betmaze",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "brand-betonline",
+      "name": "BetOnline",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-betora-games",
+      "name": "Betora games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-betradar",
+      "name": "Betradar",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-betrino",
+      "name": "Betrino",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-betsense",
+      "name": "Betsense",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-betsoft",
+      "name": "Betsoft",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-betsolutions",
+      "name": "Betsolutions",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-betstone",
+      "name": "Betstone",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-betsuna",
+      "name": "Betsuna",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "payment-method-bettereft",
+      "name": "BetterEFT",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-betterlore",
+      "name": "Betterlore",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-betting-shops",
+      "name": "betting shops",
+      "entity_type": "other"
+    },
+    {
+      "slug": "company-betvictor-limited",
+      "name": "BetVictor Limited",
+      "entity_type": "company"
+    },
+    {
+      "slug": "brand-betway",
+      "name": "Betway",
+      "entity_type": "other"
+    },
+    {
+      "slug": "company-betway-ltd",
+      "name": "BetWay LTD",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-bf-games",
+      "name": "BF Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-bg-games",
+      "name": "BG Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-bgaming",
+      "name": "BGaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-big-daddy-gaming",
+      "name": "Big Daddy Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-big-gaming-bg",
+      "name": "Big Gaming (BG)",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-big-time-gaming-btg",
+      "name": "Big Time Gaming (BTG)",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-big-wave-gaming",
+      "name": "Big Wave Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-bigpot-gaming",
+      "name": "Bigpot Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-binance-pay",
+      "name": "Binance Pay",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "other-bingo-halls",
+      "name": "Bingo Halls",
+      "entity_type": "other"
+    },
+    {
+      "slug": "brand-bingo-stars",
+      "name": "Bingo Stars",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "brand-binobet",
+      "name": "BinoBet",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "payment-method-bitcoin",
+      "name": "Bitcoin",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-bitcoin-cash",
+      "name": "Bitcoin Cash",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-bitpunch",
+      "name": "Bitpunch",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-bitville-gaming",
+      "name": "Bitville Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-blablabla-studios",
+      "name": "BlaBlaBla Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-black-pudding-games",
+      "name": "Black Pudding Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-blik",
+      "name": "BLIK",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-blitzcrown",
+      "name": "Blitzcrown",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-blue-guru-games",
+      "name": "Blue Guru Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-blue-high-house-s-a",
+      "name": "Blue High House S.A.",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-blue-print-gaming",
+      "name": "Blue Print Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-blue-ring-studios",
+      "name": "Blue Ring Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-blue-star-planet-ltd",
+      "name": "Blue Star Planet LTD",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-blueberi",
+      "name": "Blueberi",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-bluejack-gaming",
+      "name": "Bluejack Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-bluvoucher",
+      "name": "BluVoucher",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "company-bml-group-ltd",
+      "name": "BML Group LTD",
+      "entity_type": "company"
+    },
+    {
+      "slug": "payment-method-bnb",
+      "name": "BNB",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "brand-bogof-bingo",
+      "name": "BOGOF Bingo",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "payment-method-boku",
+      "name": "Boku",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-boldplay",
+      "name": "Boldplay",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-boleto",
+      "name": "Boleto",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "other-bombaycasino-com",
+      "name": "Bombaycasino.com",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-boomerang-studios",
+      "name": "Boomerang Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-booming-games",
+      "name": "Booming Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-booongo",
+      "name": "Booongo",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-boracay",
+      "name": "Boracay",
+      "entity_type": "other"
+    },
+    {
+      "slug": "other-boyd-interactive",
+      "name": "Boyd Interactive",
+      "entity_type": "other"
+    },
+    {
+      "slug": "payment-method-bpay",
+      "name": "Bpay",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-bradesco",
+      "name": "Bradesco",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-bragg-gaming",
+      "name": "Bragg Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-bresbet",
+      "name": "BresBet",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-buck-stakes-entertainment",
+      "name": "Buck Stakes Entertainment",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-buenos-aires",
+      "name": "Buenos Aires",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-bulletproof-games",
+      "name": "Bulletproof Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-bullshark-games",
+      "name": "Bullshark Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-bunfox",
+      "name": "Bunfox",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-buzz-bingo",
+      "name": "Buzz Bingo",
+      "entity_type": "other"
+    },
+    {
+      "slug": "company-bv-gaming-ltd",
+      "name": "BV Gaming LTD",
+      "entity_type": "company"
+    },
+    {
+      "slug": "other-bvgroup",
+      "name": "BVGroup",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-bw-gaming",
+      "name": "BW Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-bwin-party",
+      "name": "Bwin Party",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-cadillac-jack",
+      "name": "Cadillac Jack",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-caesars",
+      "name": "Caesars",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-caleta-gaming",
+      "name": "Caleta Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-candle-bets",
+      "name": "Candle Bets",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-capecod-gaming",
+      "name": "Capecod Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-capitec-pay",
+      "name": "Capitec Pay",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-cardano",
+      "name": "Cardano",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "brand-casea",
+      "name": "Casea",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "payment-method-cash",
+      "name": "Cash",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "brand-cash-arcade",
+      "name": "Cash Arcade",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "payment-method-cashlib",
+      "name": "CASHlib",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-cashtocode",
+      "name": "CashtoCode",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "brand-casimba",
+      "name": "Casimba",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "company-casimba-gaming",
+      "name": "Casimba Gaming",
+      "entity_type": "company"
+    },
+    {
+      "slug": "brand-casino-casino",
+      "name": "Casino Casino",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "other-casino-licence",
+      "name": "Casino Licence",
+      "entity_type": "other"
+    },
+    {
+      "slug": "other-casino-platform",
+      "name": "Casino Platform",
+      "entity_type": "other"
+    },
+    {
+      "slug": "other-casinoro",
+      "name": "Casinoro",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-casumo",
+      "name": "Casumo",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-casumo-services-ltd",
+      "name": "Casumo Services LTD",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-cayetano-gaming",
+      "name": "Cayetano Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "government-cftc",
+      "name": "CFTC",
+      "entity_type": "government"
+    },
+    {
+      "slug": "provider-champion",
+      "name": "Champion",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-champion-studio",
+      "name": "Champion Studio",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-chance-interactive",
+      "name": "Chance Interactive",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-charismatic",
+      "name": "Charismatic",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-check-by-courier",
+      "name": "Check by Courier",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-cheque",
+      "name": "Cheque",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-chilli-games",
+      "name": "chilli games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-chit-chat-bingo",
+      "name": "Chit Chat Bingo",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "other-chumba-casino",
+      "name": "Chumba Casino",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-circular-arrow",
+      "name": "Circular Arrow",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-cirsa",
+      "name": "CIRSA",
+      "entity_type": "other"
+    },
+    {
+      "slug": "payment-method-citadel",
+      "name": "Citadel",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-clawbuster",
+      "name": "Clawbuster",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-clutch-gaming",
+      "name": "Clutch Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-coin-machine-gaming",
+      "name": "Coin Machine Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-coinpoker",
+      "name": "CoinPoker",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-colossus-bets",
+      "name": "Colossus Bets",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "regulator-committee-of-tourism-industry-of-the-ministry-of-culture-and-sports-of-the-republic-of-kazakhstan",
+      "name": "Committee of Tourism Industry of the Ministry of Culture and Sports of the Republic of Kazakhstan",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "company-complete-technologies-n-v",
+      "name": "Complete Technologies N.V.",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-comtrade-gaming",
+      "name": "Comtrade Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-concept-gaming",
+      "name": "Concept Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "regulator-connecticut-department-of-consumer-protection-gaming-division",
+      "name": "Connecticut Department of Consumer Protection Gaming Division",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "provider-connective-games",
+      "name": "Connective Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-converter",
+      "name": "Converter",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-copacabana-games",
+      "name": "Copacabana Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-copslots",
+      "name": "Copslots",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-core-gaming",
+      "name": "CORE Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-coventry",
+      "name": "Coventry",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-cozy",
+      "name": "Cozy",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-cq9-gaming",
+      "name": "CQ9 Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-cr-games",
+      "name": "CR Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-crazy-tooth-studio",
+      "name": "Crazy Tooth Studio",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-credit-card",
+      "name": "Credit Card",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-creedroomz",
+      "name": "CreedRoomz",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-cristalec",
+      "name": "Cristalec",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-croco-gaming",
+      "name": "Croco Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-crucible-gaming",
+      "name": "Crucible Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-crypto",
+      "name": "Crypto",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-crypto-logic",
+      "name": "Crypto Logic",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-crypto-com",
+      "name": "Crypto.com",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-ct-gaming",
+      "name": "CT Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-ct-interactive",
+      "name": "CT Interactive",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-cubeia",
+      "name": "Cubeia",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-curacao",
+      "name": "Curaçao",
+      "entity_type": "other"
+    },
+    {
+      "slug": "other-curacao-gambling",
+      "name": "Curaçao Gambling",
+      "entity_type": "other"
+    },
+    {
+      "slug": "regulator-curacao-gaming-authority",
+      "name": "Curaçao Gaming Authority",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "provider-d-tech",
+      "name": "D-Tech",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-dagacube",
+      "name": "DaGaCube",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-dai",
+      "name": "DAI",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "regulator-danish-gaming-authority",
+      "name": "Danish Gaming Authority",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "payment-method-dankort",
+      "name": "Dankort",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-danske-bank",
+      "name": "Danske Bank",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "other-danske-spil",
+      "name": "Danske Spil",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-darwin-gaming",
+      "name": "Darwin Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-dash",
+      "name": "Dash",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "company-daub-alderney-limited",
+      "name": "Daub Alderney Limited",
+      "entity_type": "company"
+    },
+    {
+      "slug": "company-dazletag-entertainment-limited",
+      "name": "Dazletag Entertainment Limited",
+      "entity_type": "company"
+    },
+    {
+      "slug": "company-dazzletag-entertainment",
+      "name": "Dazzletag Entertainment",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-dbg-games",
+      "name": "DBG Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-debit-card",
+      "name": "Debit Card",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-deep-stake-games",
+      "name": "Deep Stake Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-degen-studios",
+      "name": "DEGEN Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-design-works-gaming",
+      "name": "Design Works Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-dice-lab",
+      "name": "Dice Lab",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-digitain",
+      "name": "Digitain",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-digital-gaming-solutions",
+      "name": "Digital Gaming Solutions",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-dimoco",
+      "name": "Dimoco",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-diners-club",
+      "name": "Diners Club",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "regulator-direccion-general-de-juegos-y-sorteos-dgjs",
+      "name": "Dirección General de Juegos y Sorteos (DGJS)",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "regulator-direccion-general-de-ordenacion-del-juego-dgoj",
+      "name": "Dirección General de Ordenación del Juego (DGOJ)",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "regulator-directorate-of-finance-of-brcko-district",
+      "name": "Directorate of Finance of Brčko District",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "payment-method-discover",
+      "name": "Discover",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-dlv",
+      "name": "DLV",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-dogecoin",
+      "name": "Dogecoin",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "brand-double-bubble-bingo",
+      "name": "Double Bubble Bingo",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "brand-dove-casino",
+      "name": "Dove Casino",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "other-draftkings",
+      "name": "DraftKings",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-dragon-gaming",
+      "name": "Dragon Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-dragonbet",
+      "name": "DragonBet",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-dragoon-soft",
+      "name": "Dragoon Soft",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-dream-play",
+      "name": "Dream Play",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-dream-tech",
+      "name": "Dream Tech",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-dream-vegas",
+      "name": "Dream Vegas",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-dreamspin",
+      "name": "Dreamspin",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-drueckglueck",
+      "name": "Drueckglueck",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "brand-dukes-casino",
+      "name": "Dukes Casino",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-dynabit-gaming",
+      "name": "Dynabit Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "regulator-eastern-cape-gambling-and-betting-board",
+      "name": "Eastern Cape Gambling and Betting Board",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "payment-method-easyeft",
+      "name": "EasyEFT",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-easyload",
+      "name": "EasyLoad",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-easypay",
+      "name": "EasyPay",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-ecovoucher",
+      "name": "ecoVoucher",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-edict",
+      "name": "edict",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-eeze",
+      "name": "Eeze",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-eft-by-swiffy",
+      "name": "EFT by Swiffy",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-egt-digital",
+      "name": "EGT Digital",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-egt-interactive",
+      "name": "EGT Interactive",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-ela-games",
+      "name": "Ela Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-elbet",
+      "name": "Elbet",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-electra-works-europe-limited",
+      "name": "Electra Works Europe Limited",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-electralade",
+      "name": "Electralade",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-electric-elephant",
+      "name": "Electric Elephant",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-elk-studios",
+      "name": "ELK Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-elysium-studios",
+      "name": "Elysium Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-endemol-shine-gaming",
+      "name": "Endemol Shine Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-endorphina",
+      "name": "Endorphina",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-enjoy",
+      "name": "Enjoy",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-enjoy-gaming",
+      "name": "Enjoy Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-entain",
+      "name": "Entain",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-entain-plc",
+      "name": "Entain plc",
+      "entity_type": "company"
+    },
+    {
+      "slug": "payment-method-epay",
+      "name": "ePay",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-epic-industries",
+      "name": "Epic Industries",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-eps",
+      "name": "EPS",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "other-eric-wasserson",
+      "name": "Eric Wasserson",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-esa-gaming",
+      "name": "ESA Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-esball",
+      "name": "Esball",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-esoterica",
+      "name": "Esoterica",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-espresso-games",
+      "name": "Espresso Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "regulator-estonian-tax-and-customs-board-emta",
+      "name": "Estonian Tax and Customs Board (EMTA)",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "payment-method-ethereum",
+      "name": "Ethereum",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-eurasian-gaming",
+      "name": "Eurasian Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-eurocoin-interactve",
+      "name": "Eurocoin Interactve",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-eurostar-studios",
+      "name": "Eurostar Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-euteller",
+      "name": "Euteller",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-everi",
+      "name": "Everi",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-everstronglink-ltd",
+      "name": "Everstronglink LTD",
+      "entity_type": "company"
+    },
+    {
+      "slug": "other-everymatrix",
+      "name": "EveryMatrix",
+      "entity_type": "other"
+    },
+    {
+      "slug": "company-evoke-plc",
+      "name": "evoke plc",
+      "entity_type": "company"
+    },
+    {
+      "slug": "other-evolution",
+      "name": "Evolution",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-evolution-gaming",
+      "name": "Evolution Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-evolution-live",
+      "name": "Evolution Live",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-evoplay",
+      "name": "Evoplay",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-ewagers",
+      "name": "EWAGERS",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-exco-game-studio",
+      "name": "EXCO Game Studio",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-expanse-studios",
+      "name": "Expanse Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-extreme-live-gaming",
+      "name": "Extreme Live Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-eyecon",
+      "name": "Eyecon",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-ezeebill",
+      "name": "EzeeBill",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-ezeewallet",
+      "name": "EzeeWallet",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-ezugi",
+      "name": "Ezugi",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-fbastards",
+      "name": "F*Bastards",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-face-up-pai-gow",
+      "name": "Face Up Pai Gow",
+      "entity_type": "other"
+    },
+    {
+      "slug": "company-fairload-ltd",
+      "name": "Fairload LTD",
+      "entity_type": "company"
+    },
+    {
+      "slug": "other-fanatics",
+      "name": "Fanatics",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-fantasma-games",
+      "name": "Fantasma Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-fast-bank-transfer",
+      "name": "Fast Bank Transfer",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-fasttoken",
+      "name": "Fasttoken",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-fat-panda",
+      "name": "Fat Panda",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-fazi",
+      "name": "Fazi",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-fbm-digital-systems",
+      "name": "FBM Digital Systems",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-fc",
+      "name": "FC",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-fdj-united",
+      "name": "FDJ UNITED",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-felix-gaming",
+      "name": "Felix Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-felt",
+      "name": "Felt",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-fils-game",
+      "name": "Fils Game",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-finby",
+      "name": "finby",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-finnish-ebank",
+      "name": "Finnish eBank",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-firebird-gaming",
+      "name": "Firebird Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-five-men-games",
+      "name": "Five Men Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-flatdog",
+      "name": "Flatdog",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-flexepin",
+      "name": "Flexepin",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-flip-five-gaming",
+      "name": "Flip Five Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-flipluck",
+      "name": "FlipLuck",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-formula-spin",
+      "name": "Formula Spin",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-fortune-factory-studios",
+      "name": "Fortune Factory Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-four-leaf-gaming",
+      "name": "Four Leaf Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-foxhound-games",
+      "name": "Foxhound Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-foxium",
+      "name": "Foxium",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "regulator-free-state-gambling-liquor-authority",
+      "name": "Free State Gambling &amp; Liquor Authority",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "provider-fresh-deck-studios",
+      "name": "Fresh Deck Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-fresh-vintage",
+      "name": "Fresh Vintage",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-ftse-100",
+      "name": "FTSE 100",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-fuga-gaming",
+      "name": "FUGA Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-fugaso",
+      "name": "Fugaso",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-fun-casino",
+      "name": "Fun Casino",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-fun-fiesta",
+      "name": "Fun Fiesta",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-funfair",
+      "name": "FunFair",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-funky-games",
+      "name": "Funky Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-funta-gaming",
+      "name": "Funta Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-g-games",
+      "name": "G Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-gacha-studios",
+      "name": "Gacha Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-galaxsys",
+      "name": "Galaxsys",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-galaxy-gaming",
+      "name": "Galaxy Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-galazia-b-v",
+      "name": "Galazia B.V.",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-gamanza",
+      "name": "Gamanza",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-gamatron",
+      "name": "Gamatron",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-gambling-debt",
+      "name": "Gambling Debt",
+      "entity_type": "other"
+    },
+    {
+      "slug": "regulator-gambling-regulatory-authority-of-ireland-grai",
+      "name": "Gambling Regulatory Authority of Ireland (GRAI)",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "provider-game-beat",
+      "name": "Game Beat",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-game2slot",
+      "name": "Game2Slot",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-game360",
+      "name": "Game360",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-gameart",
+      "name": "GameArt",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-gameburger-studios",
+      "name": "Gameburger Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-gamefish-global",
+      "name": "Gamefish Global",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-gameiom",
+      "name": "Gameiom",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-gameplay-interactive",
+      "name": "GamePlay Interactive",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-games-global",
+      "name": "Games Global",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-games-inc",
+      "name": "Games Inc.",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-games-warehouse",
+      "name": "Games Warehouse",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-gamescale",
+      "name": "GameScale",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-gameslab",
+      "name": "GamesLab",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-gamesos",
+      "name": "GamesOS",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-gamesys",
+      "name": "Gamesys",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-gamesys-bingo",
+      "name": "Gamesys Bingo",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-gamesys-operations-ltd",
+      "name": "Gamesys Operations LTD",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-gametimetec",
+      "name": "GameTimeTec",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-gamevy",
+      "name": "Gamevy",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-gamex",
+      "name": "GameX",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-gaming-1",
+      "name": "Gaming 1",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "regulator-gaming-board-of-tanzania",
+      "name": "Gaming Board of Tanzania",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "regulator-gaming-commission-of-ghana",
+      "name": "Gaming Commission of Ghana",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "regulator-gaming-control-authority-under-the-ministry-of-finance-of-the-republic-of-lithuania",
+      "name": "Gaming Control Authority under the Ministry of Finance of the Republic of Lithuania",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "provider-gaming-corps",
+      "name": "Gaming Corps",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-gaming-realms",
+      "name": "Gaming Realms",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-gamomat",
+      "name": "Gamomat",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-gamshy",
+      "name": "Gamshy",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-gamzix",
+      "name": "Gamzix",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-ganapati",
+      "name": "Ganapati",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-gary-benson",
+      "name": "Gary Benson",
+      "entity_type": "other"
+    },
+    {
+      "slug": "regulator-gauteng-gambling-board",
+      "name": "Gauteng Gambling Board",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "company-gbl-solutions-n-v",
+      "name": "GBL Solutions N.V.",
+      "entity_type": "company"
+    },
+    {
+      "slug": "other-gdpr",
+      "name": "GDPR",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-geco-gaming",
+      "name": "GECO Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "regulator-gemeinsame-glucksspielbehorde-der-lander-ggl",
+      "name": "Gemeinsame Glücksspielbehörde der Länder (GGL)",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "provider-genesis",
+      "name": "Genesis",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-genesis-global-limited",
+      "name": "Genesis Global Limited",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-genii",
+      "name": "Genii",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-george-santos",
+      "name": "George Santos",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-ggnetwork",
+      "name": "GGNetwork",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-ggpoker",
+      "name": "GGPoker",
+      "entity_type": "other"
+    },
+    {
+      "slug": "brand-giant-wins",
+      "name": "Giant Wins",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "regulator-gibraltar-betting-and-gaming-comission",
+      "name": "Gibraltar Betting and Gaming Comission",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "provider-gig-gaming",
+      "name": "GIG Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-giocaonline",
+      "name": "GiocaOnline",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-giropay",
+      "name": "Giropay",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-giveme-games",
+      "name": "Giveme Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-givme",
+      "name": "Givme",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "event-global-online-poker-championship",
+      "name": "Global Online Poker Championship",
+      "entity_type": "event"
+    },
+    {
+      "slug": "other-global-poker",
+      "name": "Global Poker",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-gluck-games",
+      "name": "Gluck Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-gmw",
+      "name": "GMW",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-gold-coin-studios",
+      "name": "Gold Coin Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-golden-hero",
+      "name": "Golden Hero",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-golden-race",
+      "name": "Golden Race",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-golden-rock-studios",
+      "name": "Golden Rock Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-gong-gaming-technologies",
+      "name": "GONG Gaming Technologies",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-google-pay",
+      "name": "Google Pay",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-goosicorn",
+      "name": "Goosicorn",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-goplay",
+      "name": "Goplay",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "company-grace-media-gibraltar-limited",
+      "name": "Grace Media (Gibraltar) Limited",
+      "entity_type": "company"
+    },
+    {
+      "slug": "company-grace-media-limited",
+      "name": "Grace Media Limited",
+      "entity_type": "company"
+    },
+    {
+      "slug": "brand-grand-ivy",
+      "name": "Grand Ivy",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-grand-vision-gaming-gvg",
+      "name": "Grand Vision Gaming GVG",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-green-jade-games",
+      "name": "Green Jade Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-green-valley-games-gvg",
+      "name": "Green Valley Games (GVG)",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-greentube",
+      "name": "Greentube",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-groove",
+      "name": "Groove",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-gvc-holdings",
+      "name": "GVC Holdings",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-habanero",
+      "name": "Habanero",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-hacksaw-gaming",
+      "name": "Hacksaw Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-half-pixel-studio",
+      "name": "Half Pixel Studio",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-hammertime",
+      "name": "Hammertime",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-happy-duck",
+      "name": "Happy Duck",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-high-5-games",
+      "name": "High 5 Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-high-flyer-games",
+      "name": "High Flyer Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-high-limit-studio",
+      "name": "High Limit Studio",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-highlight-games",
+      "name": "Highlight Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-hillside",
+      "name": "Hillside",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-ho-gaming",
+      "name": "HO Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-hoiana",
+      "name": "Hoiana",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-holle-games",
+      "name": "HÖLLE Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-hot-rise-games",
+      "name": "Hot Rise Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-house-of-lords",
+      "name": "House of Lords",
+      "entity_type": "other"
+    },
+    {
+      "slug": "other-hsbc",
+      "name": "HSBC",
+      "entity_type": "other"
+    },
+    {
+      "slug": "payment-method-hsbc",
+      "name": "HSBC",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-hungry-bear",
+      "name": "Hungry Bear",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-hurricane-games",
+      "name": "Hurricane Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-hyperionplay",
+      "name": "HyperionPlay",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-iconic-gaming",
+      "name": "Iconic Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-iconic21",
+      "name": "ICONIC21",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-ideal",
+      "name": "iDEAL",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-idebit",
+      "name": "iDebit",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-igaming2go",
+      "name": "iGaming2Go",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-igrosoft",
+      "name": "Igrosoft",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-igt-wagerworks",
+      "name": "IGT (Wagerworks)",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-imagina",
+      "name": "Imagina",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-imagine-live",
+      "name": "Imagine Live",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-immortal-wins",
+      "name": "Immortal Wins",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "payment-method-immutablex",
+      "name": "ImmutableX",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-imoon",
+      "name": "iMoon",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-in-touch-games-limited",
+      "name": "In Touch Games Limited",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-inbet-games",
+      "name": "InBet Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-incredible-technologies-it",
+      "name": "Incredible Technologies (IT)",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-independent",
+      "name": "Independent",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-indi-slots",
+      "name": "Indi Slots",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-indigo-magic",
+      "name": "Indigo Magic",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-infinity-dragon-studios",
+      "name": "Infinity Dragon Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-innogames",
+      "name": "InnoGames",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-innovex-tech-holdings-limited",
+      "name": "Innovex Tech Holdings Limited",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-ino-games",
+      "name": "INO Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-inout",
+      "name": "InOut",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-inout-games",
+      "name": "InOut Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-inpay",
+      "name": "Inpay",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "regulator-inspeccao-de-jogos-de-mocambique",
+      "name": "Inspecção de Jogos de Moçambique",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "provider-inspired-gaming",
+      "name": "Inspired Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-instadebit",
+      "name": "INSTADEBIT",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-instant-banking",
+      "name": "Instant Banking",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-instant-win-gaming",
+      "name": "Instant Win Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-instanteft",
+      "name": "instantEFT",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "company-inter-grupp-partner-service-ab",
+      "name": "Inter Grupp Partner Service AB",
+      "entity_type": "company"
+    },
+    {
+      "slug": "payment-method-interac",
+      "name": "Interac",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-intouch-games",
+      "name": "Intouch Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-intuitivetables",
+      "name": "IntuitiveTables",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-ipanema-gaming",
+      "name": "Ipanema Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-ipoker",
+      "name": "iPoker",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-iron-dog-studio",
+      "name": "Iron Dog Studio",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "regulator-isle-of-man-gambling-supervision-commission",
+      "name": "Isle of Man Gambling Supervision Commission",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "provider-isoftbet",
+      "name": "iSoftBet",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-jackpot-village",
+      "name": "Jackpot Village",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "other-jackpotbet",
+      "name": "Jackpotbet",
+      "entity_type": "other"
+    },
+    {
+      "slug": "brand-jackpotjoy",
+      "name": "Jackpotjoy",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "brand-jackpotstar",
+      "name": "JackpotStar",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-jacks-club",
+      "name": "Jacks Club",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-jade-rabbit-studios",
+      "name": "Jade Rabbit Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-japan-technicals-games-jtg",
+      "name": "Japan Technicals Games (JTG)",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-jazzyspins",
+      "name": "JazzySpins",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "payment-method-jcb",
+      "name": "JCB",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-jdb168",
+      "name": "JDB168",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-jeffbet",
+      "name": "JeffBet",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-jelly",
+      "name": "Jelly",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-jeton",
+      "name": "Jeton",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-jetonbank",
+      "name": "Jetonbank",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-jili-games",
+      "name": "JILI Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-jinx-gaming",
+      "name": "JINX Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-jks-tech",
+      "name": "JKS Tech",
+      "entity_type": "other"
+    },
+    {
+      "slug": "other-joao-simao",
+      "name": "João Simão",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-join-games",
+      "name": "Join Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-juice",
+      "name": "Juice",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-jumbo-games",
+      "name": "Jumbo Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-jumpman-gaming-limited",
+      "name": "Jumpman Gaming Limited",
+      "entity_type": "company"
+    },
+    {
+      "slug": "regulator-junta-de-control-de-juegos",
+      "name": "Junta de Control de Juegos",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "company-jupiter-gaming-ltd",
+      "name": "Jupiter Gaming LTD",
+      "entity_type": "company"
+    },
+    {
+      "slug": "other-jurojin",
+      "name": "Jurojin",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-just-slots",
+      "name": "Just Slots",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-justforthewin-jftw",
+      "name": "JustForTheWin (JFTW)",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-justplay-gaming",
+      "name": "Justplay Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-jvl",
+      "name": "JVL",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-ka-gaming",
+      "name": "KA Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "regulator-kahnawake-gaming-commission",
+      "name": "Kahnawake Gaming Commission",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "provider-kajot",
+      "name": "Kajot",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-kalamba-games",
+      "name": "Kalamba Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-kalshi",
+      "name": "Kalshi",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-kambi",
+      "name": "Kambi",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-kangwon-land",
+      "name": "Kangwon Land",
+      "entity_type": "other"
+    },
+    {
+      "slug": "regulator-kansspelautoriteit-ksa",
+      "name": "Kansspelautoriteit (KSA)",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "payment-method-kazang",
+      "name": "Kazang",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-kendoo",
+      "name": "Kendoo",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-king-midas-kingmaker",
+      "name": "King Midas (Kingmaker)",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-king-show-games",
+      "name": "King Show Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-kiron-interactive",
+      "name": "Kiron Interactive",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-kitsune-studios",
+      "name": "Kitsune Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-klarna",
+      "name": "Klarna",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-koala-games",
+      "name": "Koala Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-konami",
+      "name": "Konami",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-kong-casino",
+      "name": "Kong Casino",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "regulator-kwazulu-natal-gaming-and-betting-board",
+      "name": "KwaZulu-Natal Gaming and Betting Board",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "company-ll-europe-ltd",
+      "name": "L&amp;L Europe Ltd",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-lady-luck-games",
+      "name": "Lady Luck Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "regulator-lagos-state-lotteries-and-gaming-authority",
+      "name": "Lagos State Lotteries and Gaming Authority",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "provider-lambda-gaming",
+      "name": "LAMBDA Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-las-vegas",
+      "name": "Las Vegas",
+      "entity_type": "other"
+    },
+    {
+      "slug": "brand-late-casino",
+      "name": "Late Casino",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "company-lc-international-ltd",
+      "name": "LC International LTD",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-leander-games",
+      "name": "Leander Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-leap-gaming",
+      "name": "Leap Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-light-wonder",
+      "name": "Light &amp; Wonder",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-lightning-box",
+      "name": "Lightning Box",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-lights-camera-bingo",
+      "name": "Lights Camera Bingo",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "regulator-limpopo-gambling-board",
+      "name": "Limpopo Gambling Board",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "company-lindar-media",
+      "name": "Lindar Media",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-linko-studios",
+      "name": "Linko Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-lion-line",
+      "name": "Lion Line",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-lion-wins",
+      "name": "Lion Wins",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "payment-method-litecoin",
+      "name": "Litecoin",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-live-5",
+      "name": "Live 5",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-live-bingo",
+      "name": "live bingo",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-live-g24",
+      "name": "Live G24",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-live-vegas",
+      "name": "Live Vegas",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-live88",
+      "name": "Live88",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-lost-world-games",
+      "name": "Lost World Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-lottery-syndicate",
+      "name": "lottery syndicate",
+      "entity_type": "other"
+    },
+    {
+      "slug": "company-lotto-direct-limited",
+      "name": "Lotto Direct Limited",
+      "entity_type": "company"
+    },
+    {
+      "slug": "other-lottomatica",
+      "name": "Lottomatica",
+      "entity_type": "other"
+    },
+    {
+      "slug": "company-lottomatrix-operations-limited",
+      "name": "Lottomatrix Operations Limited",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-lucksome",
+      "name": "Lucksome",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-lucky-games",
+      "name": "Lucky Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-lucky-hills",
+      "name": "Lucky Hills",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-lucky-streak",
+      "name": "Lucky Streak",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-lucky-taps",
+      "name": "Lucky Taps",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-lucky-world-games",
+      "name": "Lucky World Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-ludoland",
+      "name": "LudoLand",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-lula",
+      "name": "Lula",
+      "entity_type": "other"
+    },
+    {
+      "slug": "payment-method-luxonpay",
+      "name": "LuxonPay",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-maestro",
+      "name": "Maestro",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-magic-dreams",
+      "name": "Magic Dreams",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-magnet-gaming",
+      "name": "Magnet Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-mahi-gaming",
+      "name": "Mahi Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "regulator-malawi-gaming-and-lotteries-authority",
+      "name": "Malawi Gaming and Lotteries Authority",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "regulator-malta-gaming-authority",
+      "name": "Malta Gaming Authority",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "provider-mancala-gaming",
+      "name": "Mancala Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-manna-play",
+      "name": "Manna Play",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-mansion-online-casino-ltd",
+      "name": "Mansion Online Casino LTD",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-markor-technology",
+      "name": "Markor Technology",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-mascot-gaming",
+      "name": "Mascot Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-mastercard",
+      "name": "Mastercard",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-masterpass",
+      "name": "Masterpass",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-matic",
+      "name": "MATIC",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-matrix-igaming",
+      "name": "Matrix iGaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-matrix-studios",
+      "name": "Matrix Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-mattress-mack",
+      "name": "Mattress Mack",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-maverick",
+      "name": "Maverick",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-maverick-gaming",
+      "name": "Maverick Gaming",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-max-win-gaming",
+      "name": "Max Win Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-maxiplay",
+      "name": "MaxiPlay",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-mazooma",
+      "name": "Mazooma",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-mbway",
+      "name": "MBWay",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "other-mecca-bingo",
+      "name": "Mecca Bingo",
+      "entity_type": "other"
+    },
+    {
+      "slug": "company-mecca-bingo-limited",
+      "name": "Mecca Bingo Limited",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-mega-entertainment",
+      "name": "MEGA Entertainment",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-megafair",
+      "name": "Megafair",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-megaways-casino",
+      "name": "Megaways Casino",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-merkur-gaming",
+      "name": "Merkur Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-metagu",
+      "name": "MetaGU",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-mga-games",
+      "name": "MGA Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-mgm-resorts",
+      "name": "MGM Resorts",
+      "entity_type": "other"
+    },
+    {
+      "slug": "regulator-michigan-gaming-control-board",
+      "name": "Michigan Gaming Control Board",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "provider-microgaming",
+      "name": "Microgaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-midnite",
+      "name": "Midnite",
+      "entity_type": "other"
+    },
+    {
+      "slug": "payment-method-mifinity",
+      "name": "MiFinity",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-mighty-finger",
+      "name": "Mighty Finger",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-mikado-games",
+      "name": "Mikado Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-mikivik-ltd",
+      "name": "MIKIVIK LTD",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-miko-apps",
+      "name": "Miko Apps",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "regulator-ministry-of-finance-zambia",
+      "name": "Ministry of Finance (Zambia)",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "regulator-ministry-of-finance-of-the-republic-of-tajikistan",
+      "name": "Ministry of Finance of the Republic of Tajikistan",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "regulator-ministry-of-tourism-zambia",
+      "name": "Ministry of Tourism (Zambia)",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "payment-method-mobile-pay",
+      "name": "Mobile Pay",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-mobilots",
+      "name": "Mobilots",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-moneta",
+      "name": "Moneta",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-money-order",
+      "name": "Money Order",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "brand-money-reels",
+      "name": "Money Reels",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "brand-monopoly-casino",
+      "name": "MONOPOLY Casino",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "brand-monster-casino",
+      "name": "Monster Casino",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "payment-method-monzo",
+      "name": "Monzo",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "other-mozzart",
+      "name": "Mozzart",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-mplay",
+      "name": "MPlay",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "regulator-mpumalanga-economic-regulator",
+      "name": "Mpumalanga Economic Regulator",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "provider-mr-slotty",
+      "name": "Mr Slotty",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-mr-jack-vegas",
+      "name": "Mr. Jack Vegas",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "brand-mr-play",
+      "name": "Mr. Play",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "brand-mrq",
+      "name": "MrQ",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "payment-method-mtn-mobile-money",
+      "name": "MTN Mobile Money",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-muchbetter",
+      "name": "MuchBetter",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-multibanco",
+      "name": "Multibanco",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-multicommerce-game-studio",
+      "name": "Multicommerce Game Studio",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-multislot",
+      "name": "MultiSlot",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-mutuel-play",
+      "name": "Mutuel Play",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-nailed-it-games",
+      "name": "Nailed it! Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "regulator-national-gambling-board-of-south-africa",
+      "name": "National Gambling Board of South Africa",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "regulator-national-lottery-regulatory-commission-nigeria",
+      "name": "National Lottery Regulatory Commission (Nigeria)",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "payment-method-natwest",
+      "name": "NatWest",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-nazionale-elettronica",
+      "name": "Nazionale Elettronica",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-neko-games",
+      "name": "Neko Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-nektan",
+      "name": "Nektan",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-nektan-gibraltar-limited",
+      "name": "Nektan (Gibraltar) Limited",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-neo-games",
+      "name": "Neo Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-neon-valley-studios",
+      "name": "Neon Valley Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-neosurf",
+      "name": "Neosurf",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-netbanking",
+      "name": "Netbanking",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "brand-netbet",
+      "name": "NetBet",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "company-netbet-enterprises-ltd",
+      "name": "Netbet Enterprises LTD",
+      "entity_type": "company"
+    },
+    {
+      "slug": "payment-method-neteller",
+      "name": "NETELLER",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-netent",
+      "name": "NetEnt",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-netent-live",
+      "name": "Netent Live",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-netgame",
+      "name": "NetGame",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-netgaming",
+      "name": "Netgaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-netoplay",
+      "name": "NetoPlay",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "regulator-nevada-gaming-commission",
+      "name": "Nevada Gaming Commission",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "provider-neverending",
+      "name": "NeverEnding",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "regulator-new-jersey-division-of-gaming-enforcement-njdge",
+      "name": "New Jersey Division of Gaming Enforcement (NJDGE)",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "provider-nextgen-gaming",
+      "name": "NextGen Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-nfl",
+      "name": "NFL",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-ngm-game",
+      "name": "NGM Game",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-noble-gaming",
+      "name": "Noble Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-noda-pay",
+      "name": "Noda Pay",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-nolimit-city",
+      "name": "Nolimit City",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-nordea",
+      "name": "Nordea",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "other-norsk-tipping",
+      "name": "Norsk Tipping",
+      "entity_type": "other"
+    },
+    {
+      "slug": "regulator-north-west-gambling-board",
+      "name": "North West Gambling Board",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "regulator-northern-cape-gambling-board",
+      "name": "Northern Cape Gambling Board",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "provider-northern-lights-gaming",
+      "name": "Northern Lights Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "regulator-northern-territory-wagering-commission",
+      "name": "Northern Territory Wagering Commission",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "provider-novomatic",
+      "name": "Novomatic",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-nownow-gaming",
+      "name": "NowNow Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-nsus",
+      "name": "NSUS",
+      "entity_type": "company"
+    },
+    {
+      "slug": "company-nsus-malta-ltd",
+      "name": "NSUS Malta LTD",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-nucleus-gaming",
+      "name": "Nucleus Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-nyx",
+      "name": "NYX",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-ocean-star-limited",
+      "name": "Ocean Star Limited",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-octavian-gaming",
+      "name": "Octavian Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-octo-play",
+      "name": "Octo Play",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "regulator-oficiul-national-pentru-jocuri-de-noroc-onjn",
+      "name": "Oficiul Național pentru Jocuri de Noroc (ONJN)",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "other-og-com",
+      "name": "OG.com",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-oi-studios",
+      "name": "Oi Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-old-skool-studios",
+      "name": "Old Skool Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-omi-gaming",
+      "name": "Omi Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-omnilogic",
+      "name": "OmniLogic",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-onair-entertainment",
+      "name": "OnAir Entertainment",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-onetouch",
+      "name": "OneTouch",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-onisac-ltd",
+      "name": "ONISAC LTD",
+      "entity_type": "company"
+    },
+    {
+      "slug": "other-online-casino",
+      "name": "Online Casino",
+      "entity_type": "other"
+    },
+    {
+      "slug": "other-online-gambling",
+      "name": "online gambling",
+      "entity_type": "other"
+    },
+    {
+      "slug": "other-online-poker",
+      "name": "Online Poker",
+      "entity_type": "other"
+    },
+    {
+      "slug": "brand-online-slots-uk",
+      "name": "Online Slots UK",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-onlyplay",
+      "name": "OnlyPlay",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-op-pohjola",
+      "name": "OP-Pohjola",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-openbet",
+      "name": "OpenBet",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-orbital-gaming",
+      "name": "Orbital Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-oros-gaming",
+      "name": "Oros Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-ortiz-gaming",
+      "name": "Ortiz Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-oryx-gaming",
+      "name": "Oryx Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-ossi-ketola",
+      "name": "Ossi Ketola",
+      "entity_type": "other"
+    },
+    {
+      "slug": "payment-method-ott",
+      "name": "OTT",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-ozow",
+      "name": "Ozow",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-p2p",
+      "name": "P2P",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-pa-slots",
+      "name": "PA Slots",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-paf",
+      "name": "Paf",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "government-pagcor",
+      "name": "PAGCOR",
+      "entity_type": "government"
+    },
+    {
+      "slug": "payment-method-pago-efectivo",
+      "name": "Pago Efectivo",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "other-palmerbet",
+      "name": "Palmerbet",
+      "entity_type": "other"
+    },
+    {
+      "slug": "brand-panda-bingo",
+      "name": "Panda Bingo",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "brand-parimatch",
+      "name": "Parimatch",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-pariplay",
+      "name": "Pariplay",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-partygaming",
+      "name": "PartyGaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-partypoker",
+      "name": "Partypoker",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-pascal-gaming",
+      "name": "Pascal Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-pateplay",
+      "name": "PatePlay",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-pateplay-live",
+      "name": "Pateplay Live",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-patrik-antonius",
+      "name": "Patrik Antonius",
+      "entity_type": "other"
+    },
+    {
+      "slug": "payment-method-pay-by-bank",
+      "name": "Pay by Bank",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-pay-by-phone",
+      "name": "Pay by Phone",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-pay",
+      "name": "Pay@",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-pay4fun",
+      "name": "Pay4Fun",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-paydo",
+      "name": "PayDo",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-payeer",
+      "name": "Payeer",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-payid",
+      "name": "PayID",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-paynearme",
+      "name": "PayNearMe",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-paypal",
+      "name": "PayPal",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-paysafe",
+      "name": "Paysafe",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-paysafecard",
+      "name": "Paysafecard",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-paysera",
+      "name": "Paysera",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-paytrail",
+      "name": "PayTrail",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-payz",
+      "name": "Payz",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-payzapp",
+      "name": "PayZapp",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-pearfiction",
+      "name": "PearFiction",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-pegasus",
+      "name": "Pegasus",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-penguin-king",
+      "name": "Penguin King",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "regulator-pennsylvania-gaming-control-board-pgcb",
+      "name": "Pennsylvania Gaming Control Board (PGCB)",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "provider-peter-sons",
+      "name": "Peter &amp; Sons",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-petfre-ltd",
+      "name": "Petfre LTD",
+      "entity_type": "company"
+    },
+    {
+      "slug": "regulator-philippine-amusement-and-gaming-corporation-pagcor",
+      "name": "Philippine Amusement and Gaming Corporation (PAGCOR)",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "other-philweb",
+      "name": "PhilWeb",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-pineapple-play",
+      "name": "Pineapple Play",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-pirates-gold-studios",
+      "name": "Pirates Gold Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-pitta-games",
+      "name": "PITTA Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-pix",
+      "name": "PIX",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-pixiu-gaming",
+      "name": "Pixiu Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-pixmove",
+      "name": "Pixmove",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-plank-gaming",
+      "name": "Plank Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-plati-live",
+      "name": "Plati+ Live",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-platin-gaming-pg",
+      "name": "Platin Gaming (PG)",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-platinum-gaming-ltd",
+      "name": "Platinum Gaming LTD",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-platipus",
+      "name": "Platipus",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-play-labs",
+      "name": "Play Labs",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-playn-go",
+      "name": "Play'n Go",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-playcard",
+      "name": "Play+Card",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-playbro",
+      "name": "Playbro",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-playhub",
+      "name": "PLAYHUB",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-playmer",
+      "name": "Playmer",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-playnetic",
+      "name": "Playnetic",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-playojo",
+      "name": "PlayOJO",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-playpearls",
+      "name": "PlayPearls",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-playreels",
+      "name": "PlayReels",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-playson",
+      "name": "Playson",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-playstar",
+      "name": "PlayStar",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-playtech",
+      "name": "Playtech",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-playtech-bingo",
+      "name": "Playtech (bingo)",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-playtech-live",
+      "name": "Playtech Live",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-playtech-origins",
+      "name": "Playtech Origins",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-playtech-vikings",
+      "name": "Playtech Vikings",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-playuk",
+      "name": "PlayUK",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-playzia",
+      "name": "Playzia",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-playzido",
+      "name": "Playzido",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-pm-affiliates",
+      "name": "PM Affiliates",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-pocket-games-soft-pg-soft",
+      "name": "Pocket Games Soft (PG Soft)",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-poggiplay",
+      "name": "PoggiPlay",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-pokerstars",
+      "name": "PokerStars",
+      "entity_type": "other"
+    },
+    {
+      "slug": "payment-method-poli",
+      "name": "POLi",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-polygon",
+      "name": "Polygon",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "other-polymarket",
+      "name": "Polymarket",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-popiplay",
+      "name": "Popiplay",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-popok-gaming",
+      "name": "Popok Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-portomaso-gaming",
+      "name": "Portomaso Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-posh-monkey-studios",
+      "name": "Posh Monkey Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-postepay",
+      "name": "Postepay",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-powderkeg-studios",
+      "name": "Powderkeg Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-pragmatic-play",
+      "name": "Pragmatic Play",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-pragmatic-play-bingo",
+      "name": "Pragmatic Play (Bingo)",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-pragmatic-play-live",
+      "name": "Pragmatic Play Live",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-pragmatic-play-pop",
+      "name": "Pragmatic Play POP",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-precicse-interactive-inc",
+      "name": "Precicse Interactive Inc",
+      "entity_type": "company"
+    },
+    {
+      "slug": "association-premier-league",
+      "name": "Premier League",
+      "entity_type": "association"
+    },
+    {
+      "slug": "provider-present-creative",
+      "name": "Present Creative",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-prime-online-ltd",
+      "name": "Prime Online Ltd",
+      "entity_type": "company"
+    },
+    {
+      "slug": "other-primero-games",
+      "name": "Primero Games",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-print",
+      "name": "Print",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-probability-gaming",
+      "name": "Probability Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-probability-jones",
+      "name": "Probability Jones",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-probe-investments-limited",
+      "name": "Probe Investments Limited",
+      "entity_type": "company"
+    },
+    {
+      "slug": "company-progressplay-ltd",
+      "name": "ProgressPlay LTD",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-proprietary-bingo",
+      "name": "Proprietary (Bingo)",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-proprietary-software",
+      "name": "Proprietary Software",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-prospect-gaming",
+      "name": "Prospect Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-provision-gaming",
+      "name": "Provision Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-przelewy24",
+      "name": "Przelewy24",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-pulse-8-studios",
+      "name": "Pulse 8 Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-push-gaming",
+      "name": "Push Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-qora-games",
+      "name": "Qora Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-qr-code",
+      "name": "QR Code",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "brand-queens-bingo",
+      "name": "Queens Bingo",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-quickfire",
+      "name": "Quickfire",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-quickspin",
+      "name": "Quickspin",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-quik-gaming",
+      "name": "Quik Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-r-franco-games",
+      "name": "R. Franco Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-rabcat",
+      "name": "Rabcat",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-radi8",
+      "name": "Radi8",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-rainbow-riches-casino",
+      "name": "Rainbow Riches Casino",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-rakerocket",
+      "name": "RakeRocket",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-random-logic",
+      "name": "Random Logic",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-rank-interactive",
+      "name": "Rank Interactive",
+      "entity_type": "company"
+    },
+    {
+      "slug": "payment-method-rapid-transfer",
+      "name": "Rapid Transfer",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-rarestone-gaming",
+      "name": "Rarestone Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-raw-igaming",
+      "name": "RAW iGaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-ready-play-gaming",
+      "name": "Ready Play Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-real-dealer-studios",
+      "name": "Real Dealer Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-real-time-gaming-rtg",
+      "name": "Real Time Gaming (RTG)",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-realistic-games",
+      "name": "Realistic Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-realnrg",
+      "name": "RealNRG",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-red-rake-gaming",
+      "name": "Red Rake Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-red-tiger-gaming",
+      "name": "Red Tiger Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-red7",
+      "name": "Red7",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-redkings",
+      "name": "RedKings",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-redstone",
+      "name": "Redstone",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-reel-kingdom",
+      "name": "Reel Kingdom",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-reel-life-games",
+      "name": "Reel Life Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-reel-nrg-gaming",
+      "name": "Reel NRG Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-reel-play",
+      "name": "Reel Play",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-reel-time-gaming",
+      "name": "Reel Time Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-reelfeel-gaming",
+      "name": "Reelfeel Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-reevo",
+      "name": "Reevo",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-reflex-gaming",
+      "name": "Reflex Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-regency-casino",
+      "name": "Regency Casino",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-relax-gaming",
+      "name": "Relax Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-renan-bruschi",
+      "name": "Renan Bruschi",
+      "entity_type": "other"
+    },
+    {
+      "slug": "other-resorts-world",
+      "name": "Resorts World",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-retro-gaming",
+      "name": "Retro Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-revolut",
+      "name": "Revolut",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-revolver-gaming",
+      "name": "Revolver Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-ricochet",
+      "name": "Ricochet",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-riddec-games",
+      "name": "Riddec Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-ringas",
+      "name": "RINGAS",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-rising-entertainment",
+      "name": "Rising Entertainment",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-rival-gaming",
+      "name": "Rival Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-rngplay",
+      "name": "RNGPlay",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-robinhood",
+      "name": "Robinhood",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-rocksalt-interactive",
+      "name": "Rocksalt Interactive",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-rogue-gaming-studio",
+      "name": "Rogue Gaming Studio",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-rose-slots",
+      "name": "Rose Slots",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-round-circle",
+      "name": "Round Circle",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-roxor-gaming",
+      "name": "Roxor Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-royal-vegas-casino",
+      "name": "Royal Vegas Casino",
+      "entity_type": "other"
+    },
+    {
+      "slug": "other-rozvadov",
+      "name": "Rozvadov",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-rtg-slots",
+      "name": "RTG Slots",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-ruby-play",
+      "name": "Ruby Play",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-s-gaming",
+      "name": "S Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-s-pankki",
+      "name": "S-Pankki",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-sa-gaming",
+      "name": "SA Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-saastopankki",
+      "name": "Säästöpankki",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-safety-pay",
+      "name": "Safety Pay",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-salsa-technology",
+      "name": "Salsa Technology",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-samsung-pay",
+      "name": "Samsung Pay",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "other-sands-china",
+      "name": "Sands China",
+      "entity_type": "other"
+    },
+    {
+      "slug": "payment-method-santander",
+      "name": "Santander",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-sapphire-gaming",
+      "name": "Sapphire Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-saracen-casino",
+      "name": "Saracen Casino",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-saucify",
+      "name": "Saucify",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-scientific-games-sg",
+      "name": "Scientific Games (SG)",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-screen-shield",
+      "name": "Screen Shield",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-section-8",
+      "name": "Section 8",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-sepa",
+      "name": "SEPA",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "other-sergio-aido",
+      "name": "Sergio Aido",
+      "entity_type": "other"
+    },
+    {
+      "slug": "regulator-servico-de-regulacao-e-inspecao-de-jogos-srij",
+      "name": "Serviço de Regulação e Inspeção de Jogos (SRIJ)",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "provider-seven-deuce-gaming",
+      "name": "Seven Deuce Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-shacks-evolution-studios",
+      "name": "Shacks Evolution Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-shady-lady",
+      "name": "Shady Lady",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-shiba-inu",
+      "name": "Shiba Inu",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-shuffle-master",
+      "name": "Shuffle Master",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-side-city",
+      "name": "Side City",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-sigma-gaming",
+      "name": "Sigma Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-silverback-gaming",
+      "name": "Silverback Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-simple-play",
+      "name": "Simple Play",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-siru-mobile",
+      "name": "Siru Mobile",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "company-skill-on-net-ltd",
+      "name": "Skill On Net Ltd",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-skillonnet",
+      "name": "SkillOnNet",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-skillzzgaming",
+      "name": "SkillzzGaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-skrill",
+      "name": "Skrill",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-skycontrol",
+      "name": "SkyControl",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-skyrocket-entertainment",
+      "name": "Skyrocket Entertainment",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-skywind-group",
+      "name": "Skywind Group",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-slammer-studios",
+      "name": "Slammer Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-slingo",
+      "name": "Slingo",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-slingo-originals",
+      "name": "Slingo Originals",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-slingshot-studios",
+      "name": "Slingshot Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-slot-factory",
+      "name": "Slot Factory",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-slotmatrix",
+      "name": "SlotMatrix",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-slotmill",
+      "name": "Slotmill",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-slotmotion",
+      "name": "SlotMotion",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-slotopia",
+      "name": "Slotopia",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-slots-animal",
+      "name": "Slots Animal",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "brand-slotsmagic",
+      "name": "SlotsMagic",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-slotvision",
+      "name": "SlotVision",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-smart-tables",
+      "name": "smart tables",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-smartbet",
+      "name": "SmartBet",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-smartsoft-gaming",
+      "name": "Smartsoft Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-sneaky-slots",
+      "name": "Sneaky Slots",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-snowborn-games",
+      "name": "Snowborn Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-sofort",
+      "name": "Sofort",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-softgate",
+      "name": "SoftGate",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-software-error",
+      "name": "software error",
+      "entity_type": "other"
+    },
+    {
+      "slug": "payment-method-solana",
+      "name": "Solana",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "company-solaya-group-ltd",
+      "name": "Solaya Group LTD",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-solidicon",
+      "name": "Solidicon",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-south-korea",
+      "name": "South Korea",
+      "entity_type": "other"
+    },
+    {
+      "slug": "brand-space-wins",
+      "name": "Space Wins",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-spadegaming",
+      "name": "Spadegaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-spark-gaming",
+      "name": "Spark Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-spearhead-studios",
+      "name": "Spearhead Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-speedy-tomatoes",
+      "name": "Speedy Tomatoes",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "regulator-spelinspektionen",
+      "name": "Spelinspektionen",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "provider-spieldev",
+      "name": "Spieldev",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-spigo",
+      "name": "Spigo",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-spike-games",
+      "name": "Spike Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-spin-fury-gaming",
+      "name": "Spin Fury Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-spin-games",
+      "name": "Spin Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-spin-rider",
+      "name": "Spin Rider",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-spinberry",
+      "name": "Spinberry",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-spingenie",
+      "name": "SpinGenie",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "brand-spinland",
+      "name": "Spinland",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-spinmatic",
+      "name": "Spinmatic",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-spinocchio",
+      "name": "Spinocchio",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-spinomenal",
+      "name": "Spinomenal",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-spinon",
+      "name": "SpinOn",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-spinoro",
+      "name": "Spinoro",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-spinplay-games",
+      "name": "SpinPlay Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-spinthon",
+      "name": "Spinthon",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-spinzwin",
+      "name": "Spinzwin",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-split-the-pot",
+      "name": "Split the Pot",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-sportsbooks",
+      "name": "sportsbooks",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-spribe",
+      "name": "Spribe",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-stake",
+      "name": "Stake",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-stakelogic",
+      "name": "StakeLogic",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "regulator-state-revenue-service-of-latvia-vid",
+      "name": "State Revenue Service of Latvia (VID)",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "payment-method-stellar-lumens",
+      "name": "Stellar Lumens",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-stg-slots",
+      "name": "STG Slots",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-sthlm-gaming",
+      "name": "Sthlm Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-sticpay",
+      "name": "Sticpay",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-storm-gaming",
+      "name": "Storm Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-stormcraft-studios",
+      "name": "Stormcraft Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-sunday-million",
+      "name": "Sunday Million",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-sunfox-games",
+      "name": "SUNFOX Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-super-spade-club",
+      "name": "Super Spade Club",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-superlottotv",
+      "name": "SuperlottoTV",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-sv388",
+      "name": "SV388",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-swanky-bingo",
+      "name": "Swanky Bingo",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "regulator-sweden-gaming-authority",
+      "name": "Sweden Gaming Authority",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "brand-swift-casino",
+      "name": "Swift Casino",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-swintt",
+      "name": "Swintt",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-swish",
+      "name": "Swish",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-switch-studios",
+      "name": "Switch Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-synot",
+      "name": "SYNOT",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-tab",
+      "name": "TAB",
+      "entity_type": "other"
+    },
+    {
+      "slug": "other-tabcorp",
+      "name": "Tabcorp",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-tada-gaming",
+      "name": "TaDa Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-tek-fox-ltd",
+      "name": "Tek Fox LTD",
+      "entity_type": "company"
+    },
+    {
+      "slug": "payment-method-teleingreso",
+      "name": "Teleingreso",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "brand-temple-nile",
+      "name": "Temple Nile",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-tequity",
+      "name": "Tequity",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-tesco",
+      "name": "Tesco",
+      "entity_type": "other"
+    },
+    {
+      "slug": "company-test-owner",
+      "name": "Test Owner",
+      "entity_type": "company"
+    },
+    {
+      "slug": "company-test-owner-2",
+      "name": "Test Owner 2",
+      "entity_type": "company"
+    },
+    {
+      "slug": "payment-method-tether",
+      "name": "Tether",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "company-tex-fox-ltd",
+      "name": "Tex Fox LTD",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-the-better-platform",
+      "name": "The Better Platform",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-the-games-company",
+      "name": "The Games Company",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-the-hood",
+      "name": "The Hood",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "regulator-the-irish-revenue-commissioner",
+      "name": "The Irish Revenue Commissioner",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "provider-the-rogue-games",
+      "name": "The Rogue Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-the-star-sydney",
+      "name": "The Star Sydney",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-the-stars-group",
+      "name": "The Stars Group",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-thunderkick",
+      "name": "Thunderkick",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-thunderspin",
+      "name": "Thunderspin",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-tiptop",
+      "name": "TipTop",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "regulator-tobique-gaming-commission",
+      "name": "Tobique Gaming Commission",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "payment-method-todito-cash",
+      "name": "Todito Cash",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-tokacity",
+      "name": "TokaCity",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-tom-horn-gaming",
+      "name": "Tom Horn Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-toncoin",
+      "name": "Toncoin",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-top-gaming",
+      "name": "TOP Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-top-trend-gaming",
+      "name": "Top Trend Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-tornado-games",
+      "name": "Tornado Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-toucan-royale",
+      "name": "Toucan Royale",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-touchstone-games",
+      "name": "Touchstone Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-transferencia-bancaria",
+      "name": "Transferencia Bancaria",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-trigger-button-studios",
+      "name": "Trigger Button Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-triple-bet-limited",
+      "name": "Triple Bet Limited",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-triple-cherry",
+      "name": "Triple Cherry",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-triple-edge-studios",
+      "name": "Triple Edge Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-triple-profits-games",
+      "name": "Triple Profits Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-tron",
+      "name": "Tron",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-truelab-games",
+      "name": "TrueLab Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-trumpcoin",
+      "name": "Trumpcoin",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-trustly",
+      "name": "Trustly",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-trusty-gaming",
+      "name": "Trusty Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-tuko-productions",
+      "name": "Tuko Productions",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-turbo-games",
+      "name": "Turbo Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-turbonino",
+      "name": "Turbonino",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-tvbet",
+      "name": "TVBet",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-twocent-technology-limited",
+      "name": "Twocent Technology Limited",
+      "entity_type": "company"
+    },
+    {
+      "slug": "company-uab-amber-gaming",
+      "name": "UAB Amber Gaming",
+      "entity_type": "company"
+    },
+    {
+      "slug": "brand-uk-bingo-net",
+      "name": "UK-Bingo.net",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "brand-umbingo",
+      "name": "Umbingo",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "other-underdog",
+      "name": "Underdog",
+      "entity_type": "other"
+    },
+    {
+      "slug": "brand-unibet",
+      "name": "Unibet",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "regulator-united-kingdom-gambling-commission",
+      "name": "United Kingdom Gambling Commission",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "provider-upgaming",
+      "name": "upgaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-upi",
+      "name": "UPI",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-urgent-games",
+      "name": "Urgent Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-usdc",
+      "name": "USDC",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-usdt",
+      "name": "USDT",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "brand-vampire-bingo",
+      "name": "Vampire Bingo",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "payment-method-vega-wallet",
+      "name": "Vega Wallet",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "other-vegas-matt",
+      "name": "Vegas Matt",
+      "entity_type": "other"
+    },
+    {
+      "slug": "brand-vegas-paradise",
+      "name": "Vegas Paradise",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "brand-vegas-wins",
+      "name": "Vegas Wins",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "brand-vegazone",
+      "name": "VegaZone",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-vela-gaming",
+      "name": "Vela Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-venus-point",
+      "name": "Venus Point",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-verkkopankki",
+      "name": "Verkkopankki",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-vermantia",
+      "name": "Vermantia",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-vf2011-limited",
+      "name": "VF2011 Limited",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-viaden-gaming",
+      "name": "Viaden Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-vibra-gaming",
+      "name": "Vibra Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-vip-program",
+      "name": "VIP program",
+      "entity_type": "other"
+    },
+    {
+      "slug": "brand-vip-spins",
+      "name": "VIP Spins",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "company-viral-interactive-limited",
+      "name": "Viral Interactive Limited",
+      "entity_type": "company"
+    },
+    {
+      "slug": "brand-virgin-games",
+      "name": "Virgin Games",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "company-virtual-global-digital-services-ltd",
+      "name": "Virtual Global Digital Services LTD",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-virtual-tech",
+      "name": "Virtual Tech",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-visa",
+      "name": "Visa",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-visa-electron",
+      "name": "Visa Electron",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-visionary-igaming",
+      "name": "Visionary iGaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-vivo-gaming",
+      "name": "Vivo Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-volt",
+      "name": "Volt",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-volt-entertainment",
+      "name": "Volt Entertainment",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-voltent",
+      "name": "VoltEnt",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-wager-gaming",
+      "name": "Wager Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-wagermill",
+      "name": "WagerMill",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-wali-games",
+      "name": "Wali Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-walletdoc",
+      "name": "Walletdoc",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-warner-brothers",
+      "name": "Warner Brothers",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-water-tree-limited",
+      "name": "Water Tree Limited",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-wazdan",
+      "name": "Wazdan",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-we-are-casino",
+      "name": "We Are Casino",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-webmoney",
+      "name": "Webmoney",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "regulator-western-cape-gambling-and-racing-board",
+      "name": "Western Cape Gambling and Racing Board",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "payment-method-western-union",
+      "name": "Western Union",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "company-whg-international-limited",
+      "name": "WHG (International) Limited",
+      "entity_type": "company"
+    },
+    {
+      "slug": "company-white-hat-gaming-limited",
+      "name": "White Hat Gaming Limited",
+      "entity_type": "company"
+    },
+    {
+      "slug": "other-white-house",
+      "name": "White House",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-wicked-games",
+      "name": "Wicked Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-wild-boars-gaming-wbg",
+      "name": "Wild Boars Gaming (WBG)",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-wild-streak-gaming",
+      "name": "Wild Streak Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-william-hill",
+      "name": "William Hill",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-william-hill-live",
+      "name": "William Hill Live",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-william-hill-plus",
+      "name": "William Hill PLUS",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-william-hill-voucher",
+      "name": "William Hill Voucher",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-williams-interactive-wms",
+      "name": "Williams Interactive (WMS)",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-win-fast",
+      "name": "Win Fast",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-win-spirit",
+      "name": "Win Spirit",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-win-studios",
+      "name": "Win Studios",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-win-systems",
+      "name": "Win Systems",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-winfinity",
+      "name": "Winfinity",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-wingo",
+      "name": "Wingo",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-winspinity",
+      "name": "Winspinity",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "company-winzon-group-limited",
+      "name": "Winzon Group Limited",
+      "entity_type": "company"
+    },
+    {
+      "slug": "payment-method-wise",
+      "name": "Wise",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-wishbone",
+      "name": "Wishbone",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-wizard-games",
+      "name": "Wizard Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-wondr-nation",
+      "name": "WONDR NATION",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-woohoo",
+      "name": "Woohoo",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-workers",
+      "name": "Workers",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-world-match",
+      "name": "World Match",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "brand-wpt-global",
+      "name": "WPT Global",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "event-wsop-online-main-event",
+      "name": "WSOP Online Main Event",
+      "entity_type": "event"
+    },
+    {
+      "slug": "provider-x-card",
+      "name": "X Card",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-x-play",
+      "name": "X Play",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-x-pro-gaming-xpg",
+      "name": "X Pro Gaming (XPG)",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-x-room",
+      "name": "X Room",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-xin-gaming",
+      "name": "XIN Gaming",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-xplosive-slots",
+      "name": "Xplosive Slots",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-xrp",
+      "name": "XRP",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "brand-yeti-casino",
+      "name": "Yeti Casino",
+      "entity_type": "brand"
+    },
+    {
+      "slug": "provider-yggdrasil",
+      "name": "YGGDRASIL",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "other-yolo-com",
+      "name": "Yolo.com",
+      "entity_type": "other"
+    },
+    {
+      "slug": "provider-yoloplay",
+      "name": "YoloPlay",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-yolted",
+      "name": "Yolted",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-yoomoney",
+      "name": "YooMoney",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "payment-method-zapper",
+      "name": "Zapper",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "company-zecure-gaming-limited",
+      "name": "Zecure Gaming Limited",
+      "entity_type": "company"
+    },
+    {
+      "slug": "provider-zephyr-slots",
+      "name": "Zephyr Slots",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-zeus-play",
+      "name": "Zeus Play",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-zillion-games",
+      "name": "Zillion Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-zimpler",
+      "name": "Zimpler",
+      "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-zitro",
+      "name": "Zitro",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-zonelock",
+      "name": "Zonelock",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-zotapay",
+      "name": "ZotaPay",
+      "entity_type": "payment-method"
+    }
+  ]
+}

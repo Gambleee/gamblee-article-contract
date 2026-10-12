@@ -1,0 +1,300 @@
+{
+  "contract": "gamblee-article-import",
+  "schema_version": "1.1",
+  "core_version": "1.83.02",
+  "rules": {
+    "one_package_creates_one_draft_article": true,
+    "preferred_handoff": "zip_with_article_json_and_optional_local_featured_image",
+    "raw_json_is_supported": true,
+    "canonical_terms_must_already_exist": true,
+    "article_tags_may_be_created": true,
+    "unknown_fields_are_rejected": true,
+    "unknown_canonical_terms_are_rejected": true,
+    "status_is_always_draft": true,
+    "do_not_include_h1_in_content_html": true,
+    "canonical_references_use_slugs": true,
+    "featured_image_package_is_preferred": true,
+    "featured_image_remote_https_is_supported": true,
+    "featured_image_alt_is_required_unless_type_none": true,
+    "featured_image_failures_do_not_delete_valid_article_draft": true
+  },
+  "package": {
+    "root_json_filename": "article.json",
+    "maximum_files": 2,
+    "allowed_image_extensions": [
+      "jpg",
+      "jpeg",
+      "png",
+      "webp"
+    ],
+    "notes": [
+      "Keep article.json and the optional featured image at the ZIP root.",
+      "featured_image.filename must exactly match the packaged image filename.",
+      "Use featured_image.type=remote for an HTTPS source image that WordPress should sideload.",
+      "Use featured_image.type=none only when no featured image is intentionally supplied."
+    ]
+  },
+  "vocabulary_access": {
+    "mode": "paged_searchable_rest",
+    "index_route": "/wp-json/gamblee-core/v1/articles/vocabulary",
+    "dimension_route_template": "/wp-json/gamblee-core/v1/articles/vocabulary/{dimension}",
+    "dimensions": [
+      "verticals",
+      "geographies",
+      "topics",
+      "subjects",
+      "entities",
+      "channels",
+      "editorial_types"
+    ],
+    "query_parameters": {
+      "search": "optional case-insensitive term-name search; maximum 80 UTF-8 bytes",
+      "page": "1-based page number; default 1; maximum 250",
+      "per_page": "items per page; default 100; maximum 200"
+    },
+    "automation_rule": "Fetch only the dimensions needed for the Article. Search large vocabularies such as entities/subjects by story concept rather than downloading the full set."
+  },
+  "schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "urn:gamblee:article-import:v1.1",
+    "title": "Gamblee Article Import v1.1",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "schema_version",
+      "title",
+      "slug",
+      "excerpt",
+      "content_html",
+      "seo",
+      "classification",
+      "context",
+      "article_tags",
+      "featured_image"
+    ],
+    "properties": {
+      "schema_version": {
+        "const": "1.1"
+      },
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "slug": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+        "maxLength": 200
+      },
+      "excerpt": {
+        "type": "string",
+        "maxLength": 1000
+      },
+      "content_html": {
+        "type": "string",
+        "minLength": 1
+      },
+      "seo": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "title",
+          "meta_description"
+        ],
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120
+          },
+          "meta_description": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 320
+          }
+        }
+      },
+      "classification": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "verticals",
+          "primary_vertical",
+          "geographies",
+          "primary_geography",
+          "topics",
+          "primary_topic",
+          "channel",
+          "editorial_type"
+        ],
+        "properties": {
+          "verticals": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          },
+          "primary_vertical": {
+            "type": "string",
+            "minLength": 1
+          },
+          "geographies": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          },
+          "primary_geography": {
+            "type": "string",
+            "minLength": 1
+          },
+          "topics": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          },
+          "primary_topic": {
+            "type": "string",
+            "minLength": 1
+          },
+          "channel": {
+            "type": "string",
+            "minLength": 1
+          },
+          "editorial_type": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "context": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "subjects",
+          "entities"
+        ],
+        "properties": {
+          "subjects": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          },
+          "entities": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          }
+        }
+      },
+      "article_tags": {
+        "type": "array",
+        "maxItems": 30,
+        "uniqueItems": true,
+        "items": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        }
+      },
+      "featured_image": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "type"
+        ],
+        "properties": {
+          "type": {
+            "enum": [
+              "package",
+              "remote",
+              "none"
+            ]
+          },
+          "filename": {
+            "type": "string",
+            "maxLength": 180
+          },
+          "url": {
+            "type": "string",
+            "maxLength": 2048
+          },
+          "source_page": {
+            "type": "string",
+            "maxLength": 2048
+          },
+          "alt": {
+            "type": "string",
+            "maxLength": 300
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 200
+          },
+          "credit": {
+            "type": "string",
+            "maxLength": 300
+          }
+        }
+      }
+    }
+  },
+  "example": {
+    "schema_version": "1.1",
+    "title": "Age of Empires Esports in 2026: Tournaments, Formats and Competitive Scene",
+    "slug": "age-of-empires-esports-2026",
+    "excerpt": "Age of Empires II and Age of Empires IV remain active esports titles in 2026, with organized tournaments across both competitive scenes.",
+    "content_html": "<p>Age of Empires remains an active competitive esport in 2026.</p><h2>Competitive scene</h2><p>Age of Empires II: Definitive Edition and Age of Empires IV continue to support organized tournaments.</p>",
+    "seo": {
+      "title": "Age of Empires Esports in 2026 • Tournaments & Events | Gamblee",
+      "meta_description": "Age of Empires II and Age of Empires IV remain active esports titles in 2026, with organized tournaments across both competitive scenes."
+    },
+    "classification": {
+      "verticals": [
+        "betting"
+      ],
+      "primary_vertical": "betting",
+      "geographies": [
+        "global"
+      ],
+      "primary_geography": "global",
+      "topics": [
+        "industry-structure"
+      ],
+      "primary_topic": "industry-structure",
+      "channel": "online",
+      "editorial_type": "news"
+    },
+    "context": {
+      "subjects": [
+        "age-of-empires"
+      ],
+      "entities": []
+    },
+    "article_tags": [
+      "Age of Empires II",
+      "Age of Empires IV"
+    ],
+    "featured_image": {
+      "type": "package",
+      "filename": "age-of-empires-esports-2026.jpg",
+      "alt": "Age of Empires esports competition",
+      "title": "Age of Empires esports competition",
+      "credit": "Source or photographer credit",
+      "source_page": "https://www.ageofempires.com/"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "contract": "gamblee-article-vocabulary-snapshot",
+  "schema_version": "1.1",
+  "dimension": "editorial_types",
+  "total": 6,
+  "source": "https://www.staging5.gamblee.com/wp-json/gamblee-core/v1/articles/vocabulary/editorial_types",
+  "items": [
+    {
+      "slug": "analysis",
+      "name": "Analysis"
+    },
+    {
+      "slug": "guides",
+      "name": "Guides"
+    },
+    {
+      "slug": "interview",
+      "name": "Interview"
+    },
+    {
+      "slug": "investigation",
+      "name": "Investigation"
+    },
+    {
+      "slug": "news",
+      "name": "News"
+    },
+    {
+      "slug": "opinion",
+      "name": "Opinion"
+    }
+  ]
+}

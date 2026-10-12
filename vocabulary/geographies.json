@@ -1,0 +1,1540 @@
+{
+  "contract": "gamblee-article-vocabulary-snapshot",
+  "schema_version": "1.1",
+  "dimension": "geographies",
+  "total": 310,
+  "source": "https://www.staging5.gamblee.com/wp-json/gamblee-core/v1/articles/vocabulary/geographies",
+  "items": [
+    {
+      "slug": "af",
+      "name": "Afghanistan",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "africa",
+      "name": "Africa"
+    },
+    {
+      "slug": "us-al",
+      "name": "Alabama",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "us-ak",
+      "name": "Alaska",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "al",
+      "name": "Albania",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "ca-ab",
+      "name": "Alberta",
+      "parent_slug": "ca"
+    },
+    {
+      "slug": "dz",
+      "name": "Algeria",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "as",
+      "name": "American Samoa",
+      "parent_slug": "oceania"
+    },
+    {
+      "slug": "ad",
+      "name": "Andorra"
+    },
+    {
+      "slug": "ao",
+      "name": "Angola",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "ai",
+      "name": "Anguilla",
+      "parent_slug": "north-america"
+    },
+    {
+      "slug": "aq",
+      "name": "Antarctica"
+    },
+    {
+      "slug": "ag",
+      "name": "Antigua and Barbuda",
+      "parent_slug": "north-america"
+    },
+    {
+      "slug": "ar",
+      "name": "Argentina",
+      "parent_slug": "south-america"
+    },
+    {
+      "slug": "us-az",
+      "name": "Arizona",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "us-ar",
+      "name": "Arkansas",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "am",
+      "name": "Armenia",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "aw",
+      "name": "Aruba",
+      "parent_slug": "north-america"
+    },
+    {
+      "slug": "asia",
+      "name": "Asia"
+    },
+    {
+      "slug": "au",
+      "name": "Australia",
+      "parent_slug": "oceania"
+    },
+    {
+      "slug": "at",
+      "name": "Austria",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "az",
+      "name": "Azerbaijan",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "bs",
+      "name": "Bahamas",
+      "parent_slug": "north-america"
+    },
+    {
+      "slug": "bh",
+      "name": "Bahrain",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "bd",
+      "name": "Bangladesh",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "bb",
+      "name": "Barbados",
+      "parent_slug": "north-america"
+    },
+    {
+      "slug": "by",
+      "name": "Belarus",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "be",
+      "name": "Belgium",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "bz",
+      "name": "Belize",
+      "parent_slug": "north-america"
+    },
+    {
+      "slug": "bj",
+      "name": "Benin",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "bm",
+      "name": "Bermuda",
+      "parent_slug": "north-america"
+    },
+    {
+      "slug": "bt",
+      "name": "Bhutan",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "bo",
+      "name": "Bolivia",
+      "parent_slug": "south-america"
+    },
+    {
+      "slug": "ba",
+      "name": "Bosnia-Herzegovina",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "bw",
+      "name": "Botswana",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "bv",
+      "name": "Bouvet Island"
+    },
+    {
+      "slug": "br",
+      "name": "Brazil",
+      "parent_slug": "south-america"
+    },
+    {
+      "slug": "ca-bc",
+      "name": "British Columbia",
+      "parent_slug": "ca"
+    },
+    {
+      "slug": "io",
+      "name": "British Indian Ocean Territory",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "bn",
+      "name": "Brunei Darussalam",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "bg",
+      "name": "Bulgaria",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "bf",
+      "name": "Burkina Faso",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "bi",
+      "name": "Burundi",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "us-ca",
+      "name": "California",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "kh",
+      "name": "Cambodia",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "cm",
+      "name": "Cameroon",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "ca",
+      "name": "Canada",
+      "parent_slug": "north-america"
+    },
+    {
+      "slug": "cv",
+      "name": "Cape Verde",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "ky",
+      "name": "Cayman Islands",
+      "parent_slug": "north-america"
+    },
+    {
+      "slug": "cf",
+      "name": "Central African Republic",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "td",
+      "name": "Chad",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "cl",
+      "name": "Chile",
+      "parent_slug": "south-america"
+    },
+    {
+      "slug": "cn",
+      "name": "China",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "cx",
+      "name": "Christmas Island",
+      "parent_slug": "oceania"
+    },
+    {
+      "slug": "cc",
+      "name": "Cocos (Keeling) Islands",
+      "parent_slug": "oceania"
+    },
+    {
+      "slug": "co",
+      "name": "Colombia",
+      "parent_slug": "south-america"
+    },
+    {
+      "slug": "us-co",
+      "name": "Colorado",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "km",
+      "name": "Comoros",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "cg",
+      "name": "Congo",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "us-ct",
+      "name": "Connecticut",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "ck",
+      "name": "Cook Islands",
+      "parent_slug": "oceania"
+    },
+    {
+      "slug": "cr",
+      "name": "Costa Rica",
+      "parent_slug": "north-america"
+    },
+    {
+      "slug": "hr",
+      "name": "Croatia",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "cu",
+      "name": "Cuba",
+      "parent_slug": "north-america"
+    },
+    {
+      "slug": "cy",
+      "name": "Cyprus",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "cz",
+      "name": "Czech Republic",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "us-de",
+      "name": "Delaware",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "cd",
+      "name": "Democratic Republic of Congo",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "dk",
+      "name": "Denmark",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "us-dc",
+      "name": "District of Columbia",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "dj",
+      "name": "Djibouti",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "dm",
+      "name": "Dominica",
+      "parent_slug": "north-america"
+    },
+    {
+      "slug": "do",
+      "name": "Dominican Republic",
+      "parent_slug": "north-america"
+    },
+    {
+      "slug": "ec",
+      "name": "Ecuador",
+      "parent_slug": "south-america"
+    },
+    {
+      "slug": "eg",
+      "name": "Egypt",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "sv",
+      "name": "El Salvador",
+      "parent_slug": "north-america"
+    },
+    {
+      "slug": "gq",
+      "name": "Equatorial Guinea",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "er",
+      "name": "Eritrea",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "ee",
+      "name": "Estonia",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "et",
+      "name": "Ethiopia",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "europe",
+      "name": "Europe"
+    },
+    {
+      "slug": "fk",
+      "name": "Falkland Islands",
+      "parent_slug": "south-america"
+    },
+    {
+      "slug": "fo",
+      "name": "Faroe Islands",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "fj",
+      "name": "Fiji",
+      "parent_slug": "oceania"
+    },
+    {
+      "slug": "fi",
+      "name": "Finland",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "us-fl",
+      "name": "Florida",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "fr",
+      "name": "France",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "tf",
+      "name": "French Southern Territories"
+    },
+    {
+      "slug": "ga",
+      "name": "Gabon",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "gm",
+      "name": "Gambia",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "ge",
+      "name": "Georgia",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "us-ga",
+      "name": "Georgia",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "de",
+      "name": "Germany",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "gh",
+      "name": "Ghana",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "gi",
+      "name": "Gibraltar",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "global",
+      "name": "Global"
+    },
+    {
+      "slug": "gr",
+      "name": "Greece",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "gl",
+      "name": "Greenland",
+      "parent_slug": "north-america"
+    },
+    {
+      "slug": "gd",
+      "name": "Grenada",
+      "parent_slug": "north-america"
+    },
+    {
+      "slug": "gp",
+      "name": "Guadeloupe (French)",
+      "parent_slug": "north-america"
+    },
+    {
+      "slug": "gu",
+      "name": "Guam (USA)",
+      "parent_slug": "oceania"
+    },
+    {
+      "slug": "gt",
+      "name": "Guatemala",
+      "parent_slug": "north-america"
+    },
+    {
+      "slug": "gg",
+      "name": "Guernsey",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "gn",
+      "name": "Guinea",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "gw",
+      "name": "Guinea Bissau",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "gy",
+      "name": "Guyana",
+      "parent_slug": "south-america"
+    },
+    {
+      "slug": "ht",
+      "name": "Haiti",
+      "parent_slug": "north-america"
+    },
+    {
+      "slug": "us-hi",
+      "name": "Hawaii",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "hm",
+      "name": "Heard Island and McDonald Islands"
+    },
+    {
+      "slug": "hn",
+      "name": "Honduras",
+      "parent_slug": "north-america"
+    },
+    {
+      "slug": "hk",
+      "name": "Hong Kong",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "hu",
+      "name": "Hungary",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "is",
+      "name": "Iceland",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "us-id",
+      "name": "Idaho",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "us-il",
+      "name": "Illinois",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "in",
+      "name": "India",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "us-in",
+      "name": "Indiana",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "id",
+      "name": "Indonesia",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "us-ia",
+      "name": "Iowa",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "ir",
+      "name": "Iran",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "iq",
+      "name": "Iraq",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "ie",
+      "name": "Ireland",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "im",
+      "name": "Isle of Man",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "il",
+      "name": "Israel",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "it",
+      "name": "Italy",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "ci",
+      "name": "Ivory Coast",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "jm",
+      "name": "Jamaica",
+      "parent_slug": "north-america"
+    },
+    {
+      "slug": "jp",
+      "name": "Japan",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "je",
+      "name": "Jersey",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "jo",
+      "name": "Jordan",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "us-ks",
+      "name": "Kansas",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "kz",
+      "name": "Kazakhstan",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "us-ky",
+      "name": "Kentucky",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "ke",
+      "name": "Kenya",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "ki",
+      "name": "Kiribati",
+      "parent_slug": "oceania"
+    },
+    {
+      "slug": "kp",
+      "name": "Korea, North",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "kr",
+      "name": "Korea, South",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "kw",
+      "name": "Kuwait",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "kg",
+      "name": "Kyrgyzstan",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "la",
+      "name": "Laos",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "lv",
+      "name": "Latvia",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "lb",
+      "name": "Lebanon",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "ls",
+      "name": "Lesotho",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "lr",
+      "name": "Liberia",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "ly",
+      "name": "Libya",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "li",
+      "name": "Liechtenstein",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "lt",
+      "name": "Lithuania",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "us-la",
+      "name": "Louisiana",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "lu",
+      "name": "Luxembourg",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "mo",
+      "name": "Macau",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "mk",
+      "name": "Macedonia",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "mg",
+      "name": "Madagascar",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "us-me",
+      "name": "Maine",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "mw",
+      "name": "Malawi",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "my",
+      "name": "Malaysia",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "mv",
+      "name": "Maldives",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "ml",
+      "name": "Mali",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "mt",
+      "name": "Malta",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "ca-mb",
+      "name": "Manitoba",
+      "parent_slug": "ca"
+    },
+    {
+      "slug": "mh",
+      "name": "Marshall Islands",
+      "parent_slug": "oceania"
+    },
+    {
+      "slug": "mq",
+      "name": "Martinique (French)",
+      "parent_slug": "north-america"
+    },
+    {
+      "slug": "us-md",
+      "name": "Maryland",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "us-ma",
+      "name": "Massachusetts",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "mr",
+      "name": "Mauritania",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "mu",
+      "name": "Mauritius",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "yt",
+      "name": "Mayotte",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "mx",
+      "name": "Mexico",
+      "parent_slug": "north-america"
+    },
+    {
+      "slug": "us-mi",
+      "name": "Michigan",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "fm",
+      "name": "Micronesia",
+      "parent_slug": "oceania"
+    },
+    {
+      "slug": "us-mn",
+      "name": "Minnesota",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "us-ms",
+      "name": "Mississippi",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "us-mo",
+      "name": "Missouri",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "md",
+      "name": "Moldova",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "mc",
+      "name": "Monaco",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "mn",
+      "name": "Mongolia",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "us-mt",
+      "name": "Montana",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "ms",
+      "name": "Montserrat",
+      "parent_slug": "north-america"
+    },
+    {
+      "slug": "ma",
+      "name": "Morocco",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "mz",
+      "name": "Mozambique",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "mm",
+      "name": "Myanmar"
+    },
+    {
+      "slug": "na",
+      "name": "Namibia",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "nr",
+      "name": "Nauru",
+      "parent_slug": "oceania"
+    },
+    {
+      "slug": "us-ne",
+      "name": "Nebraska",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "np",
+      "name": "Nepal",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "nl",
+      "name": "Netherlands",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "an",
+      "name": "Netherlands Antilles"
+    },
+    {
+      "slug": "us-nv",
+      "name": "Nevada",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "ca-nb",
+      "name": "New Brunswick",
+      "parent_slug": "ca"
+    },
+    {
+      "slug": "nc",
+      "name": "New Caledonia (French)",
+      "parent_slug": "oceania"
+    },
+    {
+      "slug": "us-nh",
+      "name": "New Hampshire",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "us-nj",
+      "name": "New Jersey",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "us-nm",
+      "name": "New Mexico",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "us-ny",
+      "name": "New York",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "nz",
+      "name": "New Zealand",
+      "parent_slug": "oceania"
+    },
+    {
+      "slug": "ca-nl",
+      "name": "Newfoundland and Labrador",
+      "parent_slug": "ca"
+    },
+    {
+      "slug": "ni",
+      "name": "Nicaragua",
+      "parent_slug": "north-america"
+    },
+    {
+      "slug": "ne",
+      "name": "Niger",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "ng",
+      "name": "Nigeria",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "nu",
+      "name": "Niue",
+      "parent_slug": "oceania"
+    },
+    {
+      "slug": "nf",
+      "name": "Norfolk Island",
+      "parent_slug": "oceania"
+    },
+    {
+      "slug": "north-america",
+      "name": "North America"
+    },
+    {
+      "slug": "us-nc",
+      "name": "North Carolina",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "us-nd",
+      "name": "North Dakota",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "mp",
+      "name": "Northern Mariana Islands",
+      "parent_slug": "oceania"
+    },
+    {
+      "slug": "ca-nt",
+      "name": "Northwest Territories",
+      "parent_slug": "ca"
+    },
+    {
+      "slug": "no",
+      "name": "Norway",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "ca-ns",
+      "name": "Nova Scotia",
+      "parent_slug": "ca"
+    },
+    {
+      "slug": "ca-nu",
+      "name": "Nunavut",
+      "parent_slug": "ca"
+    },
+    {
+      "slug": "oceania",
+      "name": "Oceania"
+    },
+    {
+      "slug": "us-oh",
+      "name": "Ohio",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "us-ok",
+      "name": "Oklahoma",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "om",
+      "name": "Oman",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "ca-on",
+      "name": "Ontario",
+      "parent_slug": "ca"
+    },
+    {
+      "slug": "us-or",
+      "name": "Oregon",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "pk",
+      "name": "Pakistan",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "pw",
+      "name": "Palau",
+      "parent_slug": "oceania"
+    },
+    {
+      "slug": "pa",
+      "name": "Panama",
+      "parent_slug": "north-america"
+    },
+    {
+      "slug": "pg",
+      "name": "Papua New Guinea",
+      "parent_slug": "oceania"
+    },
+    {
+      "slug": "py",
+      "name": "Paraguay",
+      "parent_slug": "south-america"
+    },
+    {
+      "slug": "us-pa",
+      "name": "Pennsylvania",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "pe",
+      "name": "Peru",
+      "parent_slug": "south-america"
+    },
+    {
+      "slug": "ph",
+      "name": "Philippines",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "pn",
+      "name": "Pitcairn Island",
+      "parent_slug": "oceania"
+    },
+    {
+      "slug": "pl",
+      "name": "Poland",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "pf",
+      "name": "Polynesia (French)",
+      "parent_slug": "oceania"
+    },
+    {
+      "slug": "pt",
+      "name": "Portugal",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "ca-pe",
+      "name": "Prince Edward Island",
+      "parent_slug": "ca"
+    },
+    {
+      "slug": "pr",
+      "name": "Puerto Rico",
+      "parent_slug": "north-america"
+    },
+    {
+      "slug": "qa",
+      "name": "Qatar",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "ca-qc",
+      "name": "Quebec",
+      "parent_slug": "ca"
+    },
+    {
+      "slug": "re",
+      "name": "Reunion (French)",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "us-ri",
+      "name": "Rhode Island",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "ro",
+      "name": "Romania",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "ru",
+      "name": "Russia",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "rw",
+      "name": "Rwanda",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "sh",
+      "name": "Saint Helena",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "kn",
+      "name": "Saint Kitts And Nevis Anguilla",
+      "parent_slug": "north-america"
+    },
+    {
+      "slug": "lc",
+      "name": "Saint Lucia",
+      "parent_slug": "north-america"
+    },
+    {
+      "slug": "pm",
+      "name": "Saint Pierre and Miquelon",
+      "parent_slug": "north-america"
+    },
+    {
+      "slug": "vc",
+      "name": "Saint Vincent And Grenadines",
+      "parent_slug": "north-america"
+    },
+    {
+      "slug": "ws",
+      "name": "Samoa",
+      "parent_slug": "oceania"
+    },
+    {
+      "slug": "sm",
+      "name": "San Marino",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "st",
+      "name": "Sao Tome and Principe",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "ca-sk",
+      "name": "Saskatchewan",
+      "parent_slug": "ca"
+    },
+    {
+      "slug": "sa",
+      "name": "Saudi Arabia",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "sn",
+      "name": "Senegal",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "rs",
+      "name": "Serbia",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "sc",
+      "name": "Seychelles",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "sl",
+      "name": "Sierra Leone",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "sg",
+      "name": "Singapore",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "sk",
+      "name": "Slovakia",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "si",
+      "name": "Slovenia",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "sb",
+      "name": "Solomon Islands",
+      "parent_slug": "oceania"
+    },
+    {
+      "slug": "so",
+      "name": "Somalia",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "za",
+      "name": "South Africa",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "south-america",
+      "name": "South America"
+    },
+    {
+      "slug": "us-sc",
+      "name": "South Carolina",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "us-sd",
+      "name": "South Dakota",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "gs",
+      "name": "South Georgia And South Sandwich Islands",
+      "parent_slug": "south-america"
+    },
+    {
+      "slug": "es",
+      "name": "Spain",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "lk",
+      "name": "Sri Lanka",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "sd",
+      "name": "Sudan",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "sr",
+      "name": "Suriname",
+      "parent_slug": "south-america"
+    },
+    {
+      "slug": "sj",
+      "name": "Svalbard and Jan Mayen Islands",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "sz",
+      "name": "Swaziland",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "se",
+      "name": "Sweden",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "ch",
+      "name": "Switzerland",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "sy",
+      "name": "Syria",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "tw",
+      "name": "Taiwan",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "tj",
+      "name": "Tajikistan",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "tz",
+      "name": "Tanzania",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "us-tn",
+      "name": "Tennessee",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "us-tx",
+      "name": "Texas",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "th",
+      "name": "Thailand",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "tg",
+      "name": "Togo",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "tk",
+      "name": "Tokelau",
+      "parent_slug": "oceania"
+    },
+    {
+      "slug": "to",
+      "name": "Tonga",
+      "parent_slug": "oceania"
+    },
+    {
+      "slug": "tt",
+      "name": "Trinidad and Tobago",
+      "parent_slug": "north-america"
+    },
+    {
+      "slug": "tn",
+      "name": "Tunisia",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "tr",
+      "name": "Turkey",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "tm",
+      "name": "Turkmenistan",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "tc",
+      "name": "Turks and Caicos Islands"
+    },
+    {
+      "slug": "tv",
+      "name": "Tuvalu",
+      "parent_slug": "oceania"
+    },
+    {
+      "slug": "ug",
+      "name": "Uganda",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "ua",
+      "name": "Ukraine",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "ae",
+      "name": "United Arab Emirates",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "gb",
+      "name": "United Kingdom",
+      "parent_slug": "europe"
+    },
+    {
+      "slug": "us",
+      "name": "United States",
+      "parent_slug": "north-america"
+    },
+    {
+      "slug": "uy",
+      "name": "Uruguay",
+      "parent_slug": "south-america"
+    },
+    {
+      "slug": "um",
+      "name": "USA Minor Outlying Islands"
+    },
+    {
+      "slug": "us-ut",
+      "name": "Utah",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "uz",
+      "name": "Uzbekistan",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "vu",
+      "name": "Vanuatu",
+      "parent_slug": "oceania"
+    },
+    {
+      "slug": "va",
+      "name": "Vatican"
+    },
+    {
+      "slug": "ve",
+      "name": "Venezuela",
+      "parent_slug": "south-america"
+    },
+    {
+      "slug": "us-vt",
+      "name": "Vermont",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "vn",
+      "name": "Vietnam",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "vg",
+      "name": "Virgin Islands (British)"
+    },
+    {
+      "slug": "vi",
+      "name": "Virgin Islands (USA)"
+    },
+    {
+      "slug": "us-va",
+      "name": "Virginia",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "wf",
+      "name": "Wallis and Futuna Islands",
+      "parent_slug": "oceania"
+    },
+    {
+      "slug": "us-wa",
+      "name": "Washington",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "us-wv",
+      "name": "West Virginia",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "eh",
+      "name": "Western Sahara",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "us-wi",
+      "name": "Wisconsin",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "us-wy",
+      "name": "Wyoming",
+      "parent_slug": "us"
+    },
+    {
+      "slug": "ye",
+      "name": "Yemen",
+      "parent_slug": "asia"
+    },
+    {
+      "slug": "ca-yt",
+      "name": "Yukon",
+      "parent_slug": "ca"
+    },
+    {
+      "slug": "zm",
+      "name": "Zambia",
+      "parent_slug": "africa"
+    },
+    {
+      "slug": "zw",
+      "name": "Zimbabwe",
+      "parent_slug": "africa"
+    }
+  ]
+}

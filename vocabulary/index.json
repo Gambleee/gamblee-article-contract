@@ -1,0 +1,55 @@
+{
+  "contract": "gamblee-article-vocabulary-index",
+  "schema_version": "1.1",
+  "dimensions": [
+    {
+      "dimension": "verticals",
+      "taxonomy": "vertical",
+      "count": 23,
+      "hierarchical": true,
+      "searchable": true
+    },
+    {
+      "dimension": "geographies",
+      "taxonomy": "news_geo",
+      "count": 310,
+      "hierarchical": true,
+      "searchable": true
+    },
+    {
+      "dimension": "topics",
+      "taxonomy": "news_topic",
+      "count": 65,
+      "hierarchical": true,
+      "searchable": true
+    },
+    {
+      "dimension": "subjects",
+      "taxonomy": "news_subject",
+      "count": 207,
+      "hierarchical": true,
+      "searchable": true
+    },
+    {
+      "dimension": "entities",
+      "taxonomy": "news_entity",
+      "count": 1193,
+      "hierarchical": false,
+      "searchable": true
+    },
+    {
+      "dimension": "channels",
+      "taxonomy": "news_channel",
+      "count": 4,
+      "hierarchical": false,
+      "searchable": true
+    },
+    {
+      "dimension": "editorial_types",
+      "taxonomy": "content_type",
+      "count": 6,
+      "hierarchical": false,
+      "searchable": true
+    }
+  ]
+}

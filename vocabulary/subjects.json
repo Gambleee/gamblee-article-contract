@@ -1,0 +1,931 @@
+{
+  "contract": "gamblee-article-vocabulary-snapshot",
+  "schema_version": "1.1",
+  "dimension": "subjects",
+  "total": 207,
+  "source": "https://www.staging5.gamblee.com/wp-json/gamblee-core/v1/articles/vocabulary/subjects",
+  "items": [
+    {
+      "slug": "minimum-deposit-1",
+      "name": "1 Minimum Deposit"
+    },
+    {
+      "slug": "minimum-deposit-10",
+      "name": "10 Minimum Deposit"
+    },
+    {
+      "slug": "minimum-deposit-2",
+      "name": "2 Minimum Deposit"
+    },
+    {
+      "slug": "minimum-deposit-3",
+      "name": "3 Minimum Deposit"
+    },
+    {
+      "slug": "3x3-basketball",
+      "name": "3x3 Basketball",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "minimum-deposit-5",
+      "name": "5 Minimum Deposit"
+    },
+    {
+      "slug": "bonus_type-acca-bonus",
+      "name": "Acca Bonus"
+    },
+    {
+      "slug": "betting-feature-acca-boost",
+      "name": "Acca Boost"
+    },
+    {
+      "slug": "promotion_type-acca-boost",
+      "name": "Acca Boost"
+    },
+    {
+      "slug": "betting-feature-acca-hub",
+      "name": "Acca Hub"
+    },
+    {
+      "slug": "betting-feature-acca-insurance",
+      "name": "ACCA Insurance"
+    },
+    {
+      "slug": "age-of-empires",
+      "name": "Age of Empires",
+      "parent_slug": "esports"
+    },
+    {
+      "slug": "poker-feature-all-in-insurance",
+      "name": "All-In Insurance"
+    },
+    {
+      "slug": "alpine-skiing",
+      "name": "Alpine Skiing",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "american-football",
+      "name": "American Football",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "poker-feature-analytics",
+      "name": "Analytics"
+    },
+    {
+      "slug": "platform-android",
+      "name": "Android"
+    },
+    {
+      "slug": "platform-app",
+      "name": "App"
+    },
+    {
+      "slug": "athletics",
+      "name": "Athletics",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "aussie-rules",
+      "name": "Aussie Rules",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "poker-feature-bad-beat-jackpots",
+      "name": "Bad Beat Jackpots"
+    },
+    {
+      "slug": "promotion_type-bad-beat-jackpots",
+      "name": "Bad Beat Jackpots"
+    },
+    {
+      "slug": "badminton",
+      "name": "Badminton",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "bandy",
+      "name": "Bandy",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "baseball",
+      "name": "Baseball",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "basketball",
+      "name": "Basketball",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "beach-soccer",
+      "name": "Beach Soccer",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "beach-volleyball",
+      "name": "Beach Volleyball",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "betting-feature-bet-builder",
+      "name": "Bet Builder"
+    },
+    {
+      "slug": "bonus_type-bet-insurance",
+      "name": "Bet Insurance"
+    },
+    {
+      "slug": "promotion_type-bet-insurance",
+      "name": "Bet insurance"
+    },
+    {
+      "slug": "betting-feature-bet-mentor",
+      "name": "Bet Mentor"
+    },
+    {
+      "slug": "betting-feature-betting-insights",
+      "name": "Betting Insights"
+    },
+    {
+      "slug": "biathlon",
+      "name": "Biathlon",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "bonus_type-bingo-tickets",
+      "name": "Bingo Tickets"
+    },
+    {
+      "slug": "poker-feature-bomb-pots",
+      "name": "Bomb Pots"
+    },
+    {
+      "slug": "bowling",
+      "name": "Bowling",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "bowls",
+      "name": "Bowls",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "boxing",
+      "name": "Boxing",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "platform-browser",
+      "name": "Browser"
+    },
+    {
+      "slug": "betting-feature-buying-points",
+      "name": "Buying Points"
+    },
+    {
+      "slug": "call-of-duty",
+      "name": "Call of Duty",
+      "parent_slug": "esports"
+    },
+    {
+      "slug": "betting-feature-cash-out",
+      "name": "Cash Out"
+    },
+    {
+      "slug": "bonus_type-cashback",
+      "name": "Cashback"
+    },
+    {
+      "slug": "promotion_type-cashback",
+      "name": "Cashback"
+    },
+    {
+      "slug": "poker-feature-cashout",
+      "name": "Cashout"
+    },
+    {
+      "slug": "chess",
+      "name": "Chess",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "poker-feature-chip-offload",
+      "name": "Chip Offload"
+    },
+    {
+      "slug": "platform-client",
+      "name": "Client"
+    },
+    {
+      "slug": "counter-strike",
+      "name": "Counter-Strike",
+      "parent_slug": "esports"
+    },
+    {
+      "slug": "cricket",
+      "name": "Cricket",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "cross-country-skiing",
+      "name": "Cross-Country Skiing",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "crossfire",
+      "name": "CrossFire",
+      "parent_slug": "esports"
+    },
+    {
+      "slug": "curling",
+      "name": "Curling",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "betting-feature-custom-bets",
+      "name": "Custom Bets"
+    },
+    {
+      "slug": "cycling",
+      "name": "Cycling",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "cyclo-cross",
+      "name": "Cyclo-Cross",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "promotion_type-daily-picks",
+      "name": "Daily Picks"
+    },
+    {
+      "slug": "promotion_type-daily-wheel",
+      "name": "Daily Wheel"
+    },
+    {
+      "slug": "darts",
+      "name": "Darts",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "poker-feature-deal-making",
+      "name": "Deal Making"
+    },
+    {
+      "slug": "dota-2",
+      "name": "Dota 2",
+      "parent_slug": "esports"
+    },
+    {
+      "slug": "betting-feature-early-payout",
+      "name": "Early Payout"
+    },
+    {
+      "slug": "promotion_type-early-payout",
+      "name": "Early payout"
+    },
+    {
+      "slug": "ebasketball",
+      "name": "eBasketball",
+      "parent_slug": "virtual-sports"
+    },
+    {
+      "slug": "ecricket",
+      "name": "eCricket",
+      "parent_slug": "virtual-sports"
+    },
+    {
+      "slug": "entertainment",
+      "name": "Entertainment"
+    },
+    {
+      "slug": "esoccer",
+      "name": "eSoccer",
+      "parent_slug": "virtual-sports"
+    },
+    {
+      "slug": "esports",
+      "name": "eSports"
+    },
+    {
+      "slug": "poker-feature-exclusive-game-formats",
+      "name": "Exclusive Game Formats"
+    },
+    {
+      "slug": "fast-withdrawals-fast-withdrawals",
+      "name": "Fast Withdrawal"
+    },
+    {
+      "slug": "field-hockey",
+      "name": "Field Hockey",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "fishing",
+      "name": "Fishing",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "betting-feature-flash-betting",
+      "name": "Flash Betting"
+    },
+    {
+      "slug": "floorball",
+      "name": "Floorball",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "football",
+      "name": "Football",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "formula-1",
+      "name": "Formula 1",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "formula-e",
+      "name": "Formula E",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "fortnite",
+      "name": "Fortnite",
+      "parent_slug": "esports"
+    },
+    {
+      "slug": "bonus_type-free-bet",
+      "name": "Free Bet"
+    },
+    {
+      "slug": "bonus_type-free-chips",
+      "name": "Free Chips"
+    },
+    {
+      "slug": "free-fire",
+      "name": "Free Fire",
+      "parent_slug": "esports"
+    },
+    {
+      "slug": "bonus_type-free-spins",
+      "name": "Free Spins"
+    },
+    {
+      "slug": "promotion_type-free-spins",
+      "name": "Free Spins"
+    },
+    {
+      "slug": "promotion_type-freebies",
+      "name": "Freebies"
+    },
+    {
+      "slug": "promotion_type-freerolls",
+      "name": "Freerolls"
+    },
+    {
+      "slug": "futsal",
+      "name": "Futsal",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "gaa-football",
+      "name": "GAA Football",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "gaa-hurling",
+      "name": "GAA Hurling",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "gaelic-games",
+      "name": "Gaelic Games",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "poker-networks-ggnetwork",
+      "name": "ggnetwork"
+    },
+    {
+      "slug": "poker-feature-gift-fest",
+      "name": "Gift Fest"
+    },
+    {
+      "slug": "promotion_type-giveaway",
+      "name": "Giveaway"
+    },
+    {
+      "slug": "golf",
+      "name": "Golf",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "greyhounds",
+      "name": "Greyhounds",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "poker-feature-hand-history-replays",
+      "name": "Hand History"
+    },
+    {
+      "slug": "handball",
+      "name": "Handball",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "hearthstone",
+      "name": "Hearthstone",
+      "parent_slug": "esports"
+    },
+    {
+      "slug": "heroes-of-the-storm",
+      "name": "Heroes of the Storm",
+      "parent_slug": "esports"
+    },
+    {
+      "slug": "poker-feature-high-hand-jackpots",
+      "name": "High Hand Jackpots"
+    },
+    {
+      "slug": "horse-racing",
+      "name": "Horse Racing",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "poker-feature-house-hud",
+      "name": "House HUD"
+    },
+    {
+      "slug": "ice-hockey",
+      "name": "Ice Hockey",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "betting-feature-in-play-betting",
+      "name": "In-Play Betting"
+    },
+    {
+      "slug": "indycar-racing",
+      "name": "IndyCar Racing",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "instant-withdrawals-instant-withdrawals",
+      "name": "Instant Withdrawal"
+    },
+    {
+      "slug": "platform-ios",
+      "name": "iOS"
+    },
+    {
+      "slug": "poker-networks-ipoker",
+      "name": "ipoker"
+    },
+    {
+      "slug": "promotion_type-jackpots",
+      "name": "Jackpots"
+    },
+    {
+      "slug": "kabaddi",
+      "name": "Kabaddi",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "kings-of-glory",
+      "name": "Kings of Glory",
+      "parent_slug": "esports"
+    },
+    {
+      "slug": "lacrosse",
+      "name": "Lacrosse",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "promotion_type-leaderboard-competition",
+      "name": "Leaderboard Competition"
+    },
+    {
+      "slug": "poker-feature-leaderboards",
+      "name": "Leaderboards"
+    },
+    {
+      "slug": "league-of-legends",
+      "name": "League of Legends",
+      "parent_slug": "esports"
+    },
+    {
+      "slug": "betting-feature-live-stats",
+      "name": "Live Stats"
+    },
+    {
+      "slug": "betting-feature-live-streaming",
+      "name": "Live Streaming"
+    },
+    {
+      "slug": "loyalty-vip-loyalty-vip",
+      "name": "Loyalty Programs &amp; VIP Clubs"
+    },
+    {
+      "slug": "bonus_type-match-bonus",
+      "name": "Match Bonus"
+    },
+    {
+      "slug": "mma",
+      "name": "MMA",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "motor-racing",
+      "name": "Motor Racing",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "motorcycle-racing",
+      "name": "Motorcycle Racing",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "poker-feature-mystery-bounty",
+      "name": "Mystery Bounty"
+    },
+    {
+      "slug": "bonus_type-mystery-box",
+      "name": "Mystery Box"
+    },
+    {
+      "slug": "promotion_type-mystery-box",
+      "name": "Mystery Box"
+    },
+    {
+      "slug": "nascar",
+      "name": "NASCAR",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "netball",
+      "name": "Netball",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "bonus_type-no-deposit-bonus",
+      "name": "No Deposit Bonus"
+    },
+    {
+      "slug": "no-maximum-cashout-no-maximum-cashout",
+      "name": "No Maximum Cashout Limits"
+    },
+    {
+      "slug": "bonus_type-odds-boost",
+      "name": "Odds Boost"
+    },
+    {
+      "slug": "promotion_type-odds-boost",
+      "name": "Odds boost"
+    },
+    {
+      "slug": "betting-feature-odds-boosts",
+      "name": "Odds Boosts"
+    },
+    {
+      "slug": "olympics",
+      "name": "Olympics",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "overwatch",
+      "name": "Overwatch",
+      "parent_slug": "esports"
+    },
+    {
+      "slug": "paddle-tennis",
+      "name": "Paddle Tennis",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "padel",
+      "name": "Padel",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "betting-feature-partial-cash-out",
+      "name": "Partial Cash Out"
+    },
+    {
+      "slug": "pelota-vasca",
+      "name": "Pelota Vasca",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "pesapallo",
+      "name": "Pesapallo",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "pickleball",
+      "name": "Pickleball",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "poker-feature-play-money",
+      "name": "Play Money"
+    },
+    {
+      "slug": "poker-feature-player-notes-tags",
+      "name": "Player Notes"
+    },
+    {
+      "slug": "poker-feature-poker-missions",
+      "name": "Poker Missions"
+    },
+    {
+      "slug": "politics",
+      "name": "Politics"
+    },
+    {
+      "slug": "pool",
+      "name": "Pool",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "poker-feature-private-club-games",
+      "name": "Private Club Games"
+    },
+    {
+      "slug": "promotion_type-prize-draw",
+      "name": "Prize Draw"
+    },
+    {
+      "slug": "promotion_type-prize-twister",
+      "name": "Prize Twister"
+    },
+    {
+      "slug": "betting-feature-profit-boost",
+      "name": "Profit Boost"
+    },
+    {
+      "slug": "poker-feature-progressive-knockout",
+      "name": "Progressive Knockout (PKO)"
+    },
+    {
+      "slug": "poker-feature-prop-bets",
+      "name": "Prop Bets"
+    },
+    {
+      "slug": "poker-feature-rabbit-hunt",
+      "name": "Rabbit Hunt"
+    },
+    {
+      "slug": "rainbow-six",
+      "name": "Rainbow Six",
+      "parent_slug": "esports"
+    },
+    {
+      "slug": "promotion_type-rake-race",
+      "name": "Rake Race"
+    },
+    {
+      "slug": "promotion_type-rakeback",
+      "name": "Rakeback"
+    },
+    {
+      "slug": "rallying",
+      "name": "Rallying",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "betting-feature-re-bet",
+      "name": "Re-Bet"
+    },
+    {
+      "slug": "promotion_type-refer-a-friend",
+      "name": "Refer a Friend"
+    },
+    {
+      "slug": "bonus_type-reload-bonus",
+      "name": "Reload Bonus"
+    },
+    {
+      "slug": "promotion_type-reload-bonus",
+      "name": "Reload Bonus"
+    },
+    {
+      "slug": "poker-feature-reveal-hands",
+      "name": "Reveal Hands"
+    },
+    {
+      "slug": "rink-hockey",
+      "name": "Rink Hockey",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "rocket-league",
+      "name": "Rocket League",
+      "parent_slug": "esports"
+    },
+    {
+      "slug": "rowing",
+      "name": "Rowing",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "rugby-league",
+      "name": "Rugby League",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "rugby-sevens",
+      "name": "Rugby Sevens",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "rugby-union",
+      "name": "Rugby Union",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "poker-feature-run-it-multiple-times",
+      "name": "Run It Multiple Times"
+    },
+    {
+      "slug": "sailing",
+      "name": "Sailing",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "poker-feature-session-analyzer",
+      "name": "Session Analyzer"
+    },
+    {
+      "slug": "skating",
+      "name": "Skating",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "ski-jumping",
+      "name": "Ski Jumping",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "promotion_type-slot-tournament",
+      "name": "Slot Tournament"
+    },
+    {
+      "slug": "betting-feature-smart-sub",
+      "name": "Smart Sub"
+    },
+    {
+      "slug": "poker-feature-snapcam",
+      "name": "SnapCam"
+    },
+    {
+      "slug": "snooker",
+      "name": "Snooker",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "poker-feature-social-gimmicks",
+      "name": "Social Gimmicks"
+    },
+    {
+      "slug": "specials",
+      "name": "Specials"
+    },
+    {
+      "slug": "speedway",
+      "name": "Speedway",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "poker-feature-splash-pots",
+      "name": "Splash Pots"
+    },
+    {
+      "slug": "sports",
+      "name": "Sports"
+    },
+    {
+      "slug": "squash",
+      "name": "Squash",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "poker-feature-staking",
+      "name": "Staking"
+    },
+    {
+      "slug": "poker-networks-standalone",
+      "name": "standalone"
+    },
+    {
+      "slug": "starcraft",
+      "name": "StarCraft",
+      "parent_slug": "esports"
+    },
+    {
+      "slug": "stock-car-racing",
+      "name": "Stock Car Racing",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "poker-feature-straddle",
+      "name": "Straddle"
+    },
+    {
+      "slug": "poker-feature-strength-indicator",
+      "name": "Strength Indicator"
+    },
+    {
+      "slug": "bonus_type-super-spins",
+      "name": "Super Spins"
+    },
+    {
+      "slug": "surfing",
+      "name": "Surfing",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "swimming",
+      "name": "Swimming",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "table-tennis",
+      "name": "Table Tennis",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "tennis",
+      "name": "Tennis",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "poker-feature-time-extension",
+      "name": "Time Extension"
+    },
+    {
+      "slug": "bonus_type-tournament-tickets",
+      "name": "Tournament Tickets"
+    },
+    {
+      "slug": "poker-feature-trophy-cabinet",
+      "name": "Trophy Cabinet"
+    },
+    {
+      "slug": "valorant",
+      "name": "Valorant",
+      "parent_slug": "esports"
+    },
+    {
+      "slug": "virtual-sports",
+      "name": "Virtual Sports"
+    },
+    {
+      "slug": "volleyball",
+      "name": "Volleyball",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "promotion_type-wager-get",
+      "name": "Wager &amp; get"
+    },
+    {
+      "slug": "warcraft-3",
+      "name": "Warcraft 3",
+      "parent_slug": "esports"
+    },
+    {
+      "slug": "water-polo",
+      "name": "Water Polo",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "bonus_type-wheel-bonus",
+      "name": "Wheel Bonus"
+    },
+    {
+      "slug": "promotion_type-wheel-bonus",
+      "name": "Wheel Bonus"
+    },
+    {
+      "slug": "winter-sports",
+      "name": "Winter Sports",
+      "parent_slug": "sports"
+    },
+    {
+      "slug": "world-of-tanks",
+      "name": "World of Tanks",
+      "parent_slug": "esports"
+    },
+    {
+      "slug": "wrestling",
+      "name": "Wrestling",
+      "parent_slug": "sports"
+    }
+  ]
+}

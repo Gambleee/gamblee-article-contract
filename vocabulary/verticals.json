@@ -1,0 +1,123 @@
+{
+  "contract": "gamblee-article-vocabulary-snapshot",
+  "schema_version": "1.1",
+  "dimension": "verticals",
+  "total": 23,
+  "source": "https://www.staging5.gamblee.com/wp-json/gamblee-core/v1/articles/vocabulary/verticals",
+  "items": [
+    {
+      "slug": "betting",
+      "name": "Betting",
+      "parent_slug": "gambling"
+    },
+    {
+      "slug": "betting-exchanges",
+      "name": "Betting Exchanges",
+      "parent_slug": "betting"
+    },
+    {
+      "slug": "bingo",
+      "name": "Bingo",
+      "parent_slug": "gambling"
+    },
+    {
+      "slug": "casino",
+      "name": "Casino",
+      "parent_slug": "gambling"
+    },
+    {
+      "slug": "charity-lotteries",
+      "name": "Charity Lotteries",
+      "parent_slug": "lottery"
+    },
+    {
+      "slug": "crash-instant-games",
+      "name": "Crash &amp; Instant Games",
+      "parent_slug": "casino"
+    },
+    {
+      "slug": "draw-lotteries",
+      "name": "Draw Lotteries",
+      "parent_slug": "lottery"
+    },
+    {
+      "slug": "esports-betting",
+      "name": "Esports Betting",
+      "parent_slug": "betting"
+    },
+    {
+      "slug": "fantasy-sports",
+      "name": "Fantasy Sports",
+      "parent_slug": "betting"
+    },
+    {
+      "slug": "gambling",
+      "name": "Gambling"
+    },
+    {
+      "slug": "instant-win",
+      "name": "Instant Win",
+      "parent_slug": "lottery"
+    },
+    {
+      "slug": "live-casino",
+      "name": "Live Casino",
+      "parent_slug": "casino"
+    },
+    {
+      "slug": "lottery",
+      "name": "Lottery",
+      "parent_slug": "gambling"
+    },
+    {
+      "slug": "poker",
+      "name": "Poker",
+      "parent_slug": "gambling"
+    },
+    {
+      "slug": "prediction-markets",
+      "name": "Prediction Markets",
+      "parent_slug": "betting"
+    },
+    {
+      "slug": "scratch-cards",
+      "name": "Scratch Cards",
+      "parent_slug": "lottery"
+    },
+    {
+      "slug": "skin-gambling",
+      "name": "Skin Gambling",
+      "parent_slug": "gambling"
+    },
+    {
+      "slug": "slots",
+      "name": "Slots",
+      "parent_slug": "casino"
+    },
+    {
+      "slug": "social-casino",
+      "name": "Social Casino",
+      "parent_slug": "casino"
+    },
+    {
+      "slug": "sports-betting",
+      "name": "Sports Betting",
+      "parent_slug": "betting"
+    },
+    {
+      "slug": "sweepstakes-casino",
+      "name": "Sweepstakes Casino",
+      "parent_slug": "casino"
+    },
+    {
+      "slug": "table-games",
+      "name": "Table Games",
+      "parent_slug": "casino"
+    },
+    {
+      "slug": "virtual-sports-betting",
+      "name": "Virtual Sports Betting",
+      "parent_slug": "betting"
+    }
+  ]
+}

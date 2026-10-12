@@ -1,0 +1,324 @@
+{
+  "contract": "gamblee-article-vocabulary-snapshot",
+  "schema_version": "1.1",
+  "dimension": "topics",
+  "total": 65,
+  "source": "https://www.staging5.gamblee.com/wp-json/gamblee-core/v1/articles/vocabulary/topics",
+  "items": [
+    {
+      "slug": "advertising-marketing",
+      "name": "Advertising &amp; Marketing",
+      "parent_slug": "commercial"
+    },
+    {
+      "slug": "advertising-rules",
+      "name": "Advertising Rules",
+      "parent_slug": "regulation-law"
+    },
+    {
+      "slug": "affordability",
+      "name": "Affordability",
+      "parent_slug": "player-protection"
+    },
+    {
+      "slug": "ai-automation",
+      "name": "AI &amp; Automation",
+      "parent_slug": "product-technology"
+    },
+    {
+      "slug": "aml-kyc",
+      "name": "AML &amp; KYC",
+      "parent_slug": "regulation-law"
+    },
+    {
+      "slug": "big-losses",
+      "name": "Big Losses",
+      "parent_slug": "results-player-stories"
+    },
+    {
+      "slug": "bonuses-offers",
+      "name": "Bonuses &amp; Offers",
+      "parent_slug": "offers-promotions"
+    },
+    {
+      "slug": "bots-collusion",
+      "name": "Bots &amp; Collusion",
+      "parent_slug": "integrity-crime"
+    },
+    {
+      "slug": "cheating",
+      "name": "Cheating",
+      "parent_slug": "integrity-crime"
+    },
+    {
+      "slug": "commercial",
+      "name": "Commercial"
+    },
+    {
+      "slug": "corporate-finance",
+      "name": "Corporate &amp; Finance"
+    },
+    {
+      "slug": "cybersecurity",
+      "name": "Cybersecurity",
+      "parent_slug": "product-technology"
+    },
+    {
+      "slug": "data-breach",
+      "name": "Data Breach",
+      "parent_slug": "product-technology"
+    },
+    {
+      "slug": "deposit-loss-limits",
+      "name": "Deposit / Loss Limits",
+      "parent_slug": "player-protection"
+    },
+    {
+      "slug": "enforcement",
+      "name": "Enforcement",
+      "parent_slug": "regulation-law"
+    },
+    {
+      "slug": "fairness-rng",
+      "name": "Fairness &amp; RNG",
+      "parent_slug": "gambling-mechanics-education"
+    },
+    {
+      "slug": "financial-crime",
+      "name": "Financial Crime",
+      "parent_slug": "integrity-crime"
+    },
+    {
+      "slug": "financial-results",
+      "name": "Financial Results",
+      "parent_slug": "corporate-finance"
+    },
+    {
+      "slug": "fraud",
+      "name": "Fraud",
+      "parent_slug": "integrity-crime"
+    },
+    {
+      "slug": "free-bets-free-spins",
+      "name": "Free Bets &amp; Free Spins",
+      "parent_slug": "offers-promotions"
+    },
+    {
+      "slug": "funding-investment",
+      "name": "Funding &amp; Investment",
+      "parent_slug": "corporate-finance"
+    },
+    {
+      "slug": "gambling-mechanics-education",
+      "name": "Gambling Mechanics &amp; Education"
+    },
+    {
+      "slug": "game-rules-mechanics",
+      "name": "Game Rules &amp; Mechanics",
+      "parent_slug": "gambling-mechanics-education"
+    },
+    {
+      "slug": "human-interest",
+      "name": "Human Interest",
+      "parent_slug": "results-player-stories"
+    },
+    {
+      "slug": "illegal-gambling",
+      "name": "Illegal Gambling",
+      "parent_slug": "regulation-law"
+    },
+    {
+      "slug": "industry-structure",
+      "name": "Industry Structure",
+      "parent_slug": "research-industry"
+    },
+    {
+      "slug": "insolvency-administration",
+      "name": "Insolvency &amp; Administration",
+      "parent_slug": "corporate-finance"
+    },
+    {
+      "slug": "integrity-crime",
+      "name": "Integrity &amp; Crime"
+    },
+    {
+      "slug": "jackpots-big-wins",
+      "name": "Jackpots &amp; Big Wins",
+      "parent_slug": "results-player-stories"
+    },
+    {
+      "slug": "leadership",
+      "name": "Leadership",
+      "parent_slug": "corporate-finance"
+    },
+    {
+      "slug": "legislation",
+      "name": "Legislation",
+      "parent_slug": "regulation-law"
+    },
+    {
+      "slug": "licensing",
+      "name": "Licensing",
+      "parent_slug": "regulation-law"
+    },
+    {
+      "slug": "litigation",
+      "name": "Litigation",
+      "parent_slug": "regulation-law"
+    },
+    {
+      "slug": "market-data-research",
+      "name": "Market Data &amp; Research",
+      "parent_slug": "research-industry"
+    },
+    {
+      "slug": "market-entry",
+      "name": "Market Entry",
+      "parent_slug": "corporate-finance"
+    },
+    {
+      "slug": "market-exit-closure",
+      "name": "Market Exit &amp; Closure",
+      "parent_slug": "corporate-finance"
+    },
+    {
+      "slug": "match-fixing",
+      "name": "Match Fixing",
+      "parent_slug": "integrity-crime"
+    },
+    {
+      "slug": "mergers-acquisitions",
+      "name": "Mergers &amp; Acquisitions",
+      "parent_slug": "corporate-finance"
+    },
+    {
+      "slug": "no-deposit",
+      "name": "No-Deposit Offers",
+      "parent_slug": "offers-promotions"
+    },
+    {
+      "slug": "odds-probability",
+      "name": "Odds &amp; Probability",
+      "parent_slug": "gambling-mechanics-education"
+    },
+    {
+      "slug": "offers-promotions",
+      "name": "Offers &amp; Promotions"
+    },
+    {
+      "slug": "ownership",
+      "name": "Ownership",
+      "parent_slug": "corporate-finance"
+    },
+    {
+      "slug": "partnership",
+      "name": "Partnership",
+      "parent_slug": "commercial"
+    },
+    {
+      "slug": "payments",
+      "name": "Payments",
+      "parent_slug": "product-technology"
+    },
+    {
+      "slug": "platform-migration",
+      "name": "Platform &amp; Migration",
+      "parent_slug": "product-technology"
+    },
+    {
+      "slug": "player-funds",
+      "name": "Player Funds",
+      "parent_slug": "player-protection"
+    },
+    {
+      "slug": "player-protection",
+      "name": "Player Protection &amp; Safer Gambling"
+    },
+    {
+      "slug": "poker-rake-fees",
+      "name": "Poker Rake &amp; Fees",
+      "parent_slug": "gambling-mechanics-education"
+    },
+    {
+      "slug": "poker-results",
+      "name": "Poker Results",
+      "parent_slug": "results-player-stories"
+    },
+    {
+      "slug": "product-technology",
+      "name": "Product &amp; Technology"
+    },
+    {
+      "slug": "product-launch",
+      "name": "Product Launch",
+      "parent_slug": "product-technology"
+    },
+    {
+      "slug": "promotions",
+      "name": "Promotions",
+      "parent_slug": "offers-promotions"
+    },
+    {
+      "slug": "rakeback-loyalty",
+      "name": "Rakeback &amp; Loyalty",
+      "parent_slug": "offers-promotions"
+    },
+    {
+      "slug": "records",
+      "name": "Records",
+      "parent_slug": "results-player-stories"
+    },
+    {
+      "slug": "regulation-law",
+      "name": "Regulation &amp; Law"
+    },
+    {
+      "slug": "research-industry",
+      "name": "Research &amp; Industry"
+    },
+    {
+      "slug": "responsible-gambling",
+      "name": "Responsible Gambling",
+      "parent_slug": "player-protection"
+    },
+    {
+      "slug": "restructuring-layoffs",
+      "name": "Restructuring &amp; Layoffs",
+      "parent_slug": "corporate-finance"
+    },
+    {
+      "slug": "results-player-stories",
+      "name": "Results &amp; Player Stories"
+    },
+    {
+      "slug": "self-exclusion",
+      "name": "Self-Exclusion",
+      "parent_slug": "player-protection"
+    },
+    {
+      "slug": "software-supplier",
+      "name": "Software &amp; Supplier",
+      "parent_slug": "product-technology"
+    },
+    {
+      "slug": "sponsorship",
+      "name": "Sponsorship",
+      "parent_slug": "commercial"
+    },
+    {
+      "slug": "strategy-learning",
+      "name": "Strategy &amp; Learning",
+      "parent_slug": "gambling-mechanics-education"
+    },
+    {
+      "slug": "taxation",
+      "name": "Taxation",
+      "parent_slug": "regulation-law"
+    },
+    {
+      "slug": "wagering-requirements",
+      "name": "Wagering Requirements",
+      "parent_slug": "offers-promotions"
+    }
+  ]
+}

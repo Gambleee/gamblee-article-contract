@@ -2,8 +2,8 @@
   "contract": "gamblee-article-vocabulary-snapshot",
   "schema_version": "1.1",
   "dimension": "entities",
-  "total": 1193,
-  "source": "https://www.staging5.gamblee.com/wp-json/gamblee-core/v1/articles/vocabulary/entities",
+  "total": 1247,
+  "source": "https://www.gamblee.com/wp-json/gamblee-core/v1/articles/vocabulary/entities",
   "items": [
     {
       "slug": "provider-100hp-gaming",
@@ -44,6 +44,11 @@
       "slug": "brand-21-casino",
       "name": "21 Casino",
       "entity_type": "brand"
+    },
+    {
+      "slug": "brand-21prive",
+      "name": "21Prive",
+      "entity_type": "other"
     },
     {
       "slug": "brand-247bet",
@@ -141,9 +146,24 @@
       "entity_type": "other"
     },
     {
+      "slug": "company-ace-gaming-limited",
+      "name": "ACE GAMING Limited",
+      "entity_type": "company"
+    },
+    {
       "slug": "provider-ace-roll",
       "name": "Ace Roll",
       "entity_type": "provider"
+    },
+    {
+      "slug": "brand-acecasino",
+      "name": "ACE.com",
+      "entity_type": "other"
+    },
+    {
+      "slug": "brand-ace-lucky-casino",
+      "name": "AceLucky Casino",
+      "entity_type": "other"
     },
     {
       "slug": "provider-acerun",
@@ -194,6 +214,11 @@
       "slug": "provider-ae-sexy",
       "name": "AE Sexy",
       "entity_type": "provider"
+    },
+    {
+      "slug": "brand-africasports",
+      "name": "AfricaSports",
+      "entity_type": "other"
     },
     {
       "slug": "regulator-agenzia-delle-dogane-e-dei-monopoli-adm",
@@ -439,6 +464,11 @@
       "slug": "payment-method-apple-pay",
       "name": "Apple Pay",
       "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-apricot",
+      "name": "Apricot",
+      "entity_type": "provider"
     },
     {
       "slug": "provider-arcadem",
@@ -771,6 +801,16 @@
       "entity_type": "other"
     },
     {
+      "slug": "brand-bet365",
+      "name": "bet365",
+      "entity_type": "other"
+    },
+    {
+      "slug": "company-bet365-group-limited",
+      "name": "Bet365 Group Limited",
+      "entity_type": "company"
+    },
+    {
       "slug": "other-betfair",
       "name": "Betfair",
       "entity_type": "other"
@@ -784,6 +824,11 @@
       "slug": "brand-betmaze",
       "name": "Betmaze",
       "entity_type": "brand"
+    },
+    {
+      "slug": "brand-bet-neptune",
+      "name": "BetNeptune",
+      "entity_type": "other"
     },
     {
       "slug": "brand-betonline",
@@ -1231,6 +1276,11 @@
       "entity_type": "company"
     },
     {
+      "slug": "brand-casushi",
+      "name": "Casushi",
+      "entity_type": "other"
+    },
+    {
       "slug": "provider-cayetano-gaming",
       "name": "Cayetano Gaming",
       "entity_type": "provider"
@@ -1356,6 +1406,11 @@
       "entity_type": "provider"
     },
     {
+      "slug": "brand-conquer-casino",
+      "name": "Conquer Casino",
+      "entity_type": "other"
+    },
+    {
       "slug": "payment-method-converter",
       "name": "Converter",
       "entity_type": "payment-method"
@@ -1374,6 +1429,11 @@
       "slug": "provider-core-gaming",
       "name": "CORE Gaming",
       "entity_type": "provider"
+    },
+    {
+      "slug": "brand-cosmic",
+      "name": "Cosmic Spins",
+      "entity_type": "other"
     },
     {
       "slug": "other-coventry",
@@ -1554,6 +1614,11 @@
       "slug": "provider-design-works-gaming",
       "name": "Design Works Gaming",
       "entity_type": "provider"
+    },
+    {
+      "slug": "brand-diamond7-casino",
+      "name": "Diamond7 Casino",
+      "entity_type": "other"
     },
     {
       "slug": "provider-dice-lab",
@@ -1971,6 +2036,11 @@
       "entity_type": "payment-method"
     },
     {
+      "slug": "provider-fastspin",
+      "name": "Fastspin",
+      "entity_type": "provider"
+    },
+    {
       "slug": "payment-method-fasttoken",
       "name": "Fasttoken",
       "entity_type": "payment-method"
@@ -2036,6 +2106,11 @@
       "entity_type": "provider"
     },
     {
+      "slug": "provider-flamingocatz",
+      "name": "FlamingoCatz",
+      "entity_type": "provider"
+    },
+    {
       "slug": "provider-flatdog",
       "name": "Flatdog",
       "entity_type": "provider"
@@ -2066,6 +2141,11 @@
       "entity_type": "provider"
     },
     {
+      "slug": "brand-fortune-mobile-casino",
+      "name": "Fortune Mobile Casino",
+      "entity_type": "other"
+    },
+    {
       "slug": "provider-four-leaf-gaming",
       "name": "Four Leaf Gaming",
       "entity_type": "provider"
@@ -2094,6 +2174,21 @@
       "slug": "provider-fresh-vintage",
       "name": "Fresh Vintage",
       "entity_type": "provider"
+    },
+    {
+      "slug": "brand-fruit",
+      "name": "Fruitkings",
+      "entity_type": "other"
+    },
+    {
+      "slug": "brand-fruity-king",
+      "name": "Fruity King",
+      "entity_type": "other"
+    },
+    {
+      "slug": "brand-fruity-wins",
+      "name": "Fruity Wins",
+      "entity_type": "other"
     },
     {
       "slug": "other-ftse-100",
@@ -2139,6 +2234,11 @@
       "slug": "provider-g-games",
       "name": "G Games",
       "entity_type": "provider"
+    },
+    {
+      "slug": "brand-gdaycasino",
+      "name": "G&#8217;Day Casino",
+      "entity_type": "other"
     },
     {
       "slug": "provider-gacha-studios",
@@ -2506,6 +2606,11 @@
       "entity_type": "provider"
     },
     {
+      "slug": "brand-great-britain-casino",
+      "name": "Great Britain Casino",
+      "entity_type": "other"
+    },
+    {
       "slug": "provider-green-jade-games",
       "name": "Green Jade Games",
       "entity_type": "provider"
@@ -2554,6 +2659,16 @@
       "slug": "provider-happy-duck",
       "name": "Happy Duck",
       "entity_type": "provider"
+    },
+    {
+      "slug": "regulator-hellenic-gaming-commission-hgc",
+      "name": "Hellenic Gaming Commission (HGC)",
+      "entity_type": "regulator"
+    },
+    {
+      "slug": "brand-hello-casino",
+      "name": "Hello Casino",
+      "entity_type": "other"
     },
     {
       "slug": "provider-high-5-games",
@@ -2606,14 +2721,14 @@
       "entity_type": "other"
     },
     {
-      "slug": "other-hsbc",
-      "name": "HSBC",
-      "entity_type": "other"
-    },
-    {
       "slug": "payment-method-hsbc",
       "name": "HSBC",
       "entity_type": "payment-method"
+    },
+    {
+      "slug": "other-hsbc",
+      "name": "HSBC",
+      "entity_type": "other"
     },
     {
       "slug": "provider-hungry-bear",
@@ -2629,6 +2744,11 @@
       "slug": "provider-hyperionplay",
       "name": "HyperionPlay",
       "entity_type": "provider"
+    },
+    {
+      "slug": "brand-ice36",
+      "name": "ICE36",
+      "entity_type": "other"
     },
     {
       "slug": "provider-iconic-gaming",
@@ -2831,6 +2951,11 @@
       "entity_type": "provider"
     },
     {
+      "slug": "brand-jackpot-mobile-casino",
+      "name": "Jackpot Mobile Casino",
+      "entity_type": "other"
+    },
+    {
       "slug": "brand-jackpot-village",
       "name": "Jackpot Village",
       "entity_type": "brand"
@@ -2936,6 +3061,11 @@
       "entity_type": "provider"
     },
     {
+      "slug": "provider-jumpman-gaming",
+      "name": "Jumpman Gaming",
+      "entity_type": "provider"
+    },
+    {
       "slug": "company-jumpman-gaming-limited",
       "name": "Jumpman Gaming Limited",
       "entity_type": "company"
@@ -2964,6 +3094,11 @@
       "slug": "provider-justforthewin-jftw",
       "name": "JustForTheWin (JFTW)",
       "entity_type": "provider"
+    },
+    {
+      "slug": "brand-justin-casino",
+      "name": "Justin Casino",
+      "entity_type": "other"
     },
     {
       "slug": "provider-justplay-gaming",
@@ -3116,6 +3251,11 @@
       "entity_type": "provider"
     },
     {
+      "slug": "brand-lekker-bets",
+      "name": "LekkerBets",
+      "entity_type": "other"
+    },
+    {
       "slug": "provider-light-wonder",
       "name": "Light &amp; Wonder",
       "entity_type": "provider"
@@ -3186,6 +3326,11 @@
       "entity_type": "provider"
     },
     {
+      "slug": "brand-lordping",
+      "name": "Lord Ping",
+      "entity_type": "other"
+    },
+    {
       "slug": "provider-lost-world-games",
       "name": "Lost World Games",
       "entity_type": "provider"
@@ -3241,6 +3386,11 @@
       "entity_type": "provider"
     },
     {
+      "slug": "brand-luckyme-slots",
+      "name": "LuckyMe Slots",
+      "entity_type": "other"
+    },
+    {
       "slug": "provider-ludoland",
       "name": "LudoLand",
       "entity_type": "provider"
@@ -3248,6 +3398,11 @@
     {
       "slug": "other-lula",
       "name": "Lula",
+      "entity_type": "other"
+    },
+    {
+      "slug": "brand-luna-casino",
+      "name": "LunaCasino",
       "entity_type": "other"
     },
     {
@@ -3379,6 +3534,11 @@
       "slug": "company-mecca-bingo-limited",
       "name": "Mecca Bingo Limited",
       "entity_type": "company"
+    },
+    {
+      "slug": "brand-mega-casino",
+      "name": "Mega Casino",
+      "entity_type": "other"
     },
     {
       "slug": "provider-mega-entertainment",
@@ -3846,6 +4006,11 @@
       "entity_type": "other"
     },
     {
+      "slug": "brand-online-casino-london",
+      "name": "Online Casino London",
+      "entity_type": "other"
+    },
+    {
       "slug": "other-online-gambling",
       "name": "online gambling",
       "entity_type": "other"
@@ -4016,6 +4181,11 @@
       "entity_type": "payment-method"
     },
     {
+      "slug": "payment-method-payhound",
+      "name": "Payhound",
+      "entity_type": "payment-method"
+    },
+    {
       "slug": "payment-method-payid",
       "name": "PayID",
       "entity_type": "payment-method"
@@ -4061,6 +4231,11 @@
       "entity_type": "payment-method"
     },
     {
+      "slug": "brand-peachy-games",
+      "name": "Peachy Games",
+      "entity_type": "other"
+    },
+    {
       "slug": "provider-pearfiction",
       "name": "PearFiction",
       "entity_type": "provider"
@@ -4099,6 +4274,11 @@
       "slug": "other-philweb",
       "name": "PhilWeb",
       "entity_type": "other"
+    },
+    {
+      "slug": "provider-phoenix-flames-studio",
+      "name": "Phoenix Flames Studio",
+      "entity_type": "provider"
     },
     {
       "slug": "provider-pineapple-play",
@@ -4179,6 +4359,11 @@
       "slug": "provider-playhub",
       "name": "PLAYHUB",
       "entity_type": "provider"
+    },
+    {
+      "slug": "brand-playkasino",
+      "name": "PlayKasino",
+      "entity_type": "other"
     },
     {
       "slug": "provider-playmer",
@@ -4323,7 +4508,7 @@
     {
       "slug": "provider-pragmatic-play",
       "name": "Pragmatic Play",
-      "entity_type": "provider"
+      "entity_type": "other"
     },
     {
       "slug": "provider-pragmatic-play-bingo",
@@ -4359,6 +4544,11 @@
       "slug": "company-prime-online-ltd",
       "name": "Prime Online Ltd",
       "entity_type": "company"
+    },
+    {
+      "slug": "brand-prime-scratchcards",
+      "name": "Prime Scratch Cards",
+      "entity_type": "other"
     },
     {
       "slug": "other-primero-games",
@@ -4414,6 +4604,11 @@
       "slug": "payment-method-przelewy24",
       "name": "Przelewy24",
       "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-psiclone-games",
+      "name": "Psiclone Games",
+      "entity_type": "provider"
     },
     {
       "slug": "provider-pulse-8-studios",
@@ -4866,6 +5061,11 @@
       "entity_type": "provider"
     },
     {
+      "slug": "brand-skol-casino",
+      "name": "Skol Casino",
+      "entity_type": "other"
+    },
+    {
       "slug": "payment-method-skrill",
       "name": "Skrill",
       "entity_type": "payment-method"
@@ -4891,6 +5091,11 @@
       "entity_type": "provider"
     },
     {
+      "slug": "provider-slightly-edgy-games",
+      "name": "Slightly Edgy Games",
+      "entity_type": "provider"
+    },
+    {
       "slug": "brand-slingo",
       "name": "Slingo",
       "entity_type": "brand"
@@ -4911,6 +5116,11 @@
       "entity_type": "provider"
     },
     {
+      "slug": "brand-slot-planet",
+      "name": "Slot Planet",
+      "entity_type": "other"
+    },
+    {
       "slug": "provider-slotmatrix",
       "name": "SlotMatrix",
       "entity_type": "provider"
@@ -4924,6 +5134,11 @@
       "slug": "provider-slotmotion",
       "name": "SlotMotion",
       "entity_type": "provider"
+    },
+    {
+      "slug": "brand-slotnite",
+      "name": "Slotnite",
+      "entity_type": "other"
     },
     {
       "slug": "provider-slotopia",
@@ -4999,6 +5214,11 @@
       "slug": "provider-solidicon",
       "name": "Solidicon",
       "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-solopayment",
+      "name": "SoloPayment",
+      "entity_type": "payment-method"
     },
     {
       "slug": "other-south-korea",
@@ -5191,6 +5411,11 @@
       "entity_type": "provider"
     },
     {
+      "slug": "brand-super-mega-fluffy-rainbow-vegas-jackpot-casino",
+      "name": "Super Mega Fluffy Rainbow Vegas Jackpot Casino",
+      "entity_type": "other"
+    },
+    {
       "slug": "provider-super-spade-club",
       "name": "Super Spade Club",
       "entity_type": "provider"
@@ -5334,6 +5559,16 @@
       "slug": "provider-the-stars-group",
       "name": "The Stars Group",
       "entity_type": "provider"
+    },
+    {
+      "slug": "brand-thelotter",
+      "name": "TheLotter",
+      "entity_type": "other"
+    },
+    {
+      "slug": "brand-theonlinecasino",
+      "name": "TheOnlineCasino",
+      "entity_type": "other"
     },
     {
       "slug": "provider-thunderkick",
@@ -5486,6 +5721,16 @@
       "entity_type": "company"
     },
     {
+      "slug": "brand-uk-online-slots",
+      "name": "UK Online Slots",
+      "entity_type": "other"
+    },
+    {
+      "slug": "brand-uk-slot-games",
+      "name": "UK Slot Games",
+      "entity_type": "other"
+    },
+    {
       "slug": "brand-uk-bingo-net",
       "name": "UK-Bingo.net",
       "entity_type": "brand"
@@ -5551,6 +5796,11 @@
       "entity_type": "other"
     },
     {
+      "slug": "brand-vegas-mobile-casino",
+      "name": "Vegas Mobile Casino",
+      "entity_type": "other"
+    },
+    {
       "slug": "brand-vegas-paradise",
       "name": "Vegas Paradise",
       "entity_type": "brand"
@@ -5569,6 +5819,11 @@
       "slug": "provider-vela-gaming",
       "name": "Vela Gaming",
       "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-venmo",
+      "name": "Venmo",
+      "entity_type": "payment-method"
     },
     {
       "slug": "payment-method-venus-point",
@@ -5711,6 +5966,11 @@
       "entity_type": "payment-method"
     },
     {
+      "slug": "regulator-west-virginia-lottery",
+      "name": "West Virginia Lottery",
+      "entity_type": "regulator"
+    },
+    {
       "slug": "regulator-western-cape-gambling-and-racing-board",
       "name": "Western Cape Gambling and Racing Board",
       "entity_type": "regulator"
@@ -5729,6 +5989,11 @@
       "slug": "company-white-hat-gaming-limited",
       "name": "White Hat Gaming Limited",
       "entity_type": "company"
+    },
+    {
+      "slug": "provider-white-hat-studios",
+      "name": "White Hat Studios",
+      "entity_type": "provider"
     },
     {
       "slug": "other-white-house",
@@ -5959,6 +6224,11 @@
       "slug": "provider-zitro",
       "name": "Zitro",
       "entity_type": "provider"
+    },
+    {
+      "slug": "payment-method-zonda-pay",
+      "name": "Zonda Pay",
+      "entity_type": "payment-method"
     },
     {
       "slug": "provider-zonelock",

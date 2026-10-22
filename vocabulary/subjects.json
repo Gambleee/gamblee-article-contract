@@ -2,8 +2,8 @@
   "contract": "gamblee-article-vocabulary-snapshot",
   "schema_version": "1.1",
   "dimension": "subjects",
-  "total": 207,
-  "source": "https://www.staging5.gamblee.com/wp-json/gamblee-core/v1/articles/vocabulary/subjects",
+  "total": 220,
+  "source": "https://www.gamblee.com/wp-json/gamblee-core/v1/articles/vocabulary/subjects",
   "items": [
     {
       "slug": "minimum-deposit-1",
@@ -56,6 +56,10 @@
       "parent_slug": "esports"
     },
     {
+      "slug": "air-hockey",
+      "name": "Air Hockey"
+    },
+    {
       "slug": "poker-feature-all-in-insurance",
       "name": "All-In Insurance"
     },
@@ -80,6 +84,10 @@
     {
       "slug": "platform-app",
       "name": "App"
+    },
+    {
+      "slug": "archery",
+      "name": "Archery"
     },
     {
       "slug": "athletics",
@@ -189,6 +197,10 @@
       "slug": "call-of-duty",
       "name": "Call of Duty",
       "parent_slug": "esports"
+    },
+    {
+      "slug": "canoe-kayak",
+      "name": "Canoe / Kayak"
     },
     {
       "slug": "betting-feature-cash-out",
@@ -303,6 +315,10 @@
       "name": "Entertainment"
     },
     {
+      "slug": "equestrian",
+      "name": "Equestrian"
+    },
+    {
       "slug": "esoccer",
       "name": "eSoccer",
       "parent_slug": "virtual-sports"
@@ -318,6 +334,10 @@
     {
       "slug": "fast-withdrawals-fast-withdrawals",
       "name": "Fast Withdrawal"
+    },
+    {
+      "slug": "fencing",
+      "name": "Fencing"
     },
     {
       "slug": "field-hockey",
@@ -428,6 +448,10 @@
       "slug": "greyhounds",
       "name": "Greyhounds",
       "parent_slug": "sports"
+    },
+    {
+      "slug": "gymnastics",
+      "name": "Gymnastics"
     },
     {
       "slug": "poker-feature-hand-history-replays",
@@ -677,6 +701,10 @@
       "name": "Prop Bets"
     },
     {
+      "slug": "betting-feature-quick-bet",
+      "name": "Quick Bet"
+    },
+    {
       "slug": "poker-feature-rabbit-hunt",
       "name": "Rabbit Hunt"
     },
@@ -758,8 +786,16 @@
       "parent_slug": "sports"
     },
     {
+      "slug": "sepak-takraw",
+      "name": "Sepak Takraw"
+    },
+    {
       "slug": "poker-feature-session-analyzer",
       "name": "Session Analyzer"
+    },
+    {
+      "slug": "skateboarding",
+      "name": "Skateboarding"
     },
     {
       "slug": "skating",
@@ -793,6 +829,10 @@
       "name": "Social Gimmicks"
     },
     {
+      "slug": "softball",
+      "name": "Softball"
+    },
+    {
       "slug": "specials",
       "name": "Specials"
     },
@@ -804,6 +844,10 @@
     {
       "slug": "poker-feature-splash-pots",
       "name": "Splash Pots"
+    },
+    {
+      "slug": "sport-climbing",
+      "name": "Sport Climbing"
     },
     {
       "slug": "sports",
@@ -843,6 +887,10 @@
     {
       "slug": "bonus_type-super-spins",
       "name": "Super Spins"
+    },
+    {
+      "slug": "betting-feature-superbet",
+      "name": "Superbet"
     },
     {
       "slug": "surfing",
@@ -903,6 +951,10 @@
       "slug": "water-polo",
       "name": "Water Polo",
       "parent_slug": "sports"
+    },
+    {
+      "slug": "weightlifting",
+      "name": "Weightlifting"
     },
     {
       "slug": "bonus_type-wheel-bonus",

@@ -1,7 +1,7 @@
 {
   "contract": "gamblee-article-import",
   "schema_version": "1.1",
-  "core_version": "1.83.02",
+  "core_version": "1.83.44",
   "rules": {
     "one_package_creates_one_draft_article": true,
     "preferred_handoff": "zip_with_article_json_and_optional_local_featured_image",

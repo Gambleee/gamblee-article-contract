@@ -3,7 +3,7 @@
   "schema_version": "1.1",
   "dimension": "editorial_types",
   "total": 6,
-  "source": "https://www.staging5.gamblee.com/wp-json/gamblee-core/v1/articles/vocabulary/editorial_types",
+  "source": "https://www.gamblee.com/wp-json/gamblee-core/v1/articles/vocabulary/editorial_types",
   "items": [
     {
       "slug": "analysis",

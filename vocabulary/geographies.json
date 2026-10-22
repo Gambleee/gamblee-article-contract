@@ -3,7 +3,7 @@
   "schema_version": "1.1",
   "dimension": "geographies",
   "total": 310,
-  "source": "https://www.staging5.gamblee.com/wp-json/gamblee-core/v1/articles/vocabulary/geographies",
+  "source": "https://www.gamblee.com/wp-json/gamblee-core/v1/articles/vocabulary/geographies",
   "items": [
     {
       "slug": "af",

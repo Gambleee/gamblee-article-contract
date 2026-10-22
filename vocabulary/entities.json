@@ -2,7 +2,7 @@
   "contract": "gamblee-article-vocabulary-snapshot",
   "schema_version": "1.1",
   "dimension": "entities",
-  "total": 1247,
+  "total": 1268,
   "source": "https://www.gamblee.com/wp-json/gamblee-core/v1/articles/vocabulary/entities",
   "items": [
     {
@@ -758,6 +758,11 @@
     {
       "slug": "provider-bell-fruit-games",
       "name": "Bell-Fruit Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-bellot",
+      "name": "Bellot",
       "entity_type": "provider"
     },
     {
@@ -1706,6 +1711,11 @@
       "entity_type": "provider"
     },
     {
+      "slug": "brand-dream-palace-casino",
+      "name": "Dream Palace Casino",
+      "entity_type": "other"
+    },
+    {
       "slug": "provider-dream-play",
       "name": "Dream Play",
       "entity_type": "provider"
@@ -1779,6 +1789,11 @@
       "slug": "payment-method-eft-by-swiffy",
       "name": "EFT by Swiffy",
       "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-egt",
+      "name": "EGT",
+      "entity_type": "provider"
     },
     {
       "slug": "provider-egt-digital",
@@ -1971,6 +1986,11 @@
       "entity_type": "other"
     },
     {
+      "slug": "provider-excellent-reel",
+      "name": "Excellent Reel",
+      "entity_type": "provider"
+    },
+    {
       "slug": "provider-exco-game-studio",
       "name": "EXCO Game Studio",
       "entity_type": "provider"
@@ -2008,6 +2028,11 @@
     {
       "slug": "provider-fbastards",
       "name": "F*Bastards",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-fa-chai",
+      "name": "FA CHAI",
       "entity_type": "provider"
     },
     {
@@ -2153,6 +2178,11 @@
     {
       "slug": "provider-foxhound-games",
       "name": "Foxhound Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-foxi",
+      "name": "Foxi",
       "entity_type": "provider"
     },
     {
@@ -2691,6 +2721,11 @@
       "entity_type": "provider"
     },
     {
+      "slug": "brand-highstakes",
+      "name": "HighStakes",
+      "entity_type": "other"
+    },
+    {
       "slug": "company-hillside",
       "name": "Hillside",
       "entity_type": "company"
@@ -2704,6 +2739,11 @@
       "slug": "other-hoiana",
       "name": "Hoiana",
       "entity_type": "other"
+    },
+    {
+      "slug": "provider-holland-power-gaming",
+      "name": "Holland Power Gaming",
+      "entity_type": "provider"
     },
     {
       "slug": "provider-holle-games",
@@ -2721,14 +2761,19 @@
       "entity_type": "other"
     },
     {
-      "slug": "payment-method-hsbc",
-      "name": "HSBC",
-      "entity_type": "payment-method"
+      "slug": "provider-hs-originals",
+      "name": "HS Originals",
+      "entity_type": "provider"
     },
     {
       "slug": "other-hsbc",
       "name": "HSBC",
       "entity_type": "other"
+    },
+    {
+      "slug": "payment-method-hsbc",
+      "name": "HSBC",
+      "entity_type": "payment-method"
     },
     {
       "slug": "provider-hungry-bear",
@@ -3346,6 +3391,11 @@
       "entity_type": "company"
     },
     {
+      "slug": "provider-lotto-instant-win",
+      "name": "Lotto Instant Win",
+      "entity_type": "provider"
+    },
+    {
       "slug": "other-lottomatica",
       "name": "Lottomatica",
       "entity_type": "other"
@@ -3391,6 +3441,11 @@
       "entity_type": "other"
     },
     {
+      "slug": "brand-lucky-vegas",
+      "name": "LuckyVegas",
+      "entity_type": "other"
+    },
+    {
       "slug": "provider-ludoland",
       "name": "LudoLand",
       "entity_type": "provider"
@@ -3409,6 +3464,11 @@
       "slug": "payment-method-luxonpay",
       "name": "LuxonPay",
       "entity_type": "payment-method"
+    },
+    {
+      "slug": "provider-macaw-gaming",
+      "name": "Macaw Gaming",
+      "entity_type": "provider"
     },
     {
       "slug": "payment-method-maestro",
@@ -3634,6 +3694,11 @@
       "slug": "payment-method-mobile-pay",
       "name": "Mobile Pay",
       "entity_type": "payment-method"
+    },
+    {
+      "slug": "brand-mobile-wins",
+      "name": "Mobile Wins",
+      "entity_type": "other"
     },
     {
       "slug": "provider-mobilots",
@@ -3913,6 +3978,11 @@
     {
       "slug": "provider-novomatic",
       "name": "Novomatic",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-novomatic-premium",
+      "name": "Novomatic Premium",
       "entity_type": "provider"
     },
     {
@@ -4506,6 +4576,11 @@
       "entity_type": "provider"
     },
     {
+      "slug": "brand-power",
+      "name": "Power Slots",
+      "entity_type": "other"
+    },
+    {
       "slug": "provider-pragmatic-play",
       "name": "Pragmatic Play",
       "entity_type": "other"
@@ -4826,6 +4901,11 @@
       "entity_type": "provider"
     },
     {
+      "slug": "provider-rich88",
+      "name": "RiCH88",
+      "entity_type": "provider"
+    },
+    {
       "slug": "provider-ricochet",
       "name": "Ricochet",
       "entity_type": "provider"
@@ -4884,6 +4964,11 @@
       "slug": "provider-roxor-gaming",
       "name": "Roxor Gaming",
       "entity_type": "provider"
+    },
+    {
+      "slug": "brand-royal-swipe",
+      "name": "Royal Swipe",
+      "entity_type": "other"
     },
     {
       "slug": "other-royal-vegas-casino",
@@ -4994,6 +5079,11 @@
       "slug": "regulator-servico-de-regulacao-e-inspecao-de-jogos-srij",
       "name": "Serviço de Regulação e Inspeção de Jogos (SRIJ)",
       "entity_type": "regulator"
+    },
+    {
+      "slug": "company-seven-5-offsuit-ltd",
+      "name": "Seven 5 Offsuit Ltd.",
+      "entity_type": "company"
     },
     {
       "slug": "provider-seven-deuce-gaming",
@@ -5331,6 +5421,11 @@
       "entity_type": "provider"
     },
     {
+      "slug": "provider-spinstars",
+      "name": "Spinstars",
+      "entity_type": "provider"
+    },
+    {
       "slug": "provider-spinthon",
       "name": "Spinthon",
       "entity_type": "provider"
@@ -5418,6 +5513,16 @@
     {
       "slug": "provider-super-spade-club",
       "name": "Super Spade Club",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-super-spade-games",
+      "name": "Super Spade Games",
+      "entity_type": "provider"
+    },
+    {
+      "slug": "provider-superlotto",
+      "name": "Superlotto",
       "entity_type": "provider"
     },
     {

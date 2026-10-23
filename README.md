@@ -5,9 +5,10 @@ Public, read-only snapshots for external AI assistants preparing Gamblee Article
 ## Start here
 
 1. [Authoring contract](authoring-contract.json) — the authoritative Article JSON schema (v1.1), import rules, example, packaging instructions, and lookup guidance.
-2. [Coverage index](coverage-index.json) — published Gamblee Articles for duplicate-story detection, meaningful-update checks, and internal-link discovery. The file is created after the first successful sync against a Core version exposing the coverage endpoint.
-3. [Vocabulary index](vocabulary/index.json) — available dimensions and counts.
-4. Open the required canonical vocabulary file(s):
+2. [Editorial guidelines](editorial-guidelines.md) — **required for every article**: natural internal links, restrained featured images, factual prose, and pre-delivery quality checks.
+3. [Coverage index](coverage-index.json) — published Gamblee Articles for duplicate-story detection, meaningful-update checks, and internal-link discovery. The file is created after the first successful sync against a Core version exposing the coverage endpoint.
+4. [Vocabulary index](vocabulary/index.json) — available dimensions and counts.
+5. Open the required canonical vocabulary file(s):
    - [Verticals](vocabulary/verticals.json)
    - [Geographies](vocabulary/geographies.json)
    - [Topics](vocabulary/topics.json)
@@ -18,15 +19,15 @@ Public, read-only snapshots for external AI assistants preparing Gamblee Article
 
 ## For the News Sweeper
 
-- Retrieve `authoring-contract.json`, `coverage-index.json`, and the relevant canonical vocabularies from this **public GitHub repository**, not through WPVibe.
+- Retrieve `authoring-contract.json`, **`editorial-guidelines.md`**, `coverage-index.json`, and the relevant canonical vocabularies from this **public GitHub repository**, not through WPVibe. Read editorial guidelines before drafting any Article.
 - Before recommending a story, compare the underlying event/development against `coverage-index.json`; do not rely on headline wording alone.
 - Treat candidates as `New`, `Already Covered`, or `Meaningful Update`. A repeated report of the same underlying event is not a new story.
-- Use matching existing Article URLs from the coverage index as internal-link candidates when writing a genuine update or closely related story.
+- Use matching existing Article URLs from the coverage index as internal-link candidates when writing a genuine update or closely related story. **Bury links naturally inside relevant sentences; no artificial introductions, forced link count, or link announcements.** Follow `editorial-guidelines.md` for full rules.
 - The public coverage index contains **published Articles only**. Draft titles/excerpts are deliberately not mirrored to this public repository.
 - Use exact canonical vocabulary `slug` values. Never invent classifications or extra fields.
 - For brand/entity lookups, search within [entities.json](vocabulary/entities.json) for the name and use the matching slug (for example `brand-betway`); check ambiguity before choosing.
 - Generate one `article.json` compliant with the `schema` object in the authoring contract.
-- Package `article.json` at the ZIP root with no more than one optional local featured image. Use the contract's supported image instructions.
+- Package `article.json` at the ZIP root with no more than one optional local featured image. Use the contract's supported image instructions. **Prefer appropriately licensed real photographs; when generating, use restrained, minimal single-subject images—no collages, fake screenshots or fabricated branding.**
 - The existing authenticated Gamblee WordPress importer validates the ZIP and creates **drafts only**. Reading this repository cannot publish or modify the website.
 
 ## Source and freshness

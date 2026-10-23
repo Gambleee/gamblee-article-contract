@@ -2,7 +2,7 @@
   "contract": "gamblee-article-vocabulary-snapshot",
   "schema_version": "1.1",
   "dimension": "entities",
-  "total": 1273,
+  "total": 1282,
   "source": "https://www.gamblee.com/wp-json/gamblee-core/v1/articles/vocabulary/entities",
   "items": [
     {
@@ -1626,6 +1626,11 @@
       "entity_type": "provider"
     },
     {
+      "slug": "provider-delasport",
+      "name": "Delasport",
+      "entity_type": "provider"
+    },
+    {
       "slug": "provider-design-works-gaming",
       "name": "Design Works Gaming",
       "entity_type": "provider"
@@ -2746,6 +2751,11 @@
       "entity_type": "company"
     },
     {
+      "slug": "brand-hippozino",
+      "name": "Hippozino",
+      "entity_type": "other"
+    },
+    {
       "slug": "provider-ho-gaming",
       "name": "HO Gaming",
       "entity_type": "provider"
@@ -2781,14 +2791,14 @@
       "entity_type": "provider"
     },
     {
-      "slug": "payment-method-hsbc",
-      "name": "HSBC",
-      "entity_type": "payment-method"
-    },
-    {
       "slug": "other-hsbc",
       "name": "HSBC",
       "entity_type": "other"
+    },
+    {
+      "slug": "payment-method-hsbc",
+      "name": "HSBC",
+      "entity_type": "payment-method"
     },
     {
       "slug": "provider-hungry-bear",
@@ -3546,6 +3556,11 @@
       "entity_type": "provider"
     },
     {
+      "slug": "provider-massive-studios",
+      "name": "Massive Studios",
+      "entity_type": "provider"
+    },
+    {
       "slug": "payment-method-mastercard",
       "name": "Mastercard",
       "entity_type": "payment-method"
@@ -3696,6 +3711,11 @@
       "entity_type": "provider"
     },
     {
+      "slug": "brand-millionaire-co-uk",
+      "name": "Millionaire.co.uk",
+      "entity_type": "other"
+    },
+    {
       "slug": "regulator-ministry-of-finance-zambia",
       "name": "Ministry of Finance (Zambia)",
       "entity_type": "regulator"
@@ -3739,6 +3759,11 @@
       "slug": "brand-money-reels",
       "name": "Money Reels",
       "entity_type": "brand"
+    },
+    {
+      "slug": "brand-monkeycasino",
+      "name": "MonkeyCasino",
+      "entity_type": "other"
     },
     {
       "slug": "brand-monopoly-casino",
@@ -3786,9 +3811,24 @@
       "entity_type": "brand"
     },
     {
+      "slug": "brand-mrmobi",
+      "name": "MrMobi",
+      "entity_type": "other"
+    },
+    {
       "slug": "brand-mrq",
       "name": "MrQ",
       "entity_type": "brand"
+    },
+    {
+      "slug": "brand-mr-slot",
+      "name": "MrSlot",
+      "entity_type": "other"
+    },
+    {
+      "slug": "brand-mrsuperplay",
+      "name": "MrSuperPlay",
+      "entity_type": "other"
     },
     {
       "slug": "payment-method-mtn-mobile-money",
@@ -6224,6 +6264,11 @@
       "slug": "provider-wizard-games",
       "name": "Wizard Games",
       "entity_type": "provider"
+    },
+    {
+      "slug": "brand-wombatbingo",
+      "name": "WombatBingo",
+      "entity_type": "other"
     },
     {
       "slug": "other-wondr-nation",

@@ -2,8 +2,69 @@
   "contract": "gamblee-article-coverage-index",
   "schema_version": 1,
   "source": "https://www.gamblee.com/wp-json/gamblee-core/v1/articles/coverage-index",
-  "total": 287,
+  "total": 289,
   "articles": [
+    {
+      "id": 88007,
+      "date": "2026-10-23T19:03:16+00:00",
+      "modified": "2026-10-23T19:03:16+00:00",
+      "title": "Spain Launches Gambling Player Portal Ahead of Cross-Operator Deposit Limits",
+      "slug": "spain-player-portal-cross-operator-deposit-limits-october-2026",
+      "url": "https://www.gamblee.com/articles/spain-player-portal-cross-operator-deposit-limits-october-2026/",
+      "excerpt": "Spain has launched a centralised player portal and is testing nationwide online-gambling deposit limits of €700 a day, €1,750 a week and €3,300 over four weeks.",
+      "verticals": [
+        "gambling"
+      ],
+      "geographies": [
+        "es"
+      ],
+      "topics": [
+        "deposit-loss-limits",
+        "legislation",
+        "responsible-gambling"
+      ],
+      "subjects": [],
+      "entities": [
+        "regulator-direccion-general-de-ordenacion-del-juego-dgoj"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 88004,
+      "date": "2026-10-23T19:02:33+00:00",
+      "modified": "2026-10-23T19:02:33+00:00",
+      "title": "Italy Seizes More Than €25m in Assets in Scratchcard Fraud Case",
+      "slug": "italy-scratchcard-fraud-25-million-assets-seized-october-2026",
+      "url": "https://www.gamblee.com/articles/italy-scratchcard-fraud-25-million-assets-seized-october-2026/",
+      "excerpt": "Italian authorities have seized assets worth more than €25 million in a case involving five former lottery-concessionaire employees accused of identifying winning scratchcards.",
+      "verticals": [
+        "lottery",
+        "scratch-cards"
+      ],
+      "geographies": [
+        "it"
+      ],
+      "topics": [
+        "financial-crime",
+        "fraud",
+        "litigation"
+      ],
+      "subjects": [],
+      "entities": [
+        "regulator-agenzia-delle-dogane-e-dei-monopoli-adm"
+      ],
+      "channels": [
+        "land-based"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
     {
       "id": 88001,
       "date": "2026-10-23T13:18:32+00:00",

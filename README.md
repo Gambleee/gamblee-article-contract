@@ -51,3 +51,13 @@ If the importer rejects a slug or field, stop and check the latest synchronized 
 Only public authoring metadata, canonical term names/slugs, and metadata from already-published Articles are mirrored. No importer, private draft content, credentials, or write API is mirrored.
 
 Synchronization runs in GitHub Actions rather than WordPress cron. The public WordPress endpoints are read-only and cacheable; no sync call creates WordPress rows, purges caches, or starts background registry/review work.
+
+
+## Bonus Research contract
+
+Bonus Offer research has its own public contract namespace:
+
+- [Bonus Research authoring contract](bonuses/authoring-contract.json)
+- [Bonus Research instructions](bonuses/README.md)
+
+External assistants should read these GitHub files rather than using WPVibe to inspect the Bonus schema. WordPress/WPVibe remains the authenticated write path for validation and import.

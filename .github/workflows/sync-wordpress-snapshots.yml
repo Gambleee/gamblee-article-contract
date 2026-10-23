@@ -33,7 +33,7 @@ jobs:
       - name: Commit changed snapshots
         shell: bash
         run: |
-          git add authoring-contract.json vocabulary/
+          git add authoring-contract.json vocabulary/ bonuses/
           if [ -f coverage-index.json ]; then
             git add coverage-index.json
           fi
@@ -45,5 +45,5 @@ jobs:
 
           git config user.name "gamblee-snapshot-bot"
           git config user.email "actions@users.noreply.github.com"
-          git commit -m "Sync Gamblee article snapshots"
+          git commit -m "Sync Gamblee contract snapshots"
           git push

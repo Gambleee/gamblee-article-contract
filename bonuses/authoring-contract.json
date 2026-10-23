@@ -1,0 +1,1296 @@
+{
+  "schema_version": "1.0",
+  "entity": "gamblee_bonus_research",
+  "rules": [
+    "One offer object represents exactly one market and one vertical. Multiple simultaneous offers for the same market/vertical are allowed.",
+    "Market and currency are independent. A USD-denominated poker offer may target GB, IE or another market.",
+    "A multi-stage deposit pack is one offer. Capture all stages in multi_step.rows; structured reward components describe the first stage unless a future schema explicitly models later stages.",
+    "Recurring offers remain one offer and use schedule.weekdays and/or validity dates.",
+    "Do not output prohibited markets. CA-ON is currently prohibited for public Bonus Offer publication.",
+    "If a discovered mechanic cannot be represented exactly by this contract, do not force-fit it. Put it in schema_gaps with status unsupported_but_fixable and propose the exact field/component/type change.",
+    "supported_and_analyzable and not_calculable offers may be imported. unsupported_but_fixable items are blocked until the schema is extended.",
+    "Use dedicated offer/terms landing URLs only when they genuinely exist. Otherwise return null so the offer inherits the brand market/vertical commercial link.",
+    "Prefer current first-party/official evidence. Include source URLs in evidence."
+  ],
+  "analysis_statuses": [
+    "supported_and_analyzable",
+    "not_calculable"
+  ],
+  "schema_gap_status": "unsupported_but_fixable",
+  "player_eligibility": [
+    "new_customers",
+    "existing_customers",
+    "new_and_existing_customers",
+    "invited_customers",
+    "unknown"
+  ],
+  "weekdays": [
+    "monday",
+    "tuesday",
+    "wednesday",
+    "thursday",
+    "friday",
+    "saturday",
+    "sunday"
+  ],
+  "currencies": [
+    "GBP",
+    "EUR",
+    "USD",
+    "CAD",
+    "AUD",
+    "NZD",
+    "ZAR"
+  ],
+  "verticals": [
+    {
+      "slug": "betting",
+      "name": "Betting"
+    },
+    {
+      "slug": "bingo",
+      "name": "Bingo"
+    },
+    {
+      "slug": "casino",
+      "name": "Casino"
+    },
+    {
+      "slug": "poker",
+      "name": "Poker"
+    }
+  ],
+  "bonus_types": [
+    {
+      "slug": "acca-bonus",
+      "name": "Acca Bonus"
+    },
+    {
+      "slug": "bet-insurance",
+      "name": "Bet Insurance"
+    },
+    {
+      "slug": "bingo-tickets",
+      "name": "Bingo Tickets"
+    },
+    {
+      "slug": "cashback",
+      "name": "Cashback"
+    },
+    {
+      "slug": "free-bet",
+      "name": "Free Bet"
+    },
+    {
+      "slug": "free-chips",
+      "name": "Free Chips"
+    },
+    {
+      "slug": "free-spins",
+      "name": "Free Spins"
+    },
+    {
+      "slug": "match-bonus",
+      "name": "Match Bonus"
+    },
+    {
+      "slug": "mystery-box",
+      "name": "Mystery Box"
+    },
+    {
+      "slug": "no-deposit-bonus",
+      "name": "No Deposit Bonus"
+    },
+    {
+      "slug": "odds-boost",
+      "name": "Odds Boost"
+    },
+    {
+      "slug": "reload-bonus",
+      "name": "Reload Bonus"
+    },
+    {
+      "slug": "super-spins",
+      "name": "Super Spins"
+    },
+    {
+      "slug": "tournament-tickets",
+      "name": "Tournament Tickets"
+    },
+    {
+      "slug": "wheel-bonus",
+      "name": "Wheel Bonus"
+    }
+  ],
+  "excluded_payment_methods": [
+    {
+      "slug": "all-except-debit-cards",
+      "name": "All except debit cards"
+    },
+    {
+      "slug": "apple-pay",
+      "name": "Apple Pay"
+    },
+    {
+      "slug": "e-wallets",
+      "name": "E-Wallets"
+    },
+    {
+      "slug": "neteller",
+      "name": "Neteller"
+    },
+    {
+      "slug": "paypal",
+      "name": "PayPal"
+    },
+    {
+      "slug": "paypal-neosurf-paysafe-apple-pay-neteller-skrill-ecopayz-kalibra-postpay-or-wh-plus-card",
+      "name": "PayPal, Neosurf, Paysafe, Apple Pay, NETELLER, Skrill, ecoPayz, Kalibra/Postpay or WH PLUS Card"
+    },
+    {
+      "slug": "paysafe",
+      "name": "Paysafe"
+    },
+    {
+      "slug": "skrill",
+      "name": "Skrill"
+    }
+  ],
+  "scoring_penalties": [
+    {
+      "slug": "20-max-conversion",
+      "name": "£20 Max Conversion"
+    },
+    {
+      "slug": "app-download-required",
+      "name": "App download required"
+    },
+    {
+      "slug": "bonus-and-any-winnings-from-the-bonus-are-valid-for-30-days-free-spin-winnings-are-valid-for-7-days",
+      "name": "Bonus and any winnings from the bonus are valid for 30 days. Free spin winnings are valid for 7 days."
+    },
+    {
+      "slug": "bonus-related-winnings-expire",
+      "name": "Bonus-Related Winnings Expire"
+    },
+    {
+      "slug": "conversion-limit",
+      "name": "Conversion Limit"
+    },
+    {
+      "slug": "low-conversion-limit",
+      "name": "Low Conversion Limit"
+    },
+    {
+      "slug": "max-conversion-equal-to-lifetime-deposits",
+      "name": "Max Conversion Equal To Lifetime Deposits"
+    },
+    {
+      "slug": "max-conversion-equal-to-lifetime-deposits-up-to-250",
+      "name": "Max Conversion Equal To Lifetime Deposits, up to £250"
+    },
+    {
+      "slug": "max-conversion-ca200",
+      "name": "Max conversion: $ CA200"
+    },
+    {
+      "slug": "max-conversion-200",
+      "name": "Max conversion: £200."
+    },
+    {
+      "slug": "max-conversion-3-times-the-bonus-amount-or-from-free-spins-20",
+      "name": "Max conversion: 3 times the bonus amount or from free spins: $20."
+    },
+    {
+      "slug": "maximum-conversion-of-bonus-funds-into-withdrawable-money-is-e200",
+      "name": "Maximum conversion of bonus funds into withdrawable money is €200."
+    },
+    {
+      "slug": "maximum-conversion-of-free-spin-winnings-into-withdrawable-money-is-e20",
+      "name": "Maximum conversion of free spin winnings into withdrawable money is €20."
+    },
+    {
+      "slug": "may-not-be-credited-instantly",
+      "name": "May not be credited instantly"
+    },
+    {
+      "slug": "only-for-app-users",
+      "name": "Only for App Users"
+    },
+    {
+      "slug": "restricted-to-formula-1",
+      "name": "Restricted to Formula 1"
+    },
+    {
+      "slug": "spins-credited-over-a-year",
+      "name": "Spins Credited Over a year"
+    },
+    {
+      "slug": "sticky",
+      "name": "Sticky"
+    },
+    {
+      "slug": "up-to-250",
+      "name": "up to £250"
+    }
+  ],
+  "eligible_games": [
+    {
+      "slug": "12-pots-of-gold-drum-frenzy",
+      "name": "12 Pots of Gold Drum Frenzy"
+    },
+    {
+      "slug": "3-lucky-hippos",
+      "name": "3 Lucky Hippos"
+    },
+    {
+      "slug": "777strike",
+      "name": "777Strike"
+    },
+    {
+      "slug": "age-of-the-gods-god-of-storms-2",
+      "name": "Age of the Gods: God of Storms 2"
+    },
+    {
+      "slug": "age-of-the-gods-god-of-storms-3",
+      "name": "Age of the Gods: God of Storms 3"
+    },
+    {
+      "slug": "all-markets",
+      "name": "All Markets"
+    },
+    {
+      "slug": "american-football",
+      "name": "American Football"
+    },
+    {
+      "slug": "area-link-phoenix-firestorm",
+      "name": "Area Link Phoenix Firestorm"
+    },
+    {
+      "slug": "badge-blitz",
+      "name": "Badge Blitz"
+    },
+    {
+      "slug": "baseball",
+      "name": "Baseball"
+    },
+    {
+      "slug": "basketball",
+      "name": "Basketball"
+    },
+    {
+      "slug": "beast-of-fire",
+      "name": "Beast of Fire"
+    },
+    {
+      "slug": "bee-keeper",
+      "name": "Bee Keeper"
+    },
+    {
+      "slug": "betting",
+      "name": "Betting"
+    },
+    {
+      "slug": "big-bass-bonanza",
+      "name": "big bass bonanza"
+    },
+    {
+      "slug": "big-bass-bonanza-1000",
+      "name": "Big Bass Bonanza 1000"
+    },
+    {
+      "slug": "big-bass-splash",
+      "name": "Big Bass Splash"
+    },
+    {
+      "slug": "bingo",
+      "name": "Bingo"
+    },
+    {
+      "slug": "book-of-dead",
+      "name": "Book of Dead"
+    },
+    {
+      "slug": "book-of-legacy",
+      "name": "Book of Legacy"
+    },
+    {
+      "slug": "cash-a-cabana",
+      "name": "Cash-A-Cabana"
+    },
+    {
+      "slug": "casino",
+      "name": "Casino"
+    },
+    {
+      "slug": "chilli-heat",
+      "name": "Chilli Heat"
+    },
+    {
+      "slug": "coin-freeze",
+      "name": "Coin Freeze"
+    },
+    {
+      "slug": "combined-trap-challenge",
+      "name": "Combined Trap Challenge"
+    },
+    {
+      "slug": "cricket",
+      "name": "Cricket"
+    },
+    {
+      "slug": "diamond-strike",
+      "name": "Diamond Strike"
+    },
+    {
+      "slug": "diamonds-of-the-realm",
+      "name": "Diamonds of the Realm"
+    },
+    {
+      "slug": "different-games",
+      "name": "Different Games"
+    },
+    {
+      "slug": "double-bubble",
+      "name": "Double Bubble"
+    },
+    {
+      "slug": "eruption-blaze-cashingo",
+      "name": "Eruption Blaze Cashingo"
+    },
+    {
+      "slug": "fishin-frenzy-the-big-catch-2",
+      "name": "Fishin Frenzy The Big Catch 2"
+    },
+    {
+      "slug": "fishing-frenzy-big-catch-megaways",
+      "name": "Fishing Frenzy Big Catch Megaways"
+    },
+    {
+      "slug": "fluffy-favourites",
+      "name": "Fluffy favourites"
+    },
+    {
+      "slug": "football",
+      "name": "Football"
+    },
+    {
+      "slug": "formula-1",
+      "name": "Formula 1"
+    },
+    {
+      "slug": "gates-of-olympus",
+      "name": "Gates of Olympus"
+    },
+    {
+      "slug": "gold-blitz-extreme",
+      "name": "Gold Blitz Extreme"
+    },
+    {
+      "slug": "gold-blitz-ultimate",
+      "name": "Gold Blitz Ultimate"
+    },
+    {
+      "slug": "horseracing",
+      "name": "Horseracing"
+    },
+    {
+      "slug": "ice-hockey",
+      "name": "Ice Hockey"
+    },
+    {
+      "slug": "immortal-wins",
+      "name": "Immortal Wins"
+    },
+    {
+      "slug": "jackpot-sng",
+      "name": "Jackpot SNG"
+    },
+    {
+      "slug": "le-bandit",
+      "name": "Le Bandit+"
+    },
+    {
+      "slug": "lucky-panda",
+      "name": "Lucky Panda"
+    },
+    {
+      "slug": "lucky-tiger-1000",
+      "name": "Lucky Tiger 1000"
+    },
+    {
+      "slug": "masks-of-fire-drums",
+      "name": "Masks of Fire Drums"
+    },
+    {
+      "slug": "mega-cash-collect",
+      "name": "Mega Cash Collect"
+    },
+    {
+      "slug": "mining-pots-of-gold",
+      "name": "Mining Pots of Gold"
+    },
+    {
+      "slug": "monopoly-cash",
+      "name": "Monopoly Cash"
+    },
+    {
+      "slug": "nba",
+      "name": "NBA"
+    },
+    {
+      "slug": "network-rooms",
+      "name": "Network Rooms"
+    },
+    {
+      "slug": "newbie-room",
+      "name": "Newbie Room"
+    },
+    {
+      "slug": "pragmatic-play",
+      "name": "Pragmatic Play"
+    },
+    {
+      "slug": "rainbow-riches-megaways",
+      "name": "Rainbow Riches Megaways"
+    },
+    {
+      "slug": "reactoonz",
+      "name": "Reactoonz"
+    },
+    {
+      "slug": "rigged",
+      "name": "rigged"
+    },
+    {
+      "slug": "roulette",
+      "name": "Roulette"
+    },
+    {
+      "slug": "sahara-riches-cash-collect",
+      "name": "Sahara Riches Cash Collect"
+    },
+    {
+      "slug": "silver-room",
+      "name": "Silver Room"
+    },
+    {
+      "slug": "spinning-wilds",
+      "name": "Spinning Wilds"
+    },
+    {
+      "slug": "squelin-riches-2",
+      "name": "Squelin Riches 2"
+    },
+    {
+      "slug": "starburst",
+      "name": "Starburst"
+    },
+    {
+      "slug": "tennis",
+      "name": "Tennis"
+    },
+    {
+      "slug": "the-green-knight",
+      "name": "The Green Knight"
+    },
+    {
+      "slug": "the-paying-piano-club",
+      "name": "The Paying Piano Club"
+    },
+    {
+      "slug": "the-trials-of-asgard",
+      "name": "the trials of asgard"
+    },
+    {
+      "slug": "thor-and-the-trials-of-asgard",
+      "name": "Thor and the Trials of Asgard"
+    },
+    {
+      "slug": "wolf-gold",
+      "name": "Wolf Gold"
+    }
+  ],
+  "component_specs": {
+    "match_bonus": {
+      "enabled_field": "match_bonus",
+      "fields": {
+        "match_bonus": {
+          "type": "boolean"
+        },
+        "max_bonus_match": {
+          "type": "number",
+          "nullable": true
+        },
+        "match_percent": {
+          "type": "number",
+          "nullable": true
+        },
+        "wagering_match": {
+          "type": "number",
+          "nullable": true
+        },
+        "min_odds_match": {
+          "type": "number",
+          "nullable": true
+        },
+        "poker_rake_per_bonus_match": {
+          "type": "number",
+          "nullable": true
+        },
+        "wagering_base_match": {
+          "type": "enum",
+          "choices": [
+            "bonus_only",
+            "bonus_plus_deposit",
+            "winnings_only",
+            "none",
+            "unknown"
+          ],
+          "nullable": true
+        },
+        "max_bet_match": {
+          "type": "number",
+          "nullable": true
+        },
+        "cashout_limit_status_match": {
+          "type": "enum",
+          "choices": [
+            "no_limit",
+            "capped",
+            "not_listed",
+            "unknown"
+          ],
+          "nullable": true
+        },
+        "cashout_limit_basis_match": {
+          "type": "enum",
+          "choices": [
+            "fixed_amount",
+            "bonus_amount",
+            "lifetime_deposits"
+          ],
+          "nullable": true
+        },
+        "cashout_limits_match": {
+          "type": "number",
+          "nullable": true
+        },
+        "cashout_limit_multiplier_match": {
+          "type": "number",
+          "nullable": true
+        },
+        "cashout_limit_ceiling_amount_match": {
+          "type": "number",
+          "nullable": true
+        },
+        "release_type_match_bonus": {
+          "type": "enum",
+          "choices": [
+            "sticky",
+            "non-sticky",
+            "gradual"
+          ],
+          "nullable": true
+        },
+        "reward_expiry_match": {
+          "type": "number",
+          "nullable": true
+        },
+        "reward_expiry_unit_match": {
+          "type": "enum",
+          "choices": [
+            "hours",
+            "days",
+            "weeks"
+          ],
+          "nullable": true
+        }
+      }
+    },
+    "free_spins": {
+      "enabled_field": "free_spins",
+      "fields": {
+        "free_spins": {
+          "type": "boolean"
+        },
+        "amount": {
+          "type": "integer",
+          "nullable": true
+        },
+        "value_per_spin": {
+          "type": "number",
+          "nullable": true
+        },
+        "release_schedule_free_spins": {
+          "type": "enum",
+          "choices": [
+            "all_at_once",
+            "daily_batches",
+            "manual_claim",
+            "unknown"
+          ],
+          "nullable": true
+        },
+        "spins_per_day_free_spins": {
+          "type": "integer",
+          "nullable": true
+        },
+        "wagering_slots": {
+          "type": "number",
+          "nullable": true
+        },
+        "wagering_base_free_spins": {
+          "type": "enum",
+          "choices": [
+            "winnings_only",
+            "none",
+            "bonus_plus_winnings",
+            "bonus_deposit_winnings",
+            "unknown"
+          ],
+          "nullable": true
+        },
+        "max_bet_free_spins": {
+          "type": "number",
+          "nullable": true
+        },
+        "cashout_limit_status_free_spins": {
+          "type": "enum",
+          "choices": [
+            "no_limit",
+            "capped",
+            "not_listed",
+            "unknown"
+          ],
+          "nullable": true
+        },
+        "cashout_limit_basis_free_spins": {
+          "type": "enum",
+          "choices": [
+            "fixed_amount",
+            "bonus_amount",
+            "lifetime_deposits"
+          ],
+          "nullable": true
+        },
+        "cashout_limits_slots": {
+          "type": "number",
+          "nullable": true
+        },
+        "cashout_limit_multiplier_free_spins": {
+          "type": "number",
+          "nullable": true
+        },
+        "cashout_limit_ceiling_amount_free_spins": {
+          "type": "number",
+          "nullable": true
+        },
+        "free_spins_eligible_game": {
+          "type": "taxonomy_list",
+          "taxonomy": "eligible_game"
+        },
+        "reward_expiry_free_spin": {
+          "type": "number",
+          "nullable": true
+        }
+      }
+    },
+    "bonus_funds": {
+      "enabled_field": "bonus_funds",
+      "fields": {
+        "bonus_funds": {
+          "type": "boolean"
+        },
+        "bonus_amount": {
+          "type": "number",
+          "nullable": true
+        },
+        "wagering_bonus_funds": {
+          "type": "number",
+          "nullable": true
+        },
+        "wagering_base_bonus_funds": {
+          "type": "enum",
+          "choices": [
+            "bonus_only",
+            "bonus_plus_deposit",
+            "winnings_only",
+            "none",
+            "unknown"
+          ],
+          "nullable": true
+        },
+        "max_bet_bonus_funds": {
+          "type": "number",
+          "nullable": true
+        },
+        "cashout_limit_status_bonus_funds": {
+          "type": "enum",
+          "choices": [
+            "no_limit",
+            "capped",
+            "not_listed",
+            "unknown"
+          ],
+          "nullable": true
+        },
+        "cashout_limit_basis_bonus_funds": {
+          "type": "enum",
+          "choices": [
+            "fixed_amount",
+            "bonus_amount",
+            "lifetime_deposits"
+          ],
+          "nullable": true
+        },
+        "cashout_limits_bonus_funds": {
+          "type": "number",
+          "nullable": true
+        },
+        "cashout_limit_multiplier_bonus_funds": {
+          "type": "number",
+          "nullable": true
+        },
+        "cashout_limit_ceiling_amount_bonus_funds": {
+          "type": "number",
+          "nullable": true
+        },
+        "release_type_bonus_funds": {
+          "type": "enum",
+          "choices": [
+            "sticky",
+            "non-sticky",
+            "gradual",
+            "points_redemption",
+            "staged_redemption"
+          ],
+          "nullable": true
+        },
+        "bonus_funds_eligible_game": {
+          "type": "taxonomy_list",
+          "taxonomy": "eligible_game"
+        },
+        "reward_expiry_bonus_funds": {
+          "type": "number",
+          "nullable": true
+        }
+      }
+    },
+    "cashback": {
+      "enabled_field": "cashback",
+      "fields": {
+        "cashback": {
+          "type": "boolean"
+        },
+        "cashback_type": {
+          "type": "enum",
+          "choices": [
+            "deposit_cashback",
+            "loss_cashback",
+            "wagering_cashback",
+            "stake_refund",
+            "other"
+          ],
+          "nullable": true
+        },
+        "cashback_rate": {
+          "type": "number",
+          "nullable": true
+        },
+        "max_cashback": {
+          "type": "number",
+          "nullable": true
+        },
+        "cashback_returned_as": {
+          "type": "enum",
+          "choices": [
+            "cash",
+            "bonus_funds",
+            "site_credit",
+            "free_bet",
+            "unknown"
+          ],
+          "nullable": true
+        },
+        "cashback_amount": {
+          "type": "number",
+          "nullable": true
+        },
+        "for_every": {
+          "type": "number",
+          "nullable": true
+        },
+        "activity_type": {
+          "type": "enum",
+          "choices": [
+            "wagered",
+            "rake_and_fees",
+            "net_losses",
+            "qualifying_stake",
+            "deposit",
+            "other"
+          ],
+          "nullable": true
+        },
+        "cashback_period_days": {
+          "type": "number",
+          "nullable": true
+        },
+        "payout_timing": {
+          "type": "enum",
+          "choices": [
+            "instant",
+            "as_earned",
+            "daily",
+            "weekly",
+            "monthly",
+            "end_of_period",
+            "manual_claim",
+            "unknown"
+          ],
+          "nullable": true
+        }
+      }
+    },
+    "poker_tickets": {
+      "enabled_field": "poker_tickets",
+      "fields": {
+        "poker_tickets": {
+          "type": "boolean"
+        },
+        "poker_ticket_count": {
+          "type": "integer",
+          "nullable": true
+        },
+        "poker_ticket_total_value": {
+          "type": "number",
+          "nullable": true
+        },
+        "poker_tickets_eligible_game": {
+          "type": "taxonomy_list",
+          "taxonomy": "eligible_game"
+        },
+        "reward_expiry_poker_tickets": {
+          "type": "number",
+          "nullable": true
+        }
+      }
+    },
+    "free_bets": {
+      "enabled_field": "free_bet",
+      "fields": {
+        "free_bet": {
+          "type": "boolean"
+        },
+        "value_free_bet": {
+          "type": "number",
+          "nullable": true
+        },
+        "split": {
+          "type": "string",
+          "nullable": true
+        },
+        "min_odds_free_bet": {
+          "type": "number",
+          "nullable": true
+        },
+        "wagering_free_bet": {
+          "type": "number",
+          "nullable": true
+        },
+        "minimum_stake_free_bet": {
+          "type": "number",
+          "nullable": true
+        },
+        "qualifying_bet_required_free_bet": {
+          "type": "boolean"
+        },
+        "qualifying_bet_min_odds_free_bet": {
+          "type": "number",
+          "nullable": true
+        },
+        "free_bets_eligible_game": {
+          "type": "taxonomy_list",
+          "taxonomy": "eligible_game"
+        },
+        "excluded_markets": {
+          "type": "string",
+          "nullable": true
+        },
+        "stake_returned_free_bet": {
+          "type": "boolean"
+        },
+        "reward_expiry_free_bet": {
+          "type": "number",
+          "nullable": true
+        }
+      }
+    },
+    "odds_boost": {
+      "enabled_field": "odds_boost",
+      "fields": {
+        "odds_boost": {
+          "type": "boolean"
+        },
+        "odds_boost_structure": {
+          "type": "enum",
+          "choices": [
+            "fixed",
+            "tiered"
+          ],
+          "nullable": true
+        },
+        "odds_boost_bet_type": {
+          "type": "enum",
+          "choices": [
+            "both",
+            "single",
+            "accumulator"
+          ],
+          "nullable": true
+        },
+        "odds_boost_percent": {
+          "type": "number",
+          "nullable": true
+        },
+        "min_odds_single_odds_boost": {
+          "type": "number",
+          "nullable": true
+        },
+        "min_odds_multiple_odds_boost": {
+          "type": "number",
+          "nullable": true
+        },
+        "odds_boost_maximum_stake": {
+          "type": "number",
+          "nullable": true
+        },
+        "odds_boost_maximum_win_single": {
+          "type": "number",
+          "nullable": true
+        },
+        "odds_boost_maximum_win_multiple": {
+          "type": "number",
+          "nullable": true
+        },
+        "odds_boost_tiers": {
+          "type": "repeater",
+          "fields": {
+            "bet_type": {
+              "type": "enum",
+              "choices": [
+                "any",
+                "single",
+                "double",
+                "treble",
+                "accumulator",
+                "bet_builder"
+              ],
+              "nullable": false
+            },
+            "minimum_legs": {
+              "type": "integer",
+              "nullable": true
+            },
+            "maximum_legs": {
+              "type": "integer",
+              "nullable": true
+            },
+            "boost_percentage": {
+              "type": "number",
+              "nullable": true
+            }
+          }
+        },
+        "excluded_markets_odds_boost": {
+          "type": "string",
+          "nullable": true
+        },
+        "odds_boost_eligible_game": {
+          "type": "taxonomy_list",
+          "taxonomy": "eligible_game"
+        },
+        "reward_expiry_odds_boost": {
+          "type": "number",
+          "nullable": true
+        }
+      }
+    },
+    "acca_bonus": {
+      "enabled_field": "available_acca_bonus",
+      "fields": {
+        "available_acca_bonus": {
+          "type": "boolean"
+        },
+        "max_bonus_cap_acca_bonus": {
+          "type": "number",
+          "nullable": true
+        },
+        "minimum_stake_acca_bonus": {
+          "type": "number",
+          "nullable": true
+        },
+        "maximum_stake_acca_bonus": {
+          "type": "number",
+          "nullable": true
+        },
+        "payout_type_acca_bonus": {
+          "type": "enum",
+          "choices": [
+            "cash",
+            "free_bet",
+            "bonus",
+            "unknown"
+          ],
+          "nullable": true
+        },
+        "acca_bonus_tiers": {
+          "type": "repeater",
+          "fields": {
+            "minimum_legs_acca_bonus": {
+              "type": "integer",
+              "nullable": true
+            },
+            "bonus_percent_acca_bonus": {
+              "type": "number",
+              "nullable": true
+            }
+          }
+        },
+        "min_odds_per_leg_acca_bonus": {
+          "type": "number",
+          "nullable": true
+        },
+        "acca_bonus_eligible_game": {
+          "type": "taxonomy_list",
+          "taxonomy": "eligible_game"
+        },
+        "excluded_markets_acca_bonus": {
+          "type": "string",
+          "nullable": true
+        },
+        "reward_expiry_acca_bonus": {
+          "type": "number",
+          "nullable": true
+        },
+        "acca_bonus_calculation_basis": {
+          "type": "enum",
+          "choices": [
+            "profit",
+            "stake",
+            "total_return",
+            "unknown"
+          ],
+          "nullable": true
+        }
+      }
+    },
+    "bet_insurance": {
+      "enabled_field": "bet_insurance",
+      "fields": {
+        "bet_insurance": {
+          "type": "boolean"
+        },
+        "bet_insurance_percent_refund": {
+          "type": "number",
+          "nullable": true
+        },
+        "bet_insurance_stake_limit": {
+          "type": "number",
+          "nullable": true
+        },
+        "minimum_stake_bet_insurance": {
+          "type": "number",
+          "nullable": true
+        },
+        "qualifying_bet_type_bet_insurance": {
+          "type": "enum",
+          "choices": [
+            "single_bets",
+            "accas",
+            "singles_and_accas",
+            "losing_bet",
+            "unknown"
+          ],
+          "nullable": true
+        },
+        "minimum_legs_bet_insurance": {
+          "type": "integer",
+          "nullable": true
+        },
+        "lost_legs_required_bet_insurance": {
+          "type": "integer",
+          "nullable": true
+        },
+        "bet_insurance_min_odds": {
+          "type": "number",
+          "nullable": true
+        },
+        "bet_insurance_refund_type": {
+          "type": "enum",
+          "choices": [
+            "free bet",
+            "bonus",
+            "cash"
+          ],
+          "nullable": true
+        },
+        "bet_insurance_expiry": {
+          "type": "number",
+          "nullable": true
+        },
+        "bet_insurance_eligible_game": {
+          "type": "taxonomy_list",
+          "taxonomy": "eligible_game"
+        }
+      }
+    },
+    "bingo_tickets": {
+      "enabled_field": "bingo_tickets",
+      "fields": {
+        "bingo_tickets": {
+          "type": "boolean"
+        },
+        "bingo_tickets_amount": {
+          "type": "integer",
+          "nullable": true
+        },
+        "ticket_value": {
+          "type": "number",
+          "nullable": true
+        },
+        "bingo_ticket_wagering": {
+          "type": "number",
+          "nullable": true
+        },
+        "wagering_base_bingo_tickets": {
+          "type": "enum",
+          "choices": [
+            "winnings_only",
+            "none",
+            "unknown"
+          ],
+          "nullable": true
+        },
+        "cashout_limit_status_bingo_tickets": {
+          "type": "enum",
+          "choices": [
+            "no_limit",
+            "capped",
+            "not_listed",
+            "unknown"
+          ],
+          "nullable": true
+        },
+        "cashout_limit_basis_bingo_tickets": {
+          "type": "enum",
+          "choices": [
+            "fixed_amount",
+            "bonus_amount",
+            "lifetime_deposits"
+          ],
+          "nullable": true
+        },
+        "cashout_limits_bingo_tickets": {
+          "type": "number",
+          "nullable": true
+        },
+        "cashout_limit_multiplier_bingo_tickets": {
+          "type": "number",
+          "nullable": true
+        },
+        "cashout_limit_ceiling_amount_bingo_tickets": {
+          "type": "number",
+          "nullable": true
+        },
+        "bingo_tickets_eligible_game": {
+          "type": "taxonomy_list",
+          "taxonomy": "eligible_game"
+        },
+        "eligible_bingo_room": {
+          "type": "string",
+          "nullable": true
+        },
+        "reward_expiry_bingo_tickets": {
+          "type": "number",
+          "nullable": true
+        }
+      }
+    }
+  },
+  "offer_shape": {
+    "offer_key": "stable-lowercase-key",
+    "bonus_id": null,
+    "title": "Brand Market Offer • concise reward summary",
+    "market": "GB",
+    "currency": "GBP",
+    "vertical": "casino",
+    "bonus_types": [
+      "match-bonus"
+    ],
+    "player_eligibility": "new_customers",
+    "copy": {
+      "display_offer": "100% up to £100",
+      "card_primary": null,
+      "card_secondary": null,
+      "terms": "18+. New customers. Min deposit £10. Full terms apply.",
+      "card_terms": null
+    },
+    "qualification": {
+      "minimum_deposit": 10,
+      "minimum_spend": null,
+      "opt_in_required": false,
+      "deposit_required": true,
+      "excluded_payment_methods": [],
+      "scoring_penalties": [],
+      "bonus_code_required": false,
+      "bonus_code": null
+    },
+    "schedule": {
+      "available_from": null,
+      "available_until": null,
+      "weekdays": []
+    },
+    "multi_step": {
+      "enabled": false,
+      "rows": []
+    },
+    "components": {
+      "match_bonus": {
+        "match_bonus": true,
+        "match_percent": 100,
+        "max_bonus_match": 100,
+        "wagering_match": 30,
+        "wagering_base_match": "bonus_only"
+      }
+    },
+    "urls": {
+      "offer": null,
+      "terms": null
+    },
+    "analysis": {
+      "status": "supported_and_analyzable",
+      "reason": null
+    },
+    "evidence": [
+      {
+        "url": "https://example.com/terms",
+        "label": "Official bonus terms"
+      }
+    ]
+  },
+  "root_shape": {
+    "schema_version": "1.0",
+    "brand_id": 123,
+    "researched_at": "2026-10-23T23:26:35.930Z",
+    "offers": [],
+    "schema_gaps": []
+  },
+  "snapshot": {
+    "source": "staging bootstrap from Gamblee Core 1.83.50 contract + current canonical taxonomies",
+    "generated_at": "2026-10-23T23:26:35.933Z",
+    "note": "Scheduled GitHub sync replaces this snapshot from the public WordPress REST contract when that endpoint is available."
+  }
+}

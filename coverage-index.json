@@ -2,8 +2,579 @@
   "contract": "gamblee-article-coverage-index",
   "schema_version": 1,
   "source": "https://www.gamblee.com/wp-json/gamblee-core/v1/articles/coverage-index",
-  "total": 253,
+  "total": 273,
   "articles": [
+    {
+      "id": 87956,
+      "date": "2026-10-23T02:04:52+00:00",
+      "modified": "2026-10-23T02:04:52+00:00",
+      "title": "Greece Recruits 40 Gambling Inspectors to Strengthen Enforcement",
+      "slug": "greece-gambling-regulator-recruits-40-inspectors-2026",
+      "url": "https://www.gamblee.com/articles/greece-gambling-regulator-recruits-40-inspectors-2026/",
+      "excerpt": "Greece’s Hellenic Gaming Commission is recruiting 40 inspectors from the public sector, with applications closing on 6 November 2026.",
+      "verticals": [
+        "gambling"
+      ],
+      "geographies": [
+        "gr"
+      ],
+      "topics": [
+        "enforcement",
+        "illegal-gambling"
+      ],
+      "subjects": [],
+      "entities": [
+        "regulator-hellenic-gaming-commission-hgc"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 87953,
+      "date": "2026-10-23T01:59:16+00:00",
+      "modified": "2026-10-23T01:59:16+00:00",
+      "title": "South Africa to Announce Online Gambling Tax Design in February 2027",
+      "slug": "south-africa-online-gambling-tax-final-design-february-2027",
+      "url": "https://www.gamblee.com/articles/south-africa-online-gambling-tax-final-design-february-2027/",
+      "excerpt": "South Africa’s finance minister says the government will announce the final design of a proposed national online gambling tax in February 2027, with consultations still underway.",
+      "verticals": [
+        "betting",
+        "casino"
+      ],
+      "geographies": [
+        "za"
+      ],
+      "topics": [
+        "taxation"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 87950,
+      "date": "2026-10-23T01:57:26+00:00",
+      "modified": "2026-10-23T01:57:26+00:00",
+      "title": "Italian Retail Gambling Operators Seek Extension Before December Licence Expiry",
+      "slug": "italy-retail-gambling-concessions-december-2026-bridge-measures",
+      "url": "https://www.gamblee.com/articles/italy-retail-gambling-concessions-december-2026-bridge-measures/",
+      "excerpt": "Italian betting, bingo and gaming-machine concessions are due to expire at the end of 2026, prompting calls for transitional measures as land-based gambling reform remains delayed.",
+      "verticals": [
+        "betting",
+        "bingo",
+        "casino"
+      ],
+      "geographies": [
+        "it"
+      ],
+      "topics": [
+        "licensing"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "land-based"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 87947,
+      "date": "2026-10-23T01:56:05+00:00",
+      "modified": "2026-10-23T01:56:05+00:00",
+      "title": "Buenos Aires Senator Proposes Ban on Online Casinos and Sports Betting",
+      "slug": "buenos-aires-fagioli-online-gambling-ban-proposal-2026",
+      "url": "https://www.gamblee.com/articles/buenos-aires-fagioli-online-gambling-ban-proposal-2026/",
+      "excerpt": "Buenos Aires provincial senator Federico Fagioli has proposed legislation to prohibit online sports betting, casino games and poker, replacing the province’s existing licensing framework.",
+      "verticals": [
+        "betting",
+        "casino"
+      ],
+      "geographies": [
+        "ar"
+      ],
+      "topics": [
+        "legislation",
+        "licensing"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 87944,
+      "date": "2026-10-23T01:55:21+00:00",
+      "modified": "2026-10-23T01:55:21+00:00",
+      "title": "Chile Senator Proposes Prison Terms of Up to 15 Years for Illegal Online Gambling",
+      "slug": "chile-proposes-15-year-penalties-illegal-online-gambling-2026",
+      "url": "https://www.gamblee.com/articles/chile-proposes-15-year-penalties-illegal-online-gambling-2026/",
+      "excerpt": "Senate president Paulina Núñez has proposed tougher penalties, permanent judicial blocking and restrictions on financing and advertising illegal online gambling in Chile.",
+      "verticals": [
+        "betting",
+        "casino",
+        "gambling"
+      ],
+      "geographies": [
+        "cl"
+      ],
+      "topics": [
+        "enforcement",
+        "illegal-gambling",
+        "legislation"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 87941,
+      "date": "2026-10-23T01:52:00+00:00",
+      "modified": "2026-10-23T01:52:00+00:00",
+      "title": "Latvia Committee Advances Gambling Age 21 and Player Tracking Proposals",
+      "slug": "latvia-gambling-age-21-player-card-reform-october-2026",
+      "url": "https://www.gamblee.com/articles/latvia-gambling-age-21-player-card-reform-october-2026/",
+      "excerpt": "A Latvian parliamentary committee backed gambling reform proposals including a minimum age of 21, gaming-hall closing hours and personalised player tracking.",
+      "verticals": [
+        "betting",
+        "bingo",
+        "casino",
+        "gambling"
+      ],
+      "geographies": [
+        "lv"
+      ],
+      "topics": [
+        "legislation"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "hybrid"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 87938,
+      "date": "2026-10-23T01:51:10+00:00",
+      "modified": "2026-10-23T01:51:10+00:00",
+      "title": "Denmark Advances Bill to Restrict Gambling Advertising Around Live Sport",
+      "slug": "denmark-l37-gambling-advertising-restrictions-october-2026",
+      "url": "https://www.gamblee.com/articles/denmark-l37-gambling-advertising-restrictions-october-2026/",
+      "excerpt": "Denmark’s gambling reform bill L37 would restrict gambling ads around live sports, impose limits on influencers and expand regulator enforcement powers.",
+      "verticals": [
+        "betting",
+        "gambling"
+      ],
+      "geographies": [
+        "dk"
+      ],
+      "topics": [
+        "advertising-rules",
+        "enforcement",
+        "legislation"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "hybrid"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 87935,
+      "date": "2026-10-23T01:43:22+00:00",
+      "modified": "2026-10-23T01:43:22+00:00",
+      "title": "PrizePicks Launches Digital Card Packs With $8.04m Cooper Flagg Card",
+      "slug": "prizepicks-packs-digital-trading-cards-8m-cooper-flagg-october-2026",
+      "url": "https://www.gamblee.com/articles/prizepicks-packs-digital-trading-cards-8m-cooper-flagg-october-2026/",
+      "excerpt": "PrizePicks has launched paid digital trading-card packs with physical cards among the possible prizes, including a Cooper Flagg card sold for $8.04 million.",
+      "verticals": [
+        "gambling"
+      ],
+      "geographies": [
+        "us"
+      ],
+      "topics": [
+        "industry-structure",
+        "product-launch"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 87932,
+      "date": "2026-10-23T01:41:53+00:00",
+      "modified": "2026-10-23T01:41:53+00:00",
+      "title": "High Roller Launches ROLR Prediction Markets for Eligible US Customers",
+      "slug": "high-roller-rolr-prediction-markets-us-launch-october-2026",
+      "url": "https://www.gamblee.com/articles/high-roller-rolr-prediction-markets-us-launch-october-2026/",
+      "excerpt": "High Roller Technologies has launched its ROLR prediction-markets platform commercially, offering event contracts through Crypto.com Derivatives North America.",
+      "verticals": [
+        "prediction-markets"
+      ],
+      "geographies": [
+        "us"
+      ],
+      "topics": [
+        "market-entry",
+        "product-launch"
+      ],
+      "subjects": [],
+      "entities": [
+        "other-crypto-com"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 87930,
+      "date": "2026-10-23T01:40:23+00:00",
+      "modified": "2026-10-23T01:40:23+00:00",
+      "title": "Ohio Warns Gaming Licensees Over Prediction Market Relationships",
+      "slug": "ohio-warns-gaming-licensees-prediction-market-ties-october-2026",
+      "url": "https://www.gamblee.com/articles/ohio-warns-gaming-licensees-prediction-market-ties-october-2026/",
+      "excerpt": "Ohio regulators have told sports betting and fantasy gaming licensees to end support for unlicensed sports event contracts and confirm compliance by October 30.",
+      "verticals": [
+        "prediction-markets",
+        "sports-betting"
+      ],
+      "geographies": [
+        "us-oh"
+      ],
+      "topics": [
+        "enforcement",
+        "licensing"
+      ],
+      "subjects": [],
+      "entities": [
+        "other-kalshi",
+        "other-polymarket"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 87927,
+      "date": "2026-10-23T01:35:17+00:00",
+      "modified": "2026-10-23T01:35:24+00:00",
+      "title": "IG Group Plans UK Prediction Markets and Applies for Gambling Licence",
+      "slug": "ig-group-plans-uk-prediction-markets-gambling-licence-2026",
+      "url": "https://www.gamblee.com/articles/ig-group-plans-uk-prediction-markets-gambling-licence-2026/",
+      "excerpt": "IG Group plans to launch financial prediction markets for UK professional clients in late 2026 and is pursuing a gambling licence for sports, politics and entertainment markets.",
+      "verticals": [
+        "prediction-markets"
+      ],
+      "geographies": [
+        "gb"
+      ],
+      "topics": [
+        "licensing",
+        "market-entry",
+        "product-launch"
+      ],
+      "subjects": [],
+      "entities": [
+        "other-underdog"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 87924,
+      "date": "2026-10-23T01:34:15+00:00",
+      "modified": "2026-10-23T01:34:15+00:00",
+      "title": "Betsson Reports Record Q3 Revenue as Operating Profit Falls 31&#37;",
+      "slug": "betsson-q3-2026-record-revenue-profit-falls",
+      "url": "https://www.gamblee.com/articles/betsson-q3-2026-record-revenue-profit-falls/",
+      "excerpt": "Betsson reported record quarterly revenue of €326.5 million, but operating profit fell 31% to €46.1 million during the third quarter of 2026.",
+      "verticals": [
+        "betting",
+        "casino"
+      ],
+      "geographies": [
+        "global"
+      ],
+      "topics": [
+        "financial-results",
+        "ownership"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 87921,
+      "date": "2026-10-23T01:29:03+00:00",
+      "modified": "2026-10-23T01:29:03+00:00",
+      "title": "FDJ UNITED Cuts 2026 Outlook and Reviews Online Gambling Markets",
+      "slug": "fdj-united-cuts-2026-outlook-online-betting-review",
+      "url": "https://www.gamblee.com/articles/fdj-united-cuts-2026-outlook-online-betting-review/",
+      "excerpt": "FDJ UNITED has lowered its 2026 targets after nine-month revenue fell 5.6%, and is reviewing online gambling markets and non-core assets.",
+      "verticals": [
+        "betting",
+        "gambling",
+        "lottery"
+      ],
+      "geographies": [
+        "fr"
+      ],
+      "topics": [
+        "financial-results"
+      ],
+      "subjects": [],
+      "entities": [
+        "company-fdj-united"
+      ],
+      "channels": [
+        "hybrid"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 87918,
+      "date": "2026-10-23T01:26:14+00:00",
+      "modified": "2026-10-23T01:26:14+00:00",
+      "title": "New Brunswick Reviews Opening Online Gambling to Private Operators",
+      "slug": "new-brunswick-reviews-private-online-gambling-2026",
+      "url": "https://www.gamblee.com/articles/new-brunswick-reviews-private-online-gambling-2026/",
+      "excerpt": "New Brunswick is examining whether to regulate private online casinos and sportsbooks, potentially changing Atlantic Lottery’s role. No market opening has been approved.",
+      "verticals": [
+        "gambling"
+      ],
+      "geographies": [
+        "ca-nb"
+      ],
+      "topics": [
+        "industry-structure",
+        "legislation"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 87915,
+      "date": "2026-10-23T01:24:01+00:00",
+      "modified": "2026-10-23T01:24:01+00:00",
+      "title": "Jeju Casino Faces Proposed Three-Month Suspension Over Marked-Card Blackjack Case",
+      "slug": "jeju-casino-three-month-suspension-marked-card-blackjack-2026",
+      "url": "https://www.gamblee.com/articles/jeju-casino-three-month-suspension-marked-card-blackjack-2026/",
+      "excerpt": "Jeju authorities are considering a three-month suspension after six casino-linked people were referred to prosecutors in an alleged marked-card blackjack fraud case.",
+      "verticals": [
+        "casino"
+      ],
+      "geographies": [
+        "kr"
+      ],
+      "topics": [
+        "cheating",
+        "enforcement"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "land-based"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 87912,
+      "date": "2026-10-23T01:23:18+00:00",
+      "modified": "2026-10-23T01:23:18+00:00",
+      "title": "Polymarket Reportedly Dismisses Marketing Chief Matthew Modabber",
+      "slug": "polymarket-reportedly-dismisses-marketing-chief-modabber-2026",
+      "url": "https://www.gamblee.com/articles/polymarket-reportedly-dismisses-marketing-chief-modabber-2026/",
+      "excerpt": "The New York Post reports Polymarket dismissed marketing executive Matthew Modabber following an internal review of controversial promotional practices. The claims remain independently unverified.",
+      "verticals": [
+        "prediction-markets"
+      ],
+      "geographies": [
+        "us"
+      ],
+      "topics": [
+        "leadership"
+      ],
+      "subjects": [],
+      "entities": [
+        "other-polymarket"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 87909,
+      "date": "2026-10-23T01:16:17+00:00",
+      "modified": "2026-10-23T01:16:17+00:00",
+      "title": "EU Court Sets November 19 Judgment Date in Malta Bill 55 Case",
+      "slug": "malta-bill-55-eu-court-judgment-november-2026",
+      "url": "https://www.gamblee.com/articles/malta-bill-55-eu-court-judgment-november-2026/",
+      "excerpt": "The EU Court of Justice is scheduled to rule on November 19 in a case involving Malta’s restrictions on enforcement of foreign judgments against licensed gambling operators.",
+      "verticals": [
+        "gambling"
+      ],
+      "geographies": [
+        "global"
+      ],
+      "topics": [
+        "licensing",
+        "litigation"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 87906,
+      "date": "2026-10-23T01:13:11+00:00",
+      "modified": "2026-10-23T01:13:11+00:00",
+      "title": "Pentagon Bars Prediction-Market Trades Using Nonpublic Military Information",
+      "slug": "pentagon-bans-prediction-market-insider-trading-2026",
+      "url": "https://www.gamblee.com/articles/pentagon-bans-prediction-market-insider-trading-2026/",
+      "excerpt": "A US Defense Department directive bars military and civilian personnel from trading on prediction markets using nonpublic information about military operations.",
+      "verticals": [
+        "prediction-markets"
+      ],
+      "geographies": [
+        "us"
+      ],
+      "topics": [
+        "financial-crime",
+        "regulation-law"
+      ],
+      "subjects": [],
+      "entities": [
+        "other-kalshi",
+        "other-polymarket"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 87902,
+      "date": "2026-10-23T01:11:40+00:00",
+      "modified": "2026-10-23T01:12:06+00:00",
+      "title": "Dutch Gambling Regulator Fines EOD Code €37 Million Over Illegal Casinos",
+      "slug": "netherlands-eod-code-37-million-illegal-casino-fine-2026",
+      "url": "https://www.gamblee.com/articles/netherlands-eod-code-37-million-illegal-casino-fine-2026/",
+      "excerpt": "The Dutch gambling regulator has fined EOD Code SRL €37 million for offering online gambling without a Dutch licence, citing multiple websites and player-protection failures.",
+      "verticals": [
+        "casino"
+      ],
+      "geographies": [
+        "nl"
+      ],
+      "topics": [
+        "enforcement",
+        "illegal-gambling"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 87899,
+      "date": "2026-10-23T00:32:10+00:00",
+      "modified": "2026-10-23T00:32:10+00:00",
+      "title": "New Jersey Makes Data-Driven Responsible Gambling Rules Mandatory",
+      "slug": "new-jersey-mandatory-responsible-gambling-rules-2026",
+      "url": "https://www.gamblee.com/articles/new-jersey-mandatory-responsible-gambling-rules-2026/",
+      "excerpt": "New Jersey’s online gambling rules took effect on October 19, requiring player-risk reviews, phased interventions and restrictions on marketing to at-risk customers.",
+      "verticals": [
+        "casino",
+        "sports-betting"
+      ],
+      "geographies": [
+        "us-nj"
+      ],
+      "topics": [
+        "regulation-law",
+        "responsible-gambling"
+      ],
+      "subjects": [],
+      "entities": [
+        "regulator-new-jersey-division-of-gaming-enforcement-njdge"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
     {
       "id": 87773,
       "date": "2026-10-21T17:52:47+00:00",

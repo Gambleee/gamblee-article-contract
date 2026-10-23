@@ -2,7 +2,7 @@
   "contract": "gamblee-article-vocabulary-snapshot",
   "schema_version": "1.1",
   "dimension": "entities",
-  "total": 1272,
+  "total": 1273,
   "source": "https://www.gamblee.com/wp-json/gamblee-core/v1/articles/vocabulary/entities",
   "items": [
     {
@@ -73,7 +73,7 @@
     {
       "slug": "brand-44aces",
       "name": "44Aces",
-      "entity_type": "brand"
+      "entity_type": "other"
     },
     {
       "slug": "provider-5-men-gaming",
@@ -1086,6 +1086,11 @@
       "entity_type": "payment-method"
     },
     {
+      "slug": "provider-bombay-live",
+      "name": "Bombay Live",
+      "entity_type": "provider"
+    },
+    {
       "slug": "other-bombaycasino-com",
       "name": "Bombaycasino.com",
       "entity_type": "other"
@@ -1938,7 +1943,7 @@
     {
       "slug": "brand-eurokingsclub",
       "name": "EuroKingsClub",
-      "entity_type": "brand"
+      "entity_type": "other"
     },
     {
       "slug": "provider-eurostar-studios",
@@ -6193,7 +6198,7 @@
     {
       "slug": "brand-winningkings",
       "name": "WinningKings",
-      "entity_type": "brand"
+      "entity_type": "other"
     },
     {
       "slug": "provider-winspinity",

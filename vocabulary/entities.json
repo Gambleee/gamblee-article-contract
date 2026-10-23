@@ -2,7 +2,7 @@
   "contract": "gamblee-article-vocabulary-snapshot",
   "schema_version": "1.1",
   "dimension": "entities",
-  "total": 1268,
+  "total": 1272,
   "source": "https://www.gamblee.com/wp-json/gamblee-core/v1/articles/vocabulary/entities",
   "items": [
     {
@@ -69,6 +69,11 @@
       "slug": "provider-4-the-player",
       "name": "4 The Player",
       "entity_type": "provider"
+    },
+    {
+      "slug": "brand-44aces",
+      "name": "44Aces",
+      "entity_type": "brand"
     },
     {
       "slug": "provider-5-men-gaming",
@@ -1931,6 +1936,11 @@
       "entity_type": "provider"
     },
     {
+      "slug": "brand-eurokingsclub",
+      "name": "EuroKingsClub",
+      "entity_type": "brand"
+    },
+    {
       "slug": "provider-eurostar-studios",
       "name": "Eurostar Studios",
       "entity_type": "provider"
@@ -2766,14 +2776,14 @@
       "entity_type": "provider"
     },
     {
-      "slug": "other-hsbc",
-      "name": "HSBC",
-      "entity_type": "other"
-    },
-    {
       "slug": "payment-method-hsbc",
       "name": "HSBC",
       "entity_type": "payment-method"
+    },
+    {
+      "slug": "other-hsbc",
+      "name": "HSBC",
+      "entity_type": "other"
     },
     {
       "slug": "provider-hungry-bear",
@@ -3438,6 +3448,11 @@
     {
       "slug": "brand-luckyme-slots",
       "name": "LuckyMe Slots",
+      "entity_type": "other"
+    },
+    {
+      "slug": "brand-lucky-niki",
+      "name": "LuckyNiki",
       "entity_type": "other"
     },
     {
@@ -6174,6 +6189,11 @@
       "slug": "provider-wingo",
       "name": "Wingo",
       "entity_type": "provider"
+    },
+    {
+      "slug": "brand-winningkings",
+      "name": "WinningKings",
+      "entity_type": "brand"
     },
     {
       "slug": "provider-winspinity",

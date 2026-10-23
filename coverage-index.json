@@ -2,8 +2,421 @@
   "contract": "gamblee-article-coverage-index",
   "schema_version": 1,
   "source": "https://www.gamblee.com/wp-json/gamblee-core/v1/articles/coverage-index",
-  "total": 273,
+  "total": 287,
   "articles": [
+    {
+      "id": 88001,
+      "date": "2026-10-23T13:18:32+00:00",
+      "modified": "2026-10-23T13:18:32+00:00",
+      "title": "Utah Sues Kalshi and Susquehanna Firms Over Alleged Illegal Gambling",
+      "slug": "utah-kalshi-susquehanna-gambling-lawsuit-october-2026",
+      "url": "https://www.gamblee.com/articles/utah-kalshi-susquehanna-gambling-lawsuit-october-2026/",
+      "excerpt": "Utah has filed a lawsuit against Kalshi and Susquehanna businesses, asking a state court to halt allegedly unlawful event contracts.",
+      "verticals": [
+        "prediction-markets"
+      ],
+      "geographies": [
+        "us-ut"
+      ],
+      "topics": [
+        "illegal-gambling",
+        "litigation"
+      ],
+      "subjects": [],
+      "entities": [
+        "other-kalshi"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 87998,
+      "date": "2026-10-23T13:17:46+00:00",
+      "modified": "2026-10-23T13:17:46+00:00",
+      "title": "Ohio Warns Gambling Licensees to Cut Ties With Unlicensed Prediction Markets",
+      "slug": "ohio-prediction-markets-licensees-october-2026",
+      "url": "https://www.gamblee.com/articles/ohio-prediction-markets-licensees-october-2026/",
+      "excerpt": "Ohio gambling regulators have told sports betting and fantasy licensees to cease services to unlicensed prediction markets by October 30.",
+      "verticals": [
+        "prediction-markets",
+        "sports-betting"
+      ],
+      "geographies": [
+        "us-oh"
+      ],
+      "topics": [
+        "enforcement",
+        "licensing"
+      ],
+      "subjects": [],
+      "entities": [
+        "other-kalshi",
+        "other-polymarket"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 87995,
+      "date": "2026-10-23T13:14:55+00:00",
+      "modified": "2026-10-23T13:14:55+00:00",
+      "title": "Namibia Advances Gambling Regulation Proposals and Digital Monitoring Plan",
+      "slug": "namibia-gambling-regulation-proposals-digital-monitoring-october-2026",
+      "url": "https://www.gamblee.com/articles/namibia-gambling-regulation-proposals-digital-monitoring-october-2026/",
+      "excerpt": "Namibia is consulting on amended gambling and lottery regulations, including revised levies and a central electronic monitoring system.",
+      "verticals": [
+        "gambling"
+      ],
+      "geographies": [
+        "na"
+      ],
+      "topics": [
+        "legislation",
+        "licensing"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "hybrid"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 87992,
+      "date": "2026-10-23T13:14:11+00:00",
+      "modified": "2026-10-23T13:14:11+00:00",
+      "title": "Boyd Gaming Reports $990.5m Third-Quarter Revenue as Online Segment Grows",
+      "slug": "boyd-gaming-q3-2026-revenue-online-casino-growth",
+      "url": "https://www.gamblee.com/articles/boyd-gaming-q3-2026-revenue-online-casino-growth/",
+      "excerpt": "Boyd Gaming reported $990.5m of Q3 2026 revenue, with online casino growth offsetting some softness in Las Vegas destination business.",
+      "verticals": [
+        "casino"
+      ],
+      "geographies": [
+        "us"
+      ],
+      "topics": [
+        "financial-results",
+        "industry-structure"
+      ],
+      "subjects": [],
+      "entities": [
+        "other-boyd-interactive"
+      ],
+      "channels": [
+        "hybrid"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 87989,
+      "date": "2026-10-23T13:13:32+00:00",
+      "modified": "2026-10-23T13:13:32+00:00",
+      "title": "Police Uncover Two Illegal Casinos in Melbourne in Wider Investigation",
+      "slug": "melbourne-illegal-casinos-carnegie-box-hill-police-october-2026",
+      "url": "https://www.gamblee.com/articles/melbourne-illegal-casinos-carnegie-box-hill-police-october-2026/",
+      "excerpt": "Victoria Police uncovered alleged illegal casinos in Carnegie and Box Hill in a wider investigation that has led to 29 arrests.",
+      "verticals": [
+        "casino"
+      ],
+      "geographies": [
+        "au"
+      ],
+      "topics": [
+        "enforcement",
+        "illegal-gambling"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "land-based"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 87986,
+      "date": "2026-10-23T12:59:07+00:00",
+      "modified": "2026-10-23T12:59:07+00:00",
+      "title": "Police Raid 101 Poker Club in Katy, Texas, as Questions Remain Over Cause",
+      "slug": "texas-101-poker-club-katy-police-raid-october-2026",
+      "url": "https://www.gamblee.com/articles/texas-101-poker-club-katy-police-raid-october-2026/",
+      "excerpt": "Police raided 101 Poker Club in Katy, Texas, on 22 October. Staff were detained and at least one arrest was reported; the grounds remain unconfirmed.",
+      "verticals": [
+        "poker"
+      ],
+      "geographies": [
+        "us-tx"
+      ],
+      "topics": [
+        "enforcement",
+        "illegal-gambling"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "land-based"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 87983,
+      "date": "2026-10-23T12:57:58+00:00",
+      "modified": "2026-10-23T12:57:58+00:00",
+      "title": "Australia Warns Former AFL Players Over Vegastars Casino Advertising",
+      "slug": "australia-acma-warns-afl-players-vegastars-advertising-2026",
+      "url": "https://www.gamblee.com/articles/australia-acma-warns-afl-players-vegastars-advertising-2026/",
+      "excerpt": "Australia’s ACMA issued formal warnings to former AFL players Mitch Robinson and Rhys Mathieson for promoting prohibited gambling site Vegastars.",
+      "verticals": [
+        "casino"
+      ],
+      "geographies": [
+        "au"
+      ],
+      "topics": [
+        "advertising-rules",
+        "enforcement"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 87980,
+      "date": "2026-10-23T12:56:47+00:00",
+      "modified": "2026-10-23T12:56:47+00:00",
+      "title": "PointsBet Agrees Two-Day Ontario Suspension in Jontay Porter Betting Case",
+      "slug": "pointsbet-ontario-two-day-suspension-jontay-porter-2026",
+      "url": "https://www.gamblee.com/articles/pointsbet-ontario-two-day-suspension-jontay-porter-2026/",
+      "excerpt": "PointsBet Canada has agreed to a two-day Ontario gambling-site suspension and an independent compliance audit in a settlement with the AGCO.",
+      "verticals": [
+        "sports-betting"
+      ],
+      "geographies": [
+        "ca-on"
+      ],
+      "topics": [
+        "enforcement",
+        "licensing"
+      ],
+      "subjects": [],
+      "entities": [
+        "regulator-alcohol-and-gaming-commission-of-ontario-agco"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 87977,
+      "date": "2026-10-23T12:54:55+00:00",
+      "modified": "2026-10-23T12:54:55+00:00",
+      "title": "US Lawmakers Question VIP Rewards at Six Gambling and Prediction Platforms",
+      "slug": "us-lawmakers-seek-vip-program-data-six-gambling-platforms",
+      "url": "https://www.gamblee.com/articles/us-lawmakers-seek-vip-program-data-six-gambling-platforms/",
+      "excerpt": "Three US lawmakers sought details of VIP rewards, personalised promotions and AI use from six gambling and prediction-market companies by 5 November.",
+      "verticals": [
+        "betting",
+        "prediction-markets"
+      ],
+      "geographies": [
+        "us"
+      ],
+      "topics": [
+        "advertising-marketing",
+        "player-protection"
+      ],
+      "subjects": [],
+      "entities": [
+        "other-caesars",
+        "other-draftkings",
+        "other-fanatics",
+        "other-kalshi",
+        "other-polymarket"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 87972,
+      "date": "2026-10-23T12:52:12+00:00",
+      "modified": "2026-10-23T12:53:40+00:00",
+      "title": "Tether.bet Curaçao Licence Application Questioned in Newspaper Investigation",
+      "slug": "tetherbet-curacao-licence-application-document-allegations",
+      "url": "https://www.gamblee.com/articles/tetherbet-curacao-licence-application-document-allegations/",
+      "excerpt": "A Times investigation alleges irregularities in documents used to support Tether.bet’s Curaçao gambling licence application. The claims are not regulatory findings.",
+      "verticals": [
+        "casino",
+        "gambling"
+      ],
+      "geographies": [
+        "global"
+      ],
+      "topics": [
+        "fraud",
+        "licensing"
+      ],
+      "subjects": [],
+      "entities": [
+        "regulator-curacao-gaming-authority"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 87969,
+      "date": "2026-10-23T12:49:06+00:00",
+      "modified": "2026-10-23T12:49:06+00:00",
+      "title": "Evoke Q3 Revenue Falls 7&#37; as William Hill Shop Closures Reach 270",
+      "slug": "evoke-q3-2026-revenue-falls-william-hill-shop-closures",
+      "url": "https://www.gamblee.com/articles/evoke-q3-2026-revenue-falls-william-hill-shop-closures/",
+      "excerpt": "Evoke reported third-quarter 2026 revenue of £406 million, down 7%, as retail closures and sports results weighed on trading.",
+      "verticals": [
+        "betting",
+        "gambling"
+      ],
+      "geographies": [
+        "gb"
+      ],
+      "topics": [
+        "financial-results",
+        "market-exit-closure",
+        "mergers-acquisitions"
+      ],
+      "subjects": [],
+      "entities": [
+        "brand-william-hill",
+        "company-ballys-intralot-s-a",
+        "company-evoke-plc"
+      ],
+      "channels": [
+        "hybrid"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 87966,
+      "date": "2026-10-23T12:46:57+00:00",
+      "modified": "2026-10-23T12:46:57+00:00",
+      "title": "UK Gambling Commission Sets Out Good Practice for Sports Micro-Betting Settlements",
+      "slug": "ukgc-sports-micro-betting-market-settlement-guidance-2026",
+      "url": "https://www.gamblee.com/articles/ukgc-sports-micro-betting-market-settlement-guidance-2026/",
+      "excerpt": "The UK Gambling Commission has outlined expectations for bookmakers and data suppliers when sporting micro-events are used to settle bets.",
+      "verticals": [
+        "sports-betting"
+      ],
+      "geographies": [
+        "gb"
+      ],
+      "topics": [
+        "player-protection",
+        "regulation-law"
+      ],
+      "subjects": [
+        "betting-feature-in-play-betting",
+        "football"
+      ],
+      "entities": [
+        "regulator-united-kingdom-gambling-commission"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 87963,
+      "date": "2026-10-23T12:45:28+00:00",
+      "modified": "2026-10-23T12:45:28+00:00",
+      "title": "CFTC Asks Novig and ProphetX to Hold Back Sports Event Contracts",
+      "slug": "cftc-novig-prophetx-sports-event-contracts-october-2026",
+      "url": "https://www.gamblee.com/articles/cftc-novig-prophetx-sports-event-contracts-october-2026/",
+      "excerpt": "The US Commodity Futures Trading Commission has raised objections to proposed sports event contracts from Novig and ProphetX, with the exchanges given an opportunity to respond.",
+      "verticals": [
+        "prediction-markets",
+        "sports-betting"
+      ],
+      "geographies": [
+        "us"
+      ],
+      "topics": [
+        "product-technology",
+        "regulation-law"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 87960,
+      "date": "2026-10-23T12:44:14+00:00",
+      "modified": "2026-10-23T12:44:14+00:00",
+      "title": "Evolution Temporarily Closes Brazil Live Casino Studio Amid Regulatory Uncertainty",
+      "slug": "evolution-temporarily-closes-brazil-live-casino-studio-october-2026",
+      "url": "https://www.gamblee.com/articles/evolution-temporarily-closes-brazil-live-casino-studio-october-2026/",
+      "excerpt": "Evolution has temporarily shut its Brazilian live casino studio as uncertainty over the country’s gambling framework continues, the supplier confirmed in its third-quarter results.",
+      "verticals": [
+        "live-casino"
+      ],
+      "geographies": [
+        "br"
+      ],
+      "topics": [
+        "financial-results",
+        "market-exit-closure"
+      ],
+      "subjects": [],
+      "entities": [
+        "other-evolution",
+        "provider-evolution-gaming"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
     {
       "id": 87956,
       "date": "2026-10-23T02:04:52+00:00",

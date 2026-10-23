@@ -13,7 +13,7 @@ from pathlib import Path
 
 SOURCE = os.environ.get("GAMBLEE_SOURCE_URL", "https://www.gamblee.com").rstrip("/")
 ROOT = Path(__file__).resolve().parents[1]
-USER_AGENT = "GambleeArticleSnapshotSync/1.0 (+https://github.com/Gambleee/gamblee-article-contract)"
+USER_AGENT = "GambleeContractSnapshotSync/1.1 (+https://github.com/Gambleee/gamblee-article-contract)"
 TIMEOUT = 30
 
 
@@ -35,6 +35,20 @@ def write_json(relative_path: str, payload) -> None:
 def sync_contract() -> None:
     payload = fetch_json("/wp-json/gamblee-core/v1/articles/authoring-contract")
     write_json("authoring-contract.json", payload)
+
+
+def sync_bonus_contract() -> bool:
+    endpoint = "/wp-json/gamblee-core/v1/bonuses/authoring-contract"
+    try:
+        payload = fetch_json(endpoint)
+    except urllib.error.HTTPError as exc:
+        if exc.code == 404:
+            print("Bonus contract endpoint not installed on the source site yet; retaining the last GitHub snapshot.")
+            return False
+        raise
+
+    write_json("bonuses/authoring-contract.json", payload)
+    return True
 
 
 def sync_vocabularies() -> None:
@@ -108,9 +122,10 @@ def sync_coverage() -> bool:
 
 def main() -> int:
     sync_contract()
+    sync_bonus_contract()
     sync_vocabularies()
     sync_coverage()
-    print("Gamblee Article snapshots refreshed successfully.")
+    print("Gamblee contract snapshots refreshed successfully.")
     return 0
 
 

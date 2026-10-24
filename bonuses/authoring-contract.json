@@ -9,7 +9,8 @@
     "Do not output prohibited markets. CA-ON is currently prohibited for public Bonus Offer publication.",
     "If a discovered mechanic cannot be represented exactly by this contract, do not force-fit it. Put it in schema_gaps with status unsupported_but_fixable and propose the exact field/component/type change.",
     "supported_and_analyzable and not_calculable offers may be imported. unsupported_but_fixable items are blocked until the schema is extended.",
-    "Use dedicated offer/terms landing URLs only when they genuinely exist. Otherwise return null so the offer inherits the brand market/vertical commercial link.",
+    "urls.offer is only for an approved/tracked commercial deep link. Put ordinary official promotion pages in evidence and leave urls.offer null so Gamblee inherits the brand market/vertical commercial link. urls.terms may use a direct official terms URL.",
+    "Use excluded_subdivisions for explicit subnational exclusions inside a broader market (for example GB with GB-NIR excluded). Do not hide regional exclusions only in free text.",
     "Prefer current first-party/official evidence. Include source URLs in evidence."
   ],
   "analysis_statuses": [
@@ -1279,6 +1280,9 @@
         "url": "https://example.com/terms",
         "label": "Official bonus terms"
       }
+    ],
+    "excluded_subdivisions": [
+      "GB-NIR"
     ]
   },
   "root_shape": {
@@ -1289,8 +1293,8 @@
     "schema_gaps": []
   },
   "snapshot": {
-    "source": "staging bootstrap from Gamblee Core 1.83.50 contract + current canonical taxonomies",
-    "generated_at": "2026-10-23T23:26:35.933Z",
+    "source": "staging bootstrap from Gamblee Core 1.83.51 contract + current canonical taxonomies",
+    "generated_at": "2026-10-24T00:08:14.606Z",
     "note": "Scheduled GitHub sync replaces this snapshot from the public WordPress REST contract when that endpoint is available."
   }
 }

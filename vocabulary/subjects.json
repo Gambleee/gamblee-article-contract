@@ -2,7 +2,7 @@
   "contract": "gamblee-article-vocabulary-snapshot",
   "schema_version": "1.1",
   "dimension": "subjects",
-  "total": 220,
+  "total": 227,
   "source": "https://www.gamblee.com/wp-json/gamblee-core/v1/articles/vocabulary/subjects",
   "items": [
     {
@@ -138,6 +138,10 @@
       "parent_slug": "sports"
     },
     {
+      "slug": "promotion_type-best-odds-guaranteed",
+      "name": "Best Odds Guaranteed"
+    },
+    {
       "slug": "betting-feature-bet-builder",
       "name": "Bet Builder"
     },
@@ -152,6 +156,10 @@
     {
       "slug": "betting-feature-bet-mentor",
       "name": "Bet Mentor"
+    },
+    {
+      "slug": "promotion_type-bet-protection",
+      "name": "Bet Protection"
     },
     {
       "slug": "betting-feature-betting-insights",
@@ -383,6 +391,10 @@
       "name": "Free Bet"
     },
     {
+      "slug": "promotion_type-free-bet",
+      "name": "Free Bet"
+    },
+    {
       "slug": "bonus_type-free-chips",
       "name": "Free Chips"
     },
@@ -398,6 +410,10 @@
     {
       "slug": "promotion_type-free-spins",
       "name": "Free Spins"
+    },
+    {
+      "slug": "promotion_type-free-to-play",
+      "name": "Free to Play"
     },
     {
       "slug": "promotion_type-freebies",
@@ -529,6 +545,10 @@
       "slug": "lacrosse",
       "name": "Lacrosse",
       "parent_slug": "sports"
+    },
+    {
+      "slug": "promotion_type-leaderboard",
+      "name": "Leaderboard"
     },
     {
       "slug": "promotion_type-leaderboard-competition",
@@ -685,8 +705,16 @@
       "name": "Prize Draw"
     },
     {
+      "slug": "promotion_type-prize-drop",
+      "name": "Prize Drop"
+    },
+    {
       "slug": "promotion_type-prize-twister",
       "name": "Prize Twister"
+    },
+    {
+      "slug": "promotion_type-prize-wheel",
+      "name": "Prize Wheel"
     },
     {
       "slug": "betting-feature-profit-boost",

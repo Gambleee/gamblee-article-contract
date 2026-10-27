@@ -3078,7 +3078,7 @@
     {
       "slug": "brand-jeffbet",
       "name": "JeffBet",
-      "entity_type": "brand"
+      "entity_type": "other"
     },
     {
       "slug": "provider-jelly",
@@ -4508,7 +4508,7 @@
     {
       "slug": "brand-playojo",
       "name": "PlayOJO",
-      "entity_type": "brand"
+      "entity_type": "other"
     },
     {
       "slug": "provider-playpearls",
@@ -5443,7 +5443,7 @@
     {
       "slug": "brand-spingenie",
       "name": "SpinGenie",
-      "entity_type": "brand"
+      "entity_type": "other"
     },
     {
       "slug": "brand-spinland",
@@ -5608,7 +5608,7 @@
     {
       "slug": "brand-swift-casino",
       "name": "Swift Casino",
-      "entity_type": "brand"
+      "entity_type": "other"
     },
     {
       "slug": "provider-swintt",
@@ -6038,7 +6038,7 @@
     {
       "slug": "brand-virgin-games",
       "name": "Virgin Games",
-      "entity_type": "brand"
+      "entity_type": "other"
     },
     {
       "slug": "company-virtual-global-digital-services-ltd",
@@ -6183,7 +6183,7 @@
     {
       "slug": "brand-william-hill",
       "name": "William Hill",
-      "entity_type": "brand"
+      "entity_type": "other"
     },
     {
       "slug": "provider-william-hill-live",

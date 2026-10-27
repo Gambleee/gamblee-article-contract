@@ -1,16 +1,38 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.5",
+  "compatible_schema_versions": [
+    "1.0",
+    "1.1",
+    "1.2",
+    "1.3",
+    "1.4",
+    "1.5"
+  ],
   "entity": "gamblee_bonus_research",
   "rules": [
     "One offer object represents exactly one market and one vertical. Multiple simultaneous offers for the same market/vertical are allowed.",
-    "Market and currency are independent. A USD-denominated poker offer may target GB, IE or another market.",
+    "Market and currencies are independent. A USD-denominated poker offer may target GB, IE or another market.",
+    "Currencies use the canonical Bonus Offer ISO 4217 vocabulary. GLOBAL/ROW offers may use local currencies beyond Gamblee's detailed-market currencies.",
+    "One discrete promotion stays one offer even when the operator supports several account currencies. Use currencies as a list and do not clone an otherwise identical market/vertical offer solely for EUR/USD/etc. If structured mechanics materially differ by currency and cannot be represented exactly, report a schema gap rather than creating currency-only duplicates.",
+    "Match-bonus display copy is canonical. When components.match_bonus is enabled, copy.display_offer must be exactly <match_percent>% up to <currency><max_bonus_match> with no prefix or extra wording (for example 100% up to £100 or 100% up to TZS20,000). Use the first currencies entry as the display currency; the importer normalizes this from the structured component values.",
     "A multi-stage deposit pack is one offer. Capture all stages in multi_step.rows; structured reward components describe the first stage unless a future schema explicitly models later stages.",
     "Recurring offers remain one offer and use schedule.weekdays and/or validity dates.",
     "Do not output prohibited markets. CA-ON is currently prohibited for public Bonus Offer publication.",
     "If a discovered mechanic cannot be represented exactly by this contract, do not force-fit it. Put it in schema_gaps with status unsupported_but_fixable and propose the exact field/component/type change.",
     "supported_and_analyzable and not_calculable offers may be imported. unsupported_but_fixable items are blocked until the schema is extended.",
-    "urls.offer is only for an approved/tracked commercial deep link. Put ordinary official promotion pages in evidence and leave urls.offer null so Gamblee inherits the brand market/vertical commercial link. urls.terms may use a direct official terms URL.",
-    "Use excluded_subdivisions for explicit subnational exclusions inside a broader market (for example GB with GB-NIR excluded). Do not hide regional exclusions only in free text.",
+    "urls.offer is only for a Gamblee-approved/tracked commercial deep link. Never substitute a generic official brand website, ordinary promotion page, affiliate-programme homepage, evidence URL, or guessed tracking URL. Put ordinary official promotion pages in evidence and leave urls.offer null so Gamblee inherits the canonical brand market/vertical Commercial Link. urls.terms may use a direct official terms URL.",
+    "Use included_subdivisions when a broad country offer is available only in named subdivisions; use excluded_subdivisions when it applies broadly except named subdivisions. Never use both for the same subdivision.",
+    "Use included_countries only with market=GLOBAL to whitelist the exact countries covered by a broad international offer. Countries must already be confirmed for the brand or be proposed as evidence-backed country_additions in the same payload.",
+    "Use eligibility_devices only for real device restrictions. Empty means no device restriction.",
+    "Reward expiry values are paired with explicit units (hours, days or weeks). Legacy schema 1.0 payloads without units are interpreted as days.",
+    "taxonomy_additions may propose genuinely missing eligible_game, excluded_payment_methods or scoring_penalty terms. Structural vocabularies such as bonus_type and bonus_vertical remain locked.",
+    "brand_availability_changes may propose evidence-backed country or US/Canada subdivision additions/removals discovered while researching current official offer terms. Every change requires a reason and at least one first-party URL on a stored canonical brand domain. A country addition may include name; when a valid ISO code has no existing Gamblee Country record, the importer may create that Country record from the canonical name. Do not infer removals from the absence of an offer.",
+    "Offer validation may rely on an availability addition in the same payload. Availability changes are applied only after every Bonus Offer in the payload imports successfully.",
+    "A required but operator-selected or dynamically supplied promo code uses bonus_code_requirement=required_unspecified rather than inventing a code.",
+    "Use excluded_card_bins only when official terms explicitly list excluded payment-card BIN/IIN prefixes.",
+    "Use qualification_window_value + qualification_window_unit for a deadline to complete a qualifying action or use a pre-reward token; reward expiry remains component-specific.",
+    "When qualifying spend is defined as a multiple of a deposit or bonus amount, use qualification_spend_multiplier + qualification_spend_basis instead of guessing a fixed minimum_spend.",
+    "Use components.external_reward for non-cash third-party value such as vouchers or gift cards. Use components.free_rounds for branded game rounds such as Free Flights or Free Crossings rather than force-fitting them into free_spins.",
     "Prefer current first-party/official evidence. Include source URLs in evidence."
   ],
   "analysis_statuses": [
@@ -25,6 +47,1313 @@
     "invited_customers",
     "unknown"
   ],
+  "eligibility_devices": [
+    "desktop",
+    "mobile",
+    "tablet",
+    "app",
+    "web"
+  ],
+  "countries": [
+    {
+      "code": "AD",
+      "name": "Andorra"
+    },
+    {
+      "code": "AE",
+      "name": "United Arab Emirates"
+    },
+    {
+      "code": "AF",
+      "name": "Afghanistan"
+    },
+    {
+      "code": "AG",
+      "name": "Antigua and Barbuda"
+    },
+    {
+      "code": "AI",
+      "name": "Anguilla"
+    },
+    {
+      "code": "AL",
+      "name": "Albania"
+    },
+    {
+      "code": "AM",
+      "name": "Armenia"
+    },
+    {
+      "code": "AN",
+      "name": "Netherlands Antilles"
+    },
+    {
+      "code": "AO",
+      "name": "Angola"
+    },
+    {
+      "code": "AQ",
+      "name": "Antarctica"
+    },
+    {
+      "code": "AR",
+      "name": "Argentina"
+    },
+    {
+      "code": "AS",
+      "name": "American Samoa"
+    },
+    {
+      "code": "AT",
+      "name": "Austria"
+    },
+    {
+      "code": "AU",
+      "name": "Australia"
+    },
+    {
+      "code": "AW",
+      "name": "Aruba"
+    },
+    {
+      "code": "AZ",
+      "name": "Azerbaijan"
+    },
+    {
+      "code": "BA",
+      "name": "Bosnia-Herzegovina"
+    },
+    {
+      "code": "BB",
+      "name": "Barbados"
+    },
+    {
+      "code": "BD",
+      "name": "Bangladesh"
+    },
+    {
+      "code": "BE",
+      "name": "Belgium"
+    },
+    {
+      "code": "BF",
+      "name": "Burkina Faso"
+    },
+    {
+      "code": "BG",
+      "name": "Bulgaria"
+    },
+    {
+      "code": "BH",
+      "name": "Bahrain"
+    },
+    {
+      "code": "BI",
+      "name": "Burundi"
+    },
+    {
+      "code": "BJ",
+      "name": "Benin"
+    },
+    {
+      "code": "BM",
+      "name": "Bermuda"
+    },
+    {
+      "code": "BN",
+      "name": "Brunei Darussalam"
+    },
+    {
+      "code": "BO",
+      "name": "Bolivia"
+    },
+    {
+      "code": "BR",
+      "name": "Brazil"
+    },
+    {
+      "code": "BS",
+      "name": "Bahamas"
+    },
+    {
+      "code": "BT",
+      "name": "Bhutan"
+    },
+    {
+      "code": "BV",
+      "name": "Bouvet Island"
+    },
+    {
+      "code": "BW",
+      "name": "Botswana"
+    },
+    {
+      "code": "BY",
+      "name": "Belarus"
+    },
+    {
+      "code": "BZ",
+      "name": "Belize"
+    },
+    {
+      "code": "CA",
+      "name": "Canada"
+    },
+    {
+      "code": "CC",
+      "name": "Cocos (Keeling) Islands"
+    },
+    {
+      "code": "CD",
+      "name": "Democratic Republic of Congo"
+    },
+    {
+      "code": "CF",
+      "name": "Central African Republic"
+    },
+    {
+      "code": "CG",
+      "name": "Congo"
+    },
+    {
+      "code": "CH",
+      "name": "Switzerland"
+    },
+    {
+      "code": "CI",
+      "name": "Ivory Coast"
+    },
+    {
+      "code": "CK",
+      "name": "Cook Islands"
+    },
+    {
+      "code": "CL",
+      "name": "Chile"
+    },
+    {
+      "code": "CM",
+      "name": "Cameroon"
+    },
+    {
+      "code": "CN",
+      "name": "China"
+    },
+    {
+      "code": "CO",
+      "name": "Colombia"
+    },
+    {
+      "code": "CR",
+      "name": "Costa Rica"
+    },
+    {
+      "code": "CU",
+      "name": "Cuba"
+    },
+    {
+      "code": "CV",
+      "name": "Cape Verde"
+    },
+    {
+      "code": "CX",
+      "name": "Christmas Island"
+    },
+    {
+      "code": "CY",
+      "name": "Cyprus"
+    },
+    {
+      "code": "CZ",
+      "name": "Czech Rep."
+    },
+    {
+      "code": "DE",
+      "name": "Germany"
+    },
+    {
+      "code": "DJ",
+      "name": "Djibouti"
+    },
+    {
+      "code": "DK",
+      "name": "Denmark"
+    },
+    {
+      "code": "DM",
+      "name": "Dominica"
+    },
+    {
+      "code": "DO",
+      "name": "Dominican Republic"
+    },
+    {
+      "code": "DZ",
+      "name": "Algeria"
+    },
+    {
+      "code": "EC",
+      "name": "Ecuador"
+    },
+    {
+      "code": "EE",
+      "name": "Estonia"
+    },
+    {
+      "code": "EG",
+      "name": "Egypt"
+    },
+    {
+      "code": "EH",
+      "name": "Western Sahara"
+    },
+    {
+      "code": "ER",
+      "name": "Eritrea"
+    },
+    {
+      "code": "ES",
+      "name": "Spain"
+    },
+    {
+      "code": "ET",
+      "name": "Ethiopia"
+    },
+    {
+      "code": "FI",
+      "name": "Finland"
+    },
+    {
+      "code": "FJ",
+      "name": "Fiji"
+    },
+    {
+      "code": "FK",
+      "name": "Falkland Islands"
+    },
+    {
+      "code": "FM",
+      "name": "Micronesia"
+    },
+    {
+      "code": "FO",
+      "name": "Faroe Islands"
+    },
+    {
+      "code": "FR",
+      "name": "France"
+    },
+    {
+      "code": "GA",
+      "name": "Gabon"
+    },
+    {
+      "code": "GB",
+      "name": "United Kingdom"
+    },
+    {
+      "code": "GD",
+      "name": "Grenada"
+    },
+    {
+      "code": "GE",
+      "name": "Georgia"
+    },
+    {
+      "code": "GG",
+      "name": "Guernsey"
+    },
+    {
+      "code": "GH",
+      "name": "Ghana"
+    },
+    {
+      "code": "GI",
+      "name": "Gibraltar"
+    },
+    {
+      "code": "GL",
+      "name": "Greenland"
+    },
+    {
+      "code": "GM",
+      "name": "Gambia"
+    },
+    {
+      "code": "GN",
+      "name": "Guinea"
+    },
+    {
+      "code": "GP",
+      "name": "Guadeloupe (French)"
+    },
+    {
+      "code": "GQ",
+      "name": "Equatorial Guinea"
+    },
+    {
+      "code": "GR",
+      "name": "Greece"
+    },
+    {
+      "code": "GS",
+      "name": "South Georgia And South Sandwich Islands"
+    },
+    {
+      "code": "GT",
+      "name": "Guatemala"
+    },
+    {
+      "code": "GU",
+      "name": "Guam (USA)"
+    },
+    {
+      "code": "GW",
+      "name": "Guinea Bissau"
+    },
+    {
+      "code": "GY",
+      "name": "Guyana"
+    },
+    {
+      "code": "HK",
+      "name": "Hong Kong"
+    },
+    {
+      "code": "HM",
+      "name": "Heard Island and McDonald Islands"
+    },
+    {
+      "code": "HN",
+      "name": "Honduras"
+    },
+    {
+      "code": "HR",
+      "name": "Croatia"
+    },
+    {
+      "code": "HT",
+      "name": "Haiti"
+    },
+    {
+      "code": "HU",
+      "name": "Hungary"
+    },
+    {
+      "code": "ID",
+      "name": "Indonesia"
+    },
+    {
+      "code": "IE",
+      "name": "Ireland"
+    },
+    {
+      "code": "IL",
+      "name": "Israel"
+    },
+    {
+      "code": "IM",
+      "name": "Isle of Man"
+    },
+    {
+      "code": "IN",
+      "name": "India"
+    },
+    {
+      "code": "IO",
+      "name": "British Indian Ocean Territory"
+    },
+    {
+      "code": "IQ",
+      "name": "Iraq"
+    },
+    {
+      "code": "IR",
+      "name": "Iran"
+    },
+    {
+      "code": "IS",
+      "name": "Iceland"
+    },
+    {
+      "code": "IT",
+      "name": "Italy"
+    },
+    {
+      "code": "JE",
+      "name": "Jersey"
+    },
+    {
+      "code": "JM",
+      "name": "Jamaica"
+    },
+    {
+      "code": "JO",
+      "name": "Jordan"
+    },
+    {
+      "code": "JP",
+      "name": "Japan"
+    },
+    {
+      "code": "KE",
+      "name": "Kenya"
+    },
+    {
+      "code": "KG",
+      "name": "Kyrgyzstan"
+    },
+    {
+      "code": "KH",
+      "name": "Cambodia"
+    },
+    {
+      "code": "KI",
+      "name": "Kiribati"
+    },
+    {
+      "code": "KM",
+      "name": "Comoros"
+    },
+    {
+      "code": "KN",
+      "name": "Saint Kitts And Nevis Anguilla"
+    },
+    {
+      "code": "KP",
+      "name": "Korea, North"
+    },
+    {
+      "code": "KR",
+      "name": "Korea, South"
+    },
+    {
+      "code": "KW",
+      "name": "Kuwait"
+    },
+    {
+      "code": "KY",
+      "name": "Cayman Islands"
+    },
+    {
+      "code": "KZ",
+      "name": "Kazakhstan"
+    },
+    {
+      "code": "LA",
+      "name": "Laos"
+    },
+    {
+      "code": "LB",
+      "name": "Lebanon"
+    },
+    {
+      "code": "LC",
+      "name": "Saint Lucia"
+    },
+    {
+      "code": "LI",
+      "name": "Liechtenstein"
+    },
+    {
+      "code": "LK",
+      "name": "Sri Lanka"
+    },
+    {
+      "code": "LR",
+      "name": "Liberia"
+    },
+    {
+      "code": "LS",
+      "name": "Lesotho"
+    },
+    {
+      "code": "LT",
+      "name": "Lithuania"
+    },
+    {
+      "code": "LU",
+      "name": "Luxembourg"
+    },
+    {
+      "code": "LV",
+      "name": "Latvia"
+    },
+    {
+      "code": "LY",
+      "name": "Libya"
+    },
+    {
+      "code": "MA",
+      "name": "Morocco"
+    },
+    {
+      "code": "MC",
+      "name": "Monaco"
+    },
+    {
+      "code": "MD",
+      "name": "Moldova"
+    },
+    {
+      "code": "MG",
+      "name": "Madagascar"
+    },
+    {
+      "code": "MH",
+      "name": "Marshall Islands"
+    },
+    {
+      "code": "MK",
+      "name": "Macedonia"
+    },
+    {
+      "code": "ML",
+      "name": "Mali"
+    },
+    {
+      "code": "MM",
+      "name": "Myanmar"
+    },
+    {
+      "code": "MN",
+      "name": "Mongolia"
+    },
+    {
+      "code": "MO",
+      "name": "Macau"
+    },
+    {
+      "code": "MP",
+      "name": "Northern Mariana Islands"
+    },
+    {
+      "code": "MQ",
+      "name": "Martinique (French)"
+    },
+    {
+      "code": "MR",
+      "name": "Mauritania"
+    },
+    {
+      "code": "MS",
+      "name": "Montserrat"
+    },
+    {
+      "code": "MT",
+      "name": "Malta"
+    },
+    {
+      "code": "MU",
+      "name": "Mauritius"
+    },
+    {
+      "code": "MV",
+      "name": "Maldives"
+    },
+    {
+      "code": "MW",
+      "name": "Malawi"
+    },
+    {
+      "code": "MX",
+      "name": "Mexico"
+    },
+    {
+      "code": "MY",
+      "name": "Malaysia"
+    },
+    {
+      "code": "MZ",
+      "name": "Mozambique"
+    },
+    {
+      "code": "NA",
+      "name": "Namibia"
+    },
+    {
+      "code": "NC",
+      "name": "New Caledonia (French)"
+    },
+    {
+      "code": "NE",
+      "name": "Niger"
+    },
+    {
+      "code": "NF",
+      "name": "Norfolk Island"
+    },
+    {
+      "code": "NG",
+      "name": "Nigeria"
+    },
+    {
+      "code": "NI",
+      "name": "Nicaragua"
+    },
+    {
+      "code": "NL",
+      "name": "Netherlands"
+    },
+    {
+      "code": "NO",
+      "name": "Norway"
+    },
+    {
+      "code": "NP",
+      "name": "Nepal"
+    },
+    {
+      "code": "NR",
+      "name": "Nauru"
+    },
+    {
+      "code": "NU",
+      "name": "Niue"
+    },
+    {
+      "code": "NZ",
+      "name": "New Zealand"
+    },
+    {
+      "code": "OM",
+      "name": "Oman"
+    },
+    {
+      "code": "PA",
+      "name": "Panama"
+    },
+    {
+      "code": "PE",
+      "name": "Peru"
+    },
+    {
+      "code": "PF",
+      "name": "Polynesia (French)"
+    },
+    {
+      "code": "PG",
+      "name": "Papua New Guinea"
+    },
+    {
+      "code": "PH",
+      "name": "Philippines"
+    },
+    {
+      "code": "PK",
+      "name": "Pakistan"
+    },
+    {
+      "code": "PL",
+      "name": "Poland"
+    },
+    {
+      "code": "PM",
+      "name": "Saint Pierre and Miquelon"
+    },
+    {
+      "code": "PN",
+      "name": "Pitcairn Island"
+    },
+    {
+      "code": "PR",
+      "name": "Puerto Rico"
+    },
+    {
+      "code": "PT",
+      "name": "Portugal"
+    },
+    {
+      "code": "PW",
+      "name": "Palau"
+    },
+    {
+      "code": "PY",
+      "name": "Paraguay"
+    },
+    {
+      "code": "QA",
+      "name": "Qatar"
+    },
+    {
+      "code": "RE",
+      "name": "Reunion (French)"
+    },
+    {
+      "code": "RO",
+      "name": "Romania"
+    },
+    {
+      "code": "RS",
+      "name": "Serbia"
+    },
+    {
+      "code": "RU",
+      "name": "Russia"
+    },
+    {
+      "code": "RW",
+      "name": "Rwanda"
+    },
+    {
+      "code": "SA",
+      "name": "Saudi Arabia"
+    },
+    {
+      "code": "SB",
+      "name": "Solomon Islands"
+    },
+    {
+      "code": "SC",
+      "name": "Seychelles"
+    },
+    {
+      "code": "SD",
+      "name": "Sudan"
+    },
+    {
+      "code": "SE",
+      "name": "Sweden"
+    },
+    {
+      "code": "SG",
+      "name": "Singapore"
+    },
+    {
+      "code": "SH",
+      "name": "Saint Helena"
+    },
+    {
+      "code": "SI",
+      "name": "Slovenia"
+    },
+    {
+      "code": "SJ",
+      "name": "Svalbard and Jan Mayen Islands"
+    },
+    {
+      "code": "SK",
+      "name": "Slovakia"
+    },
+    {
+      "code": "SL",
+      "name": "Sierra Leone"
+    },
+    {
+      "code": "SM",
+      "name": "San Marino"
+    },
+    {
+      "code": "SN",
+      "name": "Senegal"
+    },
+    {
+      "code": "SO",
+      "name": "Somalia"
+    },
+    {
+      "code": "SR",
+      "name": "Suriname"
+    },
+    {
+      "code": "ST",
+      "name": "Sao Tome and Principe"
+    },
+    {
+      "code": "SV",
+      "name": "El Salvador"
+    },
+    {
+      "code": "SY",
+      "name": "Syria"
+    },
+    {
+      "code": "SZ",
+      "name": "Swaziland"
+    },
+    {
+      "code": "TC",
+      "name": "Turks and Caicos Islands"
+    },
+    {
+      "code": "TD",
+      "name": "Chad"
+    },
+    {
+      "code": "TF",
+      "name": "French Southern Territories"
+    },
+    {
+      "code": "TG",
+      "name": "Togo"
+    },
+    {
+      "code": "TH",
+      "name": "Thailand"
+    },
+    {
+      "code": "TJ",
+      "name": "Tajikistan"
+    },
+    {
+      "code": "TK",
+      "name": "Tokelau"
+    },
+    {
+      "code": "TM",
+      "name": "Turkmenistan"
+    },
+    {
+      "code": "TN",
+      "name": "Tunisia"
+    },
+    {
+      "code": "TO",
+      "name": "Tonga"
+    },
+    {
+      "code": "TR",
+      "name": "Turkey"
+    },
+    {
+      "code": "TT",
+      "name": "Trinidad and Tobago"
+    },
+    {
+      "code": "TV",
+      "name": "Tuvalu"
+    },
+    {
+      "code": "TW",
+      "name": "Taiwan"
+    },
+    {
+      "code": "TZ",
+      "name": "Tanzania"
+    },
+    {
+      "code": "UA",
+      "name": "Ukraine"
+    },
+    {
+      "code": "UG",
+      "name": "Uganda"
+    },
+    {
+      "code": "UM",
+      "name": "USA Minor Outlying Islands"
+    },
+    {
+      "code": "US",
+      "name": "USA"
+    },
+    {
+      "code": "UY",
+      "name": "Uruguay"
+    },
+    {
+      "code": "UZ",
+      "name": "Uzbekistan"
+    },
+    {
+      "code": "VA",
+      "name": "Vatican"
+    },
+    {
+      "code": "VC",
+      "name": "Saint Vincent And Grenadines"
+    },
+    {
+      "code": "VE",
+      "name": "Venezuela"
+    },
+    {
+      "code": "VG",
+      "name": "Virgin Islands (British)"
+    },
+    {
+      "code": "VI",
+      "name": "Virgin Islands (USA)"
+    },
+    {
+      "code": "VN",
+      "name": "Vietnam"
+    },
+    {
+      "code": "VU",
+      "name": "Vanuatu"
+    },
+    {
+      "code": "WF",
+      "name": "Wallis and Futuna Islands"
+    },
+    {
+      "code": "WS",
+      "name": "Samoa"
+    },
+    {
+      "code": "YE",
+      "name": "Yemen"
+    },
+    {
+      "code": "YT",
+      "name": "Mayotte"
+    },
+    {
+      "code": "ZA",
+      "name": "South Africa"
+    },
+    {
+      "code": "ZM",
+      "name": "Zambia"
+    },
+    {
+      "code": "ZW",
+      "name": "Zimbabwe"
+    }
+  ],
+  "subdivisions": [
+    {
+      "code": "CA-AB",
+      "country": "CA",
+      "name": "Alberta"
+    },
+    {
+      "code": "CA-BC",
+      "country": "CA",
+      "name": "British Columbia"
+    },
+    {
+      "code": "CA-MB",
+      "country": "CA",
+      "name": "Manitoba"
+    },
+    {
+      "code": "CA-NB",
+      "country": "CA",
+      "name": "New Brunswick"
+    },
+    {
+      "code": "CA-NL",
+      "country": "CA",
+      "name": "Newfoundland and Labrador"
+    },
+    {
+      "code": "CA-NS",
+      "country": "CA",
+      "name": "Nova Scotia"
+    },
+    {
+      "code": "CA-NT",
+      "country": "CA",
+      "name": "Northwest Territories"
+    },
+    {
+      "code": "CA-NU",
+      "country": "CA",
+      "name": "Nunavut"
+    },
+    {
+      "code": "CA-ON",
+      "country": "CA",
+      "name": "Ontario"
+    },
+    {
+      "code": "CA-PE",
+      "country": "CA",
+      "name": "Prince Edward Island"
+    },
+    {
+      "code": "CA-QC",
+      "country": "CA",
+      "name": "Quebec"
+    },
+    {
+      "code": "CA-SK",
+      "country": "CA",
+      "name": "Saskatchewan"
+    },
+    {
+      "code": "CA-YT",
+      "country": "CA",
+      "name": "Yukon"
+    },
+    {
+      "code": "GB-ENG",
+      "country": "GB",
+      "name": "England"
+    },
+    {
+      "code": "GB-NIR",
+      "country": "GB",
+      "name": "Northern Ireland"
+    },
+    {
+      "code": "GB-SCT",
+      "country": "GB",
+      "name": "Scotland"
+    },
+    {
+      "code": "GB-WLS",
+      "country": "GB",
+      "name": "Wales"
+    },
+    {
+      "code": "US-AK",
+      "country": "US",
+      "name": "Alaska"
+    },
+    {
+      "code": "US-AL",
+      "country": "US",
+      "name": "Alabama"
+    },
+    {
+      "code": "US-AR",
+      "country": "US",
+      "name": "Arkansas"
+    },
+    {
+      "code": "US-AZ",
+      "country": "US",
+      "name": "Arizona"
+    },
+    {
+      "code": "US-CA",
+      "country": "US",
+      "name": "California"
+    },
+    {
+      "code": "US-CO",
+      "country": "US",
+      "name": "Colorado"
+    },
+    {
+      "code": "US-CT",
+      "country": "US",
+      "name": "Connecticut"
+    },
+    {
+      "code": "US-DC",
+      "country": "US",
+      "name": "District of Columbia"
+    },
+    {
+      "code": "US-DE",
+      "country": "US",
+      "name": "Delaware"
+    },
+    {
+      "code": "US-FL",
+      "country": "US",
+      "name": "Florida"
+    },
+    {
+      "code": "US-GA",
+      "country": "US",
+      "name": "Georgia"
+    },
+    {
+      "code": "US-HI",
+      "country": "US",
+      "name": "Hawaii"
+    },
+    {
+      "code": "US-IA",
+      "country": "US",
+      "name": "Iowa"
+    },
+    {
+      "code": "US-ID",
+      "country": "US",
+      "name": "Idaho"
+    },
+    {
+      "code": "US-IL",
+      "country": "US",
+      "name": "Illinois"
+    },
+    {
+      "code": "US-IN",
+      "country": "US",
+      "name": "Indiana"
+    },
+    {
+      "code": "US-KS",
+      "country": "US",
+      "name": "Kansas"
+    },
+    {
+      "code": "US-KY",
+      "country": "US",
+      "name": "Kentucky"
+    },
+    {
+      "code": "US-LA",
+      "country": "US",
+      "name": "Louisiana"
+    },
+    {
+      "code": "US-MA",
+      "country": "US",
+      "name": "Massachusetts"
+    },
+    {
+      "code": "US-MD",
+      "country": "US",
+      "name": "Maryland"
+    },
+    {
+      "code": "US-ME",
+      "country": "US",
+      "name": "Maine"
+    },
+    {
+      "code": "US-MI",
+      "country": "US",
+      "name": "Michigan"
+    },
+    {
+      "code": "US-MN",
+      "country": "US",
+      "name": "Minnesota"
+    },
+    {
+      "code": "US-MO",
+      "country": "US",
+      "name": "Missouri"
+    },
+    {
+      "code": "US-MS",
+      "country": "US",
+      "name": "Mississippi"
+    },
+    {
+      "code": "US-MT",
+      "country": "US",
+      "name": "Montana"
+    },
+    {
+      "code": "US-NC",
+      "country": "US",
+      "name": "North Carolina"
+    },
+    {
+      "code": "US-ND",
+      "country": "US",
+      "name": "North Dakota"
+    },
+    {
+      "code": "US-NE",
+      "country": "US",
+      "name": "Nebraska"
+    },
+    {
+      "code": "US-NH",
+      "country": "US",
+      "name": "New Hampshire"
+    },
+    {
+      "code": "US-NJ",
+      "country": "US",
+      "name": "New Jersey"
+    },
+    {
+      "code": "US-NM",
+      "country": "US",
+      "name": "New Mexico"
+    },
+    {
+      "code": "US-NV",
+      "country": "US",
+      "name": "Nevada"
+    },
+    {
+      "code": "US-NY",
+      "country": "US",
+      "name": "New York"
+    },
+    {
+      "code": "US-OH",
+      "country": "US",
+      "name": "Ohio"
+    },
+    {
+      "code": "US-OK",
+      "country": "US",
+      "name": "Oklahoma"
+    },
+    {
+      "code": "US-OR",
+      "country": "US",
+      "name": "Oregon"
+    },
+    {
+      "code": "US-PA",
+      "country": "US",
+      "name": "Pennsylvania"
+    },
+    {
+      "code": "US-RI",
+      "country": "US",
+      "name": "Rhode Island"
+    },
+    {
+      "code": "US-SC",
+      "country": "US",
+      "name": "South Carolina"
+    },
+    {
+      "code": "US-SD",
+      "country": "US",
+      "name": "South Dakota"
+    },
+    {
+      "code": "US-TN",
+      "country": "US",
+      "name": "Tennessee"
+    },
+    {
+      "code": "US-TX",
+      "country": "US",
+      "name": "Texas"
+    },
+    {
+      "code": "US-UT",
+      "country": "US",
+      "name": "Utah"
+    },
+    {
+      "code": "US-VA",
+      "country": "US",
+      "name": "Virginia"
+    },
+    {
+      "code": "US-VT",
+      "country": "US",
+      "name": "Vermont"
+    },
+    {
+      "code": "US-WA",
+      "country": "US",
+      "name": "Washington"
+    },
+    {
+      "code": "US-WI",
+      "country": "US",
+      "name": "Wisconsin"
+    },
+    {
+      "code": "US-WV",
+      "country": "US",
+      "name": "West Virginia"
+    },
+    {
+      "code": "US-WY",
+      "country": "US",
+      "name": "Wyoming"
+    }
+  ],
   "weekdays": [
     "monday",
     "tuesday",
@@ -35,13 +1364,160 @@
     "sunday"
   ],
   "currencies": [
-    "GBP",
-    "EUR",
-    "USD",
-    "CAD",
+    "AED",
+    "AFN",
+    "ALL",
+    "AMD",
+    "AOA",
+    "ARS",
     "AUD",
+    "AWG",
+    "AZN",
+    "BAM",
+    "BBD",
+    "BDT",
+    "BHD",
+    "BIF",
+    "BMD",
+    "BND",
+    "BOB",
+    "BRL",
+    "BSD",
+    "BTN",
+    "BWP",
+    "BYN",
+    "BZD",
+    "CAD",
+    "CDF",
+    "CHF",
+    "CLP",
+    "CNY",
+    "COP",
+    "CRC",
+    "CUP",
+    "CVE",
+    "CZK",
+    "DJF",
+    "DKK",
+    "DOP",
+    "DZD",
+    "EGP",
+    "ERN",
+    "ETB",
+    "EUR",
+    "FJD",
+    "FKP",
+    "GBP",
+    "GEL",
+    "GHS",
+    "GIP",
+    "GMD",
+    "GNF",
+    "GTQ",
+    "GYD",
+    "HKD",
+    "HNL",
+    "HTG",
+    "HUF",
+    "IDR",
+    "ILS",
+    "INR",
+    "IQD",
+    "IRR",
+    "ISK",
+    "JMD",
+    "JOD",
+    "JPY",
+    "KES",
+    "KGS",
+    "KHR",
+    "KMF",
+    "KPW",
+    "KRW",
+    "KWD",
+    "KYD",
+    "KZT",
+    "LAK",
+    "LBP",
+    "LKR",
+    "LRD",
+    "LSL",
+    "LYD",
+    "MAD",
+    "MDL",
+    "MGA",
+    "MKD",
+    "MMK",
+    "MNT",
+    "MOP",
+    "MRU",
+    "MUR",
+    "MVR",
+    "MWK",
+    "MXN",
+    "MYR",
+    "MZN",
+    "NAD",
+    "NGN",
+    "NIO",
+    "NOK",
+    "NPR",
     "NZD",
-    "ZAR"
+    "OMR",
+    "PAB",
+    "PEN",
+    "PGK",
+    "PHP",
+    "PKR",
+    "PLN",
+    "PYG",
+    "QAR",
+    "RON",
+    "RSD",
+    "RUB",
+    "RWF",
+    "SAR",
+    "SBD",
+    "SCR",
+    "SDG",
+    "SEK",
+    "SGD",
+    "SHP",
+    "SLE",
+    "SOS",
+    "SRD",
+    "SSP",
+    "STN",
+    "SVC",
+    "SYP",
+    "SZL",
+    "THB",
+    "TJS",
+    "TMT",
+    "TND",
+    "TOP",
+    "TRY",
+    "TTD",
+    "TWD",
+    "TZS",
+    "UAH",
+    "UGX",
+    "USD",
+    "UYU",
+    "UZS",
+    "VES",
+    "VND",
+    "VUV",
+    "WST",
+    "XAF",
+    "XCD",
+    "XCG",
+    "XOF",
+    "XPF",
+    "YER",
+    "ZAR",
+    "ZMW",
+    "ZWG"
   ],
   "verticals": [
     {
@@ -137,6 +1613,18 @@
       "name": "E-Wallets"
     },
     {
+      "slug": "ecopayz",
+      "name": "ecoPayz"
+    },
+    {
+      "slug": "kalibra-postpay",
+      "name": "Kalibra/Postpay"
+    },
+    {
+      "slug": "neosurf",
+      "name": "Neosurf"
+    },
+    {
       "slug": "neteller",
       "name": "Neteller"
     },
@@ -155,6 +1643,10 @@
     {
       "slug": "skrill",
       "name": "Skrill"
+    },
+    {
+      "slug": "william-hill-plus-card",
+      "name": "William Hill PLUS Card"
     }
   ],
   "scoring_penalties": [
@@ -249,6 +1741,14 @@
       "name": "777Strike"
     },
     {
+      "slug": "age-of-gods-king-of-olympus",
+      "name": "Age of Gods King of Olympus"
+    },
+    {
+      "slug": "age-of-the-gods-god-of-storms",
+      "name": "Age of the Gods: God of Storms"
+    },
+    {
       "slug": "age-of-the-gods-god-of-storms-2",
       "name": "Age of the Gods: God of Storms 2"
     },
@@ -269,6 +1769,10 @@
       "name": "Area Link Phoenix Firestorm"
     },
     {
+      "slug": "aviator",
+      "name": "Aviator"
+    },
+    {
       "slug": "badge-blitz",
       "name": "Badge Blitz"
     },
@@ -279,6 +1783,10 @@
     {
       "slug": "basketball",
       "name": "Basketball"
+    },
+    {
+      "slug": "bass-boss",
+      "name": "Bass Boss"
     },
     {
       "slug": "beast-of-fire",
@@ -305,8 +1813,16 @@
       "name": "Big Bass Splash"
     },
     {
+      "slug": "big-william-hill-fortune",
+      "name": "Big William Hill Fortune"
+    },
+    {
       "slug": "bingo",
       "name": "Bingo"
+    },
+    {
+      "slug": "blue-wizard",
+      "name": "Blue Wizard"
     },
     {
       "slug": "book-of-dead",
@@ -317,12 +1833,20 @@
       "name": "Book of Legacy"
     },
     {
+      "slug": "book-of-the-fallen",
+      "name": "Book of the Fallen"
+    },
+    {
       "slug": "cash-a-cabana",
       "name": "Cash-A-Cabana"
     },
     {
       "slug": "casino",
       "name": "Casino"
+    },
+    {
+      "slug": "chicken-game",
+      "name": "Chicken Game"
     },
     {
       "slug": "chilli-heat",
@@ -357,12 +1881,24 @@
       "name": "Double Bubble"
     },
     {
+      "slug": "epic-ape",
+      "name": "Epic Ape"
+    },
+    {
       "slug": "eruption-blaze-cashingo",
       "name": "Eruption Blaze Cashingo"
     },
     {
       "slug": "fishin-frenzy-the-big-catch-2",
       "name": "Fishin Frenzy The Big Catch 2"
+    },
+    {
+      "slug": "fishin-bigger-pots-of-gold",
+      "name": "Fishin' Bigger Pots of Gold"
+    },
+    {
+      "slug": "fishin-triple-pots-of-gold-power-combo",
+      "name": "Fishin' Triple Pots of Gold POWER COMBO"
     },
     {
       "slug": "fishing-frenzy-big-catch-megaways",
@@ -393,8 +1929,20 @@
       "name": "Gold Blitz Ultimate"
     },
     {
+      "slug": "green-wizard",
+      "name": "Green Wizard"
+    },
+    {
       "slug": "horseracing",
       "name": "Horseracing"
+    },
+    {
+      "slug": "hot-hot-bet",
+      "name": "Hot Hot Bet"
+    },
+    {
+      "slug": "hot-hot-fruit",
+      "name": "Hot Hot Fruit"
     },
     {
       "slug": "ice-hockey",
@@ -461,6 +2009,10 @@
       "name": "Reactoonz"
     },
     {
+      "slug": "red-rocket",
+      "name": "Red Rocket"
+    },
+    {
       "slug": "rigged",
       "name": "rigged"
     },
@@ -509,10 +2061,75 @@
       "name": "Thor and the Trials of Asgard"
     },
     {
+      "slug": "tsai-shens-gift",
+      "name": "Tsai Shen's Gift"
+    },
+    {
+      "slug": "vault-cracker-megaways",
+      "name": "Vault Cracker Megaways"
+    },
+    {
+      "slug": "wild-pistolero",
+      "name": "Wild Pistolero"
+    },
+    {
+      "slug": "william-hill-gold",
+      "name": "William Hill Gold"
+    },
+    {
       "slug": "wolf-gold",
       "name": "Wolf Gold"
     }
   ],
+  "taxonomy_additions": {
+    "allowed_taxonomies": [
+      "eligible_game",
+      "excluded_payment_methods",
+      "scoring_penalty"
+    ],
+    "term_shape": {
+      "name": "Canonical term name",
+      "slug": "canonical-term-slug"
+    }
+  },
+  "brand_availability_changes": {
+    "country_additions": [
+      {
+        "code": "GG",
+        "name": "Guernsey",
+        "reason": "Current official terms explicitly include Guernsey.",
+        "evidence": [
+          {
+            "url": "https://example.com/terms",
+            "label": "Official terms"
+          }
+        ]
+      }
+    ],
+    "country_removals": [],
+    "subdivision_additions": [
+      {
+        "code": "US-NV",
+        "reason": "Current official terms explicitly limit the offer to Nevada.",
+        "evidence": [
+          {
+            "url": "https://example.com/terms",
+            "label": "Official terms"
+          }
+        ]
+      }
+    ],
+    "subdivision_removals": []
+  },
+  "copy_rules": {
+    "match_bonus_display_offer": "<match_percent>% up to <currency><max_bonus_match>",
+    "match_bonus_display_examples": [
+      "100% up to £100",
+      "50% up to €500",
+      "200% up to C$250",
+      "100% up to TZS20,000"
+    ]
+  },
   "component_specs": {
     "match_bonus": {
       "enabled_field": "match_bonus",
@@ -607,6 +2224,10 @@
             "weeks"
           ],
           "nullable": true
+        },
+        "match_bonus_eligible_game": {
+          "type": "taxonomy_list",
+          "taxonomy": "eligible_game"
         }
       }
     },
@@ -695,6 +2316,266 @@
         "reward_expiry_free_spin": {
           "type": "number",
           "nullable": true
+        },
+        "reward_expiry_unit_free_spin": {
+          "type": "enum",
+          "choices": [
+            "hours",
+            "days",
+            "weeks"
+          ],
+          "nullable": true
+        }
+      }
+    },
+    "external_reward": {
+      "enabled_field": "external_reward",
+      "fields": {
+        "external_reward": {
+          "type": "boolean"
+        },
+        "external_reward_type": {
+          "type": "enum",
+          "choices": [
+            "voucher",
+            "gift_card",
+            "merchandise",
+            "service_credit",
+            "other"
+          ],
+          "nullable": true
+        },
+        "external_reward_face_value": {
+          "type": "number",
+          "nullable": true
+        },
+        "external_reward_currency": {
+          "type": "enum",
+          "choices": [
+            "AED",
+            "AFN",
+            "ALL",
+            "AMD",
+            "AOA",
+            "ARS",
+            "AUD",
+            "AWG",
+            "AZN",
+            "BAM",
+            "BBD",
+            "BDT",
+            "BHD",
+            "BIF",
+            "BMD",
+            "BND",
+            "BOB",
+            "BRL",
+            "BSD",
+            "BTN",
+            "BWP",
+            "BYN",
+            "BZD",
+            "CAD",
+            "CDF",
+            "CHF",
+            "CLP",
+            "CNY",
+            "COP",
+            "CRC",
+            "CUP",
+            "CVE",
+            "CZK",
+            "DJF",
+            "DKK",
+            "DOP",
+            "DZD",
+            "EGP",
+            "ERN",
+            "ETB",
+            "EUR",
+            "FJD",
+            "FKP",
+            "GBP",
+            "GEL",
+            "GHS",
+            "GIP",
+            "GMD",
+            "GNF",
+            "GTQ",
+            "GYD",
+            "HKD",
+            "HNL",
+            "HTG",
+            "HUF",
+            "IDR",
+            "ILS",
+            "INR",
+            "IQD",
+            "IRR",
+            "ISK",
+            "JMD",
+            "JOD",
+            "JPY",
+            "KES",
+            "KGS",
+            "KHR",
+            "KMF",
+            "KPW",
+            "KRW",
+            "KWD",
+            "KYD",
+            "KZT",
+            "LAK",
+            "LBP",
+            "LKR",
+            "LRD",
+            "LSL",
+            "LYD",
+            "MAD",
+            "MDL",
+            "MGA",
+            "MKD",
+            "MMK",
+            "MNT",
+            "MOP",
+            "MRU",
+            "MUR",
+            "MVR",
+            "MWK",
+            "MXN",
+            "MYR",
+            "MZN",
+            "NAD",
+            "NGN",
+            "NIO",
+            "NOK",
+            "NPR",
+            "NZD",
+            "OMR",
+            "PAB",
+            "PEN",
+            "PGK",
+            "PHP",
+            "PKR",
+            "PLN",
+            "PYG",
+            "QAR",
+            "RON",
+            "RSD",
+            "RUB",
+            "RWF",
+            "SAR",
+            "SBD",
+            "SCR",
+            "SDG",
+            "SEK",
+            "SGD",
+            "SHP",
+            "SLE",
+            "SOS",
+            "SRD",
+            "SSP",
+            "STN",
+            "SVC",
+            "SYP",
+            "SZL",
+            "THB",
+            "TJS",
+            "TMT",
+            "TND",
+            "TOP",
+            "TRY",
+            "TTD",
+            "TWD",
+            "TZS",
+            "UAH",
+            "UGX",
+            "USD",
+            "UYU",
+            "UZS",
+            "VES",
+            "VND",
+            "VUV",
+            "WST",
+            "XAF",
+            "XCD",
+            "XCG",
+            "XOF",
+            "XPF",
+            "YER",
+            "ZAR",
+            "ZMW",
+            "ZWG"
+          ],
+          "nullable": true
+        },
+        "external_reward_fulfillment_timing": {
+          "type": "string",
+          "nullable": true
+        },
+        "external_reward_provider": {
+          "type": "string",
+          "nullable": true
+        },
+        "external_reward_name": {
+          "type": "string",
+          "nullable": true
+        }
+      }
+    },
+    "free_rounds": {
+      "enabled_field": "free_rounds",
+      "fields": {
+        "free_rounds": {
+          "type": "boolean"
+        },
+        "free_rounds_count": {
+          "type": "integer",
+          "nullable": true
+        },
+        "free_rounds_unit_name": {
+          "type": "string",
+          "nullable": true
+        },
+        "free_rounds_value": {
+          "type": "number",
+          "nullable": true
+        },
+        "free_rounds_eligible_game": {
+          "type": "taxonomy_list",
+          "taxonomy": "eligible_game"
+        },
+        "wagering_free_rounds": {
+          "type": "number",
+          "nullable": true
+        },
+        "wagering_base_free_rounds": {
+          "type": "enum",
+          "choices": [
+            "winnings_only",
+            "none",
+            "bonus_plus_winnings",
+            "bonus_deposit_winnings",
+            "unknown"
+          ],
+          "nullable": true
+        },
+        "max_bet_free_rounds": {
+          "type": "number",
+          "nullable": true
+        },
+        "reward_expiry_free_rounds": {
+          "type": "number",
+          "nullable": true
+        },
+        "reward_expiry_unit_free_rounds": {
+          "type": "enum",
+          "choices": [
+            "hours",
+            "days",
+            "weeks"
+          ],
+          "nullable": true
         }
       }
     },
@@ -775,6 +2656,15 @@
         },
         "reward_expiry_bonus_funds": {
           "type": "number",
+          "nullable": true
+        },
+        "reward_expiry_unit_bonus_funds": {
+          "type": "enum",
+          "choices": [
+            "hours",
+            "days",
+            "weeks"
+          ],
           "nullable": true
         }
       }
@@ -876,6 +2766,15 @@
         "reward_expiry_poker_tickets": {
           "type": "number",
           "nullable": true
+        },
+        "reward_expiry_unit_poker_tickets": {
+          "type": "enum",
+          "choices": [
+            "hours",
+            "days",
+            "weeks"
+          ],
+          "nullable": true
         }
       }
     },
@@ -925,6 +2824,15 @@
         },
         "reward_expiry_free_bet": {
           "type": "number",
+          "nullable": true
+        },
+        "reward_expiry_unit_free_bet": {
+          "type": "enum",
+          "choices": [
+            "hours",
+            "days",
+            "weeks"
+          ],
           "nullable": true
         }
       }
@@ -1016,6 +2924,15 @@
         "reward_expiry_odds_boost": {
           "type": "number",
           "nullable": true
+        },
+        "reward_expiry_unit_odds_boost": {
+          "type": "enum",
+          "choices": [
+            "hours",
+            "days",
+            "weeks"
+          ],
+          "nullable": true
         }
       }
     },
@@ -1076,6 +2993,15 @@
           "type": "number",
           "nullable": true
         },
+        "reward_expiry_unit_acca_bonus": {
+          "type": "enum",
+          "choices": [
+            "hours",
+            "days",
+            "weeks"
+          ],
+          "nullable": true
+        },
         "acca_bonus_calculation_basis": {
           "type": "enum",
           "choices": [
@@ -1129,6 +3055,10 @@
           "type": "number",
           "nullable": true
         },
+        "bet_insurance_min_odds_per_leg": {
+          "type": "number",
+          "nullable": true
+        },
         "bet_insurance_refund_type": {
           "type": "enum",
           "choices": [
@@ -1140,6 +3070,15 @@
         },
         "bet_insurance_expiry": {
           "type": "number",
+          "nullable": true
+        },
+        "bet_insurance_expiry_unit": {
+          "type": "enum",
+          "choices": [
+            "hours",
+            "days",
+            "weeks"
+          ],
           "nullable": true
         },
         "bet_insurance_eligible_game": {
@@ -1217,6 +3156,15 @@
         "reward_expiry_bingo_tickets": {
           "type": "number",
           "nullable": true
+        },
+        "reward_expiry_unit_bingo_tickets": {
+          "type": "enum",
+          "choices": [
+            "hours",
+            "days",
+            "weeks"
+          ],
+          "nullable": true
         }
       }
     }
@@ -1226,12 +3174,23 @@
     "bonus_id": null,
     "title": "Brand Market Offer • concise reward summary",
     "market": "GB",
-    "currency": "GBP",
+    "currencies": [
+      "GBP"
+    ],
     "vertical": "casino",
     "bonus_types": [
       "match-bonus"
     ],
     "player_eligibility": "new_customers",
+    "eligibility_devices": [
+      "mobile",
+      "tablet"
+    ],
+    "included_countries": [],
+    "included_subdivisions": [],
+    "excluded_subdivisions": [
+      "GB-NIR"
+    ],
     "copy": {
       "display_offer": "100% up to £100",
       "card_primary": null,
@@ -1246,8 +3205,13 @@
       "deposit_required": true,
       "excluded_payment_methods": [],
       "scoring_penalties": [],
-      "bonus_code_required": false,
-      "bonus_code": null
+      "excluded_card_bins": [],
+      "bonus_code_requirement": "none",
+      "bonus_code": null,
+      "qualification_window_value": null,
+      "qualification_window_unit": null,
+      "qualification_spend_multiplier": null,
+      "qualification_spend_basis": null
     },
     "schedule": {
       "available_from": null,
@@ -1280,21 +3244,24 @@
         "url": "https://example.com/terms",
         "label": "Official bonus terms"
       }
-    ],
-    "excluded_subdivisions": [
-      "GB-NIR"
     ]
   },
   "root_shape": {
-    "schema_version": "1.0",
+    "schema_version": "1.5",
     "brand_id": 123,
-    "researched_at": "2026-10-23T23:26:35.930Z",
+    "researched_at": "2026-10-27T09:06:29+00:00",
+    "taxonomy_additions": {
+      "eligible_game": [],
+      "excluded_payment_methods": [],
+      "scoring_penalty": []
+    },
+    "brand_availability_changes": {
+      "country_additions": [],
+      "country_removals": [],
+      "subdivision_additions": [],
+      "subdivision_removals": []
+    },
     "offers": [],
     "schema_gaps": []
-  },
-  "snapshot": {
-    "source": "staging bootstrap from Gamblee Core 1.83.51 contract + current canonical taxonomies",
-    "generated_at": "2026-10-24T00:08:14.606Z",
-    "note": "Scheduled GitHub sync replaces this snapshot from the public WordPress REST contract when that endpoint is available."
   }
 }

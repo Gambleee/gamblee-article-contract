@@ -20,7 +20,7 @@
     "Market and currencies are independent. A USD-denominated poker offer may target GB, IE or another market.",
     "Currencies use the canonical Bonus Offer ISO 4217 vocabulary. GLOBAL/ROW offers may use local currencies beyond Gamblee's detailed-market currencies.",
     "One discrete promotion stays one offer even when the operator supports several account currencies. Use currencies as a list and do not clone an otherwise identical market/vertical offer solely for EUR/USD/etc. If structured mechanics materially differ by currency and cannot be represented exactly, report a schema gap rather than creating currency-only duplicates.",
-    "Match-bonus display copy is canonical. When components.match_bonus is enabled, copy.display_offer must be exactly <match_percent>% up to <currency><max_bonus_match> with no prefix or extra wording (for example 100% up to £100 or 100% up to TZS20,000). Use the first currencies entry as the display currency; the importer normalizes this from the structured component values.",
+    "Match-bonus display copy is canonical. When components.match_bonus is enabled, copy.display_offer must be exactly <match_percent>% up to <currency><max_bonus_match> with no prefix or extra wording (for example 100% up to £100 or 100% up to TSh 20,000). Public offer copy uses the canonical currency symbol/display token, never the raw ISO code. Use the first currencies entry as the display currency; the importer normalizes this from the structured component values.",
     "A multi-stage deposit pack is one offer. Capture all stages in multi_step.rows; structured reward components describe the first stage unless a future schema explicitly models later stages.",
     "Recurring offers remain one offer and use schedule.weekdays and/or validity dates.",
     "Do not output prohibited markets. CA-ON is currently prohibited for public Bonus Offer publication.",
@@ -1849,6 +1849,10 @@
       "name": "Book of the Fallen"
     },
     {
+      "slug": "break-the-piggy-bank",
+      "name": "Break the Piggy Bank"
+    },
+    {
       "slug": "cash-a-cabana",
       "name": "Cash-A-Cabana"
     },
@@ -2057,6 +2061,10 @@
       "name": "Starburst"
     },
     {
+      "slug": "sweet-burst",
+      "name": "Sweet Burst"
+    },
+    {
       "slug": "tennis",
       "name": "Tennis"
     },
@@ -2143,7 +2151,7 @@
       "100% up to £100",
       "50% up to €500",
       "200% up to C$250",
-      "100% up to TZS20,000"
+      "100% up to TSh 20,000"
     ]
   },
   "component_specs": {
@@ -3265,7 +3273,7 @@
   "root_shape": {
     "schema_version": "1.5",
     "brand_id": 123,
-    "researched_at": "2026-10-27T15:24:26+00:00",
+    "researched_at": "2026-10-27T22:20:35+00:00",
     "taxonomy_additions": {
       "eligible_game": [],
       "excluded_payment_methods": [],

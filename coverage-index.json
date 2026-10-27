@@ -2,8 +2,128 @@
   "contract": "gamblee-article-coverage-index",
   "schema_version": 1,
   "source": "https://www.gamblee.com/wp-json/gamblee-core/v1/articles/coverage-index",
-  "total": 289,
+  "total": 293,
   "articles": [
+    {
+      "id": 88329,
+      "date": "2026-10-27T20:22:40+00:00",
+      "modified": "2026-10-27T20:22:40+00:00",
+      "title": "Denmark Launches Campaign on Gambling-Like Features in Children’s Video Games",
+      "slug": "denmark-gambling-elements-childrens-video-games-campaign-2026",
+      "url": "https://www.gamblee.com/articles/denmark-gambling-elements-childrens-video-games-campaign-2026/",
+      "excerpt": "The Danish Gambling Authority has launched a campaign highlighting gambling-like mechanics in video games, with public installations and resources for parents. The initiative is not a new ban or regulation.",
+      "verticals": [
+        "gambling",
+        "skin-gambling"
+      ],
+      "geographies": [
+        "dk"
+      ],
+      "topics": [
+        "player-protection",
+        "responsible-gambling"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 88317,
+      "date": "2026-10-27T20:16:42+00:00",
+      "modified": "2026-10-27T20:16:42+00:00",
+      "title": "UK Gambling Commission Secures £900,000 Settlement From L &#038; L Europe Over Withdrawal Delays",
+      "slug": "uk-gambling-commission-l-l-europe-900000-withdrawal-settlement-2026",
+      "url": "https://www.gamblee.com/articles/uk-gambling-commission-l-l-europe-900000-withdrawal-settlement-2026/",
+      "excerpt": "L & L Europe will pay £900,000 in a UK Gambling Commission settlement covering unfair withdrawal restrictions, AML controls and safer-gambling failures.",
+      "verticals": [
+        "casino"
+      ],
+      "geographies": [
+        "gb"
+      ],
+      "topics": [
+        "enforcement",
+        "player-protection"
+      ],
+      "subjects": [],
+      "entities": [
+        "brand-all-british-casino",
+        "brand-casino-casino",
+        "regulator-united-kingdom-gambling-commission"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 88281,
+      "date": "2026-10-27T19:13:20+00:00",
+      "modified": "2026-10-27T19:13:20+00:00",
+      "title": "Dutch Gambling Regulator Fines EOD Code €37.25 Million Over 12 Unlicensed Gambling Sites",
+      "slug": "netherlands-ksa-eod-code-record-37-million-fine-2026",
+      "url": "https://www.gamblee.com/articles/netherlands-ksa-eod-code-record-37-million-fine-2026/",
+      "excerpt": "The Kansspelautoriteit has imposed a record €37.25 million fine on EOD Code SRL over unlicensed gambling websites including Instantcasino and Skyhills. The decision remains open to objection.",
+      "verticals": [
+        "casino",
+        "sports-betting"
+      ],
+      "geographies": [
+        "nl"
+      ],
+      "topics": [
+        "enforcement"
+      ],
+      "subjects": [],
+      "entities": [
+        "regulator-kansspelautoriteit-ksa"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 88278,
+      "date": "2026-10-27T19:08:49+00:00",
+      "modified": "2026-10-27T19:08:49+00:00",
+      "title": "NBA Names Kalshi and Polymarket Preferred Prediction-Market Exchanges",
+      "slug": "nba-kalshi-polymarket-preferred-prediction-market-exchanges-2026",
+      "url": "https://www.gamblee.com/articles/nba-kalshi-polymarket-preferred-prediction-market-exchanges-2026/",
+      "excerpt": "The NBA has signed prediction-market agreements with Kalshi and Polymarket, expanded its DraftKings relationship and established an integrity memorandum with the CFTC.",
+      "verticals": [
+        "prediction-markets",
+        "sports-betting"
+      ],
+      "geographies": [
+        "us"
+      ],
+      "topics": [
+        "regulation-law"
+      ],
+      "subjects": [],
+      "entities": [
+        "government-cftc",
+        "other-draftkings",
+        "other-kalshi",
+        "other-polymarket"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
     {
       "id": 88007,
       "date": "2026-10-23T19:03:16+00:00",

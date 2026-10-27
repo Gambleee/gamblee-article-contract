@@ -2,7 +2,7 @@
   "contract": "gamblee-article-vocabulary-snapshot",
   "schema_version": "1.1",
   "dimension": "subjects",
-  "total": 227,
+  "total": 228,
   "source": "https://www.gamblee.com/wp-json/gamblee-core/v1/articles/vocabulary/subjects",
   "items": [
     {
@@ -943,6 +943,10 @@
     {
       "slug": "poker-feature-time-extension",
       "name": "Time Extension"
+    },
+    {
+      "slug": "promotion_type-tournament",
+      "name": "Tournament"
     },
     {
       "slug": "bonus_type-tournament-tickets",

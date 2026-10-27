@@ -10,6 +10,12 @@
   ],
   "entity": "gamblee_bonus_research",
   "rules": [
+    "Before serialization, classify every discovered item as Bonus or Promo. A Bonus is only a signup/new-customer offer or an offer whose specific claiming/activation requires a new upfront deposit. Everything else is a Promo.",
+    "Existing-depositor, funded-player, VIP or active-customer status alone does not make an item a Bonus. A fresh deposit must be required for that specific offer unless it is a signup/new-customer offer.",
+    "Leaderboards, tournaments, races, prize draws, competitions, missions, giveaways and similar campaigns are Promos unless participation in that specific offer requires a new upfront deposit.",
+    "Reward type does not determine classification. Free spins, cashback, match rewards, prizes and other rewards may be Bonus or Promo depending on the signup/new-deposit rule.",
+    "Bonus JSON serializes only Bonus-classified offers. Omit Promo-classified items entirely from offers and schema_gaps.",
+    "schema_gaps is reserved only for genuine Bonus-classified offers whose mechanics cannot be represented by this contract. Never report a Promo-classified item as a Bonus schema gap.",
     "One offer object represents exactly one market and one vertical. Multiple simultaneous offers for the same market/vertical are allowed.",
     "Market and currencies are independent. A USD-denominated poker offer may target GB, IE or another market.",
     "Currencies use the canonical Bonus Offer ISO 4217 vocabulary. GLOBAL/ROW offers may use local currencies beyond Gamblee's detailed-market currencies.",
@@ -18,8 +24,10 @@
     "A multi-stage deposit pack is one offer. Capture all stages in multi_step.rows; structured reward components describe the first stage unless a future schema explicitly models later stages.",
     "Recurring offers remain one offer and use schedule.weekdays and/or validity dates.",
     "Do not output prohibited markets. CA-ON is currently prohibited for public Bonus Offer publication.",
-    "If a discovered mechanic cannot be represented exactly by this contract, do not force-fit it. Put it in schema_gaps with status unsupported_but_fixable and propose the exact field/component/type change.",
+    "Use schema_gaps only when a genuine Bonus-classified mechanic is required for structured qualification, reward, wagering, cashout, schedule, eligibility or analyzer correctness and cannot be represented exactly. Ancillary restrictions that can be represented accurately in copy.terms, such as a maximum number of claims per month, belong in copy.terms and must not create a schema gap.",
     "supported_and_analyzable and not_calculable offers may be imported. unsupported_but_fixable items are blocked until the schema is extended.",
+    "analysis.status is offer-level, but analyzer EV may be component-level. Mark an offer supported_and_analyzable when at least one substantive structured reward component is fully calculable. An unknown secondary component does not invalidate a calculable primary component; leave its unknown EV inputs null and exclude that component from EV.",
+    "Example: a calculable match bonus plus free spins with unknown value_per_spin is supported_and_analyzable using the match-bonus component. A pure free-spins offer with unknown value_per_spin is not_calculable because no reward component has a calculable EV.",
     "urls.offer is only for a Gamblee-approved/tracked commercial deep link. Never substitute a generic official brand website, ordinary promotion page, affiliate-programme homepage, evidence URL, or guessed tracking URL. Put ordinary official promotion pages in evidence and leave urls.offer null so Gamblee inherits the canonical brand market/vertical Commercial Link. urls.terms may use a direct official terms URL.",
     "Use included_subdivisions when a broad country offer is available only in named subdivisions; use excluded_subdivisions when it applies broadly except named subdivisions. Never use both for the same subdivision.",
     "Use included_countries only with market=GLOBAL to whitelist the exact countries covered by a broad international offer. Countries must already be confirmed for the brand or be proposed as evidence-backed country_additions in the same payload.",
@@ -33,7 +41,7 @@
     "Use qualification_window_value + qualification_window_unit for a deadline to complete a qualifying action or use a pre-reward token; reward expiry remains component-specific.",
     "When qualifying spend is defined as a multiple of a deposit or bonus amount, use qualification_spend_multiplier + qualification_spend_basis instead of guessing a fixed minimum_spend.",
     "Use components.external_reward for non-cash third-party value such as vouchers or gift cards. Use components.free_rounds for branded game rounds such as Free Flights or Free Crossings rather than force-fitting them into free_spins.",
-    "Prefer current first-party/official evidence. Include source URLs in evidence."
+    "Prefer current first-party/official brand or operator evidence for offer discovery, classification and mechanics. When first-party pages are unavailable, incomplete, geo-gated, login-gated or technically inaccessible, current specific secondary sources may be used for commercial offer mechanics. First-party evidence wins on conflicts. Do not infer facts from silence, and do not use secondary evidence for brand_availability_changes or regulatory/jurisdiction availability changes, which remain first-party-only. Label evidence clearly enough to distinguish official and secondary sources."
   ],
   "analysis_statuses": [
     "supported_and_analyzable",
@@ -1737,6 +1745,10 @@
       "name": "3 Lucky Hippos"
     },
     {
+      "slug": "3-pots-of-baba-yaga",
+      "name": "3 Pots of Baba Yaga"
+    },
+    {
       "slug": "777strike",
       "name": "777Strike"
     },
@@ -1967,6 +1979,10 @@
     {
       "slug": "lucky-tiger-1000",
       "name": "Lucky Tiger 1000"
+    },
+    {
+      "slug": "majestic-joker",
+      "name": "Majestic Joker"
     },
     {
       "slug": "masks-of-fire-drums",
@@ -3249,7 +3265,7 @@
   "root_shape": {
     "schema_version": "1.5",
     "brand_id": 123,
-    "researched_at": "2026-10-27T09:06:29+00:00",
+    "researched_at": "2026-10-27T15:24:26+00:00",
     "taxonomy_additions": {
       "eligible_game": [],
       "excluded_payment_methods": [],

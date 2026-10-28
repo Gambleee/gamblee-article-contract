@@ -10,12 +10,13 @@
   ],
   "entity": "gamblee_bonus_research",
   "rules": [
-    "Before serialization, classify every discovered item as Bonus or Promo. A Bonus is only a signup/new-customer offer or an offer whose specific claiming/activation requires a new upfront deposit. Everything else is a Promo.",
-    "Existing-depositor, funded-player, VIP or active-customer status alone does not make an item a Bonus. A fresh deposit must be required for that specific offer unless it is a signup/new-customer offer.",
-    "Leaderboards, tournaments, races, prize draws, competitions, missions, giveaways and similar campaigns are Promos unless participation in that specific offer requires a new upfront deposit.",
-    "Reward type does not determine classification. Free spins, cashback, match rewards, prizes and other rewards may be Bonus or Promo depending on the signup/new-deposit rule.",
-    "Bonus JSON serializes only Bonus-classified offers. Omit Promo-classified items entirely from offers and schema_gaps.",
-    "schema_gaps is reserved only for genuine Bonus-classified offers whose mechanics cannot be represented by this contract. Never report a Promo-classified item as a Bonus schema gap.",
+    "Before serialization, apply the Event override first: scheduled competitive/playable campaigns such as slot or poker tournaments, freerolls, leaderboards, casino races and scheduled bingo rooms/sessions are Events, even when signup or a fresh deposit is required.",
+    "Apply the Promo override next: prize draws, raffles, giveaways, sweepstakes, random-winner competitions, missions/challenges, cashback, loyalty mechanics, prize wheels and mystery boxes are Promos, even when time-limited or deposit-gated.",
+    "After those overrides, a Bonus is only a signup/new-customer offer or an offer whose specific direct-reward claim/activation requires a new upfront deposit.",
+    "Existing-depositor, funded-player, VIP or active-customer status alone does not make an item a Bonus.",
+    "Reward type alone does not determine classification.",
+    "Bonus JSON serializes only Bonus-classified offers. Omit Event- and Promo-classified items entirely from offers and schema_gaps.",
+    "schema_gaps is reserved only for genuine Bonus-classified offers whose mechanics cannot be represented by this contract. Never report an Event- or Promo-classified item as a Bonus schema gap.",
     "One offer object represents exactly one market and one vertical. Multiple simultaneous offers for the same market/vertical are allowed.",
     "Research prompts target explicit country/subdivision markets only and do not generate GLOBAL/ROW/international research targets. GLOBAL remains supported for legacy/import compatibility.",
     "Offer titles use <Brand> <Market label> <Vertical> Offer • <Reward>, with concise editorial market labels such as GB=UK and CA-AB=Alberta. If the title would exceed 65 characters, omit <Vertical> first. Do not truncate verified reward text merely to retain the vertical label.",
@@ -1752,6 +1753,10 @@
       "name": "12 Pots of Gold Drum Frenzy"
     },
     {
+      "slug": "15-diamonds",
+      "name": "15 Diamonds"
+    },
+    {
       "slug": "3-lucky-hippos",
       "name": "3 Lucky Hippos"
     },
@@ -1832,6 +1837,10 @@
       "name": "Big Bass Bonanza 1000"
     },
     {
+      "slug": "big-bass-halloween-splash-1000",
+      "name": "Big Bass Halloween Splash 1000"
+    },
+    {
       "slug": "big-bass-splash",
       "name": "Big Bass Splash"
     },
@@ -1896,6 +1905,10 @@
       "name": "Cricket"
     },
     {
+      "slug": "darts",
+      "name": "Darts"
+    },
+    {
       "slug": "diamond-strike",
       "name": "Diamond Strike"
     },
@@ -1918,6 +1931,10 @@
     {
       "slug": "eruption-blaze-cashingo",
       "name": "Eruption Blaze Cashingo"
+    },
+    {
+      "slug": "esports",
+      "name": "eSports"
     },
     {
       "slug": "fishin-frenzy-the-big-catch-2",
@@ -1960,12 +1977,20 @@
       "name": "Gold Blitz Ultimate"
     },
     {
+      "slug": "golf",
+      "name": "Golf"
+    },
+    {
       "slug": "gorilla-fury-hold-hit",
       "name": "Gorilla Fury Hold &amp; Hit"
     },
     {
       "slug": "green-wizard",
       "name": "Green Wizard"
+    },
+    {
+      "slug": "greyhound-racing",
+      "name": "Greyhound Racing"
     },
     {
       "slug": "horseracing",
@@ -2064,6 +2089,10 @@
       "name": "Roulette"
     },
     {
+      "slug": "rugby",
+      "name": "Rugby"
+    },
+    {
       "slug": "sahara-riches-cash-collect",
       "name": "Sahara Riches Cash Collect"
     },
@@ -2072,8 +2101,16 @@
       "name": "Silver Room"
     },
     {
+      "slug": "snooker",
+      "name": "Snooker"
+    },
+    {
       "slug": "spinning-wilds",
       "name": "Spinning Wilds"
+    },
+    {
+      "slug": "spinomenal",
+      "name": "Spinomenal"
     },
     {
       "slug": "squelin-riches-2",
@@ -2090,6 +2127,10 @@
     {
       "slug": "sweet-burst",
       "name": "Sweet Burst"
+    },
+    {
+      "slug": "table-tennis",
+      "name": "Table Tennis"
     },
     {
       "slug": "tennis",
@@ -3300,7 +3341,7 @@
   "root_shape": {
     "schema_version": "1.5",
     "brand_id": 123,
-    "researched_at": "2026-10-28T13:04:19+00:00",
+    "researched_at": "2026-10-28T20:20:13+00:00",
     "taxonomy_additions": {
       "eligible_game": [],
       "excluded_payment_methods": [],

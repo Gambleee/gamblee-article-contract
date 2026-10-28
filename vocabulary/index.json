@@ -26,7 +26,7 @@
     {
       "dimension": "subjects",
       "taxonomy": "news_subject",
-      "count": 231,
+      "count": 232,
       "hierarchical": true,
       "searchable": true
     },

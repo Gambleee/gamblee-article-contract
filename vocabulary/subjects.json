@@ -2,7 +2,7 @@
   "contract": "gamblee-article-vocabulary-snapshot",
   "schema_version": "1.1",
   "dimension": "subjects",
-  "total": 228,
+  "total": 231,
   "source": "https://www.gamblee.com/wp-json/gamblee-core/v1/articles/vocabulary/subjects",
   "items": [
     {
@@ -169,6 +169,10 @@
       "slug": "biathlon",
       "name": "Biathlon",
       "parent_slug": "sports"
+    },
+    {
+      "slug": "promotion_type-bingo-event",
+      "name": "Bingo Event"
     },
     {
       "slug": "bonus_type-bingo-tickets",
@@ -572,6 +576,10 @@
       "name": "Live Streaming"
     },
     {
+      "slug": "promotion_type-loyalty-program",
+      "name": "Loyalty Program"
+    },
+    {
       "slug": "loyalty-vip-loyalty-vip",
       "name": "Loyalty Programs &amp; VIP Clubs"
     },
@@ -960,6 +968,10 @@
       "slug": "valorant",
       "name": "Valorant",
       "parent_slug": "esports"
+    },
+    {
+      "slug": "promotion_type-vip-program",
+      "name": "VIP Program"
     },
     {
       "slug": "virtual-sports",

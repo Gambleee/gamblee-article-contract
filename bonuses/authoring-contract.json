@@ -1620,12 +1620,20 @@
       "name": "Apple Pay"
     },
     {
+      "slug": "cryptocurrency",
+      "name": "Cryptocurrency"
+    },
+    {
       "slug": "e-wallets",
       "name": "E-Wallets"
     },
     {
       "slug": "ecopayz",
       "name": "ecoPayz"
+    },
+    {
+      "slug": "euteller",
+      "name": "Euteller"
     },
     {
       "slug": "kalibra-postpay",
@@ -3292,7 +3300,7 @@
   "root_shape": {
     "schema_version": "1.5",
     "brand_id": 123,
-    "researched_at": "2026-10-28T05:50:17+00:00",
+    "researched_at": "2026-10-28T13:04:19+00:00",
     "taxonomy_additions": {
       "eligible_game": [],
       "excluded_payment_methods": [],

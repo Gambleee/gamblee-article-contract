@@ -17,6 +17,8 @@
     "Bonus JSON serializes only Bonus-classified offers. Omit Promo-classified items entirely from offers and schema_gaps.",
     "schema_gaps is reserved only for genuine Bonus-classified offers whose mechanics cannot be represented by this contract. Never report a Promo-classified item as a Bonus schema gap.",
     "One offer object represents exactly one market and one vertical. Multiple simultaneous offers for the same market/vertical are allowed.",
+    "Research prompts target explicit country/subdivision markets only and do not generate GLOBAL/ROW/international research targets. GLOBAL remains supported for legacy/import compatibility.",
+    "Offer titles use <Brand> <Market label> <Vertical> Offer • <Reward>, with concise editorial market labels such as GB=UK and CA-AB=Alberta. If the title would exceed 65 characters, omit <Vertical> first. Do not truncate verified reward text merely to retain the vertical label.",
     "Market and currencies are independent. A USD-denominated poker offer may target GB, IE or another market.",
     "Currencies use the canonical Bonus Offer ISO 4217 vocabulary. GLOBAL/ROW offers may use local currencies beyond Gamblee's detailed-market currencies.",
     "One discrete promotion stays one offer even when the operator supports several account currencies. Use currencies as a list and do not clone an otherwise identical market/vertical offer solely for EUR/USD/etc. If structured mechanics materially differ by currency and cannot be represented exactly, report a schema gap rather than creating currency-only duplicates.",
@@ -27,7 +29,8 @@
     "Use schema_gaps only when a genuine Bonus-classified mechanic is required for structured qualification, reward, wagering, cashout, schedule, eligibility or analyzer correctness and cannot be represented exactly. Ancillary restrictions that can be represented accurately in copy.terms, such as a maximum number of claims per month, belong in copy.terms and must not create a schema gap.",
     "supported_and_analyzable and not_calculable offers may be imported. unsupported_but_fixable items are blocked until the schema is extended.",
     "analysis.status is offer-level, but analyzer EV may be component-level. Mark an offer supported_and_analyzable when at least one substantive structured reward component is fully calculable. An unknown secondary component does not invalidate a calculable primary component; leave its unknown EV inputs null and exclude that component from EV.",
-    "Example: a calculable match bonus plus free spins with unknown value_per_spin is supported_and_analyzable using the match-bonus component. A pure free-spins offer with unknown value_per_spin is not_calculable because no reward component has a calculable EV.",
+    "Free-spin valuation default: when the operator does not state value_per_spin and every offer currency is one of EUR, GBP, USD, CAD, AUD or NZD, use 0.10 per spin. This is a Gamblee valuation assumption, not an operator-stated term. An explicit operator value always overrides it. Do not apply the 0.10 fallback to currencies with materially different unit scales such as ZAR.",
+    "With that fallback, a pure free-spins offer in EUR, GBP, USD, CAD, AUD or NZD can remain supported_and_analyzable when spin count is known. If value_per_spin is unknown in a non-default currency, leave it null and use not_calculable unless another component is calculable.",
     "urls.offer is only for a Gamblee-approved/tracked commercial deep link. Never substitute a generic official brand website, ordinary promotion page, affiliate-programme homepage, evidence URL, or guessed tracking URL. Put ordinary official promotion pages in evidence and leave urls.offer null so Gamblee inherits the canonical brand market/vertical Commercial Link. urls.terms may use a direct official terms URL.",
     "Use included_subdivisions when a broad country offer is available only in named subdivisions; use excluded_subdivisions when it applies broadly except named subdivisions. Never use both for the same subdivision.",
     "Use included_countries only with market=GLOBAL to whitelist the exact countries covered by a broad international offer. Countries must already be confirmed for the brand or be proposed as evidence-backed country_additions in the same payload.",
@@ -1829,6 +1832,10 @@
       "name": "Big William Hill Fortune"
     },
     {
+      "slug": "bigger-bass-splash",
+      "name": "Bigger Bass Splash"
+    },
+    {
       "slug": "bingo",
       "name": "Bingo"
     },
@@ -1945,6 +1952,10 @@
       "name": "Gold Blitz Ultimate"
     },
     {
+      "slug": "gorilla-fury-hold-hit",
+      "name": "Gorilla Fury Hold &amp; Hit"
+    },
+    {
       "slug": "green-wizard",
       "name": "Green Wizard"
     },
@@ -2017,6 +2028,10 @@
       "name": "Newbie Room"
     },
     {
+      "slug": "ninja-master",
+      "name": "Ninja Master"
+    },
+    {
       "slug": "pragmatic-play",
       "name": "Pragmatic Play"
     },
@@ -2059,6 +2074,10 @@
     {
       "slug": "starburst",
       "name": "Starburst"
+    },
+    {
+      "slug": "super-miner-mega-gems",
+      "name": "Super Miner - Mega Gems"
     },
     {
       "slug": "sweet-burst",
@@ -3196,7 +3215,7 @@
   "offer_shape": {
     "offer_key": "stable-lowercase-key",
     "bonus_id": null,
-    "title": "Brand Market Offer • concise reward summary",
+    "title": "Brand UK Casino Offer • concise reward summary",
     "market": "GB",
     "currencies": [
       "GBP"
@@ -3273,7 +3292,7 @@
   "root_shape": {
     "schema_version": "1.5",
     "brand_id": 123,
-    "researched_at": "2026-10-27T22:20:35+00:00",
+    "researched_at": "2026-10-28T05:50:17+00:00",
     "taxonomy_additions": {
       "eligible_game": [],
       "excluded_payment_methods": [],

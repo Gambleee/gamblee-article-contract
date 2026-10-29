@@ -1,0 +1,673 @@
+{
+  "schema": "Gamblee Event Research JSON",
+  "schema_version": "1.0",
+  "compatible_schema_versions": [
+    "1.0"
+  ],
+  "purpose": "Research scheduled competitive or playable gambling events and map verified facts into the Gamblee Event CPT while preserving the existing listing-card layout.",
+  "routing": {
+    "event": "Scheduled competitive/playable campaigns: slot or poker tournaments, freerolls, leaderboards, casino races and scheduled bingo rooms/sessions. A qualifying deposit does not move these out of Events.",
+    "promotion": "Prize draws, raffles, giveaways, sweepstakes, random-winner competitions, missions/challenges, cashback, loyalty mechanics, prize wheels and mystery boxes remain Promotions even when time-limited or deposit-gated.",
+    "bonus": "Direct deterministic signup/new-customer rewards, or direct deterministic rewards whose claim requires a fresh upfront deposit, remain Bonuses unless an Event or Promotion override applies."
+  },
+  "principles": [
+    "One event object represents one discrete scheduled campaign or recurring event series.",
+    "Respect the existing Event listing card: headline prize pool/jackpot, entry badge, no more than three compact info rows, countdown/status and CTA.",
+    "card.rows contains the three most useful listing facts only. Put deeper qualification and scoring mechanics in structured fields and terms.",
+    "Use event_categories for the event mechanic and vertical separately for casino, betting, bingo or poker.",
+    "Markets and currencies are independent.",
+    "Do not use Events for prize draws, giveaways or other random-winner campaigns merely because they have dates.",
+    "Keep an established event_key stable across revisions. event_key is the idempotency key.",
+    "Return one event_reconciliation row for every existing Event supplied to research: confirmed, ended or not_found. not_found never retires anything.",
+    "schema_gaps is reserved for Event-classified mechanics that cannot be represented faithfully."
+  ],
+  "markets": [
+    "GLOBAL",
+    "GB",
+    "IE",
+    "CA",
+    "CA-AB",
+    "CA-ON",
+    "US",
+    "US-CT",
+    "US-MI",
+    "US-NJ",
+    "AU",
+    "NZ",
+    "ZA"
+  ],
+  "currencies": [
+    "GBP",
+    "EUR",
+    "CAD",
+    "USD",
+    "AUD",
+    "NZD",
+    "ZAR"
+  ],
+  "verticals": [
+    "casino",
+    "betting",
+    "bingo",
+    "poker"
+  ],
+  "event_categories": [
+    {
+      "slug": "bingo-games",
+      "name": "Bingo"
+    },
+    {
+      "slug": "freerolls",
+      "name": "Freerolls"
+    },
+    {
+      "slug": "newbie-rooms",
+      "name": "Newbie Rooms"
+    },
+    {
+      "slug": "poker-tournaments",
+      "name": "Poker"
+    },
+    {
+      "slug": "slot-tournaments",
+      "name": "Slot Tournaments"
+    }
+  ],
+  "eligible_games": [
+    {
+      "slug": "12-pots-of-gold-drum-frenzy",
+      "name": "12 Pots of Gold Drum Frenzy"
+    },
+    {
+      "slug": "15-diamonds",
+      "name": "15 Diamonds"
+    },
+    {
+      "slug": "3-lucky-hippos",
+      "name": "3 Lucky Hippos"
+    },
+    {
+      "slug": "3-pots-of-baba-yaga",
+      "name": "3 Pots of Baba Yaga"
+    },
+    {
+      "slug": "777strike",
+      "name": "777Strike"
+    },
+    {
+      "slug": "age-of-gods-king-of-olympus",
+      "name": "Age of Gods King of Olympus"
+    },
+    {
+      "slug": "age-of-the-gods-god-of-storms",
+      "name": "Age of the Gods: God of Storms"
+    },
+    {
+      "slug": "age-of-the-gods-god-of-storms-2",
+      "name": "Age of the Gods: God of Storms 2"
+    },
+    {
+      "slug": "age-of-the-gods-god-of-storms-3",
+      "name": "Age of the Gods: God of Storms 3"
+    },
+    {
+      "slug": "all-markets",
+      "name": "All Markets"
+    },
+    {
+      "slug": "american-football",
+      "name": "American Football"
+    },
+    {
+      "slug": "area-link-phoenix-firestorm",
+      "name": "Area Link Phoenix Firestorm"
+    },
+    {
+      "slug": "aviator",
+      "name": "Aviator"
+    },
+    {
+      "slug": "badge-blitz",
+      "name": "Badge Blitz"
+    },
+    {
+      "slug": "baseball",
+      "name": "Baseball"
+    },
+    {
+      "slug": "basketball",
+      "name": "Basketball"
+    },
+    {
+      "slug": "bass-boss",
+      "name": "Bass Boss"
+    },
+    {
+      "slug": "beast-of-fire",
+      "name": "Beast of Fire"
+    },
+    {
+      "slug": "bee-keeper",
+      "name": "Bee Keeper"
+    },
+    {
+      "slug": "betting",
+      "name": "Betting"
+    },
+    {
+      "slug": "big-bass-bonanza",
+      "name": "big bass bonanza"
+    },
+    {
+      "slug": "big-bass-bonanza-1000",
+      "name": "Big Bass Bonanza 1000"
+    },
+    {
+      "slug": "big-bass-halloween-splash-1000",
+      "name": "Big Bass Halloween Splash 1000"
+    },
+    {
+      "slug": "big-bass-splash",
+      "name": "Big Bass Splash"
+    },
+    {
+      "slug": "big-william-hill-fortune",
+      "name": "Big William Hill Fortune"
+    },
+    {
+      "slug": "bigger-bass-splash",
+      "name": "Bigger Bass Splash"
+    },
+    {
+      "slug": "bingo",
+      "name": "Bingo"
+    },
+    {
+      "slug": "blue-wizard",
+      "name": "Blue Wizard"
+    },
+    {
+      "slug": "book-of-dead",
+      "name": "Book of Dead"
+    },
+    {
+      "slug": "book-of-legacy",
+      "name": "Book of Legacy"
+    },
+    {
+      "slug": "book-of-the-fallen",
+      "name": "Book of the Fallen"
+    },
+    {
+      "slug": "break-the-piggy-bank",
+      "name": "Break the Piggy Bank"
+    },
+    {
+      "slug": "cash-a-cabana",
+      "name": "Cash-A-Cabana"
+    },
+    {
+      "slug": "casino",
+      "name": "Casino"
+    },
+    {
+      "slug": "chicken-game",
+      "name": "Chicken Game"
+    },
+    {
+      "slug": "chilli-heat",
+      "name": "Chilli Heat"
+    },
+    {
+      "slug": "coin-freeze",
+      "name": "Coin Freeze"
+    },
+    {
+      "slug": "combined-trap-challenge",
+      "name": "Combined Trap Challenge"
+    },
+    {
+      "slug": "cricket",
+      "name": "Cricket"
+    },
+    {
+      "slug": "darts",
+      "name": "Darts"
+    },
+    {
+      "slug": "diamond-strike",
+      "name": "Diamond Strike"
+    },
+    {
+      "slug": "diamonds-of-the-realm",
+      "name": "Diamonds of the Realm"
+    },
+    {
+      "slug": "different-games",
+      "name": "Different Games"
+    },
+    {
+      "slug": "double-bubble",
+      "name": "Double Bubble"
+    },
+    {
+      "slug": "epic-ape",
+      "name": "Epic Ape"
+    },
+    {
+      "slug": "eruption-blaze-cashingo",
+      "name": "Eruption Blaze Cashingo"
+    },
+    {
+      "slug": "esports",
+      "name": "eSports"
+    },
+    {
+      "slug": "fishin-frenzy-the-big-catch-2",
+      "name": "Fishin Frenzy The Big Catch 2"
+    },
+    {
+      "slug": "fishin-bigger-pots-of-gold",
+      "name": "Fishin' Bigger Pots of Gold"
+    },
+    {
+      "slug": "fishin-triple-pots-of-gold-power-combo",
+      "name": "Fishin' Triple Pots of Gold POWER COMBO"
+    },
+    {
+      "slug": "fishing-frenzy-big-catch-megaways",
+      "name": "Fishing Frenzy Big Catch Megaways"
+    },
+    {
+      "slug": "fluffy-favourites",
+      "name": "Fluffy favourites"
+    },
+    {
+      "slug": "football",
+      "name": "Football"
+    },
+    {
+      "slug": "formula-1",
+      "name": "Formula 1"
+    },
+    {
+      "slug": "gates-of-olympus",
+      "name": "Gates of Olympus"
+    },
+    {
+      "slug": "gold-blitz-extreme",
+      "name": "Gold Blitz Extreme"
+    },
+    {
+      "slug": "gold-blitz-ultimate",
+      "name": "Gold Blitz Ultimate"
+    },
+    {
+      "slug": "golf",
+      "name": "Golf"
+    },
+    {
+      "slug": "gorilla-fury-hold-hit",
+      "name": "Gorilla Fury Hold &amp; Hit"
+    },
+    {
+      "slug": "green-wizard",
+      "name": "Green Wizard"
+    },
+    {
+      "slug": "greyhound-racing",
+      "name": "Greyhound Racing"
+    },
+    {
+      "slug": "horseracing",
+      "name": "Horseracing"
+    },
+    {
+      "slug": "hot-hot-bet",
+      "name": "Hot Hot Bet"
+    },
+    {
+      "slug": "hot-hot-fruit",
+      "name": "Hot Hot Fruit"
+    },
+    {
+      "slug": "ice-hockey",
+      "name": "Ice Hockey"
+    },
+    {
+      "slug": "immortal-wins",
+      "name": "Immortal Wins"
+    },
+    {
+      "slug": "jackpot-sng",
+      "name": "Jackpot SNG"
+    },
+    {
+      "slug": "le-bandit",
+      "name": "Le Bandit+"
+    },
+    {
+      "slug": "lucky-panda",
+      "name": "Lucky Panda"
+    },
+    {
+      "slug": "lucky-tiger-1000",
+      "name": "Lucky Tiger 1000"
+    },
+    {
+      "slug": "majestic-joker",
+      "name": "Majestic Joker"
+    },
+    {
+      "slug": "masks-of-fire-drums",
+      "name": "Masks of Fire Drums"
+    },
+    {
+      "slug": "mega-cash-collect",
+      "name": "Mega Cash Collect"
+    },
+    {
+      "slug": "mining-pots-of-gold",
+      "name": "Mining Pots of Gold"
+    },
+    {
+      "slug": "monopoly-cash",
+      "name": "Monopoly Cash"
+    },
+    {
+      "slug": "nba",
+      "name": "NBA"
+    },
+    {
+      "slug": "network-rooms",
+      "name": "Network Rooms"
+    },
+    {
+      "slug": "newbie-room",
+      "name": "Newbie Room"
+    },
+    {
+      "slug": "ninja-master",
+      "name": "Ninja Master"
+    },
+    {
+      "slug": "pragmatic-play",
+      "name": "Pragmatic Play"
+    },
+    {
+      "slug": "rainbow-riches-megaways",
+      "name": "Rainbow Riches Megaways"
+    },
+    {
+      "slug": "reactoonz",
+      "name": "Reactoonz"
+    },
+    {
+      "slug": "red-rocket",
+      "name": "Red Rocket"
+    },
+    {
+      "slug": "rigged",
+      "name": "rigged"
+    },
+    {
+      "slug": "roulette",
+      "name": "Roulette"
+    },
+    {
+      "slug": "rugby",
+      "name": "Rugby"
+    },
+    {
+      "slug": "sahara-riches-cash-collect",
+      "name": "Sahara Riches Cash Collect"
+    },
+    {
+      "slug": "silver-room",
+      "name": "Silver Room"
+    },
+    {
+      "slug": "snooker",
+      "name": "Snooker"
+    },
+    {
+      "slug": "spinning-wilds",
+      "name": "Spinning Wilds"
+    },
+    {
+      "slug": "spinomenal",
+      "name": "Spinomenal"
+    },
+    {
+      "slug": "squelin-riches-2",
+      "name": "Squelin Riches 2"
+    },
+    {
+      "slug": "starburst",
+      "name": "Starburst"
+    },
+    {
+      "slug": "super-miner-mega-gems",
+      "name": "Super Miner - Mega Gems"
+    },
+    {
+      "slug": "sweet-burst",
+      "name": "Sweet Burst"
+    },
+    {
+      "slug": "table-tennis",
+      "name": "Table Tennis"
+    },
+    {
+      "slug": "tennis",
+      "name": "Tennis"
+    },
+    {
+      "slug": "the-green-knight",
+      "name": "The Green Knight"
+    },
+    {
+      "slug": "the-paying-piano-club",
+      "name": "The Paying Piano Club"
+    },
+    {
+      "slug": "the-trials-of-asgard",
+      "name": "the trials of asgard"
+    },
+    {
+      "slug": "thor-and-the-trials-of-asgard",
+      "name": "Thor and the Trials of Asgard"
+    },
+    {
+      "slug": "tsai-shens-gift",
+      "name": "Tsai Shen's Gift"
+    },
+    {
+      "slug": "vault-cracker-megaways",
+      "name": "Vault Cracker Megaways"
+    },
+    {
+      "slug": "wild-pistolero",
+      "name": "Wild Pistolero"
+    },
+    {
+      "slug": "william-hill-gold",
+      "name": "William Hill Gold"
+    },
+    {
+      "slug": "wolf-gold",
+      "name": "Wolf Gold"
+    }
+  ],
+  "provider_groups": [],
+  "taxonomy_additions": {
+    "allowed_taxonomies": [
+      "event_category",
+      "eligible_game"
+    ],
+    "term_shape": {
+      "name": "Canonical term name",
+      "slug": "canonical-term-slug"
+    }
+  },
+  "enums": {
+    "customer_eligibility": [
+      "all",
+      "new",
+      "existing",
+      "returning",
+      "vip",
+      "targeted",
+      "unknown"
+    ],
+    "qualifying_activity": [
+      "deposit",
+      "stake",
+      "wagering",
+      "games_played",
+      "leaderboard",
+      "tournament",
+      "race",
+      "purchase",
+      "other",
+      "unknown"
+    ],
+    "buy_in": [
+      "free_entry",
+      "cash_play",
+      "unknown"
+    ],
+    "info_icon_set": [
+      "prize_podium",
+      "event_meta"
+    ],
+    "event_label": [
+      "exclusive",
+      "special_event",
+      "new_room",
+      "limited_time"
+    ],
+    "schedule_mode": [
+      "fixed",
+      "recurring",
+      "on_demand"
+    ],
+    "repeat_unit": [
+      "minutes",
+      "hours",
+      "days"
+    ],
+    "recurring_behavior": [
+      "fixed_duration",
+      "until_next"
+    ],
+    "scoring_method": [
+      "points",
+      "highest_score",
+      "wagering",
+      "wins",
+      "multiplier",
+      "race_progress",
+      "custom",
+      "not_applicable",
+      "unknown"
+    ],
+    "source_rel": [
+      "nofollow",
+      "sponsored",
+      "follow"
+    ],
+    "reconciliation_status": [
+      "confirmed",
+      "ended",
+      "not_found"
+    ]
+  },
+  "event_shape": {
+    "event_key": "stable-lowercase-key",
+    "event_id": null,
+    "title": "Brand UK Slot Tournament • £50,000 Prize Pool",
+    "event_name": "£50,000 October Slot Tournament",
+    "event_categories": [
+      "slot-tournaments"
+    ],
+    "vertical": "casino",
+    "markets": [
+      "GB"
+    ],
+    "currencies": [
+      "GBP"
+    ],
+    "provider_group": null,
+    "event_provider": null,
+    "event_label": "limited_time",
+    "prize_pool": 50000,
+    "jackpot_amount": null,
+    "buy_in": "cash_play",
+    "qualification": {
+      "customer_eligibility": "all",
+      "opt_in_required": false,
+      "activity": "leaderboard",
+      "minimum_deposit": null,
+      "minimum_stake": null,
+      "minimum_turnover": null,
+      "eligible_games": []
+    },
+    "competition": {
+      "scoring_method": "points",
+      "scoring_notes": "£1 wagered earns 10 points.",
+      "places_paid": 100
+    },
+    "schedule": {
+      "mode": "fixed",
+      "start_time": "2026-10-01T00:00:00+01:00",
+      "end_time": "2026-10-31T23:59:59+00:00",
+      "repeat_every": null,
+      "repeat_unit": null,
+      "recurring_behavior": null
+    },
+    "card": {
+      "info_icon_set": "event_meta",
+      "rows": [
+        {
+          "label": "Entry",
+          "value": "Wager on eligible slots"
+        },
+        {
+          "label": "Scoring",
+          "value": "£1 = 10 pts"
+        },
+        {
+          "label": "Payouts",
+          "value": "Top 100 paid"
+        }
+      ]
+    },
+    "access": {
+      "password": null,
+      "password_source_url": null,
+      "password_source_rel": "nofollow"
+    },
+    "terms": {
+      "summary": "Concise player-facing event conditions."
+    },
+    "evidence": {
+      "primary_source_url": "https://operator.example/event",
+      "terms_source_url": "https://operator.example/event-terms",
+      "source_checked_at": null,
+      "notes": null
+    }
+  },
+  "root_shape": {
+    "schema_version": "1.0",
+    "brand_id": 123,
+    "researched_at": null,
+    "taxonomy_additions": {
+      "event_category": [],
+      "eligible_game": []
+    },
+    "events": [],
+    "event_reconciliation": [],
+    "schema_gaps": []
+  }
+}

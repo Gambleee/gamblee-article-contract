@@ -1,0 +1,844 @@
+{
+  "schema": "Gamblee Promotion Research JSON",
+  "schema_version": "1.4",
+  "compatible_schema_versions": [
+    "1.3",
+    "1.4"
+  ],
+  "purpose": "Research current or officially announced upcoming brand promotions and map verified facts into the canonical Gamblee Promotion CPT.",
+  "principles": [
+    "Apply the Event override first: scheduled competitive/playable campaigns such as slot or poker tournaments, freerolls, leaderboards, casino races and scheduled bingo rooms/sessions belong in Event JSON even when deposit-gated.",
+    "Apply the Promo override next: prize draws, raffles, giveaways, sweepstakes, random-winner competitions, missions/challenges, cashback, loyalty mechanics, prize wheels and mystery boxes remain Promos even when time-limited or deposit-gated.",
+    "After those overrides, a Bonus is a signup/new-customer offer or an offer whose specific direct-reward claim/activation requires a new upfront deposit. Promotion JSON serializes only Promo-classified items.",
+    "Omit Bonus- and Event-classified items from promotions and schema_gaps.",
+    "Reward type alone does not determine classification.",
+    "schema_gaps is reserved only for genuine Promo-classified campaigns whose mechanics cannot be represented by this contract.",
+    "One promotion object may cover multiple confirmed markets and verticals when reward, qualification and schedule mechanics are materially identical.",
+    "Split promotions when terms, reward mechanics, qualification rules or schedule differ materially by market or vertical.",
+    "Market and currency are independent.",
+    "For each existing promotion supplied in the research prompt, return one promotion_reconciliation row with confirmed, ended or not_found. not_found never deactivates anything.",
+    "Use an existing promotion_id only when the researched promotion is clearly the same continuing or revised promotion.",
+    "Never invent missing numeric mechanics, promo codes, dates or restrictions.",
+    "Expired promotions must not be returned as current research output.",
+    "SERIALIZATION GUARD: serialize only root fields declared by root_shape."
+  ],
+  "output_gate": {
+    "require_importable": true,
+    "blocking_rules": [
+      "brand_id must match the requested WordPress brand.",
+      "Every promotion needs a descriptive editorial title, substantive structured content_html, at least one supported market, at least one existing promotion vertical, at least one promotion type, and a primary current source URL.",
+      "Reward mode must be internally consistent with its numeric fields.",
+      "Expired promotions must not be returned as current research output.",
+      "schema_gaps must be empty before final importable JSON is returned."
+    ]
+  },
+  "markets": [
+    "GLOBAL",
+    "GB",
+    "IE",
+    "EUROPE",
+    "CA",
+    "CA-AB",
+    "CA-ON",
+    "US",
+    "US-CT",
+    "US-MI",
+    "US-NJ",
+    "AU",
+    "NZ",
+    "ZA"
+  ],
+  "currencies": [
+    "GBP",
+    "EUR",
+    "CAD",
+    "USD",
+    "AUD",
+    "NZD",
+    "ZAR"
+  ],
+  "promotion_verticals": [
+    {
+      "slug": "betting",
+      "name": "Betting"
+    },
+    {
+      "slug": "bingo",
+      "name": "Bingo"
+    },
+    {
+      "slug": "casino",
+      "name": "Casino"
+    },
+    {
+      "slug": "poker",
+      "name": "Poker"
+    }
+  ],
+  "promotion_types": [
+    {
+      "slug": "acca-boost",
+      "name": "Acca Boost"
+    },
+    {
+      "slug": "bad-beat-jackpots",
+      "name": "Bad Beat Jackpots"
+    },
+    {
+      "slug": "best-odds-guaranteed",
+      "name": "Best Odds Guaranteed"
+    },
+    {
+      "slug": "bet-insurance",
+      "name": "Bet insurance"
+    },
+    {
+      "slug": "bet-protection",
+      "name": "Bet Protection"
+    },
+    {
+      "slug": "cashback",
+      "name": "Cashback"
+    },
+    {
+      "slug": "daily-picks",
+      "name": "Daily Picks"
+    },
+    {
+      "slug": "daily-wheel",
+      "name": "Daily Wheel"
+    },
+    {
+      "slug": "early-payout",
+      "name": "Early payout"
+    },
+    {
+      "slug": "free-bet",
+      "name": "Free Bet"
+    },
+    {
+      "slug": "free-spins",
+      "name": "Free Spins"
+    },
+    {
+      "slug": "free-to-play",
+      "name": "Free to Play"
+    },
+    {
+      "slug": "freebies",
+      "name": "Freebies"
+    },
+    {
+      "slug": "freerolls",
+      "name": "Freerolls"
+    },
+    {
+      "slug": "giveaway",
+      "name": "Giveaway"
+    },
+    {
+      "slug": "jackpots",
+      "name": "Jackpots"
+    },
+    {
+      "slug": "leaderboard",
+      "name": "Leaderboard"
+    },
+    {
+      "slug": "leaderboard-competition",
+      "name": "Leaderboard Competition"
+    },
+    {
+      "slug": "mystery-box",
+      "name": "Mystery Box"
+    },
+    {
+      "slug": "odds-boost",
+      "name": "Odds boost"
+    },
+    {
+      "slug": "prize-draw",
+      "name": "Prize Draw"
+    },
+    {
+      "slug": "prize-drop",
+      "name": "Prize Drop"
+    },
+    {
+      "slug": "prize-twister",
+      "name": "Prize Twister"
+    },
+    {
+      "slug": "prize-wheel",
+      "name": "Prize Wheel"
+    },
+    {
+      "slug": "rake-race",
+      "name": "Rake Race"
+    },
+    {
+      "slug": "rakeback",
+      "name": "Rakeback"
+    },
+    {
+      "slug": "refer-a-friend",
+      "name": "Refer a Friend"
+    },
+    {
+      "slug": "reload-bonus",
+      "name": "Reload Bonus"
+    },
+    {
+      "slug": "slot-tournament",
+      "name": "Slot Tournament"
+    },
+    {
+      "slug": "wager-get",
+      "name": "Wager & get"
+    },
+    {
+      "slug": "wheel-bonus",
+      "name": "Wheel Bonus"
+    }
+  ],
+  "eligible_selections": [
+    {
+      "slug": "12-pots-of-gold-drum-frenzy",
+      "name": "12 Pots of Gold Drum Frenzy"
+    },
+    {
+      "slug": "15-diamonds",
+      "name": "15 Diamonds"
+    },
+    {
+      "slug": "3-lucky-hippos",
+      "name": "3 Lucky Hippos"
+    },
+    {
+      "slug": "3-pots-of-baba-yaga",
+      "name": "3 Pots of Baba Yaga"
+    },
+    {
+      "slug": "777strike",
+      "name": "777Strike"
+    },
+    {
+      "slug": "age-of-gods-king-of-olympus",
+      "name": "Age of Gods King of Olympus"
+    },
+    {
+      "slug": "age-of-the-gods-god-of-storms",
+      "name": "Age of the Gods: God of Storms"
+    },
+    {
+      "slug": "age-of-the-gods-god-of-storms-2",
+      "name": "Age of the Gods: God of Storms 2"
+    },
+    {
+      "slug": "age-of-the-gods-god-of-storms-3",
+      "name": "Age of the Gods: God of Storms 3"
+    },
+    {
+      "slug": "all-markets",
+      "name": "All Markets"
+    },
+    {
+      "slug": "american-football",
+      "name": "American Football"
+    },
+    {
+      "slug": "area-link-phoenix-firestorm",
+      "name": "Area Link Phoenix Firestorm"
+    },
+    {
+      "slug": "aviator",
+      "name": "Aviator"
+    },
+    {
+      "slug": "badge-blitz",
+      "name": "Badge Blitz"
+    },
+    {
+      "slug": "baseball",
+      "name": "Baseball"
+    },
+    {
+      "slug": "basketball",
+      "name": "Basketball"
+    },
+    {
+      "slug": "bass-boss",
+      "name": "Bass Boss"
+    },
+    {
+      "slug": "beast-of-fire",
+      "name": "Beast of Fire"
+    },
+    {
+      "slug": "bee-keeper",
+      "name": "Bee Keeper"
+    },
+    {
+      "slug": "betting",
+      "name": "Betting"
+    },
+    {
+      "slug": "big-bass-bonanza",
+      "name": "big bass bonanza"
+    },
+    {
+      "slug": "big-bass-bonanza-1000",
+      "name": "Big Bass Bonanza 1000"
+    },
+    {
+      "slug": "big-bass-halloween-splash-1000",
+      "name": "Big Bass Halloween Splash 1000"
+    },
+    {
+      "slug": "big-bass-splash",
+      "name": "Big Bass Splash"
+    },
+    {
+      "slug": "big-william-hill-fortune",
+      "name": "Big William Hill Fortune"
+    },
+    {
+      "slug": "bigger-bass-splash",
+      "name": "Bigger Bass Splash"
+    },
+    {
+      "slug": "bingo",
+      "name": "Bingo"
+    },
+    {
+      "slug": "blue-wizard",
+      "name": "Blue Wizard"
+    },
+    {
+      "slug": "book-of-dead",
+      "name": "Book of Dead"
+    },
+    {
+      "slug": "book-of-legacy",
+      "name": "Book of Legacy"
+    },
+    {
+      "slug": "book-of-the-fallen",
+      "name": "Book of the Fallen"
+    },
+    {
+      "slug": "break-the-piggy-bank",
+      "name": "Break the Piggy Bank"
+    },
+    {
+      "slug": "cash-a-cabana",
+      "name": "Cash-A-Cabana"
+    },
+    {
+      "slug": "casino",
+      "name": "Casino"
+    },
+    {
+      "slug": "chicken-game",
+      "name": "Chicken Game"
+    },
+    {
+      "slug": "chilli-heat",
+      "name": "Chilli Heat"
+    },
+    {
+      "slug": "coin-freeze",
+      "name": "Coin Freeze"
+    },
+    {
+      "slug": "combined-trap-challenge",
+      "name": "Combined Trap Challenge"
+    },
+    {
+      "slug": "cricket",
+      "name": "Cricket"
+    },
+    {
+      "slug": "darts",
+      "name": "Darts"
+    },
+    {
+      "slug": "diamond-strike",
+      "name": "Diamond Strike"
+    },
+    {
+      "slug": "diamonds-of-the-realm",
+      "name": "Diamonds of the Realm"
+    },
+    {
+      "slug": "different-games",
+      "name": "Different Games"
+    },
+    {
+      "slug": "double-bubble",
+      "name": "Double Bubble"
+    },
+    {
+      "slug": "epic-ape",
+      "name": "Epic Ape"
+    },
+    {
+      "slug": "eruption-blaze-cashingo",
+      "name": "Eruption Blaze Cashingo"
+    },
+    {
+      "slug": "esports",
+      "name": "eSports"
+    },
+    {
+      "slug": "fishin-frenzy-the-big-catch-2",
+      "name": "Fishin Frenzy The Big Catch 2"
+    },
+    {
+      "slug": "fishin-bigger-pots-of-gold",
+      "name": "Fishin' Bigger Pots of Gold"
+    },
+    {
+      "slug": "fishin-triple-pots-of-gold-power-combo",
+      "name": "Fishin' Triple Pots of Gold POWER COMBO"
+    },
+    {
+      "slug": "fishing-frenzy-big-catch-megaways",
+      "name": "Fishing Frenzy Big Catch Megaways"
+    },
+    {
+      "slug": "fluffy-favourites",
+      "name": "Fluffy favourites"
+    },
+    {
+      "slug": "football",
+      "name": "Football"
+    },
+    {
+      "slug": "formula-1",
+      "name": "Formula 1"
+    },
+    {
+      "slug": "gates-of-olympus",
+      "name": "Gates of Olympus"
+    },
+    {
+      "slug": "gold-blitz-extreme",
+      "name": "Gold Blitz Extreme"
+    },
+    {
+      "slug": "gold-blitz-ultimate",
+      "name": "Gold Blitz Ultimate"
+    },
+    {
+      "slug": "golf",
+      "name": "Golf"
+    },
+    {
+      "slug": "gorilla-fury-hold-hit",
+      "name": "Gorilla Fury Hold &amp; Hit"
+    },
+    {
+      "slug": "green-wizard",
+      "name": "Green Wizard"
+    },
+    {
+      "slug": "greyhound-racing",
+      "name": "Greyhound Racing"
+    },
+    {
+      "slug": "horseracing",
+      "name": "Horseracing"
+    },
+    {
+      "slug": "hot-hot-bet",
+      "name": "Hot Hot Bet"
+    },
+    {
+      "slug": "hot-hot-fruit",
+      "name": "Hot Hot Fruit"
+    },
+    {
+      "slug": "ice-hockey",
+      "name": "Ice Hockey"
+    },
+    {
+      "slug": "immortal-wins",
+      "name": "Immortal Wins"
+    },
+    {
+      "slug": "jackpot-sng",
+      "name": "Jackpot SNG"
+    },
+    {
+      "slug": "le-bandit",
+      "name": "Le Bandit+"
+    },
+    {
+      "slug": "lucky-panda",
+      "name": "Lucky Panda"
+    },
+    {
+      "slug": "lucky-tiger-1000",
+      "name": "Lucky Tiger 1000"
+    },
+    {
+      "slug": "majestic-joker",
+      "name": "Majestic Joker"
+    },
+    {
+      "slug": "masks-of-fire-drums",
+      "name": "Masks of Fire Drums"
+    },
+    {
+      "slug": "mega-cash-collect",
+      "name": "Mega Cash Collect"
+    },
+    {
+      "slug": "mining-pots-of-gold",
+      "name": "Mining Pots of Gold"
+    },
+    {
+      "slug": "monopoly-cash",
+      "name": "Monopoly Cash"
+    },
+    {
+      "slug": "nba",
+      "name": "NBA"
+    },
+    {
+      "slug": "network-rooms",
+      "name": "Network Rooms"
+    },
+    {
+      "slug": "newbie-room",
+      "name": "Newbie Room"
+    },
+    {
+      "slug": "ninja-master",
+      "name": "Ninja Master"
+    },
+    {
+      "slug": "pragmatic-play",
+      "name": "Pragmatic Play"
+    },
+    {
+      "slug": "rainbow-riches-megaways",
+      "name": "Rainbow Riches Megaways"
+    },
+    {
+      "slug": "reactoonz",
+      "name": "Reactoonz"
+    },
+    {
+      "slug": "red-rocket",
+      "name": "Red Rocket"
+    },
+    {
+      "slug": "rigged",
+      "name": "rigged"
+    },
+    {
+      "slug": "roulette",
+      "name": "Roulette"
+    },
+    {
+      "slug": "rugby",
+      "name": "Rugby"
+    },
+    {
+      "slug": "sahara-riches-cash-collect",
+      "name": "Sahara Riches Cash Collect"
+    },
+    {
+      "slug": "silver-room",
+      "name": "Silver Room"
+    },
+    {
+      "slug": "snooker",
+      "name": "Snooker"
+    },
+    {
+      "slug": "spinning-wilds",
+      "name": "Spinning Wilds"
+    },
+    {
+      "slug": "spinomenal",
+      "name": "Spinomenal"
+    },
+    {
+      "slug": "squelin-riches-2",
+      "name": "Squelin Riches 2"
+    },
+    {
+      "slug": "starburst",
+      "name": "Starburst"
+    },
+    {
+      "slug": "super-miner-mega-gems",
+      "name": "Super Miner - Mega Gems"
+    },
+    {
+      "slug": "sweet-burst",
+      "name": "Sweet Burst"
+    },
+    {
+      "slug": "table-tennis",
+      "name": "Table Tennis"
+    },
+    {
+      "slug": "tennis",
+      "name": "Tennis"
+    },
+    {
+      "slug": "the-green-knight",
+      "name": "The Green Knight"
+    },
+    {
+      "slug": "the-paying-piano-club",
+      "name": "The Paying Piano Club"
+    },
+    {
+      "slug": "the-trials-of-asgard",
+      "name": "the trials of asgard"
+    },
+    {
+      "slug": "thor-and-the-trials-of-asgard",
+      "name": "Thor and the Trials of Asgard"
+    },
+    {
+      "slug": "tsai-shens-gift",
+      "name": "Tsai Shen's Gift"
+    },
+    {
+      "slug": "vault-cracker-megaways",
+      "name": "Vault Cracker Megaways"
+    },
+    {
+      "slug": "wild-pistolero",
+      "name": "Wild Pistolero"
+    },
+    {
+      "slug": "william-hill-gold",
+      "name": "William Hill Gold"
+    },
+    {
+      "slug": "wolf-gold",
+      "name": "Wolf Gold"
+    }
+  ],
+  "provider_groups": [],
+  "taxonomy_additions": {
+    "allowed_taxonomies": [
+      "promotion_type",
+      "eligible_game"
+    ],
+    "locked_taxonomies": [
+      "promo_vertical"
+    ],
+    "term_shape": {
+      "name": "Canonical term name",
+      "slug": "canonical-term-slug"
+    },
+    "auto_propose_missing_unlocked_terms": true
+  },
+  "enums": {
+    "customer_eligibility": [
+      "all",
+      "new",
+      "existing",
+      "returning",
+      "vip",
+      "targeted",
+      "unknown"
+    ],
+    "reward_type": [
+      "cash",
+      "bonus_funds",
+      "free_spins",
+      "free_bet",
+      "odds_boost",
+      "cashback",
+      "ticket",
+      "prize",
+      "loyalty_points",
+      "physical_reward",
+      "mixed",
+      "variable",
+      "other",
+      "unknown"
+    ],
+    "reward_value_mode": [
+      "fixed_money",
+      "percentage",
+      "count",
+      "prize_pool",
+      "variable",
+      "non_cash",
+      "mixed",
+      "unknown"
+    ],
+    "payout_type": [
+      "cash",
+      "withdrawable_cash",
+      "bonus_funds",
+      "free_bet",
+      "free_spins",
+      "ticket",
+      "points",
+      "physical",
+      "mixed",
+      "unknown"
+    ],
+    "credit_timing": [
+      "instant",
+      "after_qualification",
+      "daily",
+      "weekly",
+      "after_promotion",
+      "manual",
+      "unknown"
+    ],
+    "qualifying_activity": [
+      "deposit",
+      "stake",
+      "wagering",
+      "net_loss",
+      "games_played",
+      "leaderboard",
+      "tournament",
+      "opt_in_only",
+      "purchase",
+      "other",
+      "unknown"
+    ],
+    "wagering_base": [
+      "bonus_only",
+      "deposit_only",
+      "deposit_plus_bonus",
+      "winnings_only",
+      "bonus_plus_winnings",
+      "unknown"
+    ],
+    "recurrence": [
+      "ongoing",
+      "one_time",
+      "daily",
+      "weekly",
+      "recurring",
+      "unknown"
+    ],
+    "expiry_unit": [
+      "hours",
+      "days",
+      "weeks"
+    ],
+    "research_status": [
+      "verified",
+      "partially_verified",
+      "unverified",
+      "source_unavailable"
+    ],
+    "weekdays": [
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+      "sunday"
+    ],
+    "reconciliation_status": [
+      "confirmed",
+      "ended",
+      "not_found"
+    ]
+  },
+  "promotion_shape": {
+    "promotion_key": "stable-lowercase-key",
+    "promotion_id": null,
+    "title": "Brand UK Casino Offer • concrete mechanic",
+    "content_html": "<p>Useful factual introduction.</p><h2>How it works</h2><p>...</p>",
+    "markets": [
+      "GB"
+    ],
+    "currencies": [
+      "GBP"
+    ],
+    "verticals": [
+      "casino"
+    ],
+    "promotion_types": [
+      "giveaway"
+    ],
+    "eligible_selections": [],
+    "provider_group": null,
+    "excluded_casinos": [],
+    "eligibility": {
+      "customer_eligibility": "all",
+      "opt_in_required": false,
+      "promo_code_required": false,
+      "promo_code": null,
+      "verified_account_required": false,
+      "notes": null
+    },
+    "reward": {
+      "type": "prize",
+      "value_mode": "prize_pool",
+      "amount": null,
+      "percent": null,
+      "count": null,
+      "max_reward_amount": null,
+      "prize_pool_amount": 10000,
+      "payout_type": "cash",
+      "credit_timing": "after_promotion",
+      "expiry_value": null,
+      "expiry_unit": null,
+      "notes": null
+    },
+    "qualification": {
+      "activity": "games_played",
+      "minimum_deposit": null,
+      "minimum_stake": null,
+      "maximum_stake": null,
+      "minimum_spend": null,
+      "minimum_odds": null,
+      "minimum_legs": null,
+      "wagering_requirement": null,
+      "wagering_base": null,
+      "exclusions": null,
+      "notes": null
+    },
+    "schedule": {
+      "available_from": null,
+      "available_until": null,
+      "weekdays": [],
+      "recurrence": "unknown",
+      "daily_start_time": null,
+      "daily_end_time": null,
+      "timezone": null
+    },
+    "terms": {
+      "summary": "Concise factual terms summary."
+    },
+    "evidence": {
+      "primary_source_url": "https://operator.example/promotion",
+      "terms_source_url": null,
+      "source_checked_at": null,
+      "research_status": "verified",
+      "notes": null
+    }
+  },
+  "root_shape": {
+    "schema_version": "1.4",
+    "brand_id": 123,
+    "researched_at": null,
+    "taxonomy_additions": {
+      "promotion_type": [],
+      "eligible_game": []
+    },
+    "promotions": [],
+    "promotion_reconciliation": [],
+    "schema_gaps": []
+  }
+}

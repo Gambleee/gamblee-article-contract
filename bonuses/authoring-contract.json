@@ -3341,7 +3341,7 @@
   "root_shape": {
     "schema_version": "1.5",
     "brand_id": 123,
-    "researched_at": "2026-10-28T20:20:13+00:00",
+    "researched_at": "2026-10-29T01:01:14+00:00",
     "taxonomy_additions": {
       "eligible_game": [],
       "excluded_payment_methods": [],

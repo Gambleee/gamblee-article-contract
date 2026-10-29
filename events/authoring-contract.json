@@ -6,7 +6,7 @@
   ],
   "purpose": "Research scheduled competitive or playable gambling events and map verified facts into the Gamblee Event CPT while preserving the existing listing-card layout.",
   "routing": {
-    "event": "Scheduled competitive/playable campaigns: slot or poker tournaments, freerolls, leaderboards, casino races and scheduled bingo rooms/sessions. A qualifying deposit does not move these out of Events.",
+    "event": "Scheduled competitive/playable campaigns such as slot/casino tournaments, freerolls, leaderboards, casino races and scheduled bingo rooms/sessions. Poker freerolls and explicit poker leaderboard/race promotions are Events; ordinary paid poker tournaments, recurring poker schedules and tournament series are out of Gamblee Event research scope and must be omitted. A qualifying deposit does not move an otherwise in-scope Event out of Events.",
     "promotion": "Prize draws, raffles, giveaways, sweepstakes, random-winner competitions, missions/challenges, cashback, loyalty mechanics, prize wheels and mystery boxes remain Promotions even when time-limited or deposit-gated.",
     "bonus": "Direct deterministic signup/new-customer rewards, or direct deterministic rewards whose claim requires a fresh upfront deposit, remain Bonuses unless an Event or Promotion override applies."
   },
@@ -17,6 +17,7 @@
     "Use event_categories for the event mechanic and vertical separately for casino, betting, bingo or poker.",
     "Markets and currencies are independent.",
     "Do not use Events for prize draws, giveaways or other random-winner campaigns merely because they have dates.",
+    "Do not serialize ordinary poker tournament inventory: paid/cash-entry tournaments, daily or weekly poker schedules, guaranteed tournaments, major poker series (for example SCOOP-style series), or on-demand poker Sit & Go formats are out of scope. Poker freerolls remain in scope, as do explicit promotional poker leaderboards/races.",
     "Keep an established event_key stable across revisions. event_key is the idempotency key.",
     "Return one event_reconciliation row for every existing Event supplied to research: confirmed, ended or not_found. not_found never retires anything.",
     "schema_gaps is reserved for Event-classified mechanics that cannot be represented faithfully."

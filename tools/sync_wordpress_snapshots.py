@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Refresh the public Gamblee Article snapshots from live WordPress REST endpoints."""
+"""Refresh public Gamblee contract snapshots from live WordPress REST endpoints."""
 
 from __future__ import annotations
 

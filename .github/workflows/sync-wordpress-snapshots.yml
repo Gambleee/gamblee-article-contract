@@ -33,7 +33,7 @@ jobs:
       - name: Commit changed snapshots
         shell: bash
         run: |
-          git add authoring-contract.json vocabulary/ bonuses/
+          git add authoring-contract.json vocabulary/ bonuses/ promotions/ events/
           if [ -f coverage-index.json ]; then
             git add coverage-index.json
           fi

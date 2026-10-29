@@ -13,7 +13,7 @@ from pathlib import Path
 
 SOURCE = os.environ.get("GAMBLEE_SOURCE_URL", "https://www.gamblee.com").rstrip("/")
 ROOT = Path(__file__).resolve().parents[1]
-USER_AGENT = "GambleeContractSnapshotSync/1.1 (+https://github.com/Gambleee/gamblee-article-contract)"
+USER_AGENT = "GambleeContractSnapshotSync/1.2 (+https://github.com/Gambleee/gamblee-article-contract)"
 TIMEOUT = 30
 
 
@@ -37,17 +37,17 @@ def sync_contract() -> None:
     write_json("authoring-contract.json", payload)
 
 
-def sync_bonus_contract() -> bool:
-    endpoint = "/wp-json/gamblee-core/v1/bonuses/authoring-contract"
+def sync_offer_contract(kind: str, relative_path: str) -> bool:
+    endpoint = f"/wp-json/gamblee-core/v1/{kind}/authoring-contract"
     try:
         payload = fetch_json(endpoint)
     except urllib.error.HTTPError as exc:
         if exc.code == 404:
-            print("Bonus contract endpoint not installed on the source site yet; retaining the last GitHub snapshot.")
+            print(f"{kind.title()} contract endpoint not installed on the source site yet; retaining the last GitHub snapshot.")
             return False
         raise
 
-    write_json("bonuses/authoring-contract.json", payload)
+    write_json(relative_path, payload)
     return True
 
 
@@ -122,7 +122,9 @@ def sync_coverage() -> bool:
 
 def main() -> int:
     sync_contract()
-    sync_bonus_contract()
+    sync_offer_contract("bonuses", "bonuses/authoring-contract.json")
+    sync_offer_contract("promotions", "promotions/authoring-contract.json")
+    sync_offer_contract("events", "events/authoring-contract.json")
     sync_vocabularies()
     sync_coverage()
     print("Gamblee contract snapshots refreshed successfully.")

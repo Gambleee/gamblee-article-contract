@@ -53,11 +53,14 @@ Only public authoring metadata, canonical term names/slugs, and metadata from al
 Synchronization runs in GitHub Actions rather than WordPress cron. The public WordPress endpoints are read-only and cacheable; no sync call creates WordPress rows, purges caches, or starts background registry/review work.
 
 
-## Bonus Research contract
+## Offer Research contracts
 
-Bonus Offer research has its own public contract namespace:
+Bonus, Promotion and Event research each have a public contract namespace:
 
-- [Bonus Research authoring contract](bonuses/authoring-contract.json)
-- [Bonus Research instructions](bonuses/README.md)
+- [Bonus Research authoring contract](bonuses/authoring-contract.json) · [instructions](bonuses/README.md)
+- [Promotion Research authoring contract](promotions/authoring-contract.json) · [instructions](promotions/README.md)
+- [Event Research authoring contract](events/authoring-contract.json) · [instructions](events/README.md)
 
-External assistants should read these GitHub files rather than using WPVibe to inspect the Bonus schema. WordPress/WPVibe remains the authenticated write path for validation and import.
+External assistants should read these GitHub files rather than using WPVibe to inspect offer schemas. WordPress/WPVibe remains the authenticated write path for validation/import and site administration.
+
+The scheduled snapshot workflow refreshes all three offer contracts from their public WordPress REST routes every three hours. If one route is temporarily unavailable, the last good GitHub snapshot is retained.

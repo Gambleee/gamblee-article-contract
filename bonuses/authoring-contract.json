@@ -45,7 +45,9 @@
     "Use qualification_window_value + qualification_window_unit for a deadline to complete a qualifying action or use a pre-reward token; reward expiry remains component-specific.",
     "When qualifying spend is defined as a multiple of a deposit or bonus amount, use qualification_spend_multiplier + qualification_spend_basis instead of guessing a fixed minimum_spend.",
     "Use components.external_reward for non-cash third-party value such as vouchers or gift cards. Use components.free_rounds for branded game rounds such as Free Flights or Free Crossings rather than force-fitting them into free_spins.",
-    "Prefer current first-party/official brand or operator evidence for offer discovery, classification and mechanics. When first-party pages are unavailable, incomplete, geo-gated, login-gated or technically inaccessible, current specific secondary sources may be used for commercial offer mechanics. First-party evidence wins on conflicts. Do not infer facts from silence, and do not use secondary evidence for brand_availability_changes or regulatory/jurisdiction availability changes, which remain first-party-only. Label evidence clearly enough to distinguish official and secondary sources."
+    "Prefer current first-party/official brand or operator evidence for offer discovery, classification and mechanics. When first-party pages are unavailable, incomplete, geo-gated, login-gated or technically inaccessible, current specific secondary sources may be used for commercial offer mechanics. First-party evidence wins on conflicts. Do not infer facts from silence, and do not use secondary evidence for brand_availability_changes or regulatory/jurisdiction availability changes, which remain first-party-only. Label evidence clearly enough to distinguish official and secondary sources.",
+    "Return one bonus_reconciliation row for every existing Bonus supplied to research: confirmed when current evidence shows the offer remains live, ended only with affirmative evidence that it ended/was withdrawn/was replaced, and not_found when current research could not verify it. not_found never retires anything.",
+    "Stable offer_key is the primary idempotency key. When bonus_id is omitted but offer_key matches exactly one existing Bonus for this brand, the importer reconciles it automatically. Never change an established offer_key merely because offer copy or mechanics were revised."
   ],
   "analysis_statuses": [
     "supported_and_analyzable",
@@ -3354,6 +3356,12 @@
       "subdivision_removals": []
     },
     "offers": [],
-    "schema_gaps": []
-  }
+    "schema_gaps": [],
+    "bonus_reconciliation": []
+  },
+  "reconciliation_statuses": [
+    "confirmed",
+    "ended",
+    "not_found"
+  ]
 }

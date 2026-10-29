@@ -6,7 +6,7 @@
   ],
   "purpose": "Research scheduled competitive or playable gambling events and map verified facts into the Gamblee Event CPT while preserving the existing listing-card layout.",
   "routing": {
-    "event": "Scheduled competitive/playable campaigns such as slot/casino tournaments, freerolls, leaderboards, casino races and scheduled bingo rooms/sessions. Poker freerolls and explicit poker leaderboard/race promotions are Events; ordinary paid poker tournaments, recurring poker schedules and tournament series are out of Gamblee Event research scope and must be omitted. A qualifying deposit does not move an otherwise in-scope Event out of Events.",
+    "event": "Scheduled competitive/playable campaigns: slot or poker tournaments, freerolls, leaderboards, casino races and scheduled bingo rooms/sessions. A qualifying deposit does not move these out of Events.",
     "promotion": "Prize draws, raffles, giveaways, sweepstakes, random-winner competitions, missions/challenges, cashback, loyalty mechanics, prize wheels and mystery boxes remain Promotions even when time-limited or deposit-gated.",
     "bonus": "Direct deterministic signup/new-customer rewards, or direct deterministic rewards whose claim requires a fresh upfront deposit, remain Bonuses unless an Event or Promotion override applies."
   },
@@ -15,11 +15,12 @@
     "Respect the existing Event listing card: headline prize pool/jackpot, entry badge, no more than three compact info rows, countdown/status and CTA.",
     "card.rows contains the three most useful listing facts only. Put deeper qualification and scoring mechanics in structured fields and terms.",
     "Use event_categories for the event mechanic and vertical separately for casino, betting, bingo or poker.",
-    "Markets and currencies are independent.",
+    "Markets and currencies are independent. Store exact markets even though the legacy Event runtime still mirrors currency buckets for backwards compatibility.",
+    "provider_group is optional and uses the provider taxonomy. When set, the event may cover that provider group; event_brand remains the CTA owner.",
     "Do not use Events for prize draws, giveaways or other random-winner campaigns merely because they have dates.",
-    "Do not serialize ordinary poker tournament inventory: paid/cash-entry tournaments, daily or weekly poker schedules, guaranteed tournaments, major poker series (for example SCOOP-style series), or on-demand poker Sit & Go formats are out of scope. Poker freerolls remain in scope, as do explicit promotional poker leaderboards/races.",
-    "Keep an established event_key stable across revisions. event_key is the idempotency key.",
-    "Return one event_reconciliation row for every existing Event supplied to research: confirmed, ended or not_found. not_found never retires anything.",
+    "Prefer current first-party evidence. Current specific secondary evidence may fill commercial mechanics when first-party material is unavailable or inaccessible.",
+    "Keep an established event_key stable across revisions. event_key is the idempotency key: when event_id is omitted but event_key matches exactly one existing Event in the supplied brand/provider scope, the importer reconciles it automatically.",
+    "Return one event_reconciliation row for every existing Event supplied to research: confirmed when current evidence shows it remains live, ended only with affirmative evidence it ended/was withdrawn/was replaced, and not_found when current research could not verify it. not_found never retires anything.",
     "schema_gaps is reserved for Event-classified mechanics that cannot be represented faithfully."
   ],
   "markets": [
@@ -60,6 +61,10 @@
     {
       "slug": "freerolls",
       "name": "Freerolls"
+    },
+    {
+      "slug": "leaderboards",
+      "name": "Leaderboards"
     },
     {
       "slug": "newbie-rooms",
@@ -500,7 +505,2808 @@
       "name": "Wolf Gold"
     }
   ],
-  "provider_groups": [],
+  "provider_groups": [
+    {
+      "slug": "100hp-gaming",
+      "name": "100HP Gaming"
+    },
+    {
+      "slug": "155-io",
+      "name": "155.io"
+    },
+    {
+      "slug": "1spin4win",
+      "name": "1Spin4Win"
+    },
+    {
+      "slug": "1x2-gaming",
+      "name": "1X2 Gaming"
+    },
+    {
+      "slug": "2by2-gaming",
+      "name": "2By2 Gaming"
+    },
+    {
+      "slug": "3-oaks-gaming",
+      "name": "3 Oaks Gaming"
+    },
+    {
+      "slug": "4-the-player",
+      "name": "4 The Player"
+    },
+    {
+      "slug": "5-men-gaming",
+      "name": "5 Men Gaming"
+    },
+    {
+      "slug": "7-mojos",
+      "name": "7 Mojos"
+    },
+    {
+      "slug": "7777-gaming",
+      "name": "7777 Gaming"
+    },
+    {
+      "slug": "7rings-gaming",
+      "name": "7Rings Gaming"
+    },
+    {
+      "slug": "888-gaming",
+      "name": "888 Gaming"
+    },
+    {
+      "slug": "888-live",
+      "name": "888 Live"
+    },
+    {
+      "slug": "aardvark-technologies",
+      "name": "Aardvark Technologies"
+    },
+    {
+      "slug": "aberrant-software",
+      "name": "Aberrant Software"
+    },
+    {
+      "slug": "absolute-live-gaming",
+      "name": "Absolute Live Gaming"
+    },
+    {
+      "slug": "ace-roll",
+      "name": "Ace Roll"
+    },
+    {
+      "slug": "acerun",
+      "name": "AceRun"
+    },
+    {
+      "slug": "ad-lunam",
+      "name": "Ad Lunam"
+    },
+    {
+      "slug": "adopt-it",
+      "name": "Adopt It"
+    },
+    {
+      "slug": "adoptit-publishing",
+      "name": "Adoptit Publishing"
+    },
+    {
+      "slug": "advantplay",
+      "name": "AdvantPlay"
+    },
+    {
+      "slug": "ae-sexy",
+      "name": "AE Sexy"
+    },
+    {
+      "slug": "ags",
+      "name": "AGS"
+    },
+    {
+      "slug": "agt",
+      "name": "AGT"
+    },
+    {
+      "slug": "ainsworth",
+      "name": "Ainsworth"
+    },
+    {
+      "slug": "air-dice",
+      "name": "Air Dice"
+    },
+    {
+      "slug": "alchemy-gaming",
+      "name": "Alchemy Gaming"
+    },
+    {
+      "slug": "all-for-one-studios",
+      "name": "All For One Studios"
+    },
+    {
+      "slug": "all41-studios",
+      "name": "All41 Studios"
+    },
+    {
+      "slug": "allbet-gaming",
+      "name": "Allbet Gaming"
+    },
+    {
+      "slug": "allinspin",
+      "name": "Allinspin"
+    },
+    {
+      "slug": "allwayspin",
+      "name": "AllWaySpin"
+    },
+    {
+      "slug": "almond-gaming",
+      "name": "Almond Gaming"
+    },
+    {
+      "slug": "aloha-gaming",
+      "name": "Aloha Gaming"
+    },
+    {
+      "slug": "altea-gaming",
+      "name": "Altea Gaming"
+    },
+    {
+      "slug": "altente",
+      "name": "Altente"
+    },
+    {
+      "slug": "alwin-games",
+      "name": "Alwin Games"
+    },
+    {
+      "slug": "amarix",
+      "name": "Amarix"
+    },
+    {
+      "slug": "amatic-industries",
+      "name": "Amatic Industries"
+    },
+    {
+      "slug": "amaya",
+      "name": "Amaya"
+    },
+    {
+      "slug": "amazing-gaming",
+      "name": "Amazing Gaming"
+    },
+    {
+      "slug": "amigo-gaming",
+      "name": "Amigo Gaming"
+    },
+    {
+      "slug": "amigotechs",
+      "name": "Amigotechs"
+    },
+    {
+      "slug": "amusnet",
+      "name": "Amusnet"
+    },
+    {
+      "slug": "anakatech",
+      "name": "Anakatech"
+    },
+    {
+      "slug": "animak-gaming",
+      "name": "Animak Gaming"
+    },
+    {
+      "slug": "animo-studios",
+      "name": "Animo Studios"
+    },
+    {
+      "slug": "apex-gaming",
+      "name": "Apex Gaming"
+    },
+    {
+      "slug": "apollo-games",
+      "name": "Apollo Games"
+    },
+    {
+      "slug": "apparat-gaming",
+      "name": "Apparat Gaming"
+    },
+    {
+      "slug": "apricot",
+      "name": "Apricot"
+    },
+    {
+      "slug": "arcadem",
+      "name": "Arcadem"
+    },
+    {
+      "slug": "areavegas",
+      "name": "AreaVegas"
+    },
+    {
+      "slug": "aristocrat",
+      "name": "Aristocrat"
+    },
+    {
+      "slug": "armadillo-studios",
+      "name": "Armadillo Studios"
+    },
+    {
+      "slug": "arrows-edge",
+      "name": "Arrows Edge"
+    },
+    {
+      "slug": "ash-gaming",
+      "name": "Ash Gaming"
+    },
+    {
+      "slug": "asia-gaming",
+      "name": "Asia Gaming"
+    },
+    {
+      "slug": "aspect-gaming",
+      "name": "Aspect Gaming"
+    },
+    {
+      "slug": "asylum-labs",
+      "name": "Asylum Labs"
+    },
+    {
+      "slug": "atlantic-digital",
+      "name": "Atlantic Digital"
+    },
+    {
+      "slug": "atmosphere",
+      "name": "Atmosphere"
+    },
+    {
+      "slug": "atomic-city",
+      "name": "Atomic City"
+    },
+    {
+      "slug": "atomic-slot-lab",
+      "name": "Atomic Slot Lab"
+    },
+    {
+      "slug": "atsupachi",
+      "name": "Atsupachi"
+    },
+    {
+      "slug": "august-gaming",
+      "name": "August Gaming"
+    },
+    {
+      "slug": "aurify-gaming",
+      "name": "Aurify Gaming"
+    },
+    {
+      "slug": "aurum-signature-studios",
+      "name": "Aurum Signature Studios"
+    },
+    {
+      "slug": "authentic-gaming",
+      "name": "Authentic Gaming"
+    },
+    {
+      "slug": "automat-games",
+      "name": "Automat Games"
+    },
+    {
+      "slug": "avatarux-studios",
+      "name": "AvatarUX Studios"
+    },
+    {
+      "slug": "aviatrix",
+      "name": "Aviatrix"
+    },
+    {
+      "slug": "awager",
+      "name": "Awager"
+    },
+    {
+      "slug": "axial-studio",
+      "name": "Axial Studio"
+    },
+    {
+      "slug": "backseat-gaming",
+      "name": "Backseat Gaming"
+    },
+    {
+      "slug": "bad-dingo",
+      "name": "Bad Dingo"
+    },
+    {
+      "slug": "bakoo",
+      "name": "Bakoo"
+    },
+    {
+      "slug": "baldazzi-styl-art",
+      "name": "Baldazzi Styl Art"
+    },
+    {
+      "slug": "bally",
+      "name": "Bally"
+    },
+    {
+      "slug": "bally-wulff",
+      "name": "Bally Wulff Technologies"
+    },
+    {
+      "slug": "baltic-studios",
+      "name": "Baltic Studios"
+    },
+    {
+      "slug": "banana-whale-studios",
+      "name": "Banana Whale Studios"
+    },
+    {
+      "slug": "bang-bang-games",
+      "name": "Bang Bang Games"
+    },
+    {
+      "slug": "barbara-bang",
+      "name": "Barbara Bang"
+    },
+    {
+      "slug": "barcrest",
+      "name": "Barcrest"
+    },
+    {
+      "slug": "barstruck",
+      "name": "Barstruck"
+    },
+    {
+      "slug": "bb-games",
+      "name": "BB Games"
+    },
+    {
+      "slug": "begame",
+      "name": "BeGame"
+    },
+    {
+      "slug": "belatra-games",
+      "name": "Belatra Games"
+    },
+    {
+      "slug": "bell-fruit-games",
+      "name": "Bell-Fruit Games"
+    },
+    {
+      "slug": "bellot",
+      "name": "Bellot"
+    },
+    {
+      "slug": "bet-365-software",
+      "name": "Bet 365 Software"
+    },
+    {
+      "slug": "bet-construct",
+      "name": "Bet Construct"
+    },
+    {
+      "slug": "bet-digital",
+      "name": "Bet Digital"
+    },
+    {
+      "slug": "bet-games",
+      "name": "Bet Games"
+    },
+    {
+      "slug": "bet2tech",
+      "name": "Bet2Tech"
+    },
+    {
+      "slug": "betixon",
+      "name": "Betixon"
+    },
+    {
+      "slug": "betora-games",
+      "name": "Betora games"
+    },
+    {
+      "slug": "betradar",
+      "name": "Betradar"
+    },
+    {
+      "slug": "betsense",
+      "name": "Betsense"
+    },
+    {
+      "slug": "betsoft",
+      "name": "Betsoft"
+    },
+    {
+      "slug": "betsolutions",
+      "name": "Betsolutions"
+    },
+    {
+      "slug": "betstone",
+      "name": "Betstone"
+    },
+    {
+      "slug": "betterlore",
+      "name": "Betterlore"
+    },
+    {
+      "slug": "bf-games",
+      "name": "BF Games"
+    },
+    {
+      "slug": "bg-games",
+      "name": "BG Games"
+    },
+    {
+      "slug": "bgaming",
+      "name": "BGaming"
+    },
+    {
+      "slug": "big-daddy-gaming",
+      "name": "Big Daddy Gaming"
+    },
+    {
+      "slug": "big-gaming-bg",
+      "name": "Big Gaming (BG)"
+    },
+    {
+      "slug": "big-time-gaming",
+      "name": "Big Time Gaming (BTG)"
+    },
+    {
+      "slug": "big-wave-gaming",
+      "name": "Big Wave Gaming"
+    },
+    {
+      "slug": "bigpot-gaming",
+      "name": "Bigpot Gaming"
+    },
+    {
+      "slug": "bitpunch",
+      "name": "Bitpunch"
+    },
+    {
+      "slug": "bitville-gaming",
+      "name": "Bitville Gaming"
+    },
+    {
+      "slug": "blablabla-studios",
+      "name": "BlaBlaBla Studios"
+    },
+    {
+      "slug": "black-pudding-games",
+      "name": "Black Pudding Games"
+    },
+    {
+      "slug": "blitzcrown",
+      "name": "Blitzcrown"
+    },
+    {
+      "slug": "blue-guru-games",
+      "name": "Blue Guru Games"
+    },
+    {
+      "slug": "blue-print-gaming",
+      "name": "Blue Print Gaming"
+    },
+    {
+      "slug": "blue-ring-studios",
+      "name": "Blue Ring Studios"
+    },
+    {
+      "slug": "blueberi",
+      "name": "Blueberi"
+    },
+    {
+      "slug": "bluejack-gaming",
+      "name": "Bluejack Gaming"
+    },
+    {
+      "slug": "boldplay",
+      "name": "Boldplay"
+    },
+    {
+      "slug": "bombay-live",
+      "name": "Bombay Live"
+    },
+    {
+      "slug": "boomerang-studios",
+      "name": "Boomerang Studios"
+    },
+    {
+      "slug": "booming-games",
+      "name": "Booming Games"
+    },
+    {
+      "slug": "booongo",
+      "name": "Booongo"
+    },
+    {
+      "slug": "bragg-gaming",
+      "name": "Bragg Gaming"
+    },
+    {
+      "slug": "buck-stakes-entertainment",
+      "name": "Buck Stakes Entertainment"
+    },
+    {
+      "slug": "bulletproof-games",
+      "name": "Bulletproof Games"
+    },
+    {
+      "slug": "bullshark-games",
+      "name": "Bullshark Games"
+    },
+    {
+      "slug": "bunfox",
+      "name": "Bunfox"
+    },
+    {
+      "slug": "bw-gaming",
+      "name": "BW Gaming"
+    },
+    {
+      "slug": "bwin-party",
+      "name": "Bwin Party"
+    },
+    {
+      "slug": "cadillac-jack",
+      "name": "Cadillac Jack"
+    },
+    {
+      "slug": "caleta-gaming",
+      "name": "Caleta Gaming"
+    },
+    {
+      "slug": "candle-bets",
+      "name": "Candle Bets"
+    },
+    {
+      "slug": "capecod-gaming",
+      "name": "Capecod Gaming"
+    },
+    {
+      "slug": "casumo",
+      "name": "Casumo"
+    },
+    {
+      "slug": "cayetano-gaming",
+      "name": "Cayetano Gaming"
+    },
+    {
+      "slug": "champion",
+      "name": "Champion"
+    },
+    {
+      "slug": "champion-studio",
+      "name": "Champion Studio"
+    },
+    {
+      "slug": "chance-interactive",
+      "name": "Chance Interactive"
+    },
+    {
+      "slug": "charismatic",
+      "name": "Charismatic"
+    },
+    {
+      "slug": "chilli-games",
+      "name": "chilli games"
+    },
+    {
+      "slug": "circular-arrow",
+      "name": "Circular Arrow"
+    },
+    {
+      "slug": "clawbuster",
+      "name": "Clawbuster"
+    },
+    {
+      "slug": "clutch-gaming",
+      "name": "Clutch Gaming"
+    },
+    {
+      "slug": "coin-machine-gaming",
+      "name": "Coin Machine Gaming"
+    },
+    {
+      "slug": "colossus-bets",
+      "name": "Colossus Bets"
+    },
+    {
+      "slug": "comtrade-gaming",
+      "name": "Comtrade Gaming"
+    },
+    {
+      "slug": "concept-gaming",
+      "name": "Concept Gaming"
+    },
+    {
+      "slug": "connective-games",
+      "name": "Connective Games"
+    },
+    {
+      "slug": "copacabana-games",
+      "name": "Copacabana Games"
+    },
+    {
+      "slug": "core-gaming",
+      "name": "CORE Gaming"
+    },
+    {
+      "slug": "cozy",
+      "name": "Cozy"
+    },
+    {
+      "slug": "cq9-gaming",
+      "name": "CQ9 Gaming"
+    },
+    {
+      "slug": "cr-games",
+      "name": "CR Games"
+    },
+    {
+      "slug": "crazy-tooth-studio",
+      "name": "Crazy Tooth Studio"
+    },
+    {
+      "slug": "creedroomz",
+      "name": "CreedRoomz"
+    },
+    {
+      "slug": "cristalec",
+      "name": "Cristalec"
+    },
+    {
+      "slug": "croco-gaming",
+      "name": "Croco Gaming"
+    },
+    {
+      "slug": "crucible-gaming",
+      "name": "Crucible Gaming"
+    },
+    {
+      "slug": "crypto-logic",
+      "name": "Crypto Logic"
+    },
+    {
+      "slug": "ct-gaming",
+      "name": "CT Gaming"
+    },
+    {
+      "slug": "ct-interactive",
+      "name": "CT Interactive"
+    },
+    {
+      "slug": "cubeia",
+      "name": "Cubeia"
+    },
+    {
+      "slug": "d-tech",
+      "name": "D-Tech"
+    },
+    {
+      "slug": "dagacube",
+      "name": "DaGaCube"
+    },
+    {
+      "slug": "darwin-gaming",
+      "name": "Darwin Gaming"
+    },
+    {
+      "slug": "dbg-games",
+      "name": "DBG Games"
+    },
+    {
+      "slug": "deep-stake-games",
+      "name": "Deep Stake Games"
+    },
+    {
+      "slug": "degen-studios",
+      "name": "DEGEN Studios"
+    },
+    {
+      "slug": "delasport",
+      "name": "Delasport"
+    },
+    {
+      "slug": "design-works-gaming",
+      "name": "Design Works Gaming"
+    },
+    {
+      "slug": "dice-lab",
+      "name": "Dice Lab"
+    },
+    {
+      "slug": "digitain",
+      "name": "Digitain"
+    },
+    {
+      "slug": "digital-gaming-solutions",
+      "name": "Digital Gaming Solutions"
+    },
+    {
+      "slug": "dlv",
+      "name": "DLV"
+    },
+    {
+      "slug": "dragon-gaming",
+      "name": "Dragon Gaming"
+    },
+    {
+      "slug": "dragoon-soft",
+      "name": "Dragoon Soft"
+    },
+    {
+      "slug": "dream-play",
+      "name": "Dream Play"
+    },
+    {
+      "slug": "dream-tech",
+      "name": "Dream Tech"
+    },
+    {
+      "slug": "dreamspin",
+      "name": "Dreamspin"
+    },
+    {
+      "slug": "dynabit-gaming",
+      "name": "Dynabit Gaming"
+    },
+    {
+      "slug": "edict",
+      "name": "edict"
+    },
+    {
+      "slug": "eeze",
+      "name": "Eeze"
+    },
+    {
+      "slug": "egt",
+      "name": "EGT"
+    },
+    {
+      "slug": "egt-digital",
+      "name": "EGT Digital"
+    },
+    {
+      "slug": "egt-interactive",
+      "name": "EGT Interactive"
+    },
+    {
+      "slug": "ela-games",
+      "name": "Ela Games"
+    },
+    {
+      "slug": "elbet",
+      "name": "Elbet"
+    },
+    {
+      "slug": "electralade",
+      "name": "Electralade"
+    },
+    {
+      "slug": "electric-elephant",
+      "name": "Electric Elephant"
+    },
+    {
+      "slug": "elk-studios",
+      "name": "ELK Studios"
+    },
+    {
+      "slug": "elysium-studios",
+      "name": "Elysium Studios"
+    },
+    {
+      "slug": "endemol-shine-gaming",
+      "name": "Endemol Shine Gaming"
+    },
+    {
+      "slug": "endorphina",
+      "name": "Endorphina"
+    },
+    {
+      "slug": "enjoy",
+      "name": "Enjoy"
+    },
+    {
+      "slug": "enjoy-gaming",
+      "name": "Enjoy Gaming"
+    },
+    {
+      "slug": "entain",
+      "name": "Entain"
+    },
+    {
+      "slug": "epic-industries",
+      "name": "Epic Industries"
+    },
+    {
+      "slug": "esa-gaming",
+      "name": "ESA Gaming"
+    },
+    {
+      "slug": "esball",
+      "name": "Esball"
+    },
+    {
+      "slug": "esoterica",
+      "name": "Esoterica"
+    },
+    {
+      "slug": "espresso-games",
+      "name": "Espresso Games"
+    },
+    {
+      "slug": "eurasian-gaming",
+      "name": "Eurasian Gaming"
+    },
+    {
+      "slug": "eurocoin-interactve",
+      "name": "Eurocoin Interactve"
+    },
+    {
+      "slug": "eurostar-studios",
+      "name": "Eurostar Studios"
+    },
+    {
+      "slug": "everi",
+      "name": "Everi"
+    },
+    {
+      "slug": "evolution-gaming",
+      "name": "Evolution Gaming"
+    },
+    {
+      "slug": "evolution-live",
+      "name": "Evolution Live"
+    },
+    {
+      "slug": "evoplay",
+      "name": "Evoplay"
+    },
+    {
+      "slug": "excellent-reel",
+      "name": "Excellent Reel"
+    },
+    {
+      "slug": "exco-game-studio",
+      "name": "EXCO Game Studio"
+    },
+    {
+      "slug": "expanse-studios",
+      "name": "Expanse Studios"
+    },
+    {
+      "slug": "extreme-live-gaming",
+      "name": "Extreme Live Gaming"
+    },
+    {
+      "slug": "eyecon",
+      "name": "Eyecon"
+    },
+    {
+      "slug": "ezugi",
+      "name": "Ezugi"
+    },
+    {
+      "slug": "f-bastards",
+      "name": "F*Bastards"
+    },
+    {
+      "slug": "fa-chai",
+      "name": "FA CHAI"
+    },
+    {
+      "slug": "fantasma-games",
+      "name": "Fantasma Games"
+    },
+    {
+      "slug": "fastspin",
+      "name": "Fastspin"
+    },
+    {
+      "slug": "fat-panda",
+      "name": "Fat Panda"
+    },
+    {
+      "slug": "fazi",
+      "name": "Fazi"
+    },
+    {
+      "slug": "fbm-digital-systems",
+      "name": "FBM Digital Systems"
+    },
+    {
+      "slug": "fc",
+      "name": "FC"
+    },
+    {
+      "slug": "felix-gaming",
+      "name": "Felix Gaming"
+    },
+    {
+      "slug": "felt",
+      "name": "Felt"
+    },
+    {
+      "slug": "fils-game",
+      "name": "Fils Game"
+    },
+    {
+      "slug": "firebird-gaming",
+      "name": "Firebird Gaming"
+    },
+    {
+      "slug": "five-men-games",
+      "name": "Five Men Games"
+    },
+    {
+      "slug": "flamingocatz",
+      "name": "FlamingoCatz"
+    },
+    {
+      "slug": "flatdog",
+      "name": "Flatdog"
+    },
+    {
+      "slug": "flip-five-gaming",
+      "name": "Flip Five Gaming"
+    },
+    {
+      "slug": "flipluck",
+      "name": "FlipLuck"
+    },
+    {
+      "slug": "formula-spin",
+      "name": "Formula Spin"
+    },
+    {
+      "slug": "fortune-factory-studios",
+      "name": "Fortune Factory Studios"
+    },
+    {
+      "slug": "four-leaf-gaming",
+      "name": "Four Leaf Gaming"
+    },
+    {
+      "slug": "foxhound-games",
+      "name": "Foxhound Games"
+    },
+    {
+      "slug": "foxi",
+      "name": "Foxi"
+    },
+    {
+      "slug": "foxium",
+      "name": "Foxium"
+    },
+    {
+      "slug": "fresh-deck-studios",
+      "name": "Fresh Deck Studios"
+    },
+    {
+      "slug": "fresh-vintage",
+      "name": "Fresh Vintage"
+    },
+    {
+      "slug": "fuga-gaming",
+      "name": "FUGA Gaming"
+    },
+    {
+      "slug": "fugaso",
+      "name": "Fugaso"
+    },
+    {
+      "slug": "fun-fiesta",
+      "name": "Fun Fiesta"
+    },
+    {
+      "slug": "funfair",
+      "name": "FunFair"
+    },
+    {
+      "slug": "funky-games",
+      "name": "Funky Games"
+    },
+    {
+      "slug": "funta-gaming",
+      "name": "Funta Gaming"
+    },
+    {
+      "slug": "g-games",
+      "name": "G Games"
+    },
+    {
+      "slug": "gacha-studios",
+      "name": "Gacha Studios"
+    },
+    {
+      "slug": "galaxsys",
+      "name": "Galaxsys"
+    },
+    {
+      "slug": "galaxy-gaming",
+      "name": "Galaxy Gaming"
+    },
+    {
+      "slug": "gamanza",
+      "name": "Gamanza"
+    },
+    {
+      "slug": "gamatron",
+      "name": "Gamatron"
+    },
+    {
+      "slug": "game-beat",
+      "name": "Game Beat"
+    },
+    {
+      "slug": "game2slot",
+      "name": "Game2Slot"
+    },
+    {
+      "slug": "game360",
+      "name": "Game360"
+    },
+    {
+      "slug": "gameart",
+      "name": "GameArt"
+    },
+    {
+      "slug": "gameburger-studios",
+      "name": "Gameburger Studios"
+    },
+    {
+      "slug": "gamefish-global",
+      "name": "Gamefish Global"
+    },
+    {
+      "slug": "gameiom",
+      "name": "Gameiom"
+    },
+    {
+      "slug": "gameplay-interactive",
+      "name": "GamePlay Interactive"
+    },
+    {
+      "slug": "games-global",
+      "name": "Games Global"
+    },
+    {
+      "slug": "games-inc",
+      "name": "Games Inc."
+    },
+    {
+      "slug": "games-warehouse",
+      "name": "Games Warehouse"
+    },
+    {
+      "slug": "gamescale",
+      "name": "GameScale"
+    },
+    {
+      "slug": "gameslab",
+      "name": "GamesLab"
+    },
+    {
+      "slug": "gamesos",
+      "name": "GamesOS"
+    },
+    {
+      "slug": "gamesys",
+      "name": "Gamesys"
+    },
+    {
+      "slug": "gamesys-bingo",
+      "name": "Gamesys Bingo"
+    },
+    {
+      "slug": "gametimetec",
+      "name": "GameTimeTec"
+    },
+    {
+      "slug": "gamevy",
+      "name": "Gamevy"
+    },
+    {
+      "slug": "gamex",
+      "name": "GameX"
+    },
+    {
+      "slug": "gaming-1",
+      "name": "Gaming 1"
+    },
+    {
+      "slug": "gaming-corps",
+      "name": "Gaming Corps"
+    },
+    {
+      "slug": "gaming-realms",
+      "name": "Gaming Realms"
+    },
+    {
+      "slug": "gamomat",
+      "name": "Gamomat"
+    },
+    {
+      "slug": "gamshy",
+      "name": "Gamshy"
+    },
+    {
+      "slug": "gamzix",
+      "name": "Gamzix"
+    },
+    {
+      "slug": "ganapati",
+      "name": "Ganapati"
+    },
+    {
+      "slug": "geco-gaming",
+      "name": "GECO Gaming"
+    },
+    {
+      "slug": "genesis",
+      "name": "Genesis"
+    },
+    {
+      "slug": "genii",
+      "name": "Genii"
+    },
+    {
+      "slug": "ggnetwork",
+      "name": "GGNetwork"
+    },
+    {
+      "slug": "gig-gaming",
+      "name": "GIG Gaming"
+    },
+    {
+      "slug": "giocaonline",
+      "name": "GiocaOnline"
+    },
+    {
+      "slug": "giveme-games",
+      "name": "Giveme Games"
+    },
+    {
+      "slug": "givme",
+      "name": "Givme"
+    },
+    {
+      "slug": "gluck-games",
+      "name": "Gluck Games"
+    },
+    {
+      "slug": "gmw",
+      "name": "GMW"
+    },
+    {
+      "slug": "gold-coin-studios",
+      "name": "Gold Coin Studios"
+    },
+    {
+      "slug": "golden-hero",
+      "name": "Golden Hero"
+    },
+    {
+      "slug": "golden-race",
+      "name": "Golden Race"
+    },
+    {
+      "slug": "golden-rock-studios",
+      "name": "Golden Rock Studios"
+    },
+    {
+      "slug": "gong-gaming-technologies",
+      "name": "GONG Gaming Technologies"
+    },
+    {
+      "slug": "goosicorn",
+      "name": "Goosicorn"
+    },
+    {
+      "slug": "grand-vision-gaming-gvg",
+      "name": "Grand Vision Gaming GVG"
+    },
+    {
+      "slug": "green-jade-games",
+      "name": "Green Jade Games"
+    },
+    {
+      "slug": "gvg",
+      "name": "Green Valley Games (GVG)"
+    },
+    {
+      "slug": "greentube",
+      "name": "Greentube"
+    },
+    {
+      "slug": "groove",
+      "name": "Groove"
+    },
+    {
+      "slug": "habanero",
+      "name": "Habanero"
+    },
+    {
+      "slug": "hacksaw-gaming",
+      "name": "Hacksaw Gaming"
+    },
+    {
+      "slug": "half-pixel-studio",
+      "name": "Half Pixel Studio"
+    },
+    {
+      "slug": "hammertime",
+      "name": "Hammertime"
+    },
+    {
+      "slug": "happy-duck",
+      "name": "Happy Duck"
+    },
+    {
+      "slug": "high-5-games",
+      "name": "High 5 Games"
+    },
+    {
+      "slug": "high-flyer-games",
+      "name": "High Flyer Games"
+    },
+    {
+      "slug": "high-limit-studio",
+      "name": "High Limit Studio"
+    },
+    {
+      "slug": "highlight-games",
+      "name": "Highlight Games"
+    },
+    {
+      "slug": "ho-gaming",
+      "name": "HO Gaming"
+    },
+    {
+      "slug": "holland-power-gaming",
+      "name": "Holland Power Gaming"
+    },
+    {
+      "slug": "holle-games",
+      "name": "HÖLLE Games"
+    },
+    {
+      "slug": "hot-rise-games",
+      "name": "Hot Rise Games"
+    },
+    {
+      "slug": "hs-originals",
+      "name": "HS Originals"
+    },
+    {
+      "slug": "hungry-bear",
+      "name": "Hungry Bear"
+    },
+    {
+      "slug": "hurricane-games",
+      "name": "Hurricane Games"
+    },
+    {
+      "slug": "hyperionplay",
+      "name": "HyperionPlay"
+    },
+    {
+      "slug": "iconic-gaming",
+      "name": "Iconic Gaming"
+    },
+    {
+      "slug": "iconic21",
+      "name": "ICONIC21"
+    },
+    {
+      "slug": "igaming2go",
+      "name": "iGaming2Go"
+    },
+    {
+      "slug": "igrosoft",
+      "name": "Igrosoft"
+    },
+    {
+      "slug": "igt",
+      "name": "IGT (Wagerworks)"
+    },
+    {
+      "slug": "imagina",
+      "name": "Imagina"
+    },
+    {
+      "slug": "imagine-live",
+      "name": "Imagine Live"
+    },
+    {
+      "slug": "imoon",
+      "name": "iMoon"
+    },
+    {
+      "slug": "inbet-games",
+      "name": "InBet Games"
+    },
+    {
+      "slug": "incredible-technologies-it",
+      "name": "Incredible Technologies (IT)"
+    },
+    {
+      "slug": "independent",
+      "name": "Independent"
+    },
+    {
+      "slug": "indi-slots",
+      "name": "Indi Slots"
+    },
+    {
+      "slug": "indigo-magic",
+      "name": "Indigo Magic"
+    },
+    {
+      "slug": "infinity-dragon-studios",
+      "name": "Infinity Dragon Studios"
+    },
+    {
+      "slug": "innogames",
+      "name": "InnoGames"
+    },
+    {
+      "slug": "ino-games",
+      "name": "INO Games"
+    },
+    {
+      "slug": "inout",
+      "name": "InOut"
+    },
+    {
+      "slug": "inout-games",
+      "name": "InOut Games"
+    },
+    {
+      "slug": "inspired-gaming",
+      "name": "Inspired Gaming"
+    },
+    {
+      "slug": "instant-win-gaming",
+      "name": "Instant Win Gaming"
+    },
+    {
+      "slug": "intouch-games",
+      "name": "Intouch Games"
+    },
+    {
+      "slug": "ipanema-gaming",
+      "name": "Ipanema Gaming"
+    },
+    {
+      "slug": "ipoker",
+      "name": "iPoker"
+    },
+    {
+      "slug": "iron-dog-studio",
+      "name": "Iron Dog Studio"
+    },
+    {
+      "slug": "isoftbet",
+      "name": "iSoftBet"
+    },
+    {
+      "slug": "jacks-club",
+      "name": "Jacks Club"
+    },
+    {
+      "slug": "jade-rabbit-studios",
+      "name": "Jade Rabbit Studios"
+    },
+    {
+      "slug": "japan-technicals-games-jtg",
+      "name": "Japan Technicals Games (JTG)"
+    },
+    {
+      "slug": "jdb168",
+      "name": "JDB168"
+    },
+    {
+      "slug": "jelly",
+      "name": "Jelly"
+    },
+    {
+      "slug": "jili-games",
+      "name": "JILI Games"
+    },
+    {
+      "slug": "jinx-gaming",
+      "name": "JINX Gaming"
+    },
+    {
+      "slug": "join-games",
+      "name": "Join Games"
+    },
+    {
+      "slug": "jumbo-games",
+      "name": "Jumbo Games"
+    },
+    {
+      "slug": "jumpman-gaming",
+      "name": "Jumpman Gaming"
+    },
+    {
+      "slug": "just-slots",
+      "name": "Just Slots"
+    },
+    {
+      "slug": "justforthewin",
+      "name": "JustForTheWin (JFTW)"
+    },
+    {
+      "slug": "justplay-gaming",
+      "name": "Justplay Gaming"
+    },
+    {
+      "slug": "jvl",
+      "name": "JVL"
+    },
+    {
+      "slug": "ka-gaming",
+      "name": "KA Gaming"
+    },
+    {
+      "slug": "kajot",
+      "name": "Kajot"
+    },
+    {
+      "slug": "kalamba-games",
+      "name": "Kalamba Games"
+    },
+    {
+      "slug": "kambi",
+      "name": "Kambi"
+    },
+    {
+      "slug": "kendoo",
+      "name": "Kendoo"
+    },
+    {
+      "slug": "king-midas-kingmaker",
+      "name": "King Midas (Kingmaker)"
+    },
+    {
+      "slug": "king-show-games",
+      "name": "King Show Games"
+    },
+    {
+      "slug": "kiron-interactive",
+      "name": "Kiron Interactive"
+    },
+    {
+      "slug": "kitsune-studios",
+      "name": "Kitsune Studios"
+    },
+    {
+      "slug": "koala-games",
+      "name": "Koala Games"
+    },
+    {
+      "slug": "konami",
+      "name": "Konami"
+    },
+    {
+      "slug": "lady-luck-games",
+      "name": "Lady Luck Games"
+    },
+    {
+      "slug": "lambda-gaming",
+      "name": "LAMBDA Gaming"
+    },
+    {
+      "slug": "leander-games",
+      "name": "Leander Games"
+    },
+    {
+      "slug": "leap-gaming",
+      "name": "Leap Gaming"
+    },
+    {
+      "slug": "light-wonder",
+      "name": "Light &amp; Wonder"
+    },
+    {
+      "slug": "lightning-box",
+      "name": "Lightning Box"
+    },
+    {
+      "slug": "linko-studios",
+      "name": "Linko Studios"
+    },
+    {
+      "slug": "lion-line",
+      "name": "Lion Line"
+    },
+    {
+      "slug": "live-5",
+      "name": "Live 5"
+    },
+    {
+      "slug": "live-g24",
+      "name": "Live G24"
+    },
+    {
+      "slug": "live-vegas",
+      "name": "Live Vegas"
+    },
+    {
+      "slug": "live88",
+      "name": "Live88"
+    },
+    {
+      "slug": "lost-world-games",
+      "name": "Lost World Games"
+    },
+    {
+      "slug": "lotto-instant-win",
+      "name": "Lotto Instant Win"
+    },
+    {
+      "slug": "lucksome",
+      "name": "Lucksome"
+    },
+    {
+      "slug": "lucky-games",
+      "name": "Lucky Games"
+    },
+    {
+      "slug": "lucky-streak",
+      "name": "Lucky Streak"
+    },
+    {
+      "slug": "lucky-taps",
+      "name": "Lucky Taps"
+    },
+    {
+      "slug": "lucky-world-games",
+      "name": "Lucky World Games"
+    },
+    {
+      "slug": "ludoland",
+      "name": "LudoLand"
+    },
+    {
+      "slug": "macaw-gaming",
+      "name": "Macaw Gaming"
+    },
+    {
+      "slug": "magic-dreams",
+      "name": "Magic Dreams"
+    },
+    {
+      "slug": "magnet-gaming",
+      "name": "Magnet Gaming"
+    },
+    {
+      "slug": "mahi-gaming",
+      "name": "Mahi Gaming"
+    },
+    {
+      "slug": "mancala-gaming",
+      "name": "Mancala Gaming"
+    },
+    {
+      "slug": "manna-play",
+      "name": "Manna Play"
+    },
+    {
+      "slug": "markor-technology",
+      "name": "Markor Technology"
+    },
+    {
+      "slug": "mascot-gaming",
+      "name": "Mascot Gaming"
+    },
+    {
+      "slug": "massive-studios",
+      "name": "Massive Studios"
+    },
+    {
+      "slug": "matrix-igaming",
+      "name": "Matrix iGaming"
+    },
+    {
+      "slug": "matrix-studios",
+      "name": "Matrix Studios"
+    },
+    {
+      "slug": "maverick",
+      "name": "Maverick"
+    },
+    {
+      "slug": "max-win-gaming",
+      "name": "Max Win Gaming"
+    },
+    {
+      "slug": "mazooma",
+      "name": "Mazooma"
+    },
+    {
+      "slug": "mega-entertainment",
+      "name": "MEGA Entertainment"
+    },
+    {
+      "slug": "megafair",
+      "name": "Megafair"
+    },
+    {
+      "slug": "merkur-gaming",
+      "name": "Merkur Gaming"
+    },
+    {
+      "slug": "metagu",
+      "name": "MetaGU"
+    },
+    {
+      "slug": "mga-games",
+      "name": "MGA Games"
+    },
+    {
+      "slug": "micrograming",
+      "name": "Microgaming"
+    },
+    {
+      "slug": "mighty-finger",
+      "name": "Mighty Finger"
+    },
+    {
+      "slug": "mikado-games",
+      "name": "Mikado Games"
+    },
+    {
+      "slug": "miko-apps",
+      "name": "Miko Apps"
+    },
+    {
+      "slug": "mobilots",
+      "name": "Mobilots"
+    },
+    {
+      "slug": "mplay",
+      "name": "MPlay"
+    },
+    {
+      "slug": "mr-slotty",
+      "name": "Mr Slotty"
+    },
+    {
+      "slug": "multicommerce-game-studio",
+      "name": "Multicommerce Game Studio"
+    },
+    {
+      "slug": "multislot",
+      "name": "MultiSlot"
+    },
+    {
+      "slug": "mutuel-play",
+      "name": "Mutuel Play"
+    },
+    {
+      "slug": "nailed-it-games",
+      "name": "Nailed it! Games"
+    },
+    {
+      "slug": "nazionale-elettronica",
+      "name": "Nazionale Elettronica"
+    },
+    {
+      "slug": "neko-games",
+      "name": "Neko Games"
+    },
+    {
+      "slug": "nektan",
+      "name": "Nektan"
+    },
+    {
+      "slug": "neo-games",
+      "name": "Neo Games"
+    },
+    {
+      "slug": "neon-valley-studios",
+      "name": "Neon Valley Studios"
+    },
+    {
+      "slug": "netent",
+      "name": "NetEnt"
+    },
+    {
+      "slug": "netent-live",
+      "name": "Netent Live"
+    },
+    {
+      "slug": "netgame",
+      "name": "NetGame"
+    },
+    {
+      "slug": "netgaming",
+      "name": "Netgaming"
+    },
+    {
+      "slug": "netoplay",
+      "name": "NetoPlay"
+    },
+    {
+      "slug": "neverending",
+      "name": "NeverEnding"
+    },
+    {
+      "slug": "nextgen-gaming",
+      "name": "NextGen Gaming"
+    },
+    {
+      "slug": "ngm-game",
+      "name": "NGM Game"
+    },
+    {
+      "slug": "noble-gaming",
+      "name": "Noble Gaming"
+    },
+    {
+      "slug": "nolimit-city",
+      "name": "Nolimit City"
+    },
+    {
+      "slug": "northern-lights-gaming",
+      "name": "Northern Lights Gaming"
+    },
+    {
+      "slug": "novomatic",
+      "name": "Novomatic"
+    },
+    {
+      "slug": "novomatic-premium",
+      "name": "Novomatic Premium"
+    },
+    {
+      "slug": "nownow-gaming",
+      "name": "NowNow Gaming"
+    },
+    {
+      "slug": "nucleus-gaming",
+      "name": "Nucleus Gaming"
+    },
+    {
+      "slug": "nyx",
+      "name": "NYX"
+    },
+    {
+      "slug": "octavian-gaming",
+      "name": "Octavian Gaming"
+    },
+    {
+      "slug": "octo-play",
+      "name": "Octo Play"
+    },
+    {
+      "slug": "oi-studios",
+      "name": "Oi Studios"
+    },
+    {
+      "slug": "old-skool-studios",
+      "name": "Old Skool Studios"
+    },
+    {
+      "slug": "omi-gaming",
+      "name": "Omi Gaming"
+    },
+    {
+      "slug": "onair-entertainment",
+      "name": "OnAir Entertainment"
+    },
+    {
+      "slug": "onetouch",
+      "name": "OneTouch"
+    },
+    {
+      "slug": "onlyplay",
+      "name": "OnlyPlay"
+    },
+    {
+      "slug": "openbet",
+      "name": "OpenBet"
+    },
+    {
+      "slug": "orbital-gaming",
+      "name": "Orbital Gaming"
+    },
+    {
+      "slug": "oros-gaming",
+      "name": "Oros Gaming"
+    },
+    {
+      "slug": "ortiz-gaming",
+      "name": "Ortiz Gaming"
+    },
+    {
+      "slug": "oryx-gaming",
+      "name": "Oryx Gaming"
+    },
+    {
+      "slug": "pa-slots",
+      "name": "PA Slots"
+    },
+    {
+      "slug": "paf",
+      "name": "Paf"
+    },
+    {
+      "slug": "pariplay",
+      "name": "Pariplay"
+    },
+    {
+      "slug": "partygaming",
+      "name": "PartyGaming"
+    },
+    {
+      "slug": "pascal-gaming",
+      "name": "Pascal Gaming"
+    },
+    {
+      "slug": "pateplay",
+      "name": "PatePlay"
+    },
+    {
+      "slug": "pateplay-live",
+      "name": "Pateplay Live"
+    },
+    {
+      "slug": "pearfiction",
+      "name": "PearFiction"
+    },
+    {
+      "slug": "pegasus",
+      "name": "Pegasus"
+    },
+    {
+      "slug": "penguin-king",
+      "name": "Penguin King"
+    },
+    {
+      "slug": "peter-sons",
+      "name": "Peter &amp; Sons"
+    },
+    {
+      "slug": "phoenix-flames-studio",
+      "name": "Phoenix Flames Studio"
+    },
+    {
+      "slug": "pineapple-play",
+      "name": "Pineapple Play"
+    },
+    {
+      "slug": "pirates-gold-studios",
+      "name": "Pirates Gold Studios"
+    },
+    {
+      "slug": "pitta-games",
+      "name": "PITTA Games"
+    },
+    {
+      "slug": "pixiu-gaming",
+      "name": "Pixiu Gaming"
+    },
+    {
+      "slug": "pixmove",
+      "name": "Pixmove"
+    },
+    {
+      "slug": "plank-gaming",
+      "name": "Plank Gaming"
+    },
+    {
+      "slug": "plati-plus-live",
+      "name": "Plati+ Live"
+    },
+    {
+      "slug": "platin-gaming-pg",
+      "name": "Platin Gaming (PG)"
+    },
+    {
+      "slug": "platipus",
+      "name": "Platipus"
+    },
+    {
+      "slug": "play-labs",
+      "name": "Play Labs"
+    },
+    {
+      "slug": "playn-go",
+      "name": "Play'n Go"
+    },
+    {
+      "slug": "playbro",
+      "name": "Playbro"
+    },
+    {
+      "slug": "playhub",
+      "name": "PLAYHUB"
+    },
+    {
+      "slug": "playmer",
+      "name": "Playmer"
+    },
+    {
+      "slug": "playnetic",
+      "name": "Playnetic"
+    },
+    {
+      "slug": "playpearls",
+      "name": "PlayPearls"
+    },
+    {
+      "slug": "playreels",
+      "name": "PlayReels"
+    },
+    {
+      "slug": "playson",
+      "name": "Playson"
+    },
+    {
+      "slug": "playstar",
+      "name": "PlayStar"
+    },
+    {
+      "slug": "playtech",
+      "name": "Playtech"
+    },
+    {
+      "slug": "virtue-fusion",
+      "name": "Playtech (bingo)"
+    },
+    {
+      "slug": "playtech-live",
+      "name": "Playtech Live"
+    },
+    {
+      "slug": "playtech-origins",
+      "name": "Playtech Origins"
+    },
+    {
+      "slug": "playtech-vikings",
+      "name": "Playtech Vikings"
+    },
+    {
+      "slug": "playzia",
+      "name": "Playzia"
+    },
+    {
+      "slug": "plzyzido",
+      "name": "Playzido"
+    },
+    {
+      "slug": "pocket-games-soft-pg-soft",
+      "name": "Pocket Games Soft (PG Soft)"
+    },
+    {
+      "slug": "poggiplay",
+      "name": "PoggiPlay"
+    },
+    {
+      "slug": "popiplay",
+      "name": "Popiplay"
+    },
+    {
+      "slug": "popok-gaming",
+      "name": "Popok Gaming"
+    },
+    {
+      "slug": "portomaso-gaming",
+      "name": "Portomaso Gaming"
+    },
+    {
+      "slug": "posh-monkey-studios",
+      "name": "Posh Monkey Studios"
+    },
+    {
+      "slug": "powderkeg-studios",
+      "name": "Powderkeg Studios"
+    },
+    {
+      "slug": "pragmatic-play",
+      "name": "Pragmatic Play"
+    },
+    {
+      "slug": "pragmatic-play-bingo",
+      "name": "Pragmatic Play (Bingo)"
+    },
+    {
+      "slug": "pragmatic-play-live",
+      "name": "Pragmatic Play Live"
+    },
+    {
+      "slug": "pragmatic-play-pop",
+      "name": "Pragmatic Play POP"
+    },
+    {
+      "slug": "present-creative",
+      "name": "Present Creative"
+    },
+    {
+      "slug": "print",
+      "name": "Print"
+    },
+    {
+      "slug": "probability-gaming",
+      "name": "Probability Gaming"
+    },
+    {
+      "slug": "probability-jones",
+      "name": "Probability Jones"
+    },
+    {
+      "slug": "proprietary-bingo",
+      "name": "Proprietary (Bingo)"
+    },
+    {
+      "slug": "proprietary-software",
+      "name": "Proprietary Software"
+    },
+    {
+      "slug": "prospect-gaming",
+      "name": "Prospect Gaming"
+    },
+    {
+      "slug": "provision-gaming",
+      "name": "Provision Gaming"
+    },
+    {
+      "slug": "psiclone-games",
+      "name": "Psiclone Games"
+    },
+    {
+      "slug": "pulse-8-studios",
+      "name": "Pulse 8 Studios"
+    },
+    {
+      "slug": "push-gaming",
+      "name": "Push Gaming"
+    },
+    {
+      "slug": "qora-games",
+      "name": "Qora Games"
+    },
+    {
+      "slug": "quickfire",
+      "name": "Quickfire"
+    },
+    {
+      "slug": "quickspin",
+      "name": "Quickspin"
+    },
+    {
+      "slug": "quik-gaming",
+      "name": "Quik Gaming"
+    },
+    {
+      "slug": "r-franco-games",
+      "name": "R. Franco Games"
+    },
+    {
+      "slug": "rabcat",
+      "name": "Rabcat"
+    },
+    {
+      "slug": "radi8",
+      "name": "Radi8"
+    },
+    {
+      "slug": "rakerocket",
+      "name": "RakeRocket"
+    },
+    {
+      "slug": "random-logic",
+      "name": "Random Logic"
+    },
+    {
+      "slug": "rarestone-gaming",
+      "name": "Rarestone Gaming"
+    },
+    {
+      "slug": "raw-igaming",
+      "name": "RAW iGaming"
+    },
+    {
+      "slug": "ready-play-gaming",
+      "name": "Ready Play Gaming"
+    },
+    {
+      "slug": "real-dealer-studios",
+      "name": "Real Dealer Studios"
+    },
+    {
+      "slug": "real-time-gaming-rtg",
+      "name": "Real Time Gaming (RTG)"
+    },
+    {
+      "slug": "realistic-games",
+      "name": "Realistic Games"
+    },
+    {
+      "slug": "realnrg",
+      "name": "RealNRG"
+    },
+    {
+      "slug": "red-rake-gaming",
+      "name": "Red Rake Gaming"
+    },
+    {
+      "slug": "red-tiger-gaming",
+      "name": "Red Tiger Gaming"
+    },
+    {
+      "slug": "red7",
+      "name": "Red7"
+    },
+    {
+      "slug": "redstone",
+      "name": "Redstone"
+    },
+    {
+      "slug": "reel-kingdom",
+      "name": "Reel Kingdom"
+    },
+    {
+      "slug": "reel-life-games",
+      "name": "Reel Life Games"
+    },
+    {
+      "slug": "reel-nrg-gaming",
+      "name": "Reel NRG Gaming"
+    },
+    {
+      "slug": "reel-play",
+      "name": "Reel Play"
+    },
+    {
+      "slug": "reel-time-gaming",
+      "name": "Reel Time Gaming"
+    },
+    {
+      "slug": "reelfeel-gaming",
+      "name": "Reelfeel Gaming"
+    },
+    {
+      "slug": "reevo",
+      "name": "Reevo"
+    },
+    {
+      "slug": "reflex-gaming",
+      "name": "Reflex Gaming"
+    },
+    {
+      "slug": "relax-gaming",
+      "name": "Relax Gaming"
+    },
+    {
+      "slug": "retro-gaming",
+      "name": "Retro Gaming"
+    },
+    {
+      "slug": "revolver-gaming",
+      "name": "Revolver Gaming"
+    },
+    {
+      "slug": "rich88",
+      "name": "RiCH88"
+    },
+    {
+      "slug": "ricochet",
+      "name": "Ricochet"
+    },
+    {
+      "slug": "riddec-games",
+      "name": "Riddec Games"
+    },
+    {
+      "slug": "rising-entertainment",
+      "name": "Rising Entertainment"
+    },
+    {
+      "slug": "rival-gaming",
+      "name": "Rival Gaming"
+    },
+    {
+      "slug": "rngplay",
+      "name": "RNGPlay"
+    },
+    {
+      "slug": "rocksalt-interactive",
+      "name": "Rocksalt Interactive"
+    },
+    {
+      "slug": "rogue-gaming-studio",
+      "name": "Rogue Gaming Studio"
+    },
+    {
+      "slug": "round-circle",
+      "name": "Round Circle"
+    },
+    {
+      "slug": "roxor-gaming",
+      "name": "Roxor Gaming"
+    },
+    {
+      "slug": "rtg-slots",
+      "name": "RTG Slots"
+    },
+    {
+      "slug": "ruby-play",
+      "name": "Ruby Play"
+    },
+    {
+      "slug": "s-gaming",
+      "name": "S Gaming"
+    },
+    {
+      "slug": "sa-gaming",
+      "name": "SA Gaming"
+    },
+    {
+      "slug": "salsa-technology",
+      "name": "Salsa Technology"
+    },
+    {
+      "slug": "sapphire-gaming",
+      "name": "Sapphire Gaming"
+    },
+    {
+      "slug": "saucify",
+      "name": "Saucify"
+    },
+    {
+      "slug": "scientific-games-sg",
+      "name": "Scientific Games (SG)"
+    },
+    {
+      "slug": "section-8",
+      "name": "Section 8"
+    },
+    {
+      "slug": "seven-deuce-gaming",
+      "name": "Seven Deuce Gaming"
+    },
+    {
+      "slug": "shacks-evolution-studios",
+      "name": "Shacks Evolution Studios"
+    },
+    {
+      "slug": "shady-lady",
+      "name": "Shady Lady"
+    },
+    {
+      "slug": "shuffle-master",
+      "name": "Shuffle Master"
+    },
+    {
+      "slug": "side-city",
+      "name": "Side City"
+    },
+    {
+      "slug": "sigma-gaming",
+      "name": "Sigma Gaming"
+    },
+    {
+      "slug": "silverback-gaming",
+      "name": "Silverback Gaming"
+    },
+    {
+      "slug": "simple-play",
+      "name": "Simple Play"
+    },
+    {
+      "slug": "skillonnet",
+      "name": "SkillOnNet"
+    },
+    {
+      "slug": "skillzzgaming",
+      "name": "SkillzzGaming"
+    },
+    {
+      "slug": "skycontrol",
+      "name": "SkyControl"
+    },
+    {
+      "slug": "skyrocket-entertainment",
+      "name": "Skyrocket Entertainment"
+    },
+    {
+      "slug": "skywind-group",
+      "name": "Skywind Group"
+    },
+    {
+      "slug": "slammer-studios",
+      "name": "Slammer Studios"
+    },
+    {
+      "slug": "slightly-edgy-games",
+      "name": "Slightly Edgy Games"
+    },
+    {
+      "slug": "slingo-originals",
+      "name": "Slingo Originals"
+    },
+    {
+      "slug": "slingshot-studios",
+      "name": "Slingshot Studios"
+    },
+    {
+      "slug": "slot-factory",
+      "name": "Slot Factory"
+    },
+    {
+      "slug": "slotmatrix",
+      "name": "SlotMatrix"
+    },
+    {
+      "slug": "slotmill",
+      "name": "Slotmill"
+    },
+    {
+      "slug": "slotmotion",
+      "name": "SlotMotion"
+    },
+    {
+      "slug": "slotopia",
+      "name": "Slotopia"
+    },
+    {
+      "slug": "slotvision",
+      "name": "SlotVision"
+    },
+    {
+      "slug": "smartbet",
+      "name": "SmartBet"
+    },
+    {
+      "slug": "smartsoft-gaming",
+      "name": "Smartsoft Gaming"
+    },
+    {
+      "slug": "sneaky-slots",
+      "name": "Sneaky Slots"
+    },
+    {
+      "slug": "snowborn-games",
+      "name": "Snowborn Games"
+    },
+    {
+      "slug": "softgate",
+      "name": "SoftGate"
+    },
+    {
+      "slug": "solidicon",
+      "name": "Solidicon"
+    },
+    {
+      "slug": "spadegaming",
+      "name": "Spadegaming"
+    },
+    {
+      "slug": "spark-gaming",
+      "name": "Spark Gaming"
+    },
+    {
+      "slug": "spearhead-studios",
+      "name": "Spearhead Studios"
+    },
+    {
+      "slug": "speedy-tomatoes",
+      "name": "Speedy Tomatoes"
+    },
+    {
+      "slug": "spieldev",
+      "name": "Spieldev"
+    },
+    {
+      "slug": "spigo",
+      "name": "Spigo"
+    },
+    {
+      "slug": "spike-games",
+      "name": "Spike Games"
+    },
+    {
+      "slug": "spin-fury-gaming",
+      "name": "Spin Fury Gaming"
+    },
+    {
+      "slug": "spin-games",
+      "name": "Spin Games"
+    },
+    {
+      "slug": "spinberry",
+      "name": "Spinberry"
+    },
+    {
+      "slug": "spinmatic",
+      "name": "Spinmatic"
+    },
+    {
+      "slug": "spinocchio",
+      "name": "Spinocchio"
+    },
+    {
+      "slug": "spinomenal",
+      "name": "Spinomenal"
+    },
+    {
+      "slug": "spinon",
+      "name": "SpinOn"
+    },
+    {
+      "slug": "spinoro",
+      "name": "Spinoro"
+    },
+    {
+      "slug": "spinplay-games",
+      "name": "SpinPlay Games"
+    },
+    {
+      "slug": "spinstars",
+      "name": "Spinstars"
+    },
+    {
+      "slug": "spinthon",
+      "name": "Spinthon"
+    },
+    {
+      "slug": "split-the-pot",
+      "name": "Split the Pot"
+    },
+    {
+      "slug": "spribe",
+      "name": "Spribe"
+    },
+    {
+      "slug": "stakelogic",
+      "name": "StakeLogic"
+    },
+    {
+      "slug": "stg-slots",
+      "name": "STG Slots"
+    },
+    {
+      "slug": "sthlm-gaming",
+      "name": "Sthlm Gaming"
+    },
+    {
+      "slug": "storm-gaming",
+      "name": "Storm Gaming"
+    },
+    {
+      "slug": "stormcraft-studios",
+      "name": "Stormcraft Studios"
+    },
+    {
+      "slug": "sunfox-games",
+      "name": "SUNFOX Games"
+    },
+    {
+      "slug": "super-spade-club",
+      "name": "Super Spade Club"
+    },
+    {
+      "slug": "super-spade-games",
+      "name": "Super Spade Games"
+    },
+    {
+      "slug": "superlotto",
+      "name": "Superlotto"
+    },
+    {
+      "slug": "superlottotv",
+      "name": "SuperlottoTV"
+    },
+    {
+      "slug": "sv388",
+      "name": "SV388"
+    },
+    {
+      "slug": "swintt",
+      "name": "Swintt"
+    },
+    {
+      "slug": "switch-studios",
+      "name": "Switch Studios"
+    },
+    {
+      "slug": "synot",
+      "name": "SYNOT"
+    },
+    {
+      "slug": "tada-gaming",
+      "name": "TaDa Gaming"
+    },
+    {
+      "slug": "tequity",
+      "name": "Tequity"
+    },
+    {
+      "slug": "the-better-platform",
+      "name": "The Better Platform"
+    },
+    {
+      "slug": "the-games-company",
+      "name": "The Games Company"
+    },
+    {
+      "slug": "the-hood",
+      "name": "The Hood"
+    },
+    {
+      "slug": "the-rogue-games",
+      "name": "The Rogue Games"
+    },
+    {
+      "slug": "the-stars-group",
+      "name": "The Stars Group"
+    },
+    {
+      "slug": "thunderkick",
+      "name": "Thunderkick"
+    },
+    {
+      "slug": "thunderspin",
+      "name": "Thunderspin"
+    },
+    {
+      "slug": "tiptop",
+      "name": "TipTop"
+    },
+    {
+      "slug": "tokacity",
+      "name": "TokaCity"
+    },
+    {
+      "slug": "tom-horn-gaming",
+      "name": "Tom Horn Gaming"
+    },
+    {
+      "slug": "top-gaming",
+      "name": "TOP Gaming"
+    },
+    {
+      "slug": "top-trend-gaming",
+      "name": "Top Trend Gaming"
+    },
+    {
+      "slug": "tornado-games",
+      "name": "Tornado Games"
+    },
+    {
+      "slug": "toucan-royale",
+      "name": "Toucan Royale"
+    },
+    {
+      "slug": "touchstone-games",
+      "name": "Touchstone Games"
+    },
+    {
+      "slug": "trigger-button-studios",
+      "name": "Trigger Button Studios"
+    },
+    {
+      "slug": "triple-cherry",
+      "name": "Triple Cherry"
+    },
+    {
+      "slug": "triple-edge-studios",
+      "name": "Triple Edge Studios"
+    },
+    {
+      "slug": "triple-profits-games",
+      "name": "Triple Profits Games"
+    },
+    {
+      "slug": "truelab-games",
+      "name": "TrueLab Games"
+    },
+    {
+      "slug": "trusty-gaming",
+      "name": "Trusty Gaming"
+    },
+    {
+      "slug": "tuko-productions",
+      "name": "Tuko Productions"
+    },
+    {
+      "slug": "turbo-games",
+      "name": "Turbo Games"
+    },
+    {
+      "slug": "tvbet",
+      "name": "TVBet"
+    },
+    {
+      "slug": "upgaming",
+      "name": "upgaming"
+    },
+    {
+      "slug": "urgent-games",
+      "name": "Urgent Games"
+    },
+    {
+      "slug": "vela-gaming",
+      "name": "Vela Gaming"
+    },
+    {
+      "slug": "vermantia",
+      "name": "Vermantia"
+    },
+    {
+      "slug": "viaden-gaming",
+      "name": "Viaden Gaming"
+    },
+    {
+      "slug": "vibra-gaming",
+      "name": "Vibra Gaming"
+    },
+    {
+      "slug": "virtual-tech",
+      "name": "Virtual Tech"
+    },
+    {
+      "slug": "visionary-igaming",
+      "name": "Visionary iGaming"
+    },
+    {
+      "slug": "vivo-gaming",
+      "name": "Vivo Gaming"
+    },
+    {
+      "slug": "volt-entertainment",
+      "name": "Volt Entertainment"
+    },
+    {
+      "slug": "voltent",
+      "name": "VoltEnt"
+    },
+    {
+      "slug": "wager-gaming",
+      "name": "Wager Gaming"
+    },
+    {
+      "slug": "wagermill",
+      "name": "WagerMill"
+    },
+    {
+      "slug": "wali-games",
+      "name": "Wali Games"
+    },
+    {
+      "slug": "warner-brothers",
+      "name": "Warner Brothers"
+    },
+    {
+      "slug": "wazdan",
+      "name": "Wazdan"
+    },
+    {
+      "slug": "we-are-casino",
+      "name": "We Are Casino"
+    },
+    {
+      "slug": "white-hat-studios",
+      "name": "White Hat Studios"
+    },
+    {
+      "slug": "wicked-games",
+      "name": "Wicked Games"
+    },
+    {
+      "slug": "wild-boars-gaming-wbg",
+      "name": "Wild Boars Gaming (WBG)"
+    },
+    {
+      "slug": "wild-streak-gaming",
+      "name": "Wild Streak Gaming"
+    },
+    {
+      "slug": "william-hill-live",
+      "name": "William Hill Live"
+    },
+    {
+      "slug": "wms",
+      "name": "Williams Interactive (WMS)"
+    },
+    {
+      "slug": "win-fast",
+      "name": "Win Fast"
+    },
+    {
+      "slug": "win-studios",
+      "name": "Win Studios"
+    },
+    {
+      "slug": "winfinity",
+      "name": "Winfinity"
+    },
+    {
+      "slug": "wingo",
+      "name": "Wingo"
+    },
+    {
+      "slug": "winspinity",
+      "name": "Winspinity"
+    },
+    {
+      "slug": "wishbone",
+      "name": "Wishbone"
+    },
+    {
+      "slug": "wizard-games",
+      "name": "Wizard Games"
+    },
+    {
+      "slug": "woohoo",
+      "name": "Woohoo"
+    },
+    {
+      "slug": "world-match",
+      "name": "World Match"
+    },
+    {
+      "slug": "x-card",
+      "name": "X Card"
+    },
+    {
+      "slug": "x-play",
+      "name": "X Play"
+    },
+    {
+      "slug": "x-pro-gaming-xpg",
+      "name": "X Pro Gaming (XPG)"
+    },
+    {
+      "slug": "x-room",
+      "name": "X Room"
+    },
+    {
+      "slug": "xin-gaming",
+      "name": "XIN Gaming"
+    },
+    {
+      "slug": "xplosive-slots",
+      "name": "Xplosive Slots"
+    },
+    {
+      "slug": "yggdrasil",
+      "name": "YGGDRASIL"
+    },
+    {
+      "slug": "yoloplay",
+      "name": "YoloPlay"
+    },
+    {
+      "slug": "yolted",
+      "name": "Yolted"
+    },
+    {
+      "slug": "zephyr-slots",
+      "name": "Zephyr Slots"
+    },
+    {
+      "slug": "zeus-play",
+      "name": "Zeus Play"
+    },
+    {
+      "slug": "zillion-games",
+      "name": "Zillion Games"
+    },
+    {
+      "slug": "zitro",
+      "name": "Zitro"
+    },
+    {
+      "slug": "zonelock",
+      "name": "Zonelock"
+    }
+  ],
   "taxonomy_additions": {
     "allowed_taxonomies": [
       "event_category",
@@ -655,14 +3461,14 @@
     "evidence": {
       "primary_source_url": "https://operator.example/event",
       "terms_source_url": "https://operator.example/event-terms",
-      "source_checked_at": null,
+      "source_checked_at": "2026-10-29T10:05:45+00:00",
       "notes": null
     }
   },
   "root_shape": {
     "schema_version": "1.0",
     "brand_id": 123,
-    "researched_at": null,
+    "researched_at": "2026-10-29T10:05:45+00:00",
     "taxonomy_additions": {
       "event_category": [],
       "eligible_game": []

@@ -41,19 +41,24 @@
     "brand_availability_changes may propose evidence-backed country or US/Canada subdivision additions/removals discovered while researching current official offer terms. Every change requires a reason and at least one first-party URL on a stored canonical brand domain. A country addition may include name; when a valid ISO code has no existing Gamblee Country record, the importer may create that Country record from the canonical name. Do not infer removals from the absence of an offer.",
     "Offer validation may rely on an availability addition in the same payload. Availability changes are applied only after every Bonus Offer in the payload imports successfully.",
     "A required but operator-selected or dynamically supplied promo code uses bonus_code_requirement=required_unspecified rather than inventing a code.",
+    "Return one bonus_reconciliation row for every existing Bonus supplied to research: confirmed when current evidence shows the offer remains live, ended only with affirmative evidence that it ended/was withdrawn/was replaced, and not_found when current research could not verify it. not_found never retires anything.",
+    "Stable offer_key is the primary idempotency key. When bonus_id is omitted but offer_key matches exactly one existing Bonus for this brand, the importer reconciles it automatically. Never change an established offer_key merely because offer copy or mechanics were revised.",
     "Use excluded_card_bins only when official terms explicitly list excluded payment-card BIN/IIN prefixes.",
     "Use qualification_window_value + qualification_window_unit for a deadline to complete a qualifying action or use a pre-reward token; reward expiry remains component-specific.",
     "When qualifying spend is defined as a multiple of a deposit or bonus amount, use qualification_spend_multiplier + qualification_spend_basis instead of guessing a fixed minimum_spend.",
     "Use components.external_reward for non-cash third-party value such as vouchers or gift cards. Use components.free_rounds for branded game rounds such as Free Flights or Free Crossings rather than force-fitting them into free_spins.",
-    "Prefer current first-party/official brand or operator evidence for offer discovery, classification and mechanics. When first-party pages are unavailable, incomplete, geo-gated, login-gated or technically inaccessible, current specific secondary sources may be used for commercial offer mechanics. First-party evidence wins on conflicts. Do not infer facts from silence, and do not use secondary evidence for brand_availability_changes or regulatory/jurisdiction availability changes, which remain first-party-only. Label evidence clearly enough to distinguish official and secondary sources.",
-    "Return one bonus_reconciliation row for every existing Bonus supplied to research: confirmed when current evidence shows the offer remains live, ended only with affirmative evidence that it ended/was withdrawn/was replaced, and not_found when current research could not verify it. not_found never retires anything.",
-    "Stable offer_key is the primary idempotency key. When bonus_id is omitted but offer_key matches exactly one existing Bonus for this brand, the importer reconciles it automatically. Never change an established offer_key merely because offer copy or mechanics were revised."
+    "Prefer current first-party/official brand or operator evidence for offer discovery, classification and mechanics. When first-party pages are unavailable, incomplete, geo-gated, login-gated or technically inaccessible, current specific secondary sources may be used for commercial offer mechanics. First-party evidence wins on conflicts. Do not infer facts from silence, and do not use secondary evidence for brand_availability_changes or regulatory/jurisdiction availability changes, which remain first-party-only. Label evidence clearly enough to distinguish official and secondary sources."
   ],
   "analysis_statuses": [
     "supported_and_analyzable",
     "not_calculable"
   ],
   "schema_gap_status": "unsupported_but_fixable",
+  "reconciliation_statuses": [
+    "confirmed",
+    "ended",
+    "not_found"
+  ],
   "player_eligibility": [
     "new_customers",
     "existing_customers",
@@ -3343,7 +3348,7 @@
   "root_shape": {
     "schema_version": "1.5",
     "brand_id": 123,
-    "researched_at": "2026-10-29T01:01:14+00:00",
+    "researched_at": "2026-10-29T10:05:44+00:00",
     "taxonomy_additions": {
       "eligible_game": [],
       "excluded_payment_methods": [],
@@ -3356,12 +3361,7 @@
       "subdivision_removals": []
     },
     "offers": [],
-    "schema_gaps": [],
-    "bonus_reconciliation": []
-  },
-  "reconciliation_statuses": [
-    "confirmed",
-    "ended",
-    "not_found"
-  ]
+    "bonus_reconciliation": [],
+    "schema_gaps": []
+  }
 }

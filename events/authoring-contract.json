@@ -3461,14 +3461,14 @@
     "evidence": {
       "primary_source_url": "https://operator.example/event",
       "terms_source_url": "https://operator.example/event-terms",
-      "source_checked_at": "2026-10-30T18:03:44+00:00",
+      "source_checked_at": "2026-10-31T05:52:14+00:00",
       "notes": null
     }
   },
   "root_shape": {
     "schema_version": "1.0",
     "brand_id": 123,
-    "researched_at": "2026-10-30T18:03:44+00:00",
+    "researched_at": "2026-10-31T05:52:14+00:00",
     "taxonomy_additions": {
       "event_category": [],
       "eligible_game": []

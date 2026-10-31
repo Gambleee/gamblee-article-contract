@@ -15,6 +15,8 @@
     "After those overrides, a Bonus is only a signup/new-customer offer or an offer whose specific direct-reward claim/activation requires a new upfront deposit.",
     "Existing-depositor, funded-player, VIP or active-customer status alone does not make an item a Bonus.",
     "Reward type alone does not determine classification.",
+    "Classification examples: Welcome match bonus and a deposit-triggered direct free-spins offer are Bonuses; scheduled slot tournaments, poker freerolls, races and leaderboards are Events even when deposit-gated; prize draws, missions, cashback, giveaways and prize wheels are Promos even when deposit-gated. A welcome reward consisting of tournament tickets is not itself a tournament Event.",
+    "Apply the Event → Promo → Bonus classification sequence to every candidate immediately before serializing. If unverified, omit the candidate; never force an Event/Promo into Bonus JSON or schema_gaps.",
     "Bonus JSON serializes only Bonus-classified offers. Omit Event- and Promo-classified items entirely from offers and schema_gaps.",
     "schema_gaps is reserved only for genuine Bonus-classified offers whose mechanics cannot be represented by this contract. Never report an Event- or Promo-classified item as a Bonus schema gap.",
     "One offer object represents exactly one market and one vertical. Multiple simultaneous offers for the same market/vertical are allowed.",
@@ -28,10 +30,10 @@
     "Recurring offers remain one offer and use schedule.weekdays and/or validity dates.",
     "Do not output prohibited markets. CA-ON is currently prohibited for public Bonus Offer publication.",
     "Use schema_gaps only when a genuine Bonus-classified mechanic is required for structured qualification, reward, wagering, cashout, schedule, eligibility or analyzer correctness and cannot be represented exactly. Ancillary restrictions that can be represented accurately in copy.terms, such as a maximum number of claims per month, belong in copy.terms and must not create a schema gap.",
-    "supported_and_analyzable and not_calculable offers may be imported. unsupported_but_fixable items are blocked until the schema is extended.",
-    "analysis.status is offer-level, but analyzer EV may be component-level. Mark an offer supported_and_analyzable when at least one substantive structured reward component is fully calculable. An unknown secondary component does not invalidate a calculable primary component; leave its unknown EV inputs null and exclude that component from EV.",
+    "Only supported_and_analyzable offers with at least one numerically quantifiable structured reward component may be imported. not_calculable offers are excluded from new Bonus JSON imports; unsupported_but_fixable items remain blocked until the schema is extended.",
+    "analysis.status is offer-level, but analyzer EV may be component-level. Mark an offer supported_and_analyzable only when at least one substantive structured reward component is numerically quantifiable. An unknown secondary component does not invalidate a calculable primary component; leave unknown EV inputs null and exclude that component from EV. Unknown or variable personalised reload rewards, undisclosed wheel probabilities and entirely unquantifiable bonuses must not be emitted as Bonus offers or schema_gaps.",
     "Free-spin valuation default: when the operator does not state value_per_spin and every offer currency is one of EUR, GBP, USD, CAD, AUD or NZD, use 0.10 per spin. This is a Gamblee valuation assumption, not an operator-stated term. An explicit operator value always overrides it. Do not apply the 0.10 fallback to currencies with materially different unit scales such as ZAR.",
-    "With that fallback, a pure free-spins offer in EUR, GBP, USD, CAD, AUD or NZD can remain supported_and_analyzable when spin count is known. If value_per_spin is unknown in a non-default currency, leave it null and use not_calculable unless another component is calculable.",
+    "With that fallback, a pure free-spins offer in EUR, GBP, USD, CAD, AUD or NZD can remain supported_and_analyzable when spin count is known. If value_per_spin is unknown outside these currencies, omit it unless another component is calculable. Never invent a value or submit not_calculable offers.",
     "urls.offer is only for a Gamblee-approved/tracked commercial deep link. Never substitute a generic official brand website, ordinary promotion page, affiliate-programme homepage, evidence URL, or guessed tracking URL. Put ordinary official promotion pages in evidence and leave urls.offer null so Gamblee inherits the canonical brand market/vertical Commercial Link. urls.terms may use a direct official terms URL.",
     "Use included_subdivisions when a broad country offer is available only in named subdivisions; use excluded_subdivisions when it applies broadly except named subdivisions. Never use both for the same subdivision.",
     "Use included_countries only with market=GLOBAL to whitelist the exact countries covered by a broad international offer. Countries must already be confirmed for the brand or be proposed as evidence-backed country_additions in the same payload.",
@@ -41,17 +43,19 @@
     "brand_availability_changes may propose evidence-backed country or US/Canada subdivision additions/removals discovered while researching current official offer terms. Every change requires a reason and at least one first-party URL on a stored canonical brand domain. A country addition may include name; when a valid ISO code has no existing Gamblee Country record, the importer may create that Country record from the canonical name. Do not infer removals from the absence of an offer.",
     "Offer validation may rely on an availability addition in the same payload. Availability changes are applied only after every Bonus Offer in the payload imports successfully.",
     "A required but operator-selected or dynamically supplied promo code uses bonus_code_requirement=required_unspecified rather than inventing a code.",
+    "An entirely unquantifiable offer is omitted from Bonus JSON rather than reclassified automatically as a Promotion. Prize-wheel and lottery campaigns are Promotion-classified; a separately researched editorial article may cover an unquantifiable but newsworthy bonus.",
+    "Bonus codes MUST NEVER come from third-party affiliates, coupon listings, comparison sites, forums or search snippets; these may attribute customers to another affiliate. A known code is permitted only when the exact code is visibly published on an official canonical brand domain. Set bonus_code_requirement=required_known, bonus_code and bonus_code_source_url to the direct first-party page, and include the page in offer evidence. Otherwise use required_unspecified with bonus_code=null and bonus_code_source_url=null. Never repeat unverified codes in copy.",
+    "Generate one complete strict JSON object with no markdown fences, comments, trailing commas or placeholders. Validate the whole JSON before delivery. For large payloads provide a genuine complete .json file; never truncate, abbreviate or split the JSON.",
     "Return one bonus_reconciliation row for every existing Bonus supplied to research: confirmed when current evidence shows the offer remains live, ended only with affirmative evidence that it ended/was withdrawn/was replaced, and not_found when current research could not verify it. not_found never retires anything.",
     "Stable offer_key is the primary idempotency key. When bonus_id is omitted but offer_key matches exactly one existing Bonus for this brand, the importer reconciles it automatically. Never change an established offer_key merely because offer copy or mechanics were revised.",
     "Use excluded_card_bins only when official terms explicitly list excluded payment-card BIN/IIN prefixes.",
     "Use qualification_window_value + qualification_window_unit for a deadline to complete a qualifying action or use a pre-reward token; reward expiry remains component-specific.",
     "When qualifying spend is defined as a multiple of a deposit or bonus amount, use qualification_spend_multiplier + qualification_spend_basis instead of guessing a fixed minimum_spend.",
     "Use components.external_reward for non-cash third-party value such as vouchers or gift cards. Use components.free_rounds for branded game rounds such as Free Flights or Free Crossings rather than force-fitting them into free_spins.",
-    "Prefer current first-party/official brand or operator evidence for offer discovery, classification and mechanics. When first-party pages are unavailable, incomplete, geo-gated, login-gated or technically inaccessible, current specific secondary sources may be used for commercial offer mechanics. First-party evidence wins on conflicts. Do not infer facts from silence, and do not use secondary evidence for brand_availability_changes or regulatory/jurisdiction availability changes, which remain first-party-only. Label evidence clearly enough to distinguish official and secondary sources."
+    "Prefer current first-party/official brand or operator evidence for offer discovery, classification and mechanics. When first-party pages are unavailable, incomplete, geo-gated, login-gated or technically inaccessible, current specific secondary sources may be used for commercial offer mechanics OTHER THAN bonus codes. Bonus codes are first-party-only and require a bonus_code_source_url. First-party evidence wins on conflicts. Do not infer facts from silence, and do not use secondary evidence for brand_availability_changes or regulatory/jurisdiction availability changes, which remain first-party-only. Label evidence clearly enough to distinguish official and secondary sources."
   ],
   "analysis_statuses": [
-    "supported_and_analyzable",
-    "not_calculable"
+    "supported_and_analyzable"
   ],
   "schema_gap_status": "unsupported_but_fixable",
   "reconciliation_statuses": [
@@ -3307,6 +3311,7 @@
       "excluded_card_bins": [],
       "bonus_code_requirement": "none",
       "bonus_code": null,
+      "bonus_code_source_url": null,
       "qualification_window_value": null,
       "qualification_window_unit": null,
       "qualification_spend_multiplier": null,
@@ -3348,7 +3353,7 @@
   "root_shape": {
     "schema_version": "1.5",
     "brand_id": 123,
-    "researched_at": "2026-10-31T12:41:45+00:00",
+    "researched_at": "2026-10-31T19:20:21+00:00",
     "taxonomy_additions": {
       "eligible_game": [],
       "excluded_payment_methods": [],

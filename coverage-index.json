@@ -2,8 +2,95 @@
   "contract": "gamblee-article-coverage-index",
   "schema_version": 1,
   "source": "https://www.gamblee.com/wp-json/gamblee-core/v1/articles/coverage-index",
-  "total": 293,
+  "total": 296,
   "articles": [
+    {
+      "id": 88547,
+      "date": "2026-10-31T14:36:42+00:00",
+      "modified": "2026-10-31T14:38:12+00:00",
+      "title": "Finland Grants First 18 Gambling Licences Ahead of July 2027 Market Opening",
+      "slug": "finland-first-18-gambling-licences-october-2026",
+      "url": "https://www.gamblee.com/articles/finland-first-18-gambling-licences-october-2026/",
+      "excerpt": "Finland’s National Police Board granted 18 gambling licences, with 63 applications pending. Licensed casino and betting operations cannot begin before 1 July 2027.",
+      "verticals": [
+        "casino",
+        "sports-betting"
+      ],
+      "geographies": [
+        "fi"
+      ],
+      "topics": [
+        "licensing"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 88544,
+      "date": "2026-10-31T14:34:48+00:00",
+      "modified": "2026-10-31T14:34:48+00:00",
+      "title": "France Football Prepares Complaint Over Suspicious Ballon d’Or Prediction Bets",
+      "slug": "ballon-dor-2026-polymarket-suspicious-bets-complaint",
+      "url": "https://www.gamblee.com/articles/ballon-dor-2026-polymarket-suspicious-bets-complaint/",
+      "excerpt": "France Football’s publisher says a complaint is being prepared after suspicious Polymarket bets reportedly predicted the 2026 Ballon d’Or top five.",
+      "verticals": [
+        "prediction-markets"
+      ],
+      "geographies": [
+        "fr"
+      ],
+      "topics": [
+        "regulation-law"
+      ],
+      "subjects": [],
+      "entities": [
+        "other-polymarket"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 88541,
+      "date": "2026-10-31T14:32:54+00:00",
+      "modified": "2026-10-31T14:32:54+00:00",
+      "title": "Utah Charges Kalshi as DraftKings and FanDuel Restrict Prediction Markets",
+      "slug": "utah-kalshi-charges-prediction-markets-withdrawals-2026",
+      "url": "https://www.gamblee.com/articles/utah-kalshi-charges-prediction-markets-withdrawals-2026/",
+      "excerpt": "Utah filed criminal charges against Kalshi and its founders as DraftKings, FanDuel and other operators restricted prediction-market trading in the state.",
+      "verticals": [
+        "prediction-markets",
+        "sports-betting"
+      ],
+      "geographies": [
+        "us"
+      ],
+      "topics": [
+        "enforcement"
+      ],
+      "subjects": [],
+      "entities": [
+        "government-cftc",
+        "other-draftkings",
+        "other-fanatics",
+        "other-kalshi"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
     {
       "id": 88329,
       "date": "2026-10-27T20:22:40+00:00",

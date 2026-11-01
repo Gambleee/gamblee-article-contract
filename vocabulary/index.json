@@ -33,7 +33,7 @@
     {
       "dimension": "entities",
       "taxonomy": "news_entity",
-      "count": 1282,
+      "count": 1283,
       "hierarchical": false,
       "searchable": true
     },

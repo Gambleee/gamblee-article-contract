@@ -47,14 +47,14 @@
     "A required but operator-selected or dynamically supplied promo code uses bonus_code_requirement=required_unspecified rather than inventing a code.",
     "Bonus codes MUST NEVER come from third-party affiliates, coupon listings, comparison sites, forums or search snippets; these may attribute customers to another affiliate. A known code is permitted only when the exact code is visibly published on an official canonical brand domain. Set bonus_code_requirement=required_known, bonus_code and bonus_code_source_url to the direct first-party page, and include the page in offer evidence. Otherwise use required_unspecified with bonus_code=null and bonus_code_source_url=null. Never repeat unverified codes in copy.",
     "Generate one complete strict JSON object with no markdown fences, comments, trailing commas or placeholders. Validate the whole JSON before delivery. For large payloads provide a genuine complete .json file; never truncate, abbreviate or split the JSON.",
-    "Return one bonus_reconciliation row for every existing Bonus supplied to research: confirmed when current evidence shows the offer remains live, ended only with affirmative evidence that it ended/was withdrawn/was replaced, and not_found when current research could not verify it. not_found never retires anything.",
+    "Return only actionable bonus_reconciliation rows: evidence-backed ended campaigns or material status changes. Omit unchanged and not_found records; omission never retires anything. A dated official campaign schedule that has elapsed can prove its end, but a disappeared page or silence cannot.",
     "Stable offer_key is the primary idempotency key. When bonus_id is omitted but offer_key matches exactly one existing Bonus for this brand, the importer reconciles it automatically. Never change an established offer_key merely because offer copy or mechanics were revised.",
     "Use excluded_card_bins only when official terms explicitly list excluded payment-card BIN/IIN prefixes.",
     "Use qualification_window_value + qualification_window_unit for a deadline to complete a qualifying action or use a pre-reward token; reward expiry remains component-specific.",
     "When qualifying spend is defined as a multiple of a deposit or bonus amount, use qualification_spend_multiplier + qualification_spend_basis instead of guessing a fixed minimum_spend.",
     "Use components.external_reward for non-cash third-party value such as vouchers or gift cards. Use components.free_rounds for branded game rounds such as Free Flights or Free Crossings rather than force-fitting them into free_spins.",
-    "Third-party affiliate, coupon or review pages are discovery leads only; require current first-party operator evidence for every publishable reward mechanic, eligibility rule and confirmed market. Never use secondary sources for bonus codes, market availability or regulatory claims. Omit unverifiable candidates rather than inventing details.",
-    "Research output gate BEFORE serialization: if no officially verified NEW campaign, no materially REVISED existing campaign represented by a complete record, and no affirmative official evidence that an existing campaign ENDED, output exactly NO ACTIONABLE CHANGES as plain text and NO JSON. not_found and unchanged confirmed reconciliation rows are informational, never actions; do not create reconciliation-only JSON for them. When actionable campaigns exist, produce a complete schema-valid payload with reconciliation coverage as required. This does not modify importer validation."
+    "Prefer operator evidence for campaign identity, headline reward amounts and material financial conditions. Credible current specific secondary evidence may help with ancillary mechanics when original terms are incomplete. Already-confirmed brand market scopes can establish the baseline without campaign-by-campaign country evidence. New availability, regulatory claims and exact bonus codes remain first-party-only; never invent values.",
+    "Research output gate BEFORE serialization: if no verified new campaign, materially revised existing campaign or evidenced end, output exactly NO ACTIONABLE CHANGES as plain text and NO JSON. Do not output unchanged or not_found reconciliation rows. An official fixed end date that has elapsed is evidence of expiry; a missing page or silence is not. When actions exist, include only actionable records; normal importer validation remains authoritative."
   ],
   "analysis_statuses": [
     "supported_and_analyzable"
@@ -6578,5 +6578,6 @@
       }
     ],
     "schema_gaps": []
-  }
+  },
+  "research_policy_revision": 20261102
 }

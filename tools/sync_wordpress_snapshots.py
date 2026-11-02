@@ -32,9 +32,60 @@ def write_json(relative_path: str, payload) -> None:
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+def preserve_authoring_guidance(relative_path: str, incoming):
+    """Keep newer editorial/research instructions until the live Core exporter catches up.
+
+    Only guidance fields are preserved. WordPress remains authoritative for schemas,
+    vocabularies, item shapes, enums and all other importer-facing contract fields.
+    """
+    local_path = ROOT / relative_path
+    if not local_path.exists() or not isinstance(incoming, dict):
+        return incoming
+    try:
+        previous = json.loads(local_path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return incoming
+    if not isinstance(previous, dict):
+        return incoming
+
+    if relative_path == "authoring-contract.json":
+        if "editorial_style" in previous and "editorial_style" not in incoming:
+            incoming["editorial_style"] = previous["editorial_style"]
+            incoming.setdefault("rules", {})["reader_facing_prose_is_direct_and_fact_led"] = True
+            print("Retained Article editorial style guidance from GitHub snapshot.")
+        return incoming
+
+    key = "rules" if relative_path.startswith("bonuses/") else "principles"
+    old_rules = previous.get(key, [])
+    current_rules = incoming.get(key, [])
+    if not isinstance(old_rules, list) or not isinstance(current_rules, list):
+        return incoming
+    prefixes = ["Research output gate BEFORE serialization:"]
+    if relative_path.startswith("promotions/"):
+        prefixes.append("Write the public-facing article directly and factually.")
+    for prefix in prefixes:
+        old = next((r for r in old_rules if isinstance(r, str) and r.startswith(prefix)), None)
+        if old and not any(isinstance(r, str) and r.startswith(prefix) for r in current_rules):
+            current_rules.append(old)
+            print(f"Retained {relative_path} guidance: {prefix}")
+    incoming[key] = current_rules
+
+    if relative_path.startswith("promotions/"):
+        old_sections = previous.get("editorial_content_requirements", {}).get("content_html", {}).get("minimum_structure", [])
+        content = incoming.get("editorial_content_requirements", {}).get("content_html", {})
+        target_sections = content.get("minimum_structure", [])
+        if isinstance(old_sections, list) and isinstance(target_sections, list):
+            prefix = "Use direct fact-led prose in content_html"
+            old = next((r for r in old_sections if isinstance(r, str) and r.startswith(prefix)), None)
+            if old and not any(isinstance(r, str) and r.startswith(prefix) for r in target_sections):
+                target_sections.append(old)
+                print("Retained Promotion editorial style guidance from GitHub snapshot.")
+    return incoming
+
+
 def sync_contract() -> None:
     payload = fetch_json("/wp-json/gamblee-core/v1/articles/authoring-contract")
-    write_json("authoring-contract.json", payload)
+    write_json("authoring-contract.json", preserve_authoring_guidance("authoring-contract.json", payload))
 
 
 def sync_offer_contract(kind: str, relative_path: str) -> bool:
@@ -47,7 +98,7 @@ def sync_offer_contract(kind: str, relative_path: str) -> bool:
             return False
         raise
 
-    write_json(relative_path, payload)
+    write_json(relative_path, preserve_authoring_guidance(relative_path, payload))
     return True
 
 

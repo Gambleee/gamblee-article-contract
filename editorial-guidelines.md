@@ -9,6 +9,13 @@ These rules apply to every Gamblee news Article prepared using `authoring-contra
 - Contextually cite primary sources (regulators, courts, filings, operators, researchers) and credit original reporting. Do not imply Gamblee independently discovered a story reported elsewhere.
 - No H1 in `content_html`. Use `<p>`, `<h2>`, restrained `<h3>`, and occasional natural lists. Avoid generic background, SEO padding, formulaic conclusions, artificial summaries and repeated context.
 
+## Natural, direct writing
+
+- State verified facts directly. Avoid formulaic contrast framing such as "not X, but Y", "not just X — it is Y", "rather than X", "more than just X", and other rhetorical reversals used merely for emphasis.
+- Prefer concrete subjects, actions, dates, values and consequences. Write in an ordinary editorial voice without artificial tension, grandiose framing or obvious AI-style summaries.
+- Keep genuine, evidence-backed comparisons and necessary negative facts when they clarify an important distinction. The rule targets rhetorical filler, not accuracy.
+- Revise sentences that exist primarily to contrast something with an unrelated alternative; retain factual qualifications and sourcing.
+
 ## Internal links: natural, not announced
 
 - Read the current `coverage-index.json` before drafting; compare the underlying event against existing coverage and link only to genuinely relevant **published** Gamblee articles using their exact indexed URLs.

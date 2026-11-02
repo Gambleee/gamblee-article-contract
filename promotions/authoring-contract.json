@@ -32,7 +32,9 @@
     "Each promotion must include original factual content_html for the Promotion post body. Content should read like a useful Gamblee promotion guide, not a short operator-summary rewrite. Do not copy operator terms verbatim, include an H1, or embed CTA/source links in the body.",
     "Reader-facing editorial copy must never narrate Gamblee research decisions, schema decisions, taxonomy/market mapping, source-selection logic, validator behaviour or reasons a structured field was left null. Put that rationale in evidence.notes or schema_gaps instead.",
     "SERIALIZATION GUARD: Contract descriptions, principles, examples, editorial_content_requirements, enums, vocabulary lists, promotion_shape and other authoring guidance are instructions only. Never copy them into research JSON. Serialize only the root fields declared by root_shape.",
-    "Prefer one multi-market promotion with markets[] for the same campaign when official evidence supports every market; split on material mechanics, eligibility or schedule differences."
+    "Prefer one multi-market promotion with markets[] for the same campaign when official evidence supports every market; split on material mechanics, eligibility or schedule differences.",
+    "Research output gate BEFORE serialization: if no officially verified NEW campaign, no materially REVISED existing campaign represented by a complete record, and no affirmative official evidence that an existing campaign ENDED, output exactly NO ACTIONABLE CHANGES as plain text and NO JSON. not_found and unchanged confirmed reconciliation rows are informational, never actions; do not create reconciliation-only JSON for them. When actionable campaigns exist, produce a complete schema-valid payload with reconciliation coverage as required. This does not modify importer validation.",
+    "Write the public-facing article directly and factually. Avoid formulaic contrast constructions such as \"not X but Y\", \"is not just X, it is Y\", \"rather than X\", and \"more than just X\". Do not manufacture a contrast merely to make the prose sound dramatic. State what the promotion is, how it works, and its verified values, eligibility and restrictions. Genuine, relevant comparisons supported by evidence are allowed when they clarify a material distinction."
   ],
   "output_gate": {
     "require_importable": true,
@@ -1009,7 +1011,8 @@
         "Write only for the end reader. Never explain Gamblee research scope, market mapping, schema choices, taxonomy choices, importer behaviour, why a structured field is null, or why a market/date was not inferred.",
         "If a genuinely useful player-facing fact is unstated, say so neutrally only when relevant (for example, \"No expiry date is stated\"). Do not explain how the omission affected internal data modelling.",
         "Keep research uncertainty and mapping rationale in evidence.notes, not content_html or terms.summary.",
-        "The short content_html in promotion_shape is a structural illustration, not an importable article. Never reuse it verbatim or treat its length as sufficient."
+        "The short content_html in promotion_shape is a structural illustration, not an importable article. Never reuse it verbatim or treat its length as sufficient.",
+        "Use direct fact-led prose in content_html and terms.summary. Avoid rhetorical not-X-but-Y contrasts and unnecessary comparisons; any genuine comparison must be sourced and editorially useful."
       ],
       "recommended_sections": [
         "How the promotion works",

@@ -15,13 +15,15 @@
     "Respect the existing Event listing card: headline prize pool/jackpot, entry badge, no more than three compact info rows, countdown/status and CTA.",
     "card.rows contains the three most useful listing facts only. Put deeper qualification and scoring mechanics in structured fields and terms.",
     "Use event_categories for the event mechanic and vertical separately for casino, betting, bingo or poker.",
+    "Third-party pages are research leads only, not proof of event schedule, mechanics, eligibility or included markets. Include events only when current official operator evidence verifies those facts; omit otherwise.",
     "Markets and currencies are independent. Store exact markets even though the legacy Event runtime still mirrors currency buckets for backwards compatibility.",
     "provider_group is optional and uses the provider taxonomy. When set, the event may cover that provider group; event_brand remains the CTA owner.",
     "Do not use Events for prize draws, giveaways or other random-winner campaigns merely because they have dates.",
     "Prefer current first-party evidence. Current specific secondary evidence may fill commercial mechanics when first-party material is unavailable or inaccessible.",
     "Keep an established event_key stable across revisions. event_key is the idempotency key: when event_id is omitted but event_key matches exactly one existing Event in the supplied brand/provider scope, the importer reconciles it automatically.",
     "Return one event_reconciliation row for every existing Event supplied to research: confirmed when current evidence shows it remains live, ended only with affirmative evidence it ended/was withdrawn/was replaced, and not_found when current research could not verify it. not_found never retires anything.",
-    "schema_gaps is reserved for Event-classified mechanics that cannot be represented faithfully."
+    "schema_gaps is reserved for Event-classified mechanics that cannot be represented faithfully.",
+    "One event record should cover all verified markets in markets[] when the same competition, schedule and qualification apply; do not clone per market alone."
   ],
   "markets": [
     "GLOBAL",

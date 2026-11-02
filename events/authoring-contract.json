@@ -23,7 +23,8 @@
     "Keep an established event_key stable across revisions. event_key is the idempotency key: when event_id is omitted but event_key matches exactly one existing Event in the supplied brand/provider scope, the importer reconciles it automatically.",
     "Return one event_reconciliation row for every existing Event supplied to research: confirmed when current evidence shows it remains live, ended only with affirmative evidence it ended/was withdrawn/was replaced, and not_found when current research could not verify it. not_found never retires anything.",
     "schema_gaps is reserved for Event-classified mechanics that cannot be represented faithfully.",
-    "One event record should cover all verified markets in markets[] when the same competition, schedule and qualification apply; do not clone per market alone."
+    "One event record should cover all verified markets in markets[] when the same competition, schedule and qualification apply; do not clone per market alone.",
+    "Research output gate BEFORE serialization: if no officially verified NEW campaign, no materially REVISED existing campaign represented by a complete record, and no affirmative official evidence that an existing campaign ENDED, output exactly NO ACTIONABLE CHANGES as plain text and NO JSON. not_found and unchanged confirmed reconciliation rows are informational, never actions; do not create reconciliation-only JSON for them. When actionable campaigns exist, produce a complete schema-valid payload with reconciliation coverage as required. This does not modify importer validation."
   ],
   "markets": [
     "GLOBAL",

@@ -16,9 +16,10 @@
     "Existing-depositor, funded-player, VIP or active-customer status alone does not make an item a Bonus.",
     "Reward type alone does not determine classification.",
     "Classification examples: Welcome match bonus and a deposit-triggered direct free-spins offer are Bonuses; scheduled slot tournaments, poker freerolls, races and leaderboards are Events even when deposit-gated; prize draws, missions, cashback, giveaways and prize wheels are Promos even when deposit-gated. A welcome reward consisting of tournament tickets is not itself a tournament Event.",
-    "Apply the Event → Promo → Bonus classification sequence to every candidate immediately before serializing. If unverified, omit the candidate; never force an Event/Promo into Bonus JSON or schema_gaps.",
+    "Quantifiability gate after classification: only emit a Bonus if the current Bonus Analyzer can quantify at least one substantive reward component. Personalised reload rewards with undisclosed variable amounts and prize-wheel outcomes with undisclosed odds are excluded. Do not use schema_gaps as an escape hatch, and do not auto-convert unquantifiable direct bonuses to Promotion JSON. Editorial promotional articles may be separately researched when sufficiently useful.",
     "Bonus JSON serializes only Bonus-classified offers. Omit Event- and Promo-classified items entirely from offers and schema_gaps.",
     "schema_gaps is reserved only for genuine Bonus-classified offers whose mechanics cannot be represented by this contract. Never report an Event- or Promo-classified item as a Bonus schema gap.",
+    "Apply the Event → Promo → Bonus classification sequence to every candidate immediately before serializing. If unverified, omit the candidate; never force an Event/Promo into Bonus JSON or schema_gaps.",
     "One offer object represents exactly one market and one vertical. Multiple simultaneous offers for the same market/vertical are allowed.",
     "Research prompts target explicit country/subdivision markets only and do not generate GLOBAL/ROW/international research targets. GLOBAL remains supported for legacy/import compatibility.",
     "Offer titles use <Brand> <Market label> <Vertical> Offer • <Reward>, with concise editorial market labels such as GB=UK and CA-AB=Alberta. If the title would exceed 65 characters, omit <Vertical> first. Do not truncate verified reward text merely to retain the vertical label.",
@@ -30,10 +31,10 @@
     "Recurring offers remain one offer and use schedule.weekdays and/or validity dates.",
     "Do not output prohibited markets. CA-ON is currently prohibited for public Bonus Offer publication.",
     "Use schema_gaps only when a genuine Bonus-classified mechanic is required for structured qualification, reward, wagering, cashout, schedule, eligibility or analyzer correctness and cannot be represented exactly. Ancillary restrictions that can be represented accurately in copy.terms, such as a maximum number of claims per month, belong in copy.terms and must not create a schema gap.",
-    "Only supported_and_analyzable offers with at least one numerically quantifiable structured reward component may be imported. not_calculable offers are excluded from new Bonus JSON imports; unsupported_but_fixable items remain blocked until the schema is extended.",
-    "analysis.status is offer-level, but analyzer EV may be component-level. Mark an offer supported_and_analyzable only when at least one substantive structured reward component is numerically quantifiable. An unknown secondary component does not invalidate a calculable primary component; leave unknown EV inputs null and exclude that component from EV. Unknown or variable personalised reload rewards, undisclosed wheel probabilities and entirely unquantifiable bonuses must not be emitted as Bonus offers or schema_gaps.",
+    "Only supported_and_analyzable offers with a numerically measurable supported reward component may be imported. not_calculable offers are excluded from Bonus JSON; unsupported_but_fixable remains blocked.",
+    "analysis.status is offer-level, but analyzer EV may be component-level. A Bonus requires at least one supported and numerically measurable structured reward component. Unknown secondary components may be omitted from EV when the main component is calculable. Exclude personalised invitation-only rewards with no common stated value, unknown reward amounts, and undisclosed random prizes; do not fabricate values or EV.",
     "Free-spin valuation default: when the operator does not state value_per_spin and every offer currency is one of EUR, GBP, USD, CAD, AUD or NZD, use 0.10 per spin. This is a Gamblee valuation assumption, not an operator-stated term. An explicit operator value always overrides it. Do not apply the 0.10 fallback to currencies with materially different unit scales such as ZAR.",
-    "With that fallback, a pure free-spins offer in EUR, GBP, USD, CAD, AUD or NZD can remain supported_and_analyzable when spin count is known. If value_per_spin is unknown outside these currencies, omit it unless another component is calculable. Never invent a value or submit not_calculable offers.",
+    "With the 0.10 fallback, free spins in EUR, GBP, USD, CAD, AUD or NZD can qualify when spin count is known. If value_per_spin is unknown outside these currencies, omit the offer unless another component can be calculated. Never return not_calculable Bonus offers.",
     "urls.offer is only for a Gamblee-approved/tracked commercial deep link. Never substitute a generic official brand website, ordinary promotion page, affiliate-programme homepage, evidence URL, or guessed tracking URL. Put ordinary official promotion pages in evidence and leave urls.offer null so Gamblee inherits the canonical brand market/vertical Commercial Link. urls.terms may use a direct official terms URL.",
     "Use included_subdivisions when a broad country offer is available only in named subdivisions; use excluded_subdivisions when it applies broadly except named subdivisions. Never use both for the same subdivision.",
     "Use included_countries only with market=GLOBAL to whitelist the exact countries covered by a broad international offer. Countries must already be confirmed for the brand or be proposed as evidence-backed country_additions in the same payload.",
@@ -43,7 +44,6 @@
     "brand_availability_changes may propose evidence-backed country or US/Canada subdivision additions/removals discovered while researching current official offer terms. Every change requires a reason and at least one first-party URL on a stored canonical brand domain. A country addition may include name; when a valid ISO code has no existing Gamblee Country record, the importer may create that Country record from the canonical name. Do not infer removals from the absence of an offer.",
     "Offer validation may rely on an availability addition in the same payload. Availability changes are applied only after every Bonus Offer in the payload imports successfully.",
     "A required but operator-selected or dynamically supplied promo code uses bonus_code_requirement=required_unspecified rather than inventing a code.",
-    "An entirely unquantifiable offer is omitted from Bonus JSON rather than reclassified automatically as a Promotion. Prize-wheel and lottery campaigns are Promotion-classified; a separately researched editorial article may cover an unquantifiable but newsworthy bonus.",
     "Bonus codes MUST NEVER come from third-party affiliates, coupon listings, comparison sites, forums or search snippets; these may attribute customers to another affiliate. A known code is permitted only when the exact code is visibly published on an official canonical brand domain. Set bonus_code_requirement=required_known, bonus_code and bonus_code_source_url to the direct first-party page, and include the page in offer evidence. Otherwise use required_unspecified with bonus_code=null and bonus_code_source_url=null. Never repeat unverified codes in copy.",
     "Generate one complete strict JSON object with no markdown fences, comments, trailing commas or placeholders. Validate the whole JSON before delivery. For large payloads provide a genuine complete .json file; never truncate, abbreviate or split the JSON.",
     "Return one bonus_reconciliation row for every existing Bonus supplied to research: confirmed when current evidence shows the offer remains live, ended only with affirmative evidence that it ended/was withdrawn/was replaced, and not_found when current research could not verify it. not_found never retires anything.",
@@ -3353,7 +3353,7 @@
   "root_shape": {
     "schema_version": "1.5",
     "brand_id": 123,
-    "researched_at": "2026-11-01T19:43:55+00:00",
+    "researched_at": "2026-10-31T12:41:45+00:00",
     "taxonomy_additions": {
       "eligible_game": [],
       "excluded_payment_methods": [],
@@ -3367,6 +3367,3214 @@
     },
     "offers": [],
     "bonus_reconciliation": [],
+    "schema_gaps": []
+  },
+  "payload_schema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "schema_version": {
+        "const": "1.5"
+      },
+      "brand_id": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "researched_at": {
+        "type": "string"
+      },
+      "taxonomy_additions": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "eligible_game": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "slug": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name"
+              ]
+            }
+          },
+          "excluded_payment_methods": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "slug": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name"
+              ]
+            }
+          },
+          "scoring_penalty": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "slug": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name"
+              ]
+            }
+          }
+        },
+        "required": []
+      },
+      "brand_availability_changes": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "country_additions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "reason": {
+                  "type": "string"
+                },
+                "evidence": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "url": {
+                        "type": "string",
+                        "pattern": "^https?://"
+                      },
+                      "label": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "url"
+                    ]
+                  },
+                  "minItems": 1
+                }
+              },
+              "required": [
+                "code",
+                "reason",
+                "evidence"
+              ]
+            }
+          },
+          "country_removals": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "reason": {
+                  "type": "string"
+                },
+                "evidence": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "url": {
+                        "type": "string",
+                        "pattern": "^https?://"
+                      },
+                      "label": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "url"
+                    ]
+                  },
+                  "minItems": 1
+                }
+              },
+              "required": [
+                "code",
+                "reason",
+                "evidence"
+              ]
+            }
+          },
+          "subdivision_additions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "reason": {
+                  "type": "string"
+                },
+                "evidence": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "url": {
+                        "type": "string",
+                        "pattern": "^https?://"
+                      },
+                      "label": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "url"
+                    ]
+                  },
+                  "minItems": 1
+                }
+              },
+              "required": [
+                "code",
+                "reason",
+                "evidence"
+              ]
+            }
+          },
+          "subdivision_removals": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "reason": {
+                  "type": "string"
+                },
+                "evidence": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "url": {
+                        "type": "string",
+                        "pattern": "^https?://"
+                      },
+                      "label": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "url"
+                    ]
+                  },
+                  "minItems": 1
+                }
+              },
+              "required": [
+                "code",
+                "reason",
+                "evidence"
+              ]
+            }
+          }
+        },
+        "required": []
+      },
+      "offers": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "offer_key": {
+              "type": "string"
+            },
+            "bonus_id": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "title": {
+              "type": "string"
+            },
+            "market": {
+              "type": "string"
+            },
+            "currency": {
+              "type": "string"
+            },
+            "currencies": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "vertical": {
+              "type": "string",
+              "enum": [
+                "casino",
+                "betting",
+                "bingo",
+                "poker"
+              ]
+            },
+            "bonus_types": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "player_eligibility": {
+              "type": "string",
+              "enum": [
+                "new_customers",
+                "existing_customers",
+                "new_and_existing_customers",
+                "invited_customers",
+                "unknown"
+              ]
+            },
+            "eligibility_devices": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "desktop",
+                  "mobile",
+                  "tablet",
+                  "app",
+                  "web"
+                ]
+              }
+            },
+            "included_countries": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "included_subdivisions": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "excluded_subdivisions": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "copy": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "display_offer": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "card_primary": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "card_secondary": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "terms": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "card_terms": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": []
+            },
+            "qualification": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "minimum_deposit": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "minimum_spend": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "opt_in_required": {
+                  "type": "boolean"
+                },
+                "deposit_required": {
+                  "type": "boolean"
+                },
+                "excluded_payment_methods": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "scoring_penalties": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "excluded_card_bins": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^[0-9]{6,8}$"
+                  }
+                },
+                "bonus_code_required": {
+                  "type": "boolean"
+                },
+                "bonus_code_requirement": {
+                  "type": "string",
+                  "enum": [
+                    "none",
+                    "required_known",
+                    "required_unspecified"
+                  ]
+                },
+                "bonus_code": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "bonus_code_source_url": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "qualification_window_value": {
+                  "anyOf": [
+                    {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "qualification_window_unit": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "enum": [
+                        "hours",
+                        "days",
+                        "weeks"
+                      ]
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "qualification_spend_multiplier": {
+                  "anyOf": [
+                    {
+                      "type": "number",
+                      "exclusiveMinimum": 0
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "qualification_spend_basis": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "enum": [
+                        "first_deposit",
+                        "qualifying_deposit",
+                        "bonus_amount"
+                      ]
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              },
+              "required": [],
+              "allOf": [
+                {
+                  "if": {
+                    "properties": {
+                      "bonus_code_requirement": {
+                        "const": "required_known"
+                      }
+                    },
+                    "required": [
+                      "bonus_code_requirement"
+                    ]
+                  },
+                  "then": {
+                    "required": [
+                      "bonus_code",
+                      "bonus_code_source_url"
+                    ],
+                    "properties": {
+                      "bonus_code": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "bonus_code_source_url": {
+                        "type": "string",
+                        "pattern": "^https?://"
+                      }
+                    }
+                  }
+                },
+                {
+                  "if": {
+                    "properties": {
+                      "bonus_code_requirement": {
+                        "enum": [
+                          "none",
+                          "required_unspecified"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "bonus_code_requirement"
+                    ]
+                  },
+                  "then": {
+                    "properties": {
+                      "bonus_code": {
+                        "type": "null"
+                      },
+                      "bonus_code_source_url": {
+                        "type": "null"
+                      }
+                    }
+                  }
+                },
+                {
+                  "if": {
+                    "properties": {
+                      "qualification_window_value": {
+                        "type": "number"
+                      }
+                    },
+                    "required": [
+                      "qualification_window_value"
+                    ]
+                  },
+                  "then": {
+                    "properties": {
+                      "qualification_window_unit": {
+                        "type": "string",
+                        "enum": [
+                          "hours",
+                          "days",
+                          "weeks"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "qualification_window_unit"
+                    ]
+                  }
+                },
+                {
+                  "if": {
+                    "properties": {
+                      "qualification_spend_multiplier": {
+                        "type": "number"
+                      }
+                    },
+                    "required": [
+                      "qualification_spend_multiplier"
+                    ]
+                  },
+                  "then": {
+                    "properties": {
+                      "qualification_spend_basis": {
+                        "type": "string",
+                        "enum": [
+                          "first_deposit",
+                          "qualifying_deposit",
+                          "bonus_amount"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "qualification_spend_basis"
+                    ]
+                  }
+                }
+              ]
+            },
+            "schedule": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "available_from": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "available_until": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "weekdays": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "enum": [
+                      "monday",
+                      "tuesday",
+                      "wednesday",
+                      "thursday",
+                      "friday",
+                      "saturday",
+                      "sunday"
+                    ]
+                  }
+                }
+              },
+              "required": []
+            },
+            "multi_step": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "enabled": {
+                  "type": "boolean"
+                },
+                "rows": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                      "step_label": {
+                        "type": "string"
+                      },
+                      "step_text": {
+                        "type": "string"
+                      }
+                    },
+                    "required": []
+                  }
+                }
+              },
+              "required": [],
+              "allOf": [
+                {
+                  "if": {
+                    "properties": {
+                      "enabled": {
+                        "const": true
+                      }
+                    },
+                    "required": [
+                      "enabled"
+                    ]
+                  },
+                  "then": {
+                    "properties": {
+                      "rows": {
+                        "type": "array",
+                        "minItems": 1
+                      }
+                    },
+                    "required": [
+                      "rows"
+                    ]
+                  }
+                },
+                {
+                  "if": {
+                    "properties": {
+                      "enabled": {
+                        "const": false
+                      }
+                    },
+                    "required": [
+                      "enabled"
+                    ]
+                  },
+                  "then": {
+                    "properties": {
+                      "rows": {
+                        "type": "array",
+                        "maxItems": 0
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "components": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "match_bonus": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "match_bonus": {
+                      "type": "boolean"
+                    },
+                    "max_bonus_match": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "match_percent": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "wagering_match": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "min_odds_match": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "poker_rake_per_bonus_match": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "wagering_base_match": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "bonus_only",
+                            "bonus_plus_deposit",
+                            "winnings_only",
+                            "none",
+                            "unknown"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "max_bet_match": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "cashout_limit_status_match": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "no_limit",
+                            "capped",
+                            "not_listed",
+                            "unknown"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "cashout_limit_basis_match": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "fixed_amount",
+                            "bonus_amount",
+                            "lifetime_deposits"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "cashout_limits_match": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "cashout_limit_multiplier_match": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "cashout_limit_ceiling_amount_match": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "release_type_match_bonus": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "sticky",
+                            "non-sticky",
+                            "gradual"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "reward_expiry_match": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "reward_expiry_unit_match": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "hours",
+                            "days",
+                            "weeks"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "match_bonus_eligible_game": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "required": [],
+                  "allOf": [
+                    {
+                      "if": {
+                        "properties": {
+                          "reward_expiry_match": {
+                            "type": "number"
+                          }
+                        },
+                        "required": [
+                          "reward_expiry_match"
+                        ]
+                      },
+                      "then": {
+                        "properties": {
+                          "reward_expiry_unit_match": {
+                            "type": "string",
+                            "enum": [
+                              "hours",
+                              "days",
+                              "weeks"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "reward_expiry_unit_match"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "free_spins": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "free_spins": {
+                      "type": "boolean"
+                    },
+                    "amount": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "value_per_spin": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "release_schedule_free_spins": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "all_at_once",
+                            "daily_batches",
+                            "manual_claim",
+                            "unknown"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "spins_per_day_free_spins": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "wagering_slots": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "wagering_base_free_spins": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "winnings_only",
+                            "none",
+                            "bonus_plus_winnings",
+                            "bonus_deposit_winnings",
+                            "unknown"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "max_bet_free_spins": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "cashout_limit_status_free_spins": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "no_limit",
+                            "capped",
+                            "not_listed",
+                            "unknown"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "cashout_limit_basis_free_spins": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "fixed_amount",
+                            "bonus_amount",
+                            "lifetime_deposits"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "cashout_limits_slots": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "cashout_limit_multiplier_free_spins": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "cashout_limit_ceiling_amount_free_spins": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "free_spins_eligible_game": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "reward_expiry_free_spin": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "reward_expiry_unit_free_spin": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "hours",
+                            "days",
+                            "weeks"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [],
+                  "allOf": [
+                    {
+                      "if": {
+                        "properties": {
+                          "reward_expiry_free_spin": {
+                            "type": "number"
+                          }
+                        },
+                        "required": [
+                          "reward_expiry_free_spin"
+                        ]
+                      },
+                      "then": {
+                        "properties": {
+                          "reward_expiry_unit_free_spin": {
+                            "type": "string",
+                            "enum": [
+                              "hours",
+                              "days",
+                              "weeks"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "reward_expiry_unit_free_spin"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "external_reward": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "external_reward": {
+                      "type": "boolean"
+                    },
+                    "external_reward_type": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "voucher",
+                            "gift_card",
+                            "merchandise",
+                            "service_credit",
+                            "other"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "external_reward_face_value": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "external_reward_currency": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "AED",
+                            "AFN",
+                            "ALL",
+                            "AMD",
+                            "AOA",
+                            "ARS",
+                            "AUD",
+                            "AWG",
+                            "AZN",
+                            "BAM",
+                            "BBD",
+                            "BDT",
+                            "BHD",
+                            "BIF",
+                            "BMD",
+                            "BND",
+                            "BOB",
+                            "BRL",
+                            "BSD",
+                            "BTN",
+                            "BWP",
+                            "BYN",
+                            "BZD",
+                            "CAD",
+                            "CDF",
+                            "CHF",
+                            "CLP",
+                            "CNY",
+                            "COP",
+                            "CRC",
+                            "CUP",
+                            "CVE",
+                            "CZK",
+                            "DJF",
+                            "DKK",
+                            "DOP",
+                            "DZD",
+                            "EGP",
+                            "ERN",
+                            "ETB",
+                            "EUR",
+                            "FJD",
+                            "FKP",
+                            "GBP",
+                            "GEL",
+                            "GHS",
+                            "GIP",
+                            "GMD",
+                            "GNF",
+                            "GTQ",
+                            "GYD",
+                            "HKD",
+                            "HNL",
+                            "HTG",
+                            "HUF",
+                            "IDR",
+                            "ILS",
+                            "INR",
+                            "IQD",
+                            "IRR",
+                            "ISK",
+                            "JMD",
+                            "JOD",
+                            "JPY",
+                            "KES",
+                            "KGS",
+                            "KHR",
+                            "KMF",
+                            "KPW",
+                            "KRW",
+                            "KWD",
+                            "KYD",
+                            "KZT",
+                            "LAK",
+                            "LBP",
+                            "LKR",
+                            "LRD",
+                            "LSL",
+                            "LYD",
+                            "MAD",
+                            "MDL",
+                            "MGA",
+                            "MKD",
+                            "MMK",
+                            "MNT",
+                            "MOP",
+                            "MRU",
+                            "MUR",
+                            "MVR",
+                            "MWK",
+                            "MXN",
+                            "MYR",
+                            "MZN",
+                            "NAD",
+                            "NGN",
+                            "NIO",
+                            "NOK",
+                            "NPR",
+                            "NZD",
+                            "OMR",
+                            "PAB",
+                            "PEN",
+                            "PGK",
+                            "PHP",
+                            "PKR",
+                            "PLN",
+                            "PYG",
+                            "QAR",
+                            "RON",
+                            "RSD",
+                            "RUB",
+                            "RWF",
+                            "SAR",
+                            "SBD",
+                            "SCR",
+                            "SDG",
+                            "SEK",
+                            "SGD",
+                            "SHP",
+                            "SLE",
+                            "SOS",
+                            "SRD",
+                            "SSP",
+                            "STN",
+                            "SVC",
+                            "SYP",
+                            "SZL",
+                            "THB",
+                            "TJS",
+                            "TMT",
+                            "TND",
+                            "TOP",
+                            "TRY",
+                            "TTD",
+                            "TWD",
+                            "TZS",
+                            "UAH",
+                            "UGX",
+                            "USD",
+                            "UYU",
+                            "UZS",
+                            "VES",
+                            "VND",
+                            "VUV",
+                            "WST",
+                            "XAF",
+                            "XCD",
+                            "XCG",
+                            "XOF",
+                            "XPF",
+                            "YER",
+                            "ZAR",
+                            "ZMW",
+                            "ZWG"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "external_reward_fulfillment_timing": {
+                      "anyOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "external_reward_provider": {
+                      "anyOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "external_reward_name": {
+                      "anyOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": []
+                },
+                "free_rounds": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "free_rounds": {
+                      "type": "boolean"
+                    },
+                    "free_rounds_count": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "free_rounds_unit_name": {
+                      "anyOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "free_rounds_value": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "free_rounds_eligible_game": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "wagering_free_rounds": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "wagering_base_free_rounds": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "winnings_only",
+                            "none",
+                            "bonus_plus_winnings",
+                            "bonus_deposit_winnings",
+                            "unknown"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "max_bet_free_rounds": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "reward_expiry_free_rounds": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "reward_expiry_unit_free_rounds": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "hours",
+                            "days",
+                            "weeks"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [],
+                  "allOf": [
+                    {
+                      "if": {
+                        "properties": {
+                          "reward_expiry_free_rounds": {
+                            "type": "number"
+                          }
+                        },
+                        "required": [
+                          "reward_expiry_free_rounds"
+                        ]
+                      },
+                      "then": {
+                        "properties": {
+                          "reward_expiry_unit_free_rounds": {
+                            "type": "string",
+                            "enum": [
+                              "hours",
+                              "days",
+                              "weeks"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "reward_expiry_unit_free_rounds"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "bonus_funds": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "bonus_funds": {
+                      "type": "boolean"
+                    },
+                    "bonus_amount": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "wagering_bonus_funds": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "wagering_base_bonus_funds": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "bonus_only",
+                            "bonus_plus_deposit",
+                            "winnings_only",
+                            "none",
+                            "unknown"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "max_bet_bonus_funds": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "cashout_limit_status_bonus_funds": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "no_limit",
+                            "capped",
+                            "not_listed",
+                            "unknown"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "cashout_limit_basis_bonus_funds": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "fixed_amount",
+                            "bonus_amount",
+                            "lifetime_deposits"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "cashout_limits_bonus_funds": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "cashout_limit_multiplier_bonus_funds": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "cashout_limit_ceiling_amount_bonus_funds": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "release_type_bonus_funds": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "sticky",
+                            "non-sticky",
+                            "gradual",
+                            "points_redemption",
+                            "staged_redemption"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "bonus_funds_eligible_game": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "reward_expiry_bonus_funds": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "reward_expiry_unit_bonus_funds": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "hours",
+                            "days",
+                            "weeks"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [],
+                  "allOf": [
+                    {
+                      "if": {
+                        "properties": {
+                          "reward_expiry_bonus_funds": {
+                            "type": "number"
+                          }
+                        },
+                        "required": [
+                          "reward_expiry_bonus_funds"
+                        ]
+                      },
+                      "then": {
+                        "properties": {
+                          "reward_expiry_unit_bonus_funds": {
+                            "type": "string",
+                            "enum": [
+                              "hours",
+                              "days",
+                              "weeks"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "reward_expiry_unit_bonus_funds"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "cashback": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "cashback": {
+                      "type": "boolean"
+                    },
+                    "cashback_type": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "deposit_cashback",
+                            "loss_cashback",
+                            "wagering_cashback",
+                            "stake_refund",
+                            "other"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "cashback_rate": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "max_cashback": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "cashback_returned_as": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "cash",
+                            "bonus_funds",
+                            "site_credit",
+                            "free_bet",
+                            "unknown"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "cashback_amount": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "for_every": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "activity_type": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "wagered",
+                            "rake_and_fees",
+                            "net_losses",
+                            "qualifying_stake",
+                            "deposit",
+                            "other"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "cashback_period_days": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "payout_timing": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "instant",
+                            "as_earned",
+                            "daily",
+                            "weekly",
+                            "monthly",
+                            "end_of_period",
+                            "manual_claim",
+                            "unknown"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": []
+                },
+                "poker_tickets": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "poker_tickets": {
+                      "type": "boolean"
+                    },
+                    "poker_ticket_count": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "poker_ticket_total_value": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "poker_tickets_eligible_game": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "reward_expiry_poker_tickets": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "reward_expiry_unit_poker_tickets": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "hours",
+                            "days",
+                            "weeks"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [],
+                  "allOf": [
+                    {
+                      "if": {
+                        "properties": {
+                          "reward_expiry_poker_tickets": {
+                            "type": "number"
+                          }
+                        },
+                        "required": [
+                          "reward_expiry_poker_tickets"
+                        ]
+                      },
+                      "then": {
+                        "properties": {
+                          "reward_expiry_unit_poker_tickets": {
+                            "type": "string",
+                            "enum": [
+                              "hours",
+                              "days",
+                              "weeks"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "reward_expiry_unit_poker_tickets"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "free_bets": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "free_bet": {
+                      "type": "boolean"
+                    },
+                    "value_free_bet": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "split": {
+                      "anyOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "min_odds_free_bet": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "wagering_free_bet": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "minimum_stake_free_bet": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "qualifying_bet_required_free_bet": {
+                      "type": "boolean"
+                    },
+                    "qualifying_bet_min_odds_free_bet": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "free_bets_eligible_game": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "excluded_markets": {
+                      "anyOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "stake_returned_free_bet": {
+                      "type": "boolean"
+                    },
+                    "reward_expiry_free_bet": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "reward_expiry_unit_free_bet": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "hours",
+                            "days",
+                            "weeks"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [],
+                  "allOf": [
+                    {
+                      "if": {
+                        "properties": {
+                          "reward_expiry_free_bet": {
+                            "type": "number"
+                          }
+                        },
+                        "required": [
+                          "reward_expiry_free_bet"
+                        ]
+                      },
+                      "then": {
+                        "properties": {
+                          "reward_expiry_unit_free_bet": {
+                            "type": "string",
+                            "enum": [
+                              "hours",
+                              "days",
+                              "weeks"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "reward_expiry_unit_free_bet"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "odds_boost": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "odds_boost": {
+                      "type": "boolean"
+                    },
+                    "odds_boost_structure": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "fixed",
+                            "tiered"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "odds_boost_bet_type": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "both",
+                            "single",
+                            "accumulator"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "odds_boost_percent": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "min_odds_single_odds_boost": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "min_odds_multiple_odds_boost": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "odds_boost_maximum_stake": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "odds_boost_maximum_win_single": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "odds_boost_maximum_win_multiple": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "odds_boost_tiers": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "bet_type": {
+                            "type": "string",
+                            "enum": [
+                              "any",
+                              "single",
+                              "double",
+                              "treble",
+                              "accumulator",
+                              "bet_builder"
+                            ]
+                          },
+                          "minimum_legs": {
+                            "anyOf": [
+                              {
+                                "type": "integer",
+                                "minimum": 0
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "maximum_legs": {
+                            "anyOf": [
+                              {
+                                "type": "integer",
+                                "minimum": 0
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "boost_percentage": {
+                            "anyOf": [
+                              {
+                                "type": "number",
+                                "minimum": 0
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        },
+                        "required": []
+                      }
+                    },
+                    "excluded_markets_odds_boost": {
+                      "anyOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "odds_boost_eligible_game": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "reward_expiry_odds_boost": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "reward_expiry_unit_odds_boost": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "hours",
+                            "days",
+                            "weeks"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [],
+                  "allOf": [
+                    {
+                      "if": {
+                        "properties": {
+                          "reward_expiry_odds_boost": {
+                            "type": "number"
+                          }
+                        },
+                        "required": [
+                          "reward_expiry_odds_boost"
+                        ]
+                      },
+                      "then": {
+                        "properties": {
+                          "reward_expiry_unit_odds_boost": {
+                            "type": "string",
+                            "enum": [
+                              "hours",
+                              "days",
+                              "weeks"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "reward_expiry_unit_odds_boost"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "acca_bonus": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "available_acca_bonus": {
+                      "type": "boolean"
+                    },
+                    "max_bonus_cap_acca_bonus": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "minimum_stake_acca_bonus": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "maximum_stake_acca_bonus": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "payout_type_acca_bonus": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "cash",
+                            "free_bet",
+                            "bonus",
+                            "unknown"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "acca_bonus_tiers": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "minimum_legs_acca_bonus": {
+                            "anyOf": [
+                              {
+                                "type": "integer",
+                                "minimum": 0
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          },
+                          "bonus_percent_acca_bonus": {
+                            "anyOf": [
+                              {
+                                "type": "number",
+                                "minimum": 0
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        },
+                        "required": []
+                      }
+                    },
+                    "min_odds_per_leg_acca_bonus": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "acca_bonus_eligible_game": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "excluded_markets_acca_bonus": {
+                      "anyOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "reward_expiry_acca_bonus": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "reward_expiry_unit_acca_bonus": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "hours",
+                            "days",
+                            "weeks"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "acca_bonus_calculation_basis": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "profit",
+                            "stake",
+                            "total_return",
+                            "unknown"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [],
+                  "allOf": [
+                    {
+                      "if": {
+                        "properties": {
+                          "reward_expiry_acca_bonus": {
+                            "type": "number"
+                          }
+                        },
+                        "required": [
+                          "reward_expiry_acca_bonus"
+                        ]
+                      },
+                      "then": {
+                        "properties": {
+                          "reward_expiry_unit_acca_bonus": {
+                            "type": "string",
+                            "enum": [
+                              "hours",
+                              "days",
+                              "weeks"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "reward_expiry_unit_acca_bonus"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "bet_insurance": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "bet_insurance": {
+                      "type": "boolean"
+                    },
+                    "bet_insurance_percent_refund": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "bet_insurance_stake_limit": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "minimum_stake_bet_insurance": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "qualifying_bet_type_bet_insurance": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "single_bets",
+                            "accas",
+                            "singles_and_accas",
+                            "losing_bet",
+                            "unknown"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "minimum_legs_bet_insurance": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "lost_legs_required_bet_insurance": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "bet_insurance_min_odds": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "bet_insurance_min_odds_per_leg": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "bet_insurance_refund_type": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "free bet",
+                            "bonus",
+                            "cash"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "bet_insurance_expiry": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "bet_insurance_expiry_unit": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "hours",
+                            "days",
+                            "weeks"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "bet_insurance_eligible_game": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "required": [],
+                  "allOf": [
+                    {
+                      "if": {
+                        "properties": {
+                          "bet_insurance_expiry": {
+                            "type": "number"
+                          }
+                        },
+                        "required": [
+                          "bet_insurance_expiry"
+                        ]
+                      },
+                      "then": {
+                        "properties": {
+                          "bet_insurance_expiry_unit": {
+                            "type": "string",
+                            "enum": [
+                              "hours",
+                              "days",
+                              "weeks"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "bet_insurance_expiry_unit"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                "bingo_tickets": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "bingo_tickets": {
+                      "type": "boolean"
+                    },
+                    "bingo_tickets_amount": {
+                      "anyOf": [
+                        {
+                          "type": "integer",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "ticket_value": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "bingo_ticket_wagering": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "wagering_base_bingo_tickets": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "winnings_only",
+                            "none",
+                            "unknown"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "cashout_limit_status_bingo_tickets": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "no_limit",
+                            "capped",
+                            "not_listed",
+                            "unknown"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "cashout_limit_basis_bingo_tickets": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "fixed_amount",
+                            "bonus_amount",
+                            "lifetime_deposits"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "cashout_limits_bingo_tickets": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "cashout_limit_multiplier_bingo_tickets": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "cashout_limit_ceiling_amount_bingo_tickets": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "bingo_tickets_eligible_game": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "eligible_bingo_room": {
+                      "anyOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "reward_expiry_bingo_tickets": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "reward_expiry_unit_bingo_tickets": {
+                      "anyOf": [
+                        {
+                          "type": "string",
+                          "enum": [
+                            "hours",
+                            "days",
+                            "weeks"
+                          ]
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    }
+                  },
+                  "required": [],
+                  "allOf": [
+                    {
+                      "if": {
+                        "properties": {
+                          "reward_expiry_bingo_tickets": {
+                            "type": "number"
+                          }
+                        },
+                        "required": [
+                          "reward_expiry_bingo_tickets"
+                        ]
+                      },
+                      "then": {
+                        "properties": {
+                          "reward_expiry_unit_bingo_tickets": {
+                            "type": "string",
+                            "enum": [
+                              "hours",
+                              "days",
+                              "weeks"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "reward_expiry_unit_bingo_tickets"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "required": []
+            },
+            "urls": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "offer": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "terms": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": []
+            },
+            "analysis": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "supported_and_analyzable"
+                  ]
+                },
+                "reason": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "status"
+              ]
+            },
+            "evidence": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "url": {
+                    "type": "string",
+                    "pattern": "^https?://"
+                  },
+                  "label": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "url"
+                ]
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "offer_key",
+            "title",
+            "market",
+            "currencies",
+            "vertical",
+            "bonus_types",
+            "evidence"
+          ]
+        }
+      },
+      "bonus_reconciliation": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "bonus_id": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "status": {
+              "type": "string",
+              "enum": [
+                "confirmed",
+                "ended",
+                "not_found"
+              ]
+            },
+            "evidence_url": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "notes": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "bonus_id",
+            "status"
+          ],
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "status": {
+                    "const": "ended"
+                  }
+                },
+                "required": [
+                  "status"
+                ]
+              },
+              "then": {
+                "properties": {
+                  "evidence_url": {
+                    "type": "string",
+                    "pattern": "^https?://"
+                  }
+                },
+                "required": [
+                  "evidence_url"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "schema_gaps": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "offer_key": {
+              "type": "string"
+            },
+            "status": {
+              "const": "unsupported_but_fixable"
+            },
+            "mechanic": {
+              "type": "string"
+            },
+            "reason": {
+              "type": "string"
+            },
+            "proposal": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "status"
+          ]
+        }
+      }
+    },
+    "required": [
+      "schema_version",
+      "brand_id",
+      "offers"
+    ],
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Gamblee Bonus Research JSON v1.5 — importer-aligned",
+    "description": "Structural schema only. Import also enforces live brand scope, taxonomy membership, classification, numerical quantifiability, first-party source verification, duplicate offer keys and reconciliation ownership."
+  },
+  "import_example_v15": {
+    "schema_version": "1.5",
+    "brand_id": 123,
+    "researched_at": "2026-11-02T00:00:00+00:00",
+    "taxonomy_additions": {
+      "eligible_game": [],
+      "excluded_payment_methods": [],
+      "scoring_penalty": []
+    },
+    "brand_availability_changes": {
+      "country_additions": [],
+      "country_removals": [],
+      "subdivision_additions": [],
+      "subdivision_removals": []
+    },
+    "offers": [
+      {
+        "offer_key": "example-gb-casino-multistage-match",
+        "bonus_id": 456,
+        "title": "Example UK Casino Offer • 100% up to £100",
+        "market": "GB",
+        "currencies": [
+          "GBP"
+        ],
+        "vertical": "casino",
+        "bonus_types": [
+          "match-bonus"
+        ],
+        "player_eligibility": "new_customers",
+        "eligibility_devices": [],
+        "included_countries": [],
+        "included_subdivisions": [],
+        "excluded_subdivisions": [],
+        "copy": {
+          "display_offer": "100% up to £100",
+          "card_primary": "Two-deposit welcome pack",
+          "card_secondary": null,
+          "terms": "New customers only; first deposit £10 minimum.",
+          "card_terms": null
+        },
+        "qualification": {
+          "minimum_deposit": 10,
+          "minimum_spend": null,
+          "opt_in_required": false,
+          "deposit_required": true,
+          "excluded_payment_methods": [],
+          "scoring_penalties": [],
+          "excluded_card_bins": [],
+          "bonus_code_requirement": "none",
+          "bonus_code": null,
+          "bonus_code_source_url": null,
+          "qualification_window_value": null,
+          "qualification_window_unit": null,
+          "qualification_spend_multiplier": null,
+          "qualification_spend_basis": null
+        },
+        "schedule": {
+          "available_from": null,
+          "available_until": null,
+          "weekdays": []
+        },
+        "multi_step": {
+          "enabled": true,
+          "rows": [
+            {
+              "step_label": "First deposit",
+              "step_text": "100% match up to £100 on the first qualifying deposit."
+            },
+            {
+              "step_label": "Second deposit",
+              "step_text": "Further reward applies to the second deposit; verify stage-two details in operator terms."
+            }
+          ]
+        },
+        "components": {
+          "match_bonus": {
+            "match_bonus": true,
+            "match_percent": 100,
+            "max_bonus_match": 100,
+            "wagering_match": 30,
+            "wagering_base_match": "bonus_only"
+          }
+        },
+        "urls": {
+          "offer": null,
+          "terms": null
+        },
+        "analysis": {
+          "status": "supported_and_analyzable",
+          "reason": null
+        },
+        "evidence": [
+          {
+            "url": "https://brand.example/terms",
+            "label": "Official operator terms (illustrative domain)"
+          }
+        ]
+      }
+    ],
+    "bonus_reconciliation": [
+      {
+        "bonus_id": 456,
+        "status": "confirmed",
+        "evidence_url": "https://brand.example/terms",
+        "notes": "Same continuing first-deposit welcome offer."
+      }
+    ],
     "schema_gaps": []
   }
 }

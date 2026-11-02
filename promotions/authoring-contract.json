@@ -22,7 +22,7 @@
     "Provider-group promotion titles are brand-neutral. Do not put the researched brand or the arbitrary direct/source casino in the title; title the campaign by its mechanic/reward, adding a market label only when materially useful.",
     "For each existing promotion supplied in the research prompt, return one promotion_reconciliation row with confirmed, ended or not_found. ended requires affirmative current evidence that the campaign has ended or been withdrawn; not_found never deactivates anything.",
     "Use excluded_casinos only for explicitly evidenced group-member exceptions. Do not infer exclusions from silence. Brand-only promotions must leave provider_group null.",
-    "Prefer first-party operator pages and official terms as evidence. When first-party material is unavailable, incomplete, geo-gated, login-gated or technically inaccessible, current specific secondary sources may be used for commercial promotion mechanics. First-party evidence wins on conflicts; never infer facts from silence. Regulatory or jurisdiction-availability claims remain first-party-only.",
+    "Use third-party listings to discover candidates only. Publication-grade reward mechanics, dates, terms and every listed market require current official operator evidence. Omit unverified candidates rather than copying speculative claims. Regulatory and jurisdiction availability remain first-party-only.",
     "Never invent missing numeric mechanics, promo codes, dates or restrictions.",
     "If a current Promo-classified campaign cannot be represented faithfully, report it in schema_gaps instead of force-fitting it.",
     "Use an existing promotion_id only when the researched promotion is clearly the same continuing or revised promotion.",
@@ -30,7 +30,8 @@
     "GLOBAL remains supported for legacy/import compatibility, but generated research prompts target explicit country/subdivision markets only and must not create new GLOBAL/ROW/international promotion objects.",
     "Each promotion must include original factual content_html for the Promotion post body. Content should read like a useful Gamblee promotion guide, not a short operator-summary rewrite. Do not copy operator terms verbatim, include an H1, or embed CTA/source links in the body.",
     "Reader-facing editorial copy must never narrate Gamblee research decisions, schema decisions, taxonomy/market mapping, source-selection logic, validator behaviour or reasons a structured field was left null. Put that rationale in evidence.notes or schema_gaps instead.",
-    "SERIALIZATION GUARD: Contract descriptions, principles, examples, editorial_content_requirements, enums, vocabulary lists, promotion_shape and other authoring guidance are instructions only. Never copy them into research JSON. Serialize only the root fields declared by root_shape."
+    "SERIALIZATION GUARD: Contract descriptions, principles, examples, editorial_content_requirements, enums, vocabulary lists, promotion_shape and other authoring guidance are instructions only. Never copy them into research JSON. Serialize only the root fields declared by root_shape.",
+    "Prefer one multi-market promotion with markets[] for the same campaign when official evidence supports every market; split on material mechanics, eligibility or schedule differences."
   ],
   "output_gate": {
     "require_importable": true,
@@ -983,7 +984,7 @@
     "title": {
       "purpose": "Write a useful search/editorial title, not merely the operator campaign label.",
       "guidance": [
-        "For brand-only promotions, use the deterministic pattern <Brand> <Market label> <Vertical> Offer • <Reward or concrete mechanic>.",
+        "For multi-market campaigns, use one market-neutral editorial title describing the brand and mechanic; include a market label only when the campaign itself is market-specific. For a single-market promotion, use <Brand> <Market label> <Vertical> Offer • <Reward or mechanic>.",
         "When provider_group is set, omit the brand name and use a brand-neutral campaign title such as Weekly Cashback • 5% Back on Eligible Slots Net Spend. Add a market label only when the campaign itself is market-specific.",
         "Use concise editorial market labels such as GB=UK, CA=Canada, CA-AB=Alberta, IE=Ireland, NZ=New Zealand and ZA=South Africa.",
         "If the title would exceed 65 characters, omit <Vertical> first: <Brand> <Market label> Offer • <Reward or concrete mechanic>.",

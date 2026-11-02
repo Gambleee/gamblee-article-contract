@@ -19,8 +19,9 @@
     "Market and currency are independent. Never use a currency as a market proxy.",
     "Do not author derived availability, editorial Featured state or Pretty Link destinations.",
     "When a promotion is demonstrably distributed across an operator/provider group, set provider_group to the canonical owner-taxonomy slug. A provider-group campaign is one canonical Promotion post shared across covered brands, not one copy per brand. Reuse the existing canonical promotion_id and promotion_key when the same network campaign is already represented. Updating it from another covered brand must preserve the original direct/source casino relationship.",
-    "Provider-group promotion titles are brand-neutral. Do not put the researched brand or the arbitrary direct/source casino in the title; title the campaign by its mechanic/reward, adding a market label only when materially useful.",
-    "Output promotion_reconciliation rows only for actionable, evidence-backed retirements or material status changes. Omit unchanged and unverified existing posts; absence does not deactivate them. ended requires an official dated end schedule or affirmative official withdrawal/replacement evidence, not merely a missing page.",
+    "Provider-group promotion titles are brand-neutral. ALL public-facing copy (content_html, terms.summary) must also be network-neutral. Never name or frame a shared campaign around the researched brand or arbitrary direct/source casino. Describe the mechanic, reward, verified common rules, eligibility and material conditions; source-brand attribution belongs in evidence only. Do not infer network-wide eligibility from one member page.",
+    "Output promotion_reconciliation rows only for actionable, evidence-backed retirements or material status changes to currently published campaigns. Omit unchanged, unverified, draft, pending, private and otherwise unpublished existing posts; omission never deactivates anything. ended requires a dated official end schedule or affirmative withdrawal/replacement evidence, not merely a missing page. For group promotions, verify the canonical shared campaign ended, not merely that one brand stopped advertising it.",
+    "Before issuing a NO ACTIONABLE CHANGES decision, inspect the complete current official promotion/bonus hub, linked campaign details and terms, and market-specific pages within confirmed research scopes. Internally inventory and classify all visible live candidates against existing posts. Do not stop after expired events or assume unavailable pages mean no offers; do not invent campaigns when source access fails.",
     "Use excluded_casinos only for explicitly evidenced group-member exceptions. Do not infer exclusions from silence. Brand-only promotions must leave provider_group null.",
     "Prefer first-party material for campaign identity, reward amounts, dates and binding financial restrictions. A credible, current, specific secondary source may support ancillary commercial mechanics when official material is inaccessible; never fabricate figures or claim they are official. The brand's already-confirmed market scope may establish eligibility unless a specific campaign restriction contradicts it. New market additions, regulatory claims and promo codes still require official evidence.",
     "Never invent missing numeric mechanics, promo codes, dates or restrictions.",
@@ -988,7 +989,7 @@
       "purpose": "Write a useful search/editorial title, not merely the operator campaign label.",
       "guidance": [
         "For multi-market campaigns, use one market-neutral editorial title describing the brand and mechanic; include a market label only when the campaign itself is market-specific. For a single-market promotion, use <Brand> <Market label> <Vertical> Offer • <Reward or mechanic>.",
-        "When provider_group is set, omit the brand name and use a brand-neutral campaign title such as Weekly Cashback • 5% Back on Eligible Slots Net Spend. Add a market label only when the campaign itself is market-specific.",
+        "When provider_group is set, the title, content_html, and terms.summary must be brand-neutral. Use a campaign name such as Weekly Cashback • 5% Back on Eligible Slots Net Spend. Do not anchor public copy to either the researched brand or the canonical source casino; retain source-brand URLs and attribution only in evidence.",
         "Use concise editorial market labels such as GB=UK, CA=Canada, CA-AB=Alberta, IE=Ireland, NZ=New Zealand and ZA=South Africa.",
         "If the title would exceed 65 characters, omit <Vertical> first: <Brand> <Market label> Offer • <Reward or concrete mechanic>.",
         "A specific mechanic noun such as Cashback, Tournament or Leaderboard may replace Offer when clearer.",
@@ -1012,7 +1013,8 @@
         "If a genuinely useful player-facing fact is unstated, say so neutrally only when relevant (for example, \"No expiry date is stated\"). Do not explain how the omission affected internal data modelling.",
         "Keep research uncertainty and mapping rationale in evidence.notes, not content_html or terms.summary.",
         "The short content_html in promotion_shape is a structural illustration, not an importable article. Never reuse it verbatim or treat its length as sufficient.",
-        "Use direct fact-led prose in content_html and terms.summary. Avoid rhetorical not-X-but-Y contrasts and unnecessary comparisons; any genuine comparison must be sourced and editorially useful."
+        "Use direct fact-led prose in content_html and terms.summary. Avoid rhetorical not-X-but-Y contrasts and unnecessary comparisons; any genuine comparison must be sourced and editorially useful.",
+        "For provider-group campaigns, write about the shared mechanic and verified common terms, never a single member brand. Do not mention the researched brand or the arbitrary source casino in the article body or terms summary; separate brand-specific mechanics into their own brand campaign when they are genuinely different."
       ],
       "recommended_sections": [
         "How the promotion works",
@@ -1033,7 +1035,7 @@
   "network_relationship": {
     "provider_group": "Optional canonical slug from provider_groups (owner taxonomy), for example progress-play. Use only when the same campaign is distributed across that provider/operator group.",
     "excluded_casinos": "Optional list of WordPress Casino Review IDs or canonical post slugs that are known exceptions within provider_group. Empty for no known exceptions. Requires provider_group.",
-    "direct_brand_rule": "Brand-only promotions may be updated only by their direct/source brand. A canonical provider-group promotion may be updated by research for any covered brand when promotion_id, promotion_key and provider_group reconcile; the importer preserves the original direct/source casino."
+    "direct_brand_rule": "Brand-only promotions may be updated only by their direct/source brand. A canonical provider-group promotion may be updated by any verified covered brand when promotion_id, promotion_key and provider_group reconcile, preserving the original direct/source casino. The original brand relationship identifies CTA attribution, not the public editorial identity of the network campaign."
   },
   "taxonomy_additions": {
     "allowed_taxonomies": [

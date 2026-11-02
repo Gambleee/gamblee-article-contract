@@ -15,16 +15,16 @@
     "Respect the existing Event listing card: headline prize pool/jackpot, entry badge, no more than three compact info rows, countdown/status and CTA.",
     "card.rows contains the three most useful listing facts only. Put deeper qualification and scoring mechanics in structured fields and terms.",
     "Use event_categories for the event mechanic and vertical separately for casino, betting, bingo or poker.",
-    "Third-party pages are research leads only, not proof of event schedule, mechanics, eligibility or included markets. Include events only when current official operator evidence verifies those facts; omit otherwise.",
+    "Prefer first-party sources for event identity, primary prize and schedule. Current specific reliable secondary sources may clarify ancillary details. Existing brand market scope supplies baseline eligibility absent campaign-specific restrictions; do not add brand-new markets without official evidence.",
     "Markets and currencies are independent. Store exact markets even though the legacy Event runtime still mirrors currency buckets for backwards compatibility.",
     "provider_group is optional and uses the provider taxonomy. When set, the event may cover that provider group; event_brand remains the CTA owner.",
     "Do not use Events for prize draws, giveaways or other random-winner campaigns merely because they have dates.",
     "Prefer current first-party evidence. Current specific secondary evidence may fill commercial mechanics when first-party material is unavailable or inaccessible.",
     "Keep an established event_key stable across revisions. event_key is the idempotency key: when event_id is omitted but event_key matches exactly one existing Event in the supplied brand/provider scope, the importer reconciles it automatically.",
-    "Return one event_reconciliation row for every existing Event supplied to research: confirmed when current evidence shows it remains live, ended only with affirmative evidence it ended/was withdrawn/was replaced, and not_found when current research could not verify it. not_found never retires anything.",
+    "Return event_reconciliation rows only for verified ends or material status changes. Omit unchanged/not_found existing events; missing rows leave them unchanged. An official dated fixed schedule that has elapsed can establish an end; missing material alone cannot.",
     "schema_gaps is reserved for Event-classified mechanics that cannot be represented faithfully.",
     "One event record should cover all verified markets in markets[] when the same competition, schedule and qualification apply; do not clone per market alone.",
-    "Research output gate BEFORE serialization: if no officially verified NEW campaign, no materially REVISED existing campaign represented by a complete record, and no affirmative official evidence that an existing campaign ENDED, output exactly NO ACTIONABLE CHANGES as plain text and NO JSON. not_found and unchanged confirmed reconciliation rows are informational, never actions; do not create reconciliation-only JSON for them. When actionable campaigns exist, produce a complete schema-valid payload with reconciliation coverage as required. This does not modify importer validation."
+    "Research output gate BEFORE serialization: if no verified new campaign, materially revised existing campaign or evidenced end, output exactly NO ACTIONABLE CHANGES as plain text and NO JSON. Do not output unchanged or not_found reconciliation rows. An official fixed end date that has elapsed is evidence of expiry; a missing page or silence is not. When actions exist, include only actionable records; normal importer validation remains authoritative."
   ],
   "markets": [
     "GLOBAL",
@@ -3479,5 +3479,6 @@
     "events": [],
     "event_reconciliation": [],
     "schema_gaps": []
-  }
+  },
+  "research_policy_revision": 20261102
 }

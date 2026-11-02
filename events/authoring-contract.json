@@ -27,7 +27,8 @@
     "Research output gate BEFORE serialization: if no verified new campaign, materially revised existing campaign or evidenced end, output exactly NO ACTIONABLE CHANGES as plain text and NO JSON. Do not output unchanged or not_found reconciliation rows. Verified official fixed end dates that have already elapsed are sufficient evidence of expiry; a missing page or silence is not. Only actionable records go into JSON; this does not modify importer validation.",
     "schema_gaps is reserved for Event-classified mechanics that cannot be represented faithfully. Unrecognized Event types require editorial review and must be omitted from importable records; never invent or auto-create taxonomy terms.",
     "Entry is a fixed classification: Free Entry (no fee), Funded Account (previously deposited), Deposit Required (fresh qualifying deposit), Buy-in (explicit entry payment). Do not substitute 'real-money play' or unrestricted text. If absent from official evidence, do not guess.",
-    "The three card headings are immutable (Entry / Type / Prizes), and Prize values must be automatically derived from verified structured amounts. Missing numeric prize information displays 'Not listed', never an invented amount."
+    "The three card headings are immutable (Entry / Type / Prizes), and Prize values must be automatically derived from verified structured amounts. Missing numeric prize information displays 'Not listed', never an invented amount.",
+    "Poker freerolls must have buy_in=free_entry: a funded-account or qualifying-deposit requirement may still apply, but any direct paid tournament buy-in excludes the Event. Event cards cannot use real-money-play as an Entry classification."
   ],
   "markets": [
     "GLOBAL",

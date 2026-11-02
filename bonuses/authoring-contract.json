@@ -53,7 +53,8 @@
     "Use qualification_window_value + qualification_window_unit for a deadline to complete a qualifying action or use a pre-reward token; reward expiry remains component-specific.",
     "When qualifying spend is defined as a multiple of a deposit or bonus amount, use qualification_spend_multiplier + qualification_spend_basis instead of guessing a fixed minimum_spend.",
     "Use components.external_reward for non-cash third-party value such as vouchers or gift cards. Use components.free_rounds for branded game rounds such as Free Flights or Free Crossings rather than force-fitting them into free_spins.",
-    "Third-party affiliate, coupon or review pages are discovery leads only; require current first-party operator evidence for every publishable reward mechanic, eligibility rule and confirmed market. Never use secondary sources for bonus codes, market availability or regulatory claims. Omit unverifiable candidates rather than inventing details."
+    "Third-party affiliate, coupon or review pages are discovery leads only; require current first-party operator evidence for every publishable reward mechanic, eligibility rule and confirmed market. Never use secondary sources for bonus codes, market availability or regulatory claims. Omit unverifiable candidates rather than inventing details.",
+    "Research output gate BEFORE serialization: if no officially verified NEW campaign, no materially REVISED existing campaign represented by a complete record, and no affirmative official evidence that an existing campaign ENDED, output exactly NO ACTIONABLE CHANGES as plain text and NO JSON. not_found and unchanged confirmed reconciliation rows are informational, never actions; do not create reconciliation-only JSON for them. When actionable campaigns exist, produce a complete schema-valid payload with reconciliation coverage as required. This does not modify importer validation."
   ],
   "analysis_statuses": [
     "supported_and_analyzable"

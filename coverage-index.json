@@ -2,8 +2,94 @@
   "contract": "gamblee-article-coverage-index",
   "schema_version": 1,
   "source": "https://www.gamblee.com/wp-json/gamblee-core/v1/articles/coverage-index",
-  "total": 300,
+  "total": 303,
   "articles": [
+    {
+      "id": 88833,
+      "date": "2026-11-02T13:54:06+00:00",
+      "modified": "2026-11-02T14:30:02+00:00",
+      "title": "CoinPoker and ClickOut Media: Former Writer Alleges Ownership Link Amid Scrutiny",
+      "slug": "coinpoker-clickout-media-alleged-ownership-seo-scrutiny",
+      "url": "https://www.gamblee.com/articles/coinpoker-clickout-media-alleged-ownership-seo-scrutiny/",
+      "excerpt": "A former ClickOut Media writer alleges that the SEO and gambling-affiliate group owns CoinPoker. Independent reporting documents ClickOut’s media network, but ultimate ownership remains unverified.",
+      "verticals": [
+        "poker"
+      ],
+      "geographies": [
+        "global"
+      ],
+      "topics": [
+        "advertising-marketing",
+        "industry-structure",
+        "ownership"
+      ],
+      "subjects": [],
+      "entities": [
+        "brand-coinpoker"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 88830,
+      "date": "2026-11-02T13:41:55+00:00",
+      "modified": "2026-11-02T13:41:55+00:00",
+      "title": "Sri Lanka Sets December 31 Target for Delayed Gambling Regulations",
+      "slug": "sri-lanka-gambling-regulations-december-2026",
+      "url": "https://www.gamblee.com/articles/sri-lanka-gambling-regulations-december-2026/",
+      "excerpt": "Sri Lanka’s Gambling Regulatory Authority says it aims to publish delayed casino and online gambling regulations by December 31, after missing an earlier June target.",
+      "verticals": [
+        "casino",
+        "gambling",
+        "sports-betting"
+      ],
+      "geographies": [
+        "lk"
+      ],
+      "topics": [
+        "legislation",
+        "licensing"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "hybrid"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 88827,
+      "date": "2026-11-02T13:40:50+00:00",
+      "modified": "2026-11-02T13:40:50+00:00",
+      "title": "Nevis Opens Dedicated Prediction Market Licensing Applications",
+      "slug": "nevis-prediction-market-licence-2026",
+      "url": "https://www.gamblee.com/articles/nevis-prediction-market-licence-2026/",
+      "excerpt": "Nevis has opened applications for a standalone prediction-market licence, with a published annual fee of €18,000 and requirements covering trading integrity, customer funds and identity checks.",
+      "verticals": [
+        "prediction-markets"
+      ],
+      "geographies": [
+        "kn"
+      ],
+      "topics": [
+        "legislation",
+        "licensing"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
     {
       "id": 88768,
       "date": "2026-11-01T20:30:03+00:00",
@@ -1653,7 +1739,9 @@
       "subjects": [
         "poker-networks-ggnetwork"
       ],
-      "entities": [],
+      "entities": [
+        "brand-ggpoker"
+      ],
       "channels": [
         "online"
       ],

@@ -1,13 +1,16 @@
 {
   "contract": "gamblee-article-import",
   "schema_version": "1.1",
-  "core_version": "1.84.29",
+  "core_version": "1.84.33",
   "rules": {
     "one_package_creates_one_draft_article": true,
     "preferred_handoff": "zip_with_article_json_and_optional_local_featured_image",
     "raw_json_is_supported": true,
     "canonical_terms_must_already_exist": true,
     "article_tags_may_be_created": true,
+    "brand_focused_articles_must_include_canonical_brand_entity": true,
+    "exact_article_tags_matching_one_canonical_brand_are_linked_automatically": true,
+    "article_tags_are_not_a_substitute_for_other_canonical_entities": true,
     "unknown_fields_are_rejected": true,
     "unknown_canonical_terms_are_rejected": true,
     "status_is_always_draft": true,

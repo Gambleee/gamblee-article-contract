@@ -1,6 +1,7 @@
 {
   "schema": "Gamblee Event Research JSON",
   "schema_version": "1.0",
+  "research_policy_revision": 20261102,
   "compatible_schema_versions": [
     "1.0"
   ],
@@ -16,15 +17,15 @@
     "card.rows contains the three most useful listing facts only. Put deeper qualification and scoring mechanics in structured fields and terms.",
     "Use event_categories for the event mechanic and vertical separately for casino, betting, bingo or poker.",
     "Prefer first-party sources for event identity, primary prize and schedule. Current specific reliable secondary sources may clarify ancillary details. Existing brand market scope supplies baseline eligibility absent campaign-specific restrictions; do not add brand-new markets without official evidence.",
+    "One event record should cover all verified markets in markets[] when the same competition, schedule and qualification apply; do not clone per market alone.",
     "Markets and currencies are independent. Store exact markets even though the legacy Event runtime still mirrors currency buckets for backwards compatibility.",
     "provider_group is optional and uses the provider taxonomy. When set, the event may cover that provider group; event_brand remains the CTA owner.",
     "Do not use Events for prize draws, giveaways or other random-winner campaigns merely because they have dates.",
     "Prefer current first-party evidence. Current specific secondary evidence may fill commercial mechanics when first-party material is unavailable or inaccessible.",
     "Keep an established event_key stable across revisions. event_key is the idempotency key: when event_id is omitted but event_key matches exactly one existing Event in the supplied brand/provider scope, the importer reconciles it automatically.",
-    "Return event_reconciliation rows only for verified ends or material status changes. Omit unchanged/not_found existing events; missing rows leave them unchanged. An official dated fixed schedule that has elapsed can establish an end; missing material alone cannot.",
-    "schema_gaps is reserved for Event-classified mechanics that cannot be represented faithfully.",
-    "One event record should cover all verified markets in markets[] when the same competition, schedule and qualification apply; do not clone per market alone.",
-    "Research output gate BEFORE serialization: if no verified new campaign, materially revised existing campaign or evidenced end, output exactly NO ACTIONABLE CHANGES as plain text and NO JSON. Do not output unchanged or not_found reconciliation rows. An official fixed end date that has elapsed is evidence of expiry; a missing page or silence is not. When actions exist, include only actionable records; normal importer validation remains authoritative."
+    "Return event_reconciliation only for verified ends or material status changes. Omit unchanged/not_found existing events; missing rows leave them unchanged. An official dated fixed schedule that has elapsed can establish an end; missing material alone cannot.",
+    "Research output gate BEFORE serialization: if no verified new campaign, materially revised existing campaign or evidenced end, output exactly NO ACTIONABLE CHANGES as plain text and NO JSON. Do not output unchanged or not_found reconciliation rows. Verified official fixed end dates that have already elapsed are sufficient evidence of expiry; a missing page or silence is not. Only actionable records go into JSON; this does not modify importer validation.",
+    "schema_gaps is reserved for Event-classified mechanics that cannot be represented faithfully."
   ],
   "markets": [
     "GLOBAL",
@@ -228,6 +229,10 @@
       "name": "Chilli Heat"
     },
     {
+      "slug": "city-heat",
+      "name": "City Heat"
+    },
+    {
       "slug": "coin-freeze",
       "name": "Coin Freeze"
     },
@@ -270,6 +275,10 @@
     {
       "slug": "esports",
       "name": "eSports"
+    },
+    {
+      "slug": "fiesta-fortune",
+      "name": "Fiesta Fortune"
     },
     {
       "slug": "fishin-frenzy-the-big-catch-2",
@@ -470,6 +479,10 @@
     {
       "slug": "tennis",
       "name": "Tennis"
+    },
+    {
+      "slug": "the-finer-reels-of-life",
+      "name": "The Finer Reels of Life"
     },
     {
       "slug": "the-green-knight",
@@ -3464,14 +3477,14 @@
     "evidence": {
       "primary_source_url": "https://operator.example/event",
       "terms_source_url": "https://operator.example/event-terms",
-      "source_checked_at": "2026-11-01T19:43:56+00:00",
+      "source_checked_at": "2026-11-02T11:19:56+00:00",
       "notes": null
     }
   },
   "root_shape": {
     "schema_version": "1.0",
     "brand_id": 123,
-    "researched_at": "2026-11-01T19:43:56+00:00",
+    "researched_at": "2026-11-02T11:19:56+00:00",
     "taxonomy_additions": {
       "event_category": [],
       "eligible_game": []
@@ -3479,6 +3492,5 @@
     "events": [],
     "event_reconciliation": [],
     "schema_gaps": []
-  },
-  "research_policy_revision": 20261102
+  }
 }

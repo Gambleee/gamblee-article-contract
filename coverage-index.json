@@ -2,8 +2,123 @@
   "contract": "gamblee-article-coverage-index",
   "schema_version": 1,
   "source": "https://www.gamblee.com/wp-json/gamblee-core/v1/articles/coverage-index",
-  "total": 296,
+  "total": 300,
   "articles": [
+    {
+      "id": 88768,
+      "date": "2026-11-01T20:30:03+00:00",
+      "modified": "2026-11-01T20:30:03+00:00",
+      "title": "Malta Gaming Authority Warns Against Six Websites Making False Licence Claims",
+      "slug": "malta-gaming-authority-six-unauthorised-sites-october-2026",
+      "url": "https://www.gamblee.com/articles/malta-gaming-authority-six-unauthorised-sites-october-2026/",
+      "excerpt": "The Malta Gaming Authority has named six URLs in an October 30 warning, saying they falsely or misleadingly suggest a connection to the regulator.",
+      "verticals": [
+        "casino",
+        "gambling"
+      ],
+      "geographies": [
+        "mt"
+      ],
+      "topics": [
+        "illegal-gambling",
+        "licensing",
+        "player-protection"
+      ],
+      "subjects": [],
+      "entities": [
+        "regulator-malta-gaming-authority"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 88765,
+      "date": "2026-11-01T20:27:12+00:00",
+      "modified": "2026-11-01T20:27:12+00:00",
+      "title": "UK Gaming Machine Duty to Rise to 25&#37; as Remote Bonus Tax Rules Change",
+      "slug": "uk-machine-games-duty-25-percent-freeplays-tax-rules-2027",
+      "url": "https://www.gamblee.com/articles/uk-machine-games-duty-25-percent-freeplays-tax-rules-2027/",
+      "excerpt": "HMRC has announced a 25% duty rate for higher-stake gaming machines and changes to the tax treatment of remote gaming freeplays, prizes and tournaments from April 2027.",
+      "verticals": [
+        "betting",
+        "casino",
+        "gambling"
+      ],
+      "geographies": [
+        "gb"
+      ],
+      "topics": [
+        "legislation",
+        "taxation"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "hybrid"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 88761,
+      "date": "2026-11-01T20:25:49+00:00",
+      "modified": "2026-11-01T20:26:15+00:00",
+      "title": "UK Ad Regulator Upholds Complaint Over Betting Affiliate Ad on Self-Exclusion Search",
+      "slug": "asa-optival-betting-affiliate-self-exclusion-search-ruling",
+      "url": "https://www.gamblee.com/articles/asa-optival-betting-affiliate-self-exclusion-search-ruling/",
+      "excerpt": "The UK Advertising Standards Authority ruled that a betting affiliate advertisement shown against a self-exclusion search was irresponsibly targeted.",
+      "verticals": [
+        "betting"
+      ],
+      "geographies": [
+        "gb"
+      ],
+      "topics": [
+        "advertising-rules",
+        "self-exclusion"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 88757,
+      "date": "2026-11-01T20:24:08+00:00",
+      "modified": "2026-11-01T20:24:26+00:00",
+      "title": "Oklahoma Sweepstakes Casino Restrictions Take Effect as Operators Leave State",
+      "slug": "oklahoma-sweepstakes-casino-restrictions-november-2026",
+      "url": "https://www.gamblee.com/articles/oklahoma-sweepstakes-casino-restrictions-november-2026/",
+      "excerpt": "Oklahoma SB 1589 took effect November 1, targeting certain dual-currency online casino games. McLuck, Hello Millions, SpinBlitz and PlayFame announced exits.",
+      "verticals": [
+        "sweepstakes-casino"
+      ],
+      "geographies": [
+        "us-ok"
+      ],
+      "topics": [
+        "illegal-gambling",
+        "legislation",
+        "market-exit-closure"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
     {
       "id": 88547,
       "date": "2026-10-31T14:36:42+00:00",

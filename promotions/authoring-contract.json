@@ -1,6 +1,7 @@
 {
   "schema": "Gamblee Promotion Research JSON",
   "schema_version": "1.4",
+  "research_policy_revision": 20261102,
   "compatible_schema_versions": [
     "1.3",
     "1.4"
@@ -19,29 +20,29 @@
     "Market and currency are independent. Never use a currency as a market proxy.",
     "Do not author derived availability, editorial Featured state or Pretty Link destinations.",
     "When a promotion is demonstrably distributed across an operator/provider group, set provider_group to the canonical owner-taxonomy slug. A provider-group campaign is one canonical Promotion post shared across covered brands, not one copy per brand. Reuse the existing canonical promotion_id and promotion_key when the same network campaign is already represented. Updating it from another covered brand must preserve the original direct/source casino relationship.",
-    "Provider-group promotion titles are brand-neutral. ALL public-facing copy (content_html, terms.summary) must also be network-neutral. Never name or frame a shared campaign around the researched brand or arbitrary direct/source casino. Describe the mechanic, reward, verified common rules, eligibility and material conditions; source-brand attribution belongs in evidence only. Do not infer network-wide eligibility from one member page.",
-    "Output promotion_reconciliation rows only for actionable, evidence-backed retirements or material status changes to currently published campaigns. Omit unchanged, unverified, draft, pending, private and otherwise unpublished existing posts; omission never deactivates anything. ended requires a dated official end schedule or affirmative withdrawal/replacement evidence, not merely a missing page. For group promotions, verify the canonical shared campaign ended, not merely that one brand stopped advertising it.",
-    "Before issuing a NO ACTIONABLE CHANGES decision, inspect the complete current official promotion/bonus hub, linked campaign details and terms, and market-specific pages within confirmed research scopes. Internally inventory and classify all visible live candidates against existing posts. Do not stop after expired events or assume unavailable pages mean no offers; do not invent campaigns when source access fails.",
+    "Provider-group promotion titles are brand-neutral. ALL public-facing copy (content_html, terms.summary) must also be network-neutral. Never name or frame the shared campaign around the researched brand or arbitrary direct/source casino. Describe the campaign mechanic, reward, confirmed common terms, and material market distinctions; keep individual source-brand attribution in evidence only. Provider-group membership requires verification; do not infer every member is eligible from one brand page.",
+    "Output promotion_reconciliation rows only for actionable, evidence-backed retirements or material status changes to currently published campaigns. Omit unchanged, unverified and already-draft/unpublished existing posts; absence does not deactivate them. ended requires an official dated end schedule or affirmative official withdrawal/replacement evidence, not merely a missing page. For a provider-group campaign, verify the canonical group campaign ended, not merely that one brand removed the advert.",
+    "Research output gate BEFORE serialization: if no verified new campaign, no materially revised existing campaign, and no evidenced end of an existing campaign, output exactly NO ACTIONABLE CHANGES as plain text and NO JSON. Do not serialize unchanged or not_found rows. When actions exist, include only actionable records. An existing official date-specific end schedule may prove expiry after its end; silence or an inaccessible page cannot.",
+    "Before issuing a NO ACTIONABLE CHANGES decision, check the whole current official promotions hub, campaign detail/terms links and confirmed market-specific pages. Inventory and classify visible live candidates internally against existing posts; do not stop after finding already-expired offers. Do not fabricate missing campaigns when the hub cannot be accessed.",
     "Use excluded_casinos only for explicitly evidenced group-member exceptions. Do not infer exclusions from silence. Brand-only promotions must leave provider_group null.",
-    "Prefer first-party material for campaign identity, reward amounts, dates and binding financial restrictions. A credible, current, specific secondary source may support ancillary commercial mechanics when official material is inaccessible; never fabricate figures or claim they are official. The brand's already-confirmed market scope may establish eligibility unless a specific campaign restriction contradicts it. New market additions, regulatory claims and promo codes still require official evidence.",
+    "Prefer first-party material for campaign identity, reward amounts, dates and binding financial restrictions. A credible, current, specific secondary source may support ancillary commercial mechanics when the official material is inaccessible; never fabricate figures or claim they are official. The brand’s already-confirmed market scope may establish eligibility unless a specific campaign restriction contradicts it. New market additions, regulatory claims and promo codes still require explicit official evidence.",
     "Never invent missing numeric mechanics, promo codes, dates or restrictions.",
     "If a current Promo-classified campaign cannot be represented faithfully, report it in schema_gaps instead of force-fitting it.",
     "Use an existing promotion_id only when the researched promotion is clearly the same continuing or revised promotion.",
     "promotion_type and eligible_game are extensible taxonomies: unknown slugs used by research may be proposed in taxonomy_additions and the importer may auto-propose safe missing terms during validation.",
+    "Prefer one multi-market promotion with markets[] for the same campaign when official evidence supports every market; split on material mechanics, eligibility or schedule differences.",
     "GLOBAL remains supported for legacy/import compatibility, but generated research prompts target explicit country/subdivision markets only and must not create new GLOBAL/ROW/international promotion objects.",
     "Promotion content_html must contain at least 80 genuine visible words after HTML stripping, ideally 140+ when the mechanic warrants it. H2 headings and lists are optional; use them when helpful, not to satisfy a template. Never use an H1. Cover the actual mechanics and material conditions succinctly without speculation or padding.",
     "Each promotion must include original factual content_html for the Promotion post body. Content should read like a useful Gamblee promotion guide, not a short operator-summary rewrite. Do not copy operator terms verbatim, include an H1, or embed CTA/source links in the body.",
     "Reader-facing editorial copy must never narrate Gamblee research decisions, schema decisions, taxonomy/market mapping, source-selection logic, validator behaviour or reasons a structured field was left null. Put that rationale in evidence.notes or schema_gaps instead.",
-    "SERIALIZATION GUARD: Contract descriptions, principles, examples, editorial_content_requirements, enums, vocabulary lists, promotion_shape and other authoring guidance are instructions only. Never copy them into research JSON. Serialize only the root fields declared by root_shape.",
-    "Prefer one multi-market promotion with markets[] for the same campaign when official evidence supports every market; split on material mechanics, eligibility or schedule differences.",
-    "Research output gate BEFORE serialization: if no verified new campaign, materially revised existing campaign or evidenced end, output exactly NO ACTIONABLE CHANGES as plain text and NO JSON. Do not output unchanged or not_found reconciliation rows. An official fixed end date that has elapsed is evidence of expiry; a missing page or silence is not. When actions exist, include only actionable records; normal importer validation remains authoritative.",
-    "Write the public-facing article directly and factually. Avoid formulaic contrast constructions such as \"not X but Y\", \"is not just X, it is Y\", \"rather than X\", and \"more than just X\". Do not manufacture a contrast merely to make the prose sound dramatic. State what the promotion is, how it works, and its verified values, eligibility and restrictions. Genuine, relevant comparisons supported by evidence are allowed when they clarify a material distinction."
+    "Write the public-facing article directly and factually. Avoid formulaic contrast constructions such as \"not X but Y\", \"is not just X, it is Y\", \"rather than X\", and \"more than just X\". Do not manufacture a contrast merely to make the prose sound dramatic. State what the promotion is, how it works, and its verified values, eligibility and restrictions. Genuine, relevant comparisons supported by evidence are allowed when they clarify a material distinction.",
+    "SERIALIZATION GUARD: Contract descriptions, principles, examples, editorial_content_requirements, enums, vocabulary lists, promotion_shape and other authoring guidance are instructions only. Never copy them into research JSON. Serialize only the root fields declared by root_shape."
   ],
   "output_gate": {
     "require_importable": true,
     "blocking_rules": [
       "brand_id must match the requested WordPress brand.",
-      "Every promotion needs a descriptive title, at least 80 factual visible words in content_html, a supported market/vertical/type, and a current source URL. H2 sections and lists are optional. Core reward figures, claim conditions and time limits must not be invented.",
+      "Every promotion needs a descriptive title, at least 80 factual visible words in content_html, supported market/vertical/type, and a current source URL. H2 sections and lists are optional. Core reward figures, claim conditions and time limits must not be invented.",
       "Reward mode must be internally consistent with its numeric fields.",
       "Expired promotions must not be returned as current research output.",
       "schema_gaps must be empty before final importable JSON is returned."
@@ -382,6 +383,10 @@
       "name": "Chilli Heat"
     },
     {
+      "slug": "city-heat",
+      "name": "City Heat"
+    },
+    {
       "slug": "coin-freeze",
       "name": "Coin Freeze"
     },
@@ -424,6 +429,10 @@
     {
       "slug": "esports",
       "name": "eSports"
+    },
+    {
+      "slug": "fiesta-fortune",
+      "name": "Fiesta Fortune"
     },
     {
       "slug": "fishin-frenzy-the-big-catch-2",
@@ -624,6 +633,10 @@
     {
       "slug": "tennis",
       "name": "Tennis"
+    },
+    {
+      "slug": "the-finer-reels-of-life",
+      "name": "The Finer Reels of Life"
     },
     {
       "slug": "the-green-knight",
@@ -989,7 +1002,7 @@
       "purpose": "Write a useful search/editorial title, not merely the operator campaign label.",
       "guidance": [
         "For multi-market campaigns, use one market-neutral editorial title describing the brand and mechanic; include a market label only when the campaign itself is market-specific. For a single-market promotion, use <Brand> <Market label> <Vertical> Offer • <Reward or mechanic>.",
-        "When provider_group is set, the title, content_html, and terms.summary must be brand-neutral. Use a campaign name such as Weekly Cashback • 5% Back on Eligible Slots Net Spend. Do not anchor public copy to either the researched brand or the canonical source casino; retain source-brand URLs and attribution only in evidence.",
+        "When provider_group is set, the title AND content_html AND terms.summary must be brand-neutral, without the researched brand or the arbitrary direct/source casino. Use a campaign title such as Weekly Cashback • 5% Back on Eligible Slots Net Spend. Source-brand evidence belongs in the evidence fields, not the public copy.",
         "Use concise editorial market labels such as GB=UK, CA=Canada, CA-AB=Alberta, IE=Ireland, NZ=New Zealand and ZA=South Africa.",
         "If the title would exceed 65 characters, omit <Vertical> first: <Brand> <Market label> Offer • <Reward or concrete mechanic>.",
         "A specific mechanic noun such as Cashback, Tournament or Leaderboard may replace Offer when clearer.",
@@ -997,7 +1010,15 @@
       ]
     },
     "content_html": {
-      "target_word_range": "Use the length needed to explain actual verified terms. 80 factual visible words is the minimum; 140-400 is useful for most campaigns. Do not pad.",
+      "validation_gate": {
+        "minimum_words": 80,
+        "preferred_minimum_words": 140,
+        "minimum_h2_sections": 0,
+        "requires_factual_list": false,
+        "forbid_h1": true,
+        "word_count_method": "Count whitespace-separated words after stripping all HTML tags from sanitized content_html."
+      },
+      "target_word_range": "Use the length needed to explain actual verified terms. 80 factual visible words is the minimum; 140-400 is a useful range for most campaigns. Do not add padding.",
       "minimum_structure": [
         "Open with a concrete summary stating what the promotion is, who it is for when known, the main reward and the core qualification mechanic.",
         "Use H2 sections only when the promotion is complex enough to benefit from them.",
@@ -1008,34 +1029,24 @@
         "Include eligibility and material exclusions/restrictions when known.",
         "For tiered, recurring, leaderboard, prize-draw or variable-reward promotions, explain the actual tier/scoring/draw/reset mechanic rather than summarising it vaguely.",
         "Derived arithmetic may be included only when it follows directly from verified terms and the calculation is transparent.",
-        "Avoid repetition, generic padding, copied terms or made-up values. Concise, specific promotion copy is acceptable when few mechanics are verified.",
+        "Avoid repetition, generic padding, copied terms or made-up values. A concise, specific promotion page is acceptable when only a few mechanics are verified.",
         "Write only for the end reader. Never explain Gamblee research scope, market mapping, schema choices, taxonomy choices, importer behaviour, why a structured field is null, or why a market/date was not inferred.",
         "If a genuinely useful player-facing fact is unstated, say so neutrally only when relevant (for example, \"No expiry date is stated\"). Do not explain how the omission affected internal data modelling.",
         "Keep research uncertainty and mapping rationale in evidence.notes, not content_html or terms.summary.",
-        "The short content_html in promotion_shape is a structural illustration, not an importable article. Never reuse it verbatim or treat its length as sufficient.",
-        "Use direct fact-led prose in content_html and terms.summary. Avoid rhetorical not-X-but-Y contrasts and unnecessary comparisons; any genuine comparison must be sourced and editorially useful.",
-        "For provider-group campaigns, write about the shared mechanic and verified common terms, never a single member brand. Do not mention the researched brand or the arbitrary source casino in the article body or terms summary; separate brand-specific mechanics into their own brand campaign when they are genuinely different."
+        "Use direct fact-led prose in content_html and terms.summary. Avoid rhetorical not-X-but-Y contrasts and unnecessary comparisons; any genuine comparison must be sourced and editorially useful."
       ],
       "recommended_sections": [
         "How the promotion works",
         "Promotion facts or What you can win",
         "Who can take part (when eligibility is material)",
         "Important conditions"
-      ],
-      "validation_gate": {
-        "minimum_words": 80,
-        "preferred_minimum_words": 140,
-        "minimum_h2_sections": 0,
-        "requires_factual_list": false,
-        "forbid_h1": true,
-        "word_count_method": "Count whitespace-separated words after stripping all HTML tags from sanitized content_html."
-      }
+      ]
     }
   },
   "network_relationship": {
     "provider_group": "Optional canonical slug from provider_groups (owner taxonomy), for example progress-play. Use only when the same campaign is distributed across that provider/operator group.",
     "excluded_casinos": "Optional list of WordPress Casino Review IDs or canonical post slugs that are known exceptions within provider_group. Empty for no known exceptions. Requires provider_group.",
-    "direct_brand_rule": "Brand-only promotions may be updated only by their direct/source brand. A canonical provider-group promotion may be updated by any verified covered brand when promotion_id, promotion_key and provider_group reconcile, preserving the original direct/source casino. The original brand relationship identifies CTA attribution, not the public editorial identity of the network campaign."
+    "direct_brand_rule": "Brand-only promotions may be updated only by their direct/source brand. A canonical provider-group promotion may be updated by research for any covered brand when promotion_id, promotion_key and provider_group reconcile; the importer preserves the original direct/source casino. The original casino is an attribution/CTA relationship, never the editorial identity of the provider-group campaign."
   },
   "taxonomy_additions": {
     "allowed_taxonomies": [
@@ -1233,7 +1244,7 @@
     "evidence": {
       "primary_source_url": "https://operator.example/promotion",
       "terms_source_url": "https://operator.example/promotion-terms",
-      "source_checked_at": "2026-11-01T19:43:56+00:00",
+      "source_checked_at": "2026-11-02T11:19:55+00:00",
       "research_status": "verified",
       "notes": null
     }
@@ -1241,7 +1252,7 @@
   "root_shape": {
     "schema_version": "1.4",
     "brand_id": 123,
-    "researched_at": "2026-11-01T19:43:56+00:00",
+    "researched_at": "2026-11-02T11:19:55+00:00",
     "taxonomy_additions": {
       "promotion_type": [],
       "eligible_game": []
@@ -1256,6 +1267,5 @@
       }
     ],
     "schema_gaps": []
-  },
-  "research_policy_revision": 20261102
+  }
 }

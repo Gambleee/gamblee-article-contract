@@ -1,7 +1,7 @@
 {
   "contract": "gamblee-article-import",
   "schema_version": "1.1",
-  "core_version": "1.84.24",
+  "core_version": "1.84.29",
   "rules": {
     "one_package_creates_one_draft_article": true,
     "preferred_handoff": "zip_with_article_json_and_optional_local_featured_image",
@@ -16,7 +16,17 @@
     "featured_image_package_is_preferred": true,
     "featured_image_remote_https_is_supported": true,
     "featured_image_alt_is_required_unless_type_none": true,
-    "featured_image_failures_do_not_delete_valid_article_draft": true
+    "featured_image_failures_do_not_delete_valid_article_draft": true,
+    "reader_facing_prose_is_direct_and_fact_led": true
+  },
+  "editorial_style": {
+    "lead": "Open with the sourced development, consequences, parties and dates. Use clear reporting instead of rhetorical framing.",
+    "avoid": [
+      "Formulaic reversals such as not X but Y, this is not just X it is Y, rather than X it is Y, and more than just X.",
+      "Generic scene-setting, manufactured contrasts, self-referential commentary, inflated significance and repetitive summaries."
+    ],
+    "exception": "Use an actual comparison or negative factual statement when it is material, accurate and supported by the sources. Do not remove essential qualifications.",
+    "guide": "https://raw.githubusercontent.com/Gambleee/gamblee-article-contract/main/editorial-guidelines.md"
   },
   "package": {
     "root_json_filename": "article.json",

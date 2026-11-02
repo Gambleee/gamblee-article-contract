@@ -14,9 +14,9 @@
   "principles": [
     "One event object represents one discrete scheduled campaign or recurring event series.",
     "Respect the existing Event listing card: headline prize pool/jackpot, entry badge, no more than three compact info rows, countdown/status and CTA.",
-    "card.rows contains the three most useful listing facts only. Put deeper qualification and scoring mechanics in structured fields and terms.",
+    "card.rows contains at most three compact facts: labels no longer than 16 characters and values no longer than 28 characters. Put detail in structured fields and terms.",
     "Use event_categories for the event mechanic and vertical separately for casino, betting, bingo or poker.",
-    "Prefer first-party sources for event identity, primary prize and schedule. Current specific reliable secondary sources may clarify ancillary details. Existing brand market scope supplies baseline eligibility absent campaign-specific restrictions; do not add brand-new markets without official evidence.",
+    "Fixed and recurring Events require exact, verifiable start_time and end_time. Recurring dates anchor the first occurrence and duration; cadence alone is insufficient. Avoid recurring mode for a series with a separate unrepresentable campaign end. Use limited_time only for fixed events with verified boundaries. Missing dates must never imply LIVE or a countdown. Prefer first-party sources for event identity, primary prize and schedule. Current specific reliable secondary sources may clarify ancillary details. Existing brand market scope supplies baseline eligibility absent campaign-specific restrictions; do not add brand-new markets without official evidence.",
     "One event record should cover all verified markets in markets[] when the same competition, schedule and qualification apply; do not clone per market alone.",
     "Markets and currencies are independent. Store exact markets even though the legacy Event runtime still mirrors currency buckets for backwards compatibility.",
     "provider_group is optional and uses the provider taxonomy. When set, the event may cover that provider group; event_brand remains the CTA owner.",

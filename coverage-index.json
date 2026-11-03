@@ -2,8 +2,169 @@
   "contract": "gamblee-article-coverage-index",
   "schema_version": 1,
   "source": "https://www.gamblee.com/wp-json/gamblee-core/v1/articles/coverage-index",
-  "total": 303,
+  "total": 308,
   "articles": [
+    {
+      "id": 88872,
+      "date": "2026-11-03T22:23:01+00:00",
+      "modified": "2026-11-03T22:23:01+00:00",
+      "title": "Brazil Betting Ban Faces Supreme Court Hearing as Flamengo Warns of R$430m Exposure",
+      "slug": "brazil-betting-ban-supreme-court-flamengo-hearing-november-2026",
+      "url": "https://www.gamblee.com/articles/brazil-betting-ban-supreme-court-flamengo-hearing-november-2026/",
+      "excerpt": "Brazil's Supreme Federal Court heard challenges to the betting prohibition on November 3, as Flamengo warned of R$430 million in annual revenue exposure. No injunction was issued.",
+      "verticals": [
+        "casino",
+        "sports-betting"
+      ],
+      "geographies": [
+        "br"
+      ],
+      "topics": [
+        "legislation",
+        "litigation"
+      ],
+      "subjects": [
+        "football"
+      ],
+      "entities": [
+        "other-lula"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 88869,
+      "date": "2026-11-03T22:22:15+00:00",
+      "modified": "2026-11-03T22:22:15+00:00",
+      "title": "Lottomatica Revenue Rises to €1.72bn as Cirsa Merger Moves Toward 2027",
+      "slug": "lottomatica-2026-nine-month-results-cirsa-merger",
+      "url": "https://www.gamblee.com/articles/lottomatica-2026-nine-month-results-cirsa-merger/",
+      "excerpt": "Lottomatica reported €1.72 billion in nine-month revenue and 13% online growth while advancing a proposed all-share merger with Cirsa expected in 2027.",
+      "verticals": [
+        "casino",
+        "gambling",
+        "sports-betting"
+      ],
+      "geographies": [
+        "es",
+        "it"
+      ],
+      "topics": [
+        "financial-results",
+        "mergers-acquisitions"
+      ],
+      "subjects": [],
+      "entities": [
+        "other-cirsa",
+        "other-lottomatica"
+      ],
+      "channels": [
+        "hybrid"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 88861,
+      "date": "2026-11-03T22:16:22+00:00",
+      "modified": "2026-11-03T22:16:22+00:00",
+      "title": "Paddy Power Poker Moves From iPoker to PokerStars Network",
+      "slug": "paddy-power-poker-moves-ipoker-to-pokerstars-network",
+      "url": "https://www.gamblee.com/articles/paddy-power-poker-moves-ipoker-to-pokerstars-network/",
+      "excerpt": "Paddy Power migrated to the PokerStars Network on October 28, giving its players access to shared PokerStars liquidity and leaving Sky Poker as Flutter’s remaining iPoker brand.",
+      "verticals": [
+        "poker"
+      ],
+      "geographies": [
+        "gb",
+        "ie"
+      ],
+      "topics": [
+        "industry-structure",
+        "platform-migration"
+      ],
+      "subjects": [],
+      "entities": [
+        "other-betfair",
+        "other-pokerstars",
+        "provider-ipoker",
+        "provider-playtech"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 88858,
+      "date": "2026-11-03T22:14:24+00:00",
+      "modified": "2026-11-03T22:14:24+00:00",
+      "title": "PokerStars Launches in Alberta as GGPoker Rejects Closed Poker Player Pool",
+      "slug": "pokerstars-alberta-launch-ggpoker-declines-ringfenced-market",
+      "url": "https://www.gamblee.com/articles/pokerstars-alberta-launch-ggpoker-declines-ringfenced-market/",
+      "excerpt": "PokerStars on FanDuel launched regulated Alberta poker on November 2. GGPoker says it will not launch while international player-pool sharing remains unavailable.",
+      "verticals": [
+        "poker"
+      ],
+      "geographies": [
+        "ca-ab"
+      ],
+      "topics": [
+        "licensing",
+        "market-entry",
+        "market-exit-closure"
+      ],
+      "subjects": [],
+      "entities": [
+        "brand-888poker",
+        "brand-ggpoker",
+        "other-pokerstars"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 88854,
+      "date": "2026-11-03T20:47:25+00:00",
+      "modified": "2026-11-03T20:47:25+00:00",
+      "title": "South Korea Uncovers ₩2.67 Trillion Offshore Gambling Network, 87 Apprehended",
+      "slug": "south-korea-2-67-trillion-offshore-gambling-network-87-apprehended",
+      "url": "https://www.gamblee.com/articles/south-korea-2-67-trillion-offshore-gambling-network-87-apprehended/",
+      "excerpt": "Chungbuk police say an international gambling network processed ₩2.668 trillion through 316 accounts. Authorities apprehended 87 people overall, including 43 alleged network participants.",
+      "verticals": [
+        "casino",
+        "gambling",
+        "sports-betting"
+      ],
+      "geographies": [
+        "kr"
+      ],
+      "topics": [
+        "enforcement",
+        "illegal-gambling"
+      ],
+      "subjects": [],
+      "entities": [
+        "other-south-korea"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
     {
       "id": 88833,
       "date": "2026-11-02T13:54:06+00:00",

@@ -20,12 +20,6 @@
     "Apply the Event → Promo → Bonus classification sequence to every candidate immediately before serializing. If unverified, omit the candidate; never force an Event/Promo into Bonus JSON or schema_gaps.",
     "Bonus JSON serializes only Bonus-classified offers. Omit Event- and Promo-classified items entirely from offers and schema_gaps.",
     "schema_gaps is reserved only for genuine Bonus-classified offers whose mechanics cannot be represented by this contract. Never report an Event- or Promo-classified item as a Bonus schema gap.",
-    "CAMPAIGN IDENTITY GATE — BEFORE extracting reward components or creating offers: inventory each official operator-advertised campaign as a whole. Record internally its exact headline, promotion page or offer terms, participating rewards, activation/claim path, dates and eligible markets. Each distinct campaign is the unit of identity; an individual reward is NOT automatically an independent offer.",
-    "COMBINED WELCOME REGRESSION: An operator-advertised welcome package containing registration free spins, a deposit match and additional deposit free spins is ONE welcome campaign per market/vertical. Store independently quantifiable mechanics together in the same offer's structured components and describe any additional reward or conditional restriction precisely in terms. Do not duplicate, omit, conflate or add free-spin counts with materially different activation/wagering terms just to fit one numeric field. If supported mechanics cannot represent a material distinction, disclose the limitation rather than invent an extra campaign.",
-    "SEPARATION PROOF: Create separate Bonus offers ONLY when current official evidence establishes separately advertised AND independently claimable campaigns, with distinct activation/eligibility or separate operator terms. Different reward components, game names, amounts, promo codes, discovery links, currency labels or scheduled subparts do NOT by themselves prove separate campaigns. An apparently separate reload or free-spin deal requires its OWN official campaign identity and current availability; third-party listings cannot establish that identity. If identity cannot be established, omit the unverified new candidate and do not alter existing posts.",
-    "RECONCILIATION GATE: Before declaring any campaign NEW, compare operator-advertised campaign identity, full reward bundle, offer scope, existing titles, offer_keys and supplied existing IDs across the same brand/market/vertical. If it is the same campaign, reuse its existing offer_key and bonus_id for material updates; if unchanged, emit nothing. An independently advertised campaign may be added alongside it only with official identity evidence. Never infer that an existing welcome offer ended because another incentive is visible or the original page is inaccessible.",
-    "STAGE DISTINCTION: A welcome package combining different reward components is NOT automatically a multi-stage deposit pack. Only enable multi_step for an explicitly staged package with defined deposit steps. Never split one combined welcome campaign into separate records to avoid component modelling limitations.",
-    "FINAL PRE-SERIALIZATION IDENTITY CHECK: For EACH proposed offer, answer internally: What exact current official campaign proves this record exists? Which rewards does that one campaign include? Which existing offer is the same campaign? What official fact proves independence from adjacent offers? If an answer is unsupported, hold the candidate rather than creating speculative JSON. This check precedes all market replication and schema validation.",
     "One offer object represents exactly one market and one vertical. Multiple simultaneous offers for the same market/vertical are allowed.",
     "Research prompts target explicit country/subdivision markets only and do not generate GLOBAL/ROW/international research targets. GLOBAL remains supported for legacy/import compatibility.",
     "Offer titles use <Brand> <Market label> <Vertical> Offer • <Reward>, with concise editorial market labels such as GB=UK and CA-AB=Alberta. If the title would exceed 65 characters, omit <Vertical> first. Do not truncate verified reward text merely to retain the vertical label.",
@@ -6463,8 +6457,7 @@
     "required": [
       "schema_version",
       "brand_id",
-      "offers",
-      "bonus_reconciliation"
+      "offers"
     ],
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Gamblee Bonus Research JSON v1.5 — importer-aligned",
@@ -6582,7 +6575,7 @@
   "root_shape": {
     "schema_version": "1.5",
     "brand_id": 123,
-    "researched_at": "2026-11-03T17:07:35+00:00",
+    "researched_at": "2026-11-03T23:28:22+00:00",
     "taxonomy_additions": {
       "eligible_game": [],
       "excluded_payment_methods": [],

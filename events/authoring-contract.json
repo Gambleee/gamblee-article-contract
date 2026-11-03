@@ -7,16 +7,18 @@
   ],
   "purpose": "Research scheduled competitive or playable gambling events and map verified facts into the Gamblee Event CPT while preserving the existing listing-card layout.",
   "routing": {
-    "event": "Scheduled competitive/playable campaigns: leaderboards, slot tournaments, races, poker freerolls, bingo tournaments and special scheduled bingo sessions. Poker: freerolls ONLY, never ordinary poker tournaments. Deposit requirements do not change the classification.",
+    "event": "Scheduled competitive/playable campaigns: leaderboards, slot tournaments, races, poker freerolls, bingo tournaments and special scheduled bingo sessions. Poker: freerolls ONLY, never ordinary poker tournaments. Deposits do not change classification.",
     "promotion": "Prize draws, raffles, giveaways, sweepstakes, random-winner competitions, missions/challenges, cashback, loyalty mechanics, prize wheels and mystery boxes remain Promotions even when time-limited or deposit-gated.",
     "bonus": "Direct deterministic signup/new-customer rewards, or direct deterministic rewards whose claim requires a fresh upfront deposit, remain Bonuses unless an Event or Promotion override applies."
   },
   "principles": [
     "One event object represents one discrete scheduled campaign or recurring event series.",
     "Respect the existing Event listing card: headline prize pool/jackpot, entry badge, no more than three compact info rows, countdown/status and CTA.",
-    "All Event cards have exactly three fixed columns: Entry, Type and Prizes. Only card.entry is supplied in research JSON, using free_entry, funded_account, deposit_required or buy_in. The single approved event_categories type determines Type; prize_pool/jackpot_amount determines Prizes. card.rows and info_icon_set are forbidden.",
-    "Use exactly one approved event_categories mechanic and a separate vertical. Poker Events must be freerolls only, never regular paid-entry poker tournaments. Bingo Tournament and Bingo Session require the bingo vertical; Slot Tournament requires casino.",
-    "Fixed and recurring Events require exact, verifiable start_time and end_time. Recurring dates anchor the first occurrence and duration; cadence alone is insufficient. Avoid recurring mode for a series with a separate unrepresentable campaign end. Use limited_time only for fixed events with verified boundaries. Missing dates must never imply LIVE or a countdown. Prefer first-party sources for event identity, primary prize and schedule. Current specific reliable secondary sources may clarify ancillary details. Existing brand market scope supplies baseline eligibility absent campaign-specific restrictions; do not add brand-new markets without official evidence.",
+    "All Event cards show three fixed columns: Entry, Type and Prizes. card.entry must be selected from the four approved entry choices. Type is determined only by the single approved event_categories value. Prizes is derived from structured prize_pool or jackpot_amount, never AI-written card prose. card.rows and info_icon_set are forbidden in new Event research JSON.",
+    "Choose exactly one approved event_categories type. Vertical is separate (casino, betting, bingo, poker). Poker Events must use freerolls only. Bingo Tournament and Bingo Session require the bingo vertical. Unknown or unrepresentable types must be held for editorial review and omitted from import; never automatically create a new event category.",
+    "Fixed and recurring Events must have exact, officially supported start_time and end_time. For recurring events those timestamps anchor the first actual occurrence and its duration; repeat_every and repeat_unit provide the repeat interval. A month name or generic weekly cadence cannot establish dates. Never invent schedule timestamps or claim LIVE without them. The schema cannot express a separate end date for an entire recurring series; do not represent bounded recurring campaigns as endless recurring events.",
+    "Use limited_time only for fixed events with verified start_time and end_time. On-demand or recurring events must not claim Limited Time without a modelled campaign end. Existing undated events remain editable but are suppressed in ordinary public listings until dates are verified.",
+    "Prefer first-party sources for event identity, primary prize and schedule. Current specific reliable secondary sources may clarify ancillary details. Existing brand market scope supplies baseline eligibility absent campaign-specific restrictions; do not add brand-new markets without official evidence.",
     "One event record should cover all verified markets in markets[] when the same competition, schedule and qualification apply; do not clone per market alone.",
     "Markets and currencies are independent. Store exact markets even though the legacy Event runtime still mirrors currency buckets for backwards compatibility.",
     "provider_group is optional and uses the provider taxonomy. When set, the event may cover that provider group; event_brand remains the CTA owner.",
@@ -25,10 +27,7 @@
     "Keep an established event_key stable across revisions. event_key is the idempotency key: when event_id is omitted but event_key matches exactly one existing Event in the supplied brand/provider scope, the importer reconciles it automatically.",
     "Return event_reconciliation only for verified ends or material status changes. Omit unchanged/not_found existing events; missing rows leave them unchanged. An official dated fixed schedule that has elapsed can establish an end; missing material alone cannot.",
     "Research output gate BEFORE serialization: if no verified new campaign, materially revised existing campaign or evidenced end, output exactly NO ACTIONABLE CHANGES as plain text and NO JSON. Do not output unchanged or not_found reconciliation rows. Verified official fixed end dates that have already elapsed are sufficient evidence of expiry; a missing page or silence is not. Only actionable records go into JSON; this does not modify importer validation.",
-    "schema_gaps is reserved for Event-classified mechanics that cannot be represented faithfully. Unrecognized Event types require editorial review and must be omitted from importable records; never invent or auto-create taxonomy terms.",
-    "Entry is a fixed classification: Free Entry (no fee), Funded Account (previously deposited), Deposit Required (fresh qualifying deposit), Buy-in (explicit entry payment). Do not substitute 'real-money play' or unrestricted text. If absent from official evidence, do not guess.",
-    "The three card headings are immutable (Entry / Type / Prizes), and Prize values must be automatically derived from verified structured amounts. Missing numeric prize information displays 'Not listed', never an invented amount.",
-    "Poker freerolls must have buy_in=free_entry: a funded-account or qualifying-deposit requirement may still apply, but any direct paid tournament buy-in excludes the Event. Event cards cannot use real-money-play as an Entry classification."
+    "schema_gaps is reserved for Event-classified mechanics that cannot be represented faithfully. Never fabricate a taxonomy category; a proposed new type is for separate editorial review and is not an importable Event record."
   ],
   "markets": [
     "GLOBAL",
@@ -3362,6 +3361,12 @@
       "cash_play",
       "unknown"
     ],
+    "card_entry": [
+      "free_entry",
+      "funded_account",
+      "deposit_required",
+      "buy_in"
+    ],
     "info_icon_set": [
       "prize_podium",
       "event_meta"
@@ -3406,12 +3411,6 @@
       "confirmed",
       "ended",
       "not_found"
-    ],
-    "card_entry": [
-      "free_entry",
-      "funded_account",
-      "deposit_required",
-      "buy_in"
     ]
   },
   "event_shape": {
@@ -3471,14 +3470,14 @@
     "evidence": {
       "primary_source_url": "https://operator.example/event",
       "terms_source_url": "https://operator.example/event-terms",
-      "source_checked_at": "2026-11-02T21:44:45+00:00",
+      "source_checked_at": "2026-11-03T06:55:05+00:00",
       "notes": null
     }
   },
   "root_shape": {
     "schema_version": "1.0",
     "brand_id": 123,
-    "researched_at": "2026-11-02T21:44:45+00:00",
+    "researched_at": "2026-11-03T06:55:05+00:00",
     "taxonomy_additions": {
       "event_category": [],
       "eligible_game": []

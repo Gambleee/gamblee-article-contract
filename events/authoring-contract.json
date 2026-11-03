@@ -12,6 +12,8 @@
     "bonus": "Direct deterministic signup/new-customer rewards, or direct deterministic rewards whose claim requires a fresh upfront deposit, remain Bonuses unless an Event or Promotion override applies."
   },
   "principles": [
+    "CAMPAIGN IDENTITY GATE: Identify the operator's actual tournament/event series and all component prize awards before creating Event records. Prize tiers, game-specific rounds and qualifying steps belonging to one official competition do not automatically become separate Events. Split only for distinct officially advertised competitions or materially different schedules/mechanics, not separate rewards.",
+    "RECONCILIATION IDENTITY GATE: Match the official event/series identity, recurring series schedule, exact competition rules, eligible markets, and supplied existing event_id/key before deciding NEW. When the same competition recurs according to its published series definition, preserve its established identity. Missing pages or secondary-only reports do not establish a new campaign or a verified ending.",
     "One event object represents one discrete scheduled campaign or recurring event series.",
     "Respect the existing Event listing card: headline prize pool/jackpot, entry badge, no more than three compact info rows, countdown/status and CTA.",
     "All Event cards show three fixed columns: Entry, Type and Prizes. card.entry must be selected from the four approved entry choices. Type is determined only by the single approved event_categories value. Prizes is derived from structured prize_pool or jackpot_amount, never AI-written card prose. card.rows and info_icon_set are forbidden in new Event research JSON.",

@@ -255,6 +255,10 @@
       "name": "3 Pots of Baba Yaga"
     },
     {
+      "slug": "3-wild-troopers",
+      "name": "3 Wild Troopers"
+    },
+    {
       "slug": "777strike",
       "name": "777Strike"
     },
@@ -1244,7 +1248,7 @@
     "evidence": {
       "primary_source_url": "https://operator.example/promotion",
       "terms_source_url": "https://operator.example/promotion-terms",
-      "source_checked_at": "2026-11-03T06:55:04+00:00",
+      "source_checked_at": "2026-11-03T17:07:36+00:00",
       "research_status": "verified",
       "notes": null
     }
@@ -1252,7 +1256,7 @@
   "root_shape": {
     "schema_version": "1.4",
     "brand_id": 123,
-    "researched_at": "2026-11-03T06:55:04+00:00",
+    "researched_at": "2026-11-03T17:07:36+00:00",
     "taxonomy_additions": {
       "promotion_type": [],
       "eligible_game": []

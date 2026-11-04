@@ -1,6 +1,6 @@
 {
   "schema_version": "1.5",
-  "research_policy_revision": 20261102,
+  "research_policy_revision": 20261104,
   "compatible_schema_versions": [
     "1.0",
     "1.1",
@@ -20,12 +20,11 @@
     "Apply the Event → Promo → Bonus classification sequence to every candidate immediately before serializing. If unverified, omit the candidate; never force an Event/Promo into Bonus JSON or schema_gaps.",
     "Bonus JSON serializes only Bonus-classified offers. Omit Event- and Promo-classified items entirely from offers and schema_gaps.",
     "schema_gaps is reserved only for genuine Bonus-classified offers whose mechanics cannot be represented by this contract. Never report an Event- or Promo-classified item as a Bonus schema gap.",
-    "One offer object represents exactly one market and one vertical. Multiple simultaneous offers for the same market/vertical are allowed.",
-    "Research prompts target explicit country/subdivision markets only and do not generate GLOBAL/ROW/international research targets. GLOBAL remains supported for legacy/import compatibility.",
-    "Offer titles use <Brand> <Market label> <Vertical> Offer • <Reward>, with concise editorial market labels such as GB=UK and CA-AB=Alberta. If the title would exceed 65 characters, omit <Vertical> first. Do not truncate verified reward text merely to retain the vertical label.",
-    "Market and currencies are independent. A USD-denominated poker offer may target GB, IE or another market.",
+    "One offer object represents one campaign variant and one vertical. Use market=\"\" when no explicit market was discovered; currencies drive shared inference. For an explicitly documented multi-country campaign use GLOBAL with included_countries; do not duplicate identical offers by country.",
+    "MARKETS AND CAMPAIGN IDENTITY: Research official current campaign pages even when the brand has no previously researched market. Existing market lists are context, not a discovery whitelist. Record only explicit campaign markets; otherwise use market=\"\" for Bonus or markets=[] for Promotion/Event. The shared runtime infers effective markets from advertised OFFER currencies, never merely account/payment currencies. Do not write inferred countries into explicit market fields or brand availability. GLOBAL is permitted only for explicitly documented broad coverage; known restrictions still apply. EUR infers euro-using markets, not all Europe; USD alone establishes no country. Preserve the existing campaign ID and stable key when adding currencies or market evidence. One campaign with identical numeric rewards, conditions and schedule stays one record; return its complete advertised currency list. Split materially different rewards/conditions/schedules, never currency labels alone. A single amount applies to every listed currency: do not merge differing currency-specific amounts or invent conversions. Reuse verified existing campaign IDs; ambiguous candidate matches require review, never a new duplicate. No inference overrides explicit exclusions, product restrictions or publication policy.",
+    "Offer titles use <Brand> <Market label> <Vertical> Offer • <Reward>, with full market labels such as United Kingdom and Canada, Alberta; omit the market label when not explicitly known. If the title would exceed 65 characters, omit <Vertical> first. Do not truncate verified reward text merely to retain the vertical label.",
     "Currencies use the canonical Bonus Offer ISO 4217 vocabulary. GLOBAL/ROW offers may use local currencies beyond Gamblee's detailed-market currencies.",
-    "One discrete promotion stays one offer even when the operator supports several account currencies. Use currencies as a list and do not clone an otherwise identical market/vertical offer solely for EUR/USD/etc. If structured mechanics materially differ by currency and cannot be represented exactly, report a schema gap rather than creating currency-only duplicates.",
+    "One discrete promotion stays one offer even when the offer explicitly supports several currencies. Use currencies as a list and do not clone an otherwise identical market/vertical offer solely for EUR/USD/etc. If structured mechanics materially differ by currency and cannot be represented exactly, report a schema gap rather than creating currency-only duplicates.",
     "Automatic Bonus card display is authoritative: copy.card_primary, copy.card_secondary and copy.card_terms must all be null in AI research output. The importer intentionally does NOT write these override fields or display_offer_text; previously set manual WordPress overrides are preserved in the database but are ignored wherever automatic structured copy is available. Non-null override fields are rejected on import. copy.display_offer remains a canonical contract-validation value, not an instruction to override the card.",
     "Match-bonus display copy is canonical. When components.match_bonus is enabled, copy.display_offer must be exactly <match_percent>% up to <currency><max_bonus_match> with no prefix or extra wording (for example 100% up to £100 or 100% up to TSh 20,000). Public offer copy uses the canonical currency symbol/display token, never the raw ISO code. Use the first currencies entry as the display currency; the importer normalizes this from the structured component values.",
     "A multi-stage deposit pack is one offer. Capture all stages in multi_step.rows; structured reward components describe the first stage unless a future schema explicitly models later stages.",
@@ -38,7 +37,7 @@
     "With that fallback, a pure free-spins offer in EUR, GBP, USD, CAD, AUD or NZD can remain supported_and_analyzable when spin count is known. If value_per_spin is unknown outside these currencies, omit it unless another component is calculable. Never invent a value or submit not_calculable offers.",
     "urls.offer is only for a Gamblee-approved/tracked commercial deep link. Never substitute a generic official brand website, ordinary promotion page, affiliate-programme homepage, evidence URL, or guessed tracking URL. Put ordinary official promotion pages in evidence and leave urls.offer null so Gamblee inherits the canonical brand market/vertical Commercial Link. urls.terms may use a direct official terms URL.",
     "Use included_subdivisions when a broad country offer is available only in named subdivisions; use excluded_subdivisions when it applies broadly except named subdivisions. Never use both for the same subdivision.",
-    "Use included_countries only with market=GLOBAL to whitelist the exact countries covered by a broad international offer. Countries must already be confirmed for the brand or be proposed as evidence-backed country_additions in the same payload.",
+    "Use included_countries only with market=GLOBAL to whitelist the exact countries covered by a broad international offer. Use verified campaign country coverage; known brand exclusions still apply and campaign inference never changes brand availability.",
     "Use eligibility_devices only for real device restrictions. Empty means no device restriction.",
     "Reward expiry values are paired with explicit units (hours, days or weeks). Legacy schema 1.0 payloads without units are interpreted as days.",
     "taxonomy_additions may propose genuinely missing eligible_game, excluded_payment_methods or scoring_penalty terms. Structural vocabularies such as bonus_type and bonus_vertical remain locked.",
@@ -55,7 +54,7 @@
     "Use qualification_window_value + qualification_window_unit for a deadline to complete a qualifying action or use a pre-reward token; reward expiry remains component-specific.",
     "When qualifying spend is defined as a multiple of a deposit or bonus amount, use qualification_spend_multiplier + qualification_spend_basis instead of guessing a fixed minimum_spend.",
     "Use components.external_reward for non-cash third-party value such as vouchers or gift cards. Use components.free_rounds for branded game rounds such as Free Flights or Free Crossings rather than force-fitting them into free_spins.",
-    "Prefer operator evidence for campaign identity, headline reward amounts and material financial conditions. Credible current specific secondary evidence may help with ancillary mechanics when original terms are incomplete. Already-confirmed brand market scopes can establish the baseline without campaign-by-campaign country evidence. New availability, regulatory claims and exact bonus codes remain first-party-only; never invent values."
+    "Prefer operator evidence for campaign identity, headline reward amounts and material financial conditions. Credible current specific secondary evidence may help with ancillary mechanics when original terms are incomplete. Store explicit campaign markets only; when unstated, shared currency inference supplies display scope. New availability, regulatory claims and exact bonus codes remain first-party-only; never invent values."
   ],
   "analysis_statuses": [
     "supported_and_analyzable"
@@ -6575,7 +6574,7 @@
   "root_shape": {
     "schema_version": "1.5",
     "brand_id": 123,
-    "researched_at": "2026-11-04T06:34:29+00:00",
+    "researched_at": "2026-11-04T17:19:47+00:00",
     "taxonomy_additions": {
       "eligible_game": [],
       "excluded_payment_methods": [],

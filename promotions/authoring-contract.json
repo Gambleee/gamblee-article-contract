@@ -846,6 +846,10 @@
       "name": "Darts"
     },
     {
+      "slug": "dead-or-alive",
+      "name": "Dead or Alive"
+    },
+    {
       "slug": "diamond-strike",
       "name": "Diamond Strike"
     },
@@ -1176,6 +1180,10 @@
       "name": "BML Group LTD"
     },
     {
+      "slug": "branders-limited",
+      "name": "Branders Limited"
+    },
+    {
       "slug": "bv-gaming-ltd",
       "name": "BV Gaming LTD"
     },
@@ -1406,6 +1414,10 @@
     {
       "slug": "uab-amber-gaming",
       "name": "UAB Amber Gaming"
+    },
+    {
+      "slug": "vegas-folks",
+      "name": "Vegas Folks"
     },
     {
       "slug": "vf2011-limited",
@@ -1687,7 +1699,7 @@
     "evidence": {
       "primary_source_url": "https://operator.example/promotion",
       "terms_source_url": "https://operator.example/promotion-terms",
-      "source_checked_at": "2026-11-04T23:44:29+00:00",
+      "source_checked_at": "2026-11-05T17:27:43+00:00",
       "research_status": "verified",
       "notes": null
     }
@@ -1695,7 +1707,7 @@
   "root_shape": {
     "schema_version": "1.4",
     "brand_id": 123,
-    "researched_at": "2026-11-04T23:44:29+00:00",
+    "researched_at": "2026-11-05T17:27:43+00:00",
     "taxonomy_additions": {
       "promotion_type": [],
       "eligible_game": []

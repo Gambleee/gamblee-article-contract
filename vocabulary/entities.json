@@ -2,7 +2,7 @@
   "contract": "gamblee-article-vocabulary-snapshot",
   "schema_version": "1.1",
   "dimension": "entities",
-  "total": 1283,
+  "total": 1285,
   "source": "https://www.gamblee.com/wp-json/gamblee-core/v1/articles/vocabulary/entities",
   "items": [
     {
@@ -1134,6 +1134,11 @@
       "slug": "provider-bragg-gaming",
       "name": "Bragg Gaming",
       "entity_type": "provider"
+    },
+    {
+      "slug": "company-branders-limited",
+      "name": "Branders Limited",
+      "entity_type": "company"
     },
     {
       "slug": "other-bresbet",
@@ -5959,6 +5964,11 @@
       "slug": "payment-method-vega-wallet",
       "name": "Vega Wallet",
       "entity_type": "payment-method"
+    },
+    {
+      "slug": "company-vegas-folks",
+      "name": "Vegas Folks",
+      "entity_type": "company"
     },
     {
       "slug": "other-vegas-matt",

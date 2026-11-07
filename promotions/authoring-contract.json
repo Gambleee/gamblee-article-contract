@@ -1,7 +1,7 @@
 {
   "schema": "Gamblee Promotion Research JSON",
   "schema_version": "1.4",
-  "research_policy_revision": 20261104,
+  "research_policy_revision": 20261107,
   "compatible_schema_versions": [
     "1.3",
     "1.4"
@@ -19,12 +19,12 @@
     "Split promotions when terms, reward mechanics, qualification rules or schedule differ materially by market or vertical.",
     "MARKETS AND CAMPAIGN IDENTITY: Research official current campaign pages even when the brand has no previously researched market. Existing market lists are context, not a discovery whitelist. Record only explicit campaign markets; otherwise use market=\"\" for Bonus or markets=[] for Promotion/Event. The shared runtime infers effective markets from advertised OFFER currencies, never merely account/payment currencies. Do not write inferred countries into explicit market fields or brand availability. GLOBAL is permitted only for explicitly documented broad coverage; known restrictions still apply. EUR infers euro-using markets, not all Europe; USD alone establishes no country. Preserve the existing campaign ID and stable key when adding currencies or market evidence. One campaign with identical numeric rewards, conditions and schedule stays one record; return its complete advertised currency list. Split materially different rewards/conditions/schedules, never currency labels alone. A single amount applies to every listed currency: do not merge differing currency-specific amounts or invent conversions. Reuse verified existing campaign IDs; ambiguous candidate matches require review, never a new duplicate. No inference overrides explicit exclusions, product restrictions or publication policy.",
     "Do not author derived availability, editorial Featured state or Pretty Link destinations.",
-    "When a promotion is demonstrably distributed across an operator/provider group, set provider_group to the canonical owner-taxonomy slug. A provider-group campaign is one canonical Promotion post shared across covered brands, not one copy per brand. Reuse the existing canonical promotion_id and promotion_key when the same network campaign is already represented. Updating it from another covered brand must preserve the original direct/source casino relationship.",
-    "Provider-group promotion titles are brand-neutral. ALL public-facing copy (content_html, terms.summary) must also be network-neutral. Never name or frame the shared campaign around the researched brand or arbitrary direct/source casino. Describe the campaign mechanic, reward, confirmed common terms, and material market distinctions; keep individual source-brand attribution in evidence only. Provider-group membership requires verification; do not infer every member is eligible from one brand page.",
-    "Output promotion_reconciliation rows only for actionable, evidence-backed retirements or material status changes to currently published campaigns. Omit unchanged, unverified and already-draft/unpublished existing posts; absence does not deactivate them. ended requires an official dated end schedule or affirmative official withdrawal/replacement evidence, not merely a missing page. For a provider-group campaign, verify the canonical group campaign ended, not merely that one brand removed the advert.",
+    "BRAND-ONLY OWNERSHIP: Every Promotion is owned by exactly the researched Casino Review identified by root brand_id. No provider-group or operator-wide inheritance. An identical promotion at another casino is a separate brand-specific editorial article and Promotion record with its own ID, official source, code, conditions, currencies, explicit markets, and commercial links.",
+    "SCOPED RECONCILIATION: Existing promotion_id and promotion_key must be reused for confirmed updates only within the SAME brand_id; never import, update, retire or reconcile a Promotion owned by another casino. Compare researched offers with the selected brand catalogue; cross-brand duplicates are intentionally permitted.",
+    "NO NETWORK FIELDS: Do not output provider_group, excluded_casinos, network_campaign or verified_brands. Historical network metadata remains outside the authoring contract and must not confer public eligibility. Never derive availability by owner or game/software provider group.",
+    "Output promotion_reconciliation rows only for actionable, evidence-backed retirements or material status changes to currently published campaigns. Omit unchanged, unverified and already-draft/unpublished existing posts; absence does not deactivate them. ended requires an official dated end schedule or affirmative official withdrawal/replacement evidence, not merely a missing page. Retire only the researched brand's specific Promotion, with official evidence that it ended for that brand.",
     "Research output gate BEFORE serialization: if no verified new campaign, no materially revised existing campaign, and no evidenced end of an existing campaign, output exactly NO ACTIONABLE CHANGES as plain text and NO JSON. Do not serialize unchanged or not_found rows. When actions exist, include only actionable records. An existing official date-specific end schedule may prove expiry after its end; silence or an inaccessible page cannot.",
     "Before issuing a NO ACTIONABLE CHANGES decision, check the whole current official promotions hub, campaign detail/terms links and confirmed market-specific pages. Inventory and classify visible live candidates internally against existing posts; do not stop after finding already-expired offers. Do not fabricate missing campaigns when the hub cannot be accessed.",
-    "Use excluded_casinos only for explicitly evidenced group-member exceptions. Do not infer exclusions from silence. Brand-only promotions must leave provider_group null.",
     "Prefer first-party material for campaign identity, reward amounts, dates and binding financial restrictions. A credible, current, specific secondary source may support ancillary commercial mechanics when the official material is inaccessible; never fabricate figures or claim they are official. The brand’s already-confirmed market scope may establish eligibility unless a specific campaign restriction contradicts it. New market additions, regulatory claims and promo codes still require explicit official evidence.",
     "Never invent missing numeric mechanics, promo codes, dates or restrictions.",
     "If a current Promo-classified campaign cannot be represented faithfully, report it in schema_gaps instead of force-fitting it.",
@@ -44,7 +44,8 @@
       "Every promotion needs a descriptive title, at least 220 factual visible words in content_html, two meaningful H2 sections, one factual ul/ol list, supported market/vertical/type and a current official source URL. Missing reward figures or material claim conditions must not be invented; omit unsupported campaigns.",
       "Reward mode must be internally consistent with its numeric fields.",
       "Expired promotions must not be returned as current research output.",
-      "schema_gaps must be empty before final importable JSON is returned."
+      "schema_gaps must be empty before final importable JSON is returned.",
+      "Every Promotion, all its existing IDs, and reconciliation actions must belong exclusively to root brand_id; cross-brand updates and network-group coverage are prohibited."
     ]
   },
   "markets": [
@@ -1122,336 +1123,6 @@
       "name": "Wolf Gold"
     }
   ],
-  "provider_groups": [
-    {
-      "slug": "888-holdings-plc",
-      "name": "888 Holdings PLC"
-    },
-    {
-      "slug": "ace-gaming-limited",
-      "name": "ACE GAMING Limited"
-    },
-    {
-      "slug": "action-commerce-ltd",
-      "name": "Action Commerce LTD"
-    },
-    {
-      "slug": "anakatech-interactive-ltd",
-      "name": "Anakatech Interactive LTD"
-    },
-    {
-      "slug": "annexio-jersey-limited",
-      "name": "Annexio (Jersey) Limited"
-    },
-    {
-      "slug": "aspire-global-international-ltd",
-      "name": "Aspire Global International LTD"
-    },
-    {
-      "slug": "ballys-corporation",
-      "name": "Bally's Corporation"
-    },
-    {
-      "slug": "ballys-intralot-s-a",
-      "name": "Bally's Intralot S.A."
-    },
-    {
-      "slug": "bet365-group-limited",
-      "name": "Bet365 Group Limited"
-    },
-    {
-      "slug": "betvictor-limited",
-      "name": "BetVictor Limited"
-    },
-    {
-      "slug": "betway-ltd",
-      "name": "BetWay LTD"
-    },
-    {
-      "slug": "blue-high-house-s-a",
-      "name": "Blue High House S.A."
-    },
-    {
-      "slug": "blue-star-planet-ltd",
-      "name": "Blue Star Planet LTD"
-    },
-    {
-      "slug": "bml-group-ltd",
-      "name": "BML Group LTD"
-    },
-    {
-      "slug": "branders-limited",
-      "name": "Branders Limited"
-    },
-    {
-      "slug": "bv-gaming-ltd",
-      "name": "BV Gaming LTD"
-    },
-    {
-      "slug": "casimba-gaming",
-      "name": "Casimba Gaming"
-    },
-    {
-      "slug": "casumo-services-ltd",
-      "name": "Casumo Services LTD"
-    },
-    {
-      "slug": "complete-technologies-n-v",
-      "name": "Complete Technologies N.V."
-    },
-    {
-      "slug": "daub-alderney-limited",
-      "name": "Daub Alderney Limited"
-    },
-    {
-      "slug": "dazletag-entertainment-limited",
-      "name": "Dazletag Entertainment Limited"
-    },
-    {
-      "slug": "dazzletag-entertainment",
-      "name": "Dazzletag Entertainment"
-    },
-    {
-      "slug": "electra-works-europe-limited",
-      "name": "Electra Works Europe Limited"
-    },
-    {
-      "slug": "entain-plc",
-      "name": "Entain plc"
-    },
-    {
-      "slug": "everstronglink-ltd",
-      "name": "Everstronglink LTD"
-    },
-    {
-      "slug": "evoke-plc",
-      "name": "evoke plc"
-    },
-    {
-      "slug": "fairload-ltd",
-      "name": "Fairload LTD"
-    },
-    {
-      "slug": "fdj-united",
-      "name": "FDJ UNITED"
-    },
-    {
-      "slug": "galazia-b-v",
-      "name": "Galazia B.V."
-    },
-    {
-      "slug": "gamesys-operations-ltd",
-      "name": "Gamesys Operations LTD"
-    },
-    {
-      "slug": "gbl-solutions-n-v",
-      "name": "GBL Solutions N.V."
-    },
-    {
-      "slug": "genesis-global-limited",
-      "name": "Genesis Global Limited"
-    },
-    {
-      "slug": "grace-media-gibraltar-limited",
-      "name": "Grace Media (Gibraltar) Limited"
-    },
-    {
-      "slug": "grace-media-limited",
-      "name": "Grace Media Limited"
-    },
-    {
-      "slug": "gvc-holdings",
-      "name": "GVC Holdings"
-    },
-    {
-      "slug": "hillside",
-      "name": "Hillside"
-    },
-    {
-      "slug": "in-touch-games-limited",
-      "name": "In Touch Games Limited"
-    },
-    {
-      "slug": "innovex-tech-holdings-limited",
-      "name": "Innovex Tech Holdings Limited"
-    },
-    {
-      "slug": "inter-grupp-partner-service-ab",
-      "name": "Inter Grupp Partner Service AB"
-    },
-    {
-      "slug": "jumpman-gaming-limited",
-      "name": "Jumpman Gaming Limited"
-    },
-    {
-      "slug": "jupiter-gaming-ltd",
-      "name": "Jupiter Gaming LTD"
-    },
-    {
-      "slug": "ll-europe-ltd",
-      "name": "L&amp;L Europe Ltd"
-    },
-    {
-      "slug": "lc-international-ltd",
-      "name": "LC International LTD"
-    },
-    {
-      "slug": "lindar-media",
-      "name": "Lindar Media"
-    },
-    {
-      "slug": "lotto-direct-limited",
-      "name": "Lotto Direct Limited"
-    },
-    {
-      "slug": "lottomatrix-operations-limited",
-      "name": "Lottomatrix Operations Limited"
-    },
-    {
-      "slug": "mansion-online-casino-ltd",
-      "name": "Mansion Online Casino LTD"
-    },
-    {
-      "slug": "mecca-bingo-limited",
-      "name": "Mecca Bingo Limited"
-    },
-    {
-      "slug": "mikivik-ltd",
-      "name": "MIKIVIK LTD"
-    },
-    {
-      "slug": "nektan-gibraltar-limited",
-      "name": "Nektan (Gibraltar) Limited"
-    },
-    {
-      "slug": "netbet-enterprises-ltd",
-      "name": "Netbet Enterprises LTD"
-    },
-    {
-      "slug": "nsus",
-      "name": "NSUS"
-    },
-    {
-      "slug": "nsus-malta-ltd",
-      "name": "NSUS Malta LTD"
-    },
-    {
-      "slug": "ocean-star-limited",
-      "name": "Ocean Star Limited"
-    },
-    {
-      "slug": "onisac-ltd",
-      "name": "ONISAC LTD"
-    },
-    {
-      "slug": "petfre-ltd",
-      "name": "Petfre LTD"
-    },
-    {
-      "slug": "platinum-gaming-ltd",
-      "name": "Platinum Gaming LTD"
-    },
-    {
-      "slug": "pm-affiliates",
-      "name": "PM Affiliates"
-    },
-    {
-      "slug": "precicse-interactive-inc",
-      "name": "Precicse Interactive Inc"
-    },
-    {
-      "slug": "prime-online-ltd",
-      "name": "Prime Online Ltd"
-    },
-    {
-      "slug": "probe-investments-limited",
-      "name": "Probe Investments Limited"
-    },
-    {
-      "slug": "progressplay-ltd",
-      "name": "ProgressPlay LTD"
-    },
-    {
-      "slug": "rank-interactive",
-      "name": "Rank Interactive"
-    },
-    {
-      "slug": "seven-5-offsuit-ltd",
-      "name": "Seven 5 Offsuit Ltd."
-    },
-    {
-      "slug": "skill-on-net-ltd",
-      "name": "Skill On Net Ltd"
-    },
-    {
-      "slug": "solaya-group-ltd",
-      "name": "Solaya Group LTD"
-    },
-    {
-      "slug": "tek-fox-ltd",
-      "name": "Tek Fox LTD"
-    },
-    {
-      "slug": "test-owner",
-      "name": "Test Owner"
-    },
-    {
-      "slug": "test-owner-2",
-      "name": "Test Owner 2"
-    },
-    {
-      "slug": "tex-fox-ltd",
-      "name": "Tex Fox LTD"
-    },
-    {
-      "slug": "triple-bet-limited",
-      "name": "Triple Bet Limited"
-    },
-    {
-      "slug": "twocent-technology-limited",
-      "name": "Twocent Technology Limited"
-    },
-    {
-      "slug": "uab-amber-gaming",
-      "name": "UAB Amber Gaming"
-    },
-    {
-      "slug": "vegas-folks",
-      "name": "Vegas Folks"
-    },
-    {
-      "slug": "vf2011-limited",
-      "name": "VF2011 Limited"
-    },
-    {
-      "slug": "viral-interactive-limited",
-      "name": "Viral Interactive Limited"
-    },
-    {
-      "slug": "virtual-global-digital-services-ltd",
-      "name": "Virtual Global Digital Services LTD"
-    },
-    {
-      "slug": "water-tree-limited",
-      "name": "Water Tree Limited"
-    },
-    {
-      "slug": "whg-international-limited",
-      "name": "WHG (International) Limited"
-    },
-    {
-      "slug": "white-hat-gaming-limited",
-      "name": "White Hat Gaming Limited"
-    },
-    {
-      "slug": "winzon-group-limited",
-      "name": "Winzon Group Limited"
-    },
-    {
-      "slug": "zecure-gaming-limited",
-      "name": "Zecure Gaming Limited"
-    }
-  ],
   "editorial_content_requirements": {
     "title": {
       "purpose": "Write a useful search/editorial title, not merely the operator campaign label.",
@@ -1497,11 +1168,6 @@
         "Important conditions"
       ]
     }
-  },
-  "network_relationship": {
-    "provider_group": "Optional canonical slug from provider_groups (owner taxonomy), for example progress-play. Use only when the same campaign is distributed across that provider/operator group.",
-    "excluded_casinos": "Optional list of WordPress Casino Review IDs or canonical post slugs that are known exceptions within provider_group. Empty for no known exceptions. Requires provider_group.",
-    "direct_brand_rule": "Brand-only promotions may be updated only by their direct/source brand. A canonical provider-group promotion may be updated by research for any covered brand when promotion_id, promotion_key and provider_group reconcile; the importer preserves the original direct/source casino. The original casino is an attribution/CTA relationship, never the editorial identity of the provider-group campaign."
   },
   "taxonomy_additions": {
     "allowed_taxonomies": [
@@ -1647,8 +1313,6 @@
       "giveaway"
     ],
     "eligible_selections": [],
-    "provider_group": null,
-    "excluded_casinos": [],
     "eligibility": {
       "customer_eligibility": "all",
       "opt_in_required": false,

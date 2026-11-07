@@ -620,6 +620,10 @@
       "name": "Big Bass Bonanza 1000"
     },
     {
+      "slug": "big-bass-football-bonanza",
+      "name": "Big Bass Football Bonanza"
+    },
+    {
       "slug": "big-bass-halloween-splash-1000",
       "name": "Big Bass Halloween Splash 1000"
     },
@@ -764,6 +768,10 @@
       "name": "Gates of Olympus"
     },
     {
+      "slug": "gates-of-olympus-pop",
+      "name": "Gates of Olympus POP"
+    },
+    {
       "slug": "gold-blitz-extreme",
       "name": "Gold Blitz Extreme"
     },
@@ -802,6 +810,10 @@
     {
       "slug": "ice-hockey",
       "name": "Ice Hockey"
+    },
+    {
+      "slug": "immortal-romance",
+      "name": "Immortal Romance"
     },
     {
       "slug": "immortal-wins",
@@ -870,6 +882,10 @@
     {
       "slug": "reactoonz",
       "name": "Reactoonz"
+    },
+    {
+      "slug": "reactoonz-blitzways",
+      "name": "Reactoonz Blitzways"
     },
     {
       "slug": "red-rocket",
@@ -3919,14 +3935,14 @@
     "evidence": {
       "primary_source_url": "https://operator.example/event",
       "terms_source_url": "https://operator.example/event-terms",
-      "source_checked_at": "2026-11-07T06:06:44+00:00",
+      "source_checked_at": "2026-11-07T13:11:46+00:00",
       "notes": null
     }
   },
   "root_shape": {
     "schema_version": "1.0",
     "brand_id": 123,
-    "researched_at": "2026-11-07T06:06:44+00:00",
+    "researched_at": "2026-11-07T13:11:46+00:00",
     "taxonomy_additions": {
       "event_category": [],
       "eligible_game": []

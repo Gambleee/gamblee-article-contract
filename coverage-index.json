@@ -2,8 +2,151 @@
   "contract": "gamblee-article-coverage-index",
   "schema_version": 1,
   "source": "https://www.gamblee.com/wp-json/gamblee-core/v1/articles/coverage-index",
-  "total": 320,
+  "total": 325,
   "articles": [
+    {
+      "id": 89492,
+      "date": "2026-11-08T21:20:21+00:00",
+      "modified": "2026-11-08T21:20:21+00:00",
+      "title": "UK Finance Bill Clarifies Tax Treatment of Casino Free Spins and Tournaments",
+      "slug": "uk-remote-gaming-duty-free-spins-finance-bill-2026",
+      "url": "https://www.gamblee.com/articles/uk-remote-gaming-duty-free-spins-finance-bill-2026/",
+      "excerpt": "HMRC plans to clarify how restricted promotional play, tournament entries and prizes are treated for Remote Gaming Duty from April 2027.",
+      "verticals": [
+        "bingo",
+        "casino",
+        "poker"
+      ],
+      "geographies": [
+        "gb"
+      ],
+      "topics": [
+        "regulation-law"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89489,
+      "date": "2026-11-08T21:13:18+00:00",
+      "modified": "2026-11-08T21:13:18+00:00",
+      "title": "Haiti Confirms ANJHA as Nationwide Gambling Regulator and DGI as Tax Collector",
+      "slug": "haiti-anjha-national-gambling-regulator-november-2026",
+      "url": "https://www.gamblee.com/articles/haiti-anjha-national-gambling-regulator-november-2026/",
+      "excerpt": "Haiti's Finance Ministry has reinforced the authority of new regulator ANJHA and instructed gambling operators to pay taxes and fees only through DGI.",
+      "verticals": [
+        "casino",
+        "lottery",
+        "sports-betting"
+      ],
+      "geographies": [
+        "ht"
+      ],
+      "topics": [
+        "licensing",
+        "regulation-law"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89486,
+      "date": "2026-11-08T21:12:50+00:00",
+      "modified": "2026-11-08T21:12:50+00:00",
+      "title": "7bet Announces Prediction Markets for Lithuania and Latvia Amid Legal Questions",
+      "slug": "7bet-prediction-markets-lithuania-latvia-2026",
+      "url": "https://www.gamblee.com/articles/7bet-prediction-markets-lithuania-latvia-2026/",
+      "excerpt": "7bet says it is bringing prediction markets to Lithuania and Latvia with Altenar technology, although product approval and live access remain unverified.",
+      "verticals": [
+        "sports-betting"
+      ],
+      "geographies": [
+        "lt",
+        "lv"
+      ],
+      "topics": [
+        "licensing",
+        "regulation-law"
+      ],
+      "subjects": [],
+      "entities": [
+        "brand-7bet"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89483,
+      "date": "2026-11-08T21:11:16+00:00",
+      "modified": "2026-11-08T21:11:32+00:00",
+      "title": "UK Gambling Commission Reports 7.8 Million Illegal Gambling URL Referrals",
+      "slug": "ukgc-reports-7-8-million-illegal-gambling-url-referrals-2026",
+      "url": "https://www.gamblee.com/articles/ukgc-reports-7-8-million-illegal-gambling-url-referrals-2026/",
+      "excerpt": "The UK Gambling Commission referred more than 7.8 million URLs to search engines in six months, while new data adds context to illegal-market exposure.",
+      "verticals": [
+        "casino",
+        "sports-betting"
+      ],
+      "geographies": [
+        "gb"
+      ],
+      "topics": [
+        "enforcement"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89480,
+      "date": "2026-11-08T21:07:51+00:00",
+      "modified": "2026-11-08T21:07:51+00:00",
+      "title": "Mozambique Sets Tough Online Casino Licensing Rules Ahead of 20 November",
+      "slug": "mozambique-online-casino-licensing-rules-november-2026",
+      "url": "https://www.gamblee.com/articles/mozambique-online-casino-licensing-rules-november-2026/",
+      "excerpt": "Mozambique's online gaming regulation takes effect on 20 November, bringing capital, ownership, payment, technical and player-protection requirements.",
+      "verticals": [
+        "bingo",
+        "casino",
+        "poker"
+      ],
+      "geographies": [
+        "mz"
+      ],
+      "topics": [
+        "licensing",
+        "regulation-law"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
     {
       "id": 89239,
       "date": "2026-11-08T01:58:00+00:00",

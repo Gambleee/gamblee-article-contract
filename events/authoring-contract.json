@@ -1,7 +1,7 @@
 {
   "schema": "Gamblee Event Research JSON",
   "schema_version": "1.0",
-  "research_policy_revision": 20261107,
+  "research_policy_revision": 20261104,
   "compatible_schema_versions": [
     "1.0"
   ],
@@ -18,9 +18,9 @@
     "Choose exactly one approved event_categories type. Vertical is separate (casino, betting, bingo, poker). Poker Events must use freerolls only. Bingo Tournament and Bingo Session require the bingo vertical. Unknown or unrepresentable types must be held for editorial review and omitted from import; never automatically create a new event category.",
     "Fixed and recurring Events must have exact, officially supported start_time and end_time. For recurring events those timestamps anchor the first actual occurrence and its duration; repeat_every and repeat_unit provide the repeat interval. A month name or generic weekly cadence cannot establish dates. Never invent schedule timestamps or claim LIVE without them. The schema cannot express a separate end date for an entire recurring series; do not represent bounded recurring campaigns as endless recurring events.",
     "Use limited_time only for fixed events with verified start_time and end_time. On-demand or recurring events must not claim Limited Time without a modelled campaign end. Existing undated events remain editable but are suppressed in ordinary public listings until dates are verified.",
-    "Prefer first-party sources for event identity, primary prize and schedule. Current specific reliable secondary sources may clarify ancillary details. When official countries are unstated, markets=[] and the event's advertised currencies[] enable inferred listing scope without country-by-country proof. Do not add unsupported explicit market codes, and honor known restrictions.",
-    "One event record covers identical competition, schedule and qualification across the explicitly named markets[], or markets=[] and advertised currencies[] when geography is unstated. Do not omit or clone solely because individual inferred countries are unverified.",
-    "MARKETS AND CAMPAIGN IDENTITY: Research official current campaign pages even when the brand has no previously researched market. Existing market lists are context, not a discovery whitelist. Record only operator-explicit campaign markets; otherwise use market=\"\" for Bonus or markets=[] for Promotion/Event, with all currencies advertised for the OFFER. Gamblee automatically infers listing markets from offer currencies (including applicable EUR markets); do NOT demand independent proof for each inferred country, and do NOT omit a documented campaign solely because no country list is published. Inferred countries belong only to derived listing visibility, not explicit market fields or brand availability; never substitute account/payment currencies. GLOBAL is permitted only for explicitly documented broad coverage; known restrictions still apply. EUR infers euro-using markets, not all Europe; USD alone establishes no country. Preserve the existing campaign ID and stable key when adding currencies or market evidence. One campaign with identical numeric rewards, conditions and schedule stays one record; return its complete advertised currency list. Split materially different rewards/conditions/schedules, never currency labels alone. A single amount applies to every listed currency: do not merge differing currency-specific amounts or invent conversions. Reuse verified existing campaign IDs; ambiguous candidate matches require review, never a new duplicate. No inference overrides explicit exclusions, product restrictions or publication policy.",
+    "Prefer first-party sources for event identity, primary prize and schedule. Current specific reliable secondary sources may clarify ancillary details. When eligible countries are unstated, use markets=[] and event-advertised currencies[] for normal inferred listing scope; no per-country proof gate. Only add explicit market codes supported by the operator; known exclusions override inference.",
+    "One event record should cover all verified markets in markets[] when the same competition, schedule and qualification apply; do not clone per market alone.",
+    "MARKETS AND CAMPAIGN IDENTITY: Research official current campaign pages even when the brand has no previously researched market. Existing market lists are context, not a discovery whitelist. Record only explicitly named campaign markets; otherwise use market=\"\" for Bonus or markets=[] for Promotion/Event and populate currencies[] from the advertised OFFER denominations. Gamblee derives listing visibility from those currencies, including the applicable EUR market set; independent confirmation of every inferred country is NOT required for research, JSON creation or import. Missing explicit country coverage is never a reason to omit an otherwise supported campaign. Do not write derived countries into explicit market fields or brand availability, and never derive offer currencies from generic account/payment methods. GLOBAL is permitted only for explicitly documented broad coverage; known restrictions still apply. EUR infers euro-using markets, not all Europe; USD alone establishes no country. Preserve the existing campaign ID and stable key when adding currencies or market evidence. One campaign with identical numeric rewards, conditions and schedule stays one record; return its complete advertised currency list. Split materially different rewards/conditions/schedules, never currency labels alone. A single amount applies to every listed currency: do not merge differing currency-specific amounts or invent conversions. Reuse verified existing campaign IDs; ambiguous candidate matches require review, never a new duplicate. No inference overrides explicit exclusions, product restrictions or publication policy.",
     "provider_group is optional and uses the provider taxonomy. When set, the event may cover that provider group; event_brand remains the CTA owner.",
     "Do not use Events for prize draws, giveaways or other random-winner campaigns merely because they have dates.",
     "Prefer current first-party evidence. Current specific secondary evidence may fill commercial mechanics when first-party material is unavailable or inaccessible.",
@@ -764,6 +764,10 @@
       "name": "Formula 1"
     },
     {
+      "slug": "fruitspin",
+      "name": "Fruitspin"
+    },
+    {
       "slug": "gates-of-olympus",
       "name": "Gates of Olympus"
     },
@@ -808,6 +812,14 @@
       "name": "Hot Hot Fruit"
     },
     {
+      "slug": "hotline",
+      "name": "Hotline"
+    },
+    {
+      "slug": "huff-n-puff-haunted-mansion",
+      "name": "Huff N' Puff: Haunted Mansion"
+    },
+    {
       "slug": "ice-hockey",
       "name": "Ice Hockey"
     },
@@ -822,6 +834,10 @@
     {
       "slug": "jackpot-sng",
       "name": "Jackpot SNG"
+    },
+    {
+      "slug": "jungle-spirit",
+      "name": "Jungle Spirit"
     },
     {
       "slug": "le-bandit",
@@ -3935,14 +3951,14 @@
     "evidence": {
       "primary_source_url": "https://operator.example/event",
       "terms_source_url": "https://operator.example/event-terms",
-      "source_checked_at": "2026-11-07T19:28:42+00:00",
+      "source_checked_at": "2026-11-08T00:42:51+00:00",
       "notes": null
     }
   },
   "root_shape": {
     "schema_version": "1.0",
     "brand_id": 123,
-    "researched_at": "2026-11-07T19:28:42+00:00",
+    "researched_at": "2026-11-08T00:42:51+00:00",
     "taxonomy_additions": {
       "event_category": [],
       "eligible_game": []

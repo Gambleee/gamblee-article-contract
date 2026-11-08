@@ -26,14 +26,14 @@
     {
       "dimension": "subjects",
       "taxonomy": "news_subject",
-      "count": 232,
+      "count": 233,
       "hierarchical": true,
       "searchable": true
     },
     {
       "dimension": "entities",
       "taxonomy": "news_entity",
-      "count": 1287,
+      "count": 1288,
       "hierarchical": false,
       "searchable": true
     },

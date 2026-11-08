@@ -2,7 +2,7 @@
   "contract": "gamblee-article-vocabulary-snapshot",
   "schema_version": "1.1",
   "dimension": "entities",
-  "total": 1287,
+  "total": 1288,
   "source": "https://www.gamblee.com/wp-json/gamblee-core/v1/articles/vocabulary/entities",
   "items": [
     {
@@ -3564,6 +3564,11 @@
       "slug": "provider-markor-technology",
       "name": "Markor Technology",
       "entity_type": "provider"
+    },
+    {
+      "slug": "company-marquix-enterprises-pvt-ltd",
+      "name": "Marquix Enterprises Pvt Ltd",
+      "entity_type": "company"
     },
     {
       "slug": "provider-mascot-gaming",

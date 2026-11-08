@@ -2,8 +2,143 @@
   "contract": "gamblee-article-coverage-index",
   "schema_version": 1,
   "source": "https://www.gamblee.com/wp-json/gamblee-core/v1/articles/coverage-index",
-  "total": 315,
+  "total": 320,
   "articles": [
+    {
+      "id": 89239,
+      "date": "2026-11-08T01:58:00+00:00",
+      "modified": "2026-11-08T01:58:00+00:00",
+      "title": "Malta’s EU Objection Delays Austria’s Gambling Reform Until December 7",
+      "slug": "malta-delays-austria-gambling-reform-december-2026",
+      "url": "https://www.gamblee.com/articles/malta-delays-austria-gambling-reform-december-2026/",
+      "excerpt": "A formal detailed opinion from Malta extended the EU standstill on Austria’s draft gambling legislation to 7 December 2026.",
+      "verticals": [
+        "casino",
+        "sports-betting"
+      ],
+      "geographies": [
+        "at"
+      ],
+      "topics": [
+        "regulation-law"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89236,
+      "date": "2026-11-08T01:57:07+00:00",
+      "modified": "2026-11-08T01:57:07+00:00",
+      "title": "Arkansas Sues Kalshi and Global Poker Owner VGW in Separate Gambling Cases",
+      "slug": "arkansas-sues-kalshi-vgw-global-poker-2026",
+      "url": "https://www.gamblee.com/articles/arkansas-sues-kalshi-vgw-global-poker-2026/",
+      "excerpt": "Arkansas has filed separate lawsuits against Kalshi and VGW, challenging prediction-market event contracts and dual-currency sweepstakes games.",
+      "verticals": [
+        "casino",
+        "poker",
+        "sports-betting"
+      ],
+      "geographies": [
+        "us-ar"
+      ],
+      "topics": [
+        "regulation-law"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89233,
+      "date": "2026-11-08T01:56:16+00:00",
+      "modified": "2026-11-08T01:56:16+00:00",
+      "title": "Casinos Austria Warns 150,000 Customers After Voucher-Shop Cyberattack",
+      "slug": "casinos-austria-150000-customers-cyberattack-2026",
+      "url": "https://www.gamblee.com/articles/casinos-austria-150000-customers-cyberattack-2026/",
+      "excerpt": "Casinos Austria says a breach at an outside provider affected about 150,000 voucher-shop customers. It says payment-card details were not compromised.",
+      "verticals": [
+        "casino"
+      ],
+      "geographies": [
+        "at"
+      ],
+      "topics": [
+        "player-protection"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89230,
+      "date": "2026-11-08T01:55:04+00:00",
+      "modified": "2026-11-08T01:55:04+00:00",
+      "title": "Turkey Remands 90 in Illegal Betting Case Involving ₺20 Billion in Transactions",
+      "slug": "turkey-90-detained-illegal-betting-20-billion-lira-2026",
+      "url": "https://www.gamblee.com/articles/turkey-90-detained-illegal-betting-20-billion-lira-2026/",
+      "excerpt": "A 34-province operation led from Nevşehir resulted in 90 suspects being remanded in custody as police investigate alleged betting proceeds and money laundering.",
+      "verticals": [
+        "casino",
+        "sports-betting"
+      ],
+      "geographies": [
+        "tr"
+      ],
+      "topics": [
+        "enforcement"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89227,
+      "date": "2026-11-08T01:54:06+00:00",
+      "modified": "2026-11-08T01:54:06+00:00",
+      "title": "Indonesia Expands Illegal Gambling Bank-Account Sweep to 39,923",
+      "slug": "indonesia-39923-bank-accounts-illegal-gambling-2026",
+      "url": "https://www.gamblee.com/articles/indonesia-39923-bank-accounts-illegal-gambling-2026/",
+      "excerpt": "Indonesia ordered enhanced bank checks and possible blocking of 39,923 accounts suspected of online gambling, extending its crackdown to payment networks.",
+      "verticals": [
+        "casino",
+        "sports-betting"
+      ],
+      "geographies": [
+        "id"
+      ],
+      "topics": [
+        "enforcement"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
     {
       "id": 89032,
       "date": "2026-11-05T09:43:02+00:00",

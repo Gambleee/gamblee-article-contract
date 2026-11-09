@@ -2,8 +2,38 @@
   "contract": "gamblee-article-coverage-index",
   "schema_version": 1,
   "source": "https://www.gamblee.com/wp-json/gamblee-core/v1/articles/coverage-index",
-  "total": 325,
+  "total": 326,
   "articles": [
+    {
+      "id": 89585,
+      "date": "2026-11-09T15:20:45+00:00",
+      "modified": "2026-11-09T15:20:45+00:00",
+      "title": "Independent Commission Opens Review of UK Gambling Laws and 2005 Act",
+      "slug": "uk-gambling-policy-commission-review-gambling-act-2005-2026",
+      "url": "https://www.gamblee.com/articles/uk-gambling-policy-commission-review-gambling-act-2005-2026/",
+      "excerpt": "A new independent commission will examine whether Britain needs a replacement for the Gambling Act 2005, covering prediction markets, offshore sites, taxes and gambling harm.",
+      "verticals": [
+        "bingo",
+        "casino",
+        "lottery",
+        "poker",
+        "sports-betting"
+      ],
+      "geographies": [
+        "gb"
+      ],
+      "topics": [
+        "regulation-law"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
     {
       "id": 89492,
       "date": "2026-11-08T21:20:21+00:00",

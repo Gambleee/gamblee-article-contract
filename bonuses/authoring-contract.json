@@ -1,6 +1,6 @@
 {
   "schema_version": "1.5",
-  "research_policy_revision": 20261104,
+  "research_policy_revision": 20261109,
   "compatible_schema_versions": [
     "1.0",
     "1.1",
@@ -12,17 +12,17 @@
   "entity": "gamblee_bonus_research",
   "rules": [
     "Before serialization, apply the Event override first: scheduled competitive/playable campaigns such as slot or poker tournaments, freerolls, leaderboards, casino races and scheduled bingo rooms/sessions are Events, even when signup or a fresh deposit is required.",
-    "Apply the Promo override next: prize draws, raffles, giveaways, sweepstakes, random-winner competitions, missions/challenges, cashback, loyalty mechanics, prize wheels and mystery boxes are Promos, even when time-limited or deposit-gated.",
+    "Apply the Promo override next: prize draws, raffles, giveaways, sweepstakes, random-winner competitions, missions/challenges, cashback, loyalty mechanics, free daily wheels and mystery boxes are Promos. EXCEPTION: a direct deposit-triggered Mega Wheel or reload wheel is a Bonus, not a Promotion, when the new deposit activates the wheel reward.",
     "After those overrides, a Bonus is only a signup/new-customer offer or an offer whose specific direct-reward claim/activation requires a new upfront deposit.",
     "Existing-depositor, funded-player, VIP or active-customer status alone does not make an item a Bonus.",
     "Reward type alone does not determine classification.",
-    "Classification examples: Welcome match bonus and a deposit-triggered direct free-spins offer are Bonuses; scheduled slot tournaments, poker freerolls, races and leaderboards are Events even when deposit-gated; prize draws, missions, cashback, giveaways and prize wheels are Promos even when deposit-gated. A welcome reward consisting of tournament tickets is not itself a tournament Event.",
+    "Classification examples: Welcome matches, new-deposit rewards, and deposit-triggered Mega Wheel/reel spins are Bonuses (including uncalculable ones); daily free wheels not triggered by a new deposit, prize draws, cashback, missions and giveaways are Promotions; scheduled competitions, poker freerolls and leaderboards are Events.",
     "Apply the Event → Promo → Bonus classification sequence to every candidate immediately before serializing. If unverified, omit the candidate; never force an Event/Promo into Bonus JSON or schema_gaps.",
     "Bonus JSON serializes only Bonus-classified offers. Omit Event- and Promo-classified items entirely from offers and schema_gaps.",
     "schema_gaps is reserved only for genuine Bonus-classified offers whose mechanics cannot be represented by this contract. Never report an Event- or Promo-classified item as a Bonus schema gap.",
     "One offer object represents one campaign variant and one vertical. Use market=\"\" when no explicit market was discovered; currencies drive shared inference. For an explicitly documented multi-country campaign use GLOBAL with included_countries; do not duplicate identical offers by country.",
     "MAIN-MARKET BONUS COVERAGE (RESEARCH TARGET, NOT AN OUTPUT QUOTA): Investigate all campaigns in the current official hub and clearly relevant market/subdivision pages. Start with welcome/signup/first-deposit offers, then reloads, free spins and other direct-deposit rewards. Do not perform a separate country-by-country proof exercise for markets inferred from offer currencies, and do not treat market counts as output quotas. Maintain an internal market-coverage checklist, but do not serialize it or fabricate, duplicate or localize offers to reach a quota. An operator-advertised EUR offer may use market=\"\" and currencies=[\"EUR\"] so Gamblee derives eligible listing scope without country-by-country proof. Do not omit that campaign for lack of a country list, localize unverified amounts, or clone it for the inferred markets. Only populate explicit market codes where the operator names them; explicit restrictions override inference. Keep researching additional Bonuses, Promos and Events after finding one qualifying Bonus. If no qualifying campaign mechanics are established, do not fabricate a record; if official retrieval is blocked, report research incomplete rather than asserting no offers.",
-    "MARKETS AND CAMPAIGN IDENTITY: Research official current campaign pages even when the brand has no previously researched market. Existing market lists are context, not a discovery whitelist. Record only explicitly named campaign markets; otherwise use market=\"\" for Bonus or markets=[] for Promotion/Event and populate currencies[] from the advertised OFFER denominations. Gamblee derives listing visibility from those currencies, including the applicable EUR market set; independent confirmation of every inferred country is NOT required for research, JSON creation or import. Missing explicit country coverage is never a reason to omit an otherwise supported campaign. Do not write derived countries into explicit market fields or brand availability, and never derive offer currencies from generic account/payment methods. GLOBAL is permitted only for explicitly documented broad coverage; known restrictions still apply. EUR infers euro-using markets, not all Europe; USD alone establishes no country. Preserve the existing campaign ID and stable key when adding currencies or market evidence. One campaign with identical numeric rewards, conditions and schedule stays one record; return its complete advertised currency list. Split materially different rewards/conditions/schedules, never currency labels alone. A single amount applies to every listed currency: do not merge differing currency-specific amounts or invent conversions. Reuse verified existing campaign IDs; ambiguous candidate matches require review, never a new duplicate. No inference overrides explicit exclusions, product restrictions or publication policy.",
+    "MARKETS AND CAMPAIGN IDENTITY: For NEW Bonus and Promotion research, focus on GB, IE, CA, US and AU betting; existing other-market records remain historical context and retain their IDs. The standalone Event workflow keeps its separate historical market policy. Existing lists are reconciliation context, not output quotas. Record only explicitly named campaign markets; otherwise use market=\"\" for Bonus or markets=[] for Promotion/Event and populate currencies[] from the advertised OFFER denominations. Gamblee derives listing visibility from those currencies, using the five commercial-market currency map; independent confirmation of every inferred country is NOT required for research, JSON creation or import. Missing explicit country coverage is never a reason to omit an otherwise supported campaign. Do not write derived countries into explicit market fields or brand availability, and never derive offer currencies from generic account/payment methods. GLOBAL is permitted only for explicitly documented broad coverage; known restrictions still apply. EUR infers Ireland for Bonus/Promotion commercial listings. Exact ISO USD can infer the US for approved-brand campaign records, while an unlabelled dollar symbol needs Canadian/US context and must never silently default to USD. Preserve the existing campaign ID and stable key when adding currencies or market evidence. One campaign with identical numeric rewards, conditions and schedule stays one record; return its complete advertised currency list. Split materially different rewards/conditions/schedules, never currency labels alone. A single amount applies to every listed currency: do not merge differing currency-specific amounts or invent conversions. Reuse verified existing campaign IDs; ambiguous candidate matches require review, never a new duplicate. No inference overrides explicit exclusions, product restrictions or publication policy.",
     "Offer titles use <Brand> <Market label> <Vertical> Offer • <Reward>, with full market labels such as United Kingdom and Canada, Alberta; omit the market label when not explicitly known. If the title would exceed 65 characters, omit <Vertical> first. Do not truncate verified reward text merely to retain the vertical label.",
     "Currencies use the canonical Bonus Offer ISO 4217 vocabulary. GLOBAL/ROW offers may use local currencies beyond Gamblee's detailed-market currencies.",
     "One discrete promotion stays one offer even when the offer explicitly supports several currencies. Use currencies as a list and do not clone an otherwise identical market/vertical offer solely for EUR/USD/etc. If structured mechanics materially differ by currency and cannot be represented exactly, report a schema gap rather than creating currency-only duplicates.",
@@ -32,10 +32,10 @@
     "Recurring offers remain one offer and use schedule.weekdays and/or validity dates.",
     "Do not output prohibited markets. CA-ON is currently prohibited for public Bonus Offer publication.",
     "Use schema_gaps only when a genuine Bonus-classified mechanic is required for structured qualification, reward, wagering, cashout, schedule, eligibility or analyzer correctness and cannot be represented exactly. Ancillary restrictions that can be represented accurately in copy.terms, such as a maximum number of claims per month, belong in copy.terms and must not create a schema gap.",
-    "Only supported_and_analyzable offers with at least one numerically quantifiable structured reward component may be imported. not_calculable offers are excluded from new Bonus JSON imports; unsupported_but_fixable items remain blocked until the schema is extended.",
-    "analysis.status is offer-level, but analyzer EV may be component-level. Mark an offer supported_and_analyzable only when at least one substantive structured reward component is numerically quantifiable. An unknown secondary component does not invalidate a calculable primary component; leave unknown EV inputs null and exclude that component from EV. Unknown or variable personalised reload rewards, undisclosed wheel probabilities and entirely unquantifiable bonuses must not be emitted as Bonus offers or schema_gaps.",
+    "A current, evidenced signup/new-deposit Bonus is importable as analysis.status=not_calculable even with components={} when the outcome is random/personalised and no reliable monetary EV exists. A factual copy.display_offer and analysis.reason are mandatory. Never invent reward probabilities, guaranteed spins or a fake numerical value. supported_and_analyzable still requires a genuine calculable component.",
+    "analysis.status is offer-level; unsupported numeric expectations must never be fabricated. supported_and_analyzable requires a guaranteed numeric component; not_calculable carries a factual text headline for deposit-triggered Mega Wheel/random/personalised rewards and displays the offer rather than a monetary EV. Unknown ancillary component data can remain null. Components for a pure variable wheel may be {}.",
     "Free-spin valuation default: when the operator does not state value_per_spin and every offer currency is one of EUR, GBP, USD, CAD, AUD or NZD, use 0.10 per spin. This is a Gamblee valuation assumption, not an operator-stated term. An explicit operator value always overrides it. Do not apply the 0.10 fallback to currencies with materially different unit scales such as ZAR.",
-    "With that fallback, a pure free-spins offer in EUR, GBP, USD, CAD, AUD or NZD can remain supported_and_analyzable when spin count is known. If value_per_spin is unknown outside these currencies, omit it unless another component is calculable. Never invent a value or submit not_calculable offers.",
+    "The free-spin value fallback applies only to a GUARANTEED, known spin count; do not treat a prize-wheel possible maximum (e.g. up to 500 spins) as a guaranteed amount. For variable or random deposit rewards use not_calculable and describe the reward in copy.display_offer. Ordinary guaranteed Free Spins remain supported_and_analyzable with valid fallback values.",
     "urls.offer is only for a Gamblee-approved/tracked commercial deep link. Never substitute a generic official brand website, ordinary promotion page, affiliate-programme homepage, evidence URL, or guessed tracking URL. Put ordinary official promotion pages in evidence and leave urls.offer null so Gamblee inherits the canonical brand market/vertical Commercial Link. urls.terms may use a direct official terms URL.",
     "Use included_subdivisions when a broad country offer is available only in named subdivisions; use excluded_subdivisions when it applies broadly except named subdivisions. Never use both for the same subdivision.",
     "Use included_countries only with market=GLOBAL to whitelist the exact countries covered by a broad international offer. Use verified campaign country coverage; known brand exclusions still apply and campaign inference never changes brand availability.",
@@ -45,7 +45,7 @@
     "brand_availability_changes may propose evidence-backed country or US/Canada subdivision additions/removals discovered while researching current official offer terms. Every change requires a reason and at least one first-party URL on a stored canonical brand domain. A country addition may include name; when a valid ISO code has no existing Gamblee Country record, the importer may create that Country record from the canonical name. Do not infer removals from the absence of an offer.",
     "Offer validation may rely on an availability addition in the same payload. Availability changes are applied only after every Bonus Offer in the payload imports successfully.",
     "A required but operator-selected or dynamically supplied promo code uses bonus_code_requirement=required_unspecified rather than inventing a code.",
-    "An entirely unquantifiable offer is omitted from Bonus JSON rather than reclassified automatically as a Promotion. Prize-wheel and lottery campaigns are Promotion-classified; a separately researched editorial article may cover an unquantifiable but newsworthy bonus.",
+    "Do not drop or misclassify a direct-deposit Bonus because its monetary value cannot be computed. Model deposit-triggered Mega Wheel as a not_calculable Bonus with honest display_offer and empty components where no guaranteed value exists. An ordinary daily/free wheel with no newly qualifying deposit stays a Promotion. Draws and lotteries stay Promotions.",
     "Bonus codes MUST NEVER come from third-party affiliates, coupon listings, comparison sites, forums or search snippets; these may attribute customers to another affiliate. A known code is permitted only when the exact code is visibly published on an official canonical brand domain. Set bonus_code_requirement=required_known, bonus_code and bonus_code_source_url to the direct first-party page, and include the page in offer evidence. Otherwise use required_unspecified with bonus_code=null and bonus_code_source_url=null. Never repeat unverified codes in copy.",
     "Generate one complete strict JSON object with no markdown fences, comments, trailing commas or placeholders. Validate the whole JSON before delivery. For large payloads provide a genuine complete .json file; never truncate, abbreviate or split the JSON.",
     "Return only actionable bonus_reconciliation rows: an evidence-backed ended campaign or a material status change. Omit unchanged and not_found records; omission never retires anything. A dated official campaign schedule that has elapsed can prove its end, but a disappeared page or silence cannot.",
@@ -58,7 +58,8 @@
     "Prefer operator evidence for campaign identity, headline reward amounts and material financial conditions. Credible current specific secondary evidence may help with ancillary mechanics when original terms are incomplete. Store explicit campaign markets only when stated; when unstated, use market=\"\" and the offer-advertised currencies[] to supply normal listing visibility without checking each inferred country. Never omit a documented campaign because it lacks a market list. Changes to brand availability, regulatory claims and exact bonus codes remain first-party-only; never invent terms or numbers."
   ],
   "analysis_statuses": [
-    "supported_and_analyzable"
+    "supported_and_analyzable",
+    "not_calculable"
   ],
   "schema_gap_status": "unsupported_but_fixable",
   "reconciliation_statuses": [
@@ -6354,7 +6355,8 @@
                 "status": {
                   "type": "string",
                   "enum": [
-                    "supported_and_analyzable"
+                    "supported_and_analyzable",
+                    "not_calculable"
                   ]
                 },
                 "reason": {
@@ -6497,7 +6499,7 @@
     ],
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "title": "Gamblee Bonus Research JSON v1.5 — importer-aligned",
-    "description": "Structural schema only. Import also enforces live brand scope, taxonomy membership, classification, numerical quantifiability, first-party source verification, duplicate offer keys and reconciliation ownership."
+    "description": "Structural schema only. Import also enforces live brand scope, taxonomy membership, classification, authored variable-reward explanation, first-party source verification, duplicate offer keys and reconciliation ownership."
   },
   "import_example_v15": {
     "schema_version": "1.5",
@@ -6611,7 +6613,7 @@
   "root_shape": {
     "schema_version": "1.5",
     "brand_id": 123,
-    "researched_at": "2026-11-09T06:45:19+00:00",
+    "researched_at": "2026-11-09T19:52:33+00:00",
     "taxonomy_additions": {
       "eligible_game": [],
       "excluded_payment_methods": [],

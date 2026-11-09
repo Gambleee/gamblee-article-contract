@@ -123,7 +123,7 @@
     {
       "slug": "brand-888casino",
       "name": "888casino",
-      "entity_type": "brand"
+      "entity_type": "other"
     },
     {
       "slug": "brand-888poker",
@@ -1753,7 +1753,7 @@
     {
       "slug": "brand-dream-vegas",
       "name": "Dream Vegas",
-      "entity_type": "brand"
+      "entity_type": "other"
     },
     {
       "slug": "provider-dreamspin",
@@ -4948,7 +4948,7 @@
     {
       "slug": "brand-regency-casino",
       "name": "Regency Casino",
-      "entity_type": "brand"
+      "entity_type": "other"
     },
     {
       "slug": "provider-relax-gaming",

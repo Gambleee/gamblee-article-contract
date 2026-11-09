@@ -9,8 +9,8 @@
   "purpose": "Research current or officially announced upcoming brand promotions and map verified facts into the canonical Gamblee Promotion CPT.",
   "principles": [
     "Classify Events first: scheduled competitive/playable campaigns such as slot or poker tournaments, freerolls, leaderboards, casino races and timed bingo competitions remain Events even if deposit-gated. In the new combined Bonus + Promotion workflow, skip Events entirely (no Event payload or reconciliation); the standalone Event importer is unchanged.",
-    "Apply the Promo override next: prize draws, raffles, giveaways, sweepstakes, random-winner competitions, missions/challenges, cashback, loyalty mechanics, prize wheels and mystery boxes remain Promos even when time-limited or deposit-gated.",
-    "After those overrides, a Bonus is a signup/new-customer offer or an offer whose specific direct-reward claim/activation requires a new upfront deposit. Promotion JSON serializes only Promo-classified items.",
+    "Apply the Promo override next: prize draws, raffles, giveaways, sweepstakes, random-winner competitions, missions/challenges, cashback, loyalty, FREE DAILY WHEELS and mystery boxes remain Promotions even if funded-account status is required. A Mega Wheel/Reel triggered by a NEW qualifying deposit is a Bonus, even when the reward or its probabilities are unknown. It must not be put in Promotion JSON.",
+    "After Event and Promo overrides, a Bonus is a signup/new-customer offer or a new-deposit-triggered direct reward, including a deposit Mega Wheel or variable reload wheel. The Promotions payload serializes only Promo-classified items.",
     "Omit Bonus- and Event-classified items from promotions and schema_gaps.",
     "Existing-depositor, funded-player, VIP or active-customer status alone does not make an item a Bonus.",
     "Reward type alone does not determine classification. Free spins, cashback, match rewards and other direct rewards may be Bonus or Promo depending on the signup/new-deposit rule after the campaign override.",

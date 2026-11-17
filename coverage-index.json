@@ -2,8 +2,157 @@
   "contract": "gamblee-article-coverage-index",
   "schema_version": 1,
   "source": "https://www.gamblee.com/wp-json/gamblee-core/v1/articles/coverage-index",
-  "total": 326,
+  "total": 331,
   "articles": [
+    {
+      "id": 89607,
+      "date": "2026-11-17T10:55:00+00:00",
+      "modified": "2026-11-17T10:55:00+00:00",
+      "title": "Novomatic Chair Resigns From Ainsworth Board Amid Governance Probe",
+      "slug": "novomatic-chair-ainsworth-board-resignation-governance-2026",
+      "url": "https://www.gamblee.com/articles/novomatic-chair-ainsworth-board-resignation-governance-2026/",
+      "excerpt": "Birgit Wimmer has resigned from Ainsworth Game Technology’s board as the slot-machine supplier investigates unproven governance allegations raised by shareholder Kjerulf Ainsworth.",
+      "verticals": [
+        "slots"
+      ],
+      "geographies": [
+        "au"
+      ],
+      "topics": [
+        "industry-structure",
+        "leadership",
+        "ownership"
+      ],
+      "subjects": [],
+      "entities": [
+        "provider-ainsworth",
+        "provider-novomatic"
+      ],
+      "channels": [
+        "hybrid"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89604,
+      "date": "2026-11-17T10:53:38+00:00",
+      "modified": "2026-11-17T10:54:04+00:00",
+      "title": "Betfair Wins High Court Gambling Duty-of-Care Case",
+      "slug": "betfair-high-court-gambling-duty-of-care-ashton-2026",
+      "url": "https://www.gamblee.com/articles/betfair-high-court-gambling-duty-of-care-ashton-2026/",
+      "excerpt": "England’s High Court has dismissed a negligence claim against the Betfair exchange operator following the death of Luke Ashton, clarifying when operators may owe a civil duty of care.",
+      "verticals": [
+        "betting-exchanges",
+        "sports-betting"
+      ],
+      "geographies": [
+        "gb"
+      ],
+      "topics": [
+        "litigation",
+        "responsible-gambling"
+      ],
+      "subjects": [],
+      "entities": [
+        "other-betfair"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89599,
+      "date": "2026-11-17T10:00:30+00:00",
+      "modified": "2026-11-17T10:01:35+00:00",
+      "title": "UK Youth Gambling Falls, but 22&#37; Still Spend Money on Loot Boxes",
+      "slug": "uk-youth-gambling-falls-22-percent-paid-loot-boxes-2026",
+      "url": "https://www.gamblee.com/articles/uk-youth-gambling-falls-22-percent-paid-loot-boxes-2026/",
+      "excerpt": "UK Gambling Commission research finds 26% of 11- to 17-year-olds spent money on gambling in 2026, while 22% opened paid loot boxes.",
+      "verticals": [
+        "esports-betting",
+        "gambling"
+      ],
+      "geographies": [
+        "gb"
+      ],
+      "topics": [
+        "market-data-research",
+        "responsible-gambling"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89596,
+      "date": "2026-11-17T09:55:50+00:00",
+      "modified": "2026-11-17T09:55:50+00:00",
+      "title": "India Arrests Mahadev Betting Promoter After Extradition From Oman",
+      "slug": "mahadev-betting-saurabh-chandrakar-arrest-extradition-2026",
+      "url": "https://www.gamblee.com/articles/mahadev-betting-saurabh-chandrakar-arrest-extradition-2026/",
+      "excerpt": "Indian investigators arrested alleged Mahadev Online Book promoter Saurabh Chandrakar after his extradition from Oman, as a major money-laundering case continues.",
+      "verticals": [
+        "betting",
+        "sports-betting"
+      ],
+      "geographies": [
+        "in",
+        "om"
+      ],
+      "topics": [
+        "enforcement",
+        "financial-crime",
+        "illegal-gambling"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89593,
+      "date": "2026-11-17T09:53:26+00:00",
+      "modified": "2026-11-17T09:53:26+00:00",
+      "title": "Kalshi Acquires Brokerage as It Plans Stock and ETF Trading",
+      "slug": "kalshi-acquires-fb-securities-stock-etf-trading-2026",
+      "url": "https://www.gamblee.com/articles/kalshi-acquires-fb-securities-stock-etf-trading-2026/",
+      "excerpt": "Kalshi has acquired US broker-dealer FB Securities and plans to add stock and ETF trading, extending its business beyond prediction markets.",
+      "verticals": [
+        "prediction-markets"
+      ],
+      "geographies": [
+        "us"
+      ],
+      "topics": [
+        "industry-structure",
+        "mergers-acquisitions",
+        "product-launch"
+      ],
+      "subjects": [],
+      "entities": [
+        "other-kalshi"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
     {
       "id": 89585,
       "date": "2026-11-09T15:20:45+00:00",

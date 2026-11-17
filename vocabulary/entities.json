@@ -2,7 +2,7 @@
   "contract": "gamblee-article-vocabulary-snapshot",
   "schema_version": "1.1",
   "dimension": "entities",
-  "total": 1288,
+  "total": 1299,
   "source": "https://www.gamblee.com/wp-json/gamblee-core/v1/articles/vocabulary/entities",
   "items": [
     {
@@ -101,9 +101,24 @@
       "entity_type": "provider"
     },
     {
+      "slug": "company-888-denmark-limited",
+      "name": "888 Denmark Limited",
+      "entity_type": "company"
+    },
+    {
+      "slug": "company-888-eire-limited",
+      "name": "888 Eire Limited",
+      "entity_type": "company"
+    },
+    {
       "slug": "provider-888-gaming",
       "name": "888 Gaming",
       "entity_type": "provider"
+    },
+    {
+      "slug": "company-888-germany-limited",
+      "name": "888 Germany Limited",
+      "entity_type": "company"
     },
     {
       "slug": "company-888-holdings-plc",
@@ -111,9 +126,34 @@
       "entity_type": "company"
     },
     {
+      "slug": "company-888-italia-limited",
+      "name": "888 Italia Limited",
+      "entity_type": "company"
+    },
+    {
       "slug": "provider-888-live",
       "name": "888 Live",
       "entity_type": "provider"
+    },
+    {
+      "slug": "company-888-online-games-espana-s-a",
+      "name": "888 Online Games España S.A.",
+      "entity_type": "company"
+    },
+    {
+      "slug": "company-888-portugal-limited",
+      "name": "888 Portugal Limited",
+      "entity_type": "company"
+    },
+    {
+      "slug": "company-888-sweden-limited",
+      "name": "888 Sweden Limited",
+      "entity_type": "company"
+    },
+    {
+      "slug": "company-888-uk-limited",
+      "name": "888 UK Limited",
+      "entity_type": "company"
     },
     {
       "slug": "other-888africa",
@@ -3991,6 +4031,11 @@
       "entity_type": "provider"
     },
     {
+      "slug": "company-new-gambling-solutions-s-r-l",
+      "name": "New Gambling Solutions S.R.L.",
+      "entity_type": "company"
+    },
+    {
       "slug": "regulator-new-jersey-division-of-gaming-enforcement-njdge",
       "name": "New Jersey Division of Gaming Enforcement (NJDGE)",
       "entity_type": "regulator"
@@ -6036,6 +6081,11 @@
       "entity_type": "company"
     },
     {
+      "slug": "company-vhl-ontario-limited",
+      "name": "VHL Ontario Limited",
+      "entity_type": "company"
+    },
+    {
       "slug": "provider-viaden-gaming",
       "name": "Viaden Gaming",
       "entity_type": "provider"
@@ -6064,6 +6114,11 @@
       "slug": "brand-virgin-games",
       "name": "Virgin Games",
       "entity_type": "other"
+    },
+    {
+      "slug": "company-virtual-digital-services-limited",
+      "name": "Virtual Digital Services Limited",
+      "entity_type": "company"
     },
     {
       "slug": "company-virtual-global-digital-services-ltd",

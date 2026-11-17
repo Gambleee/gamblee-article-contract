@@ -1162,8 +1162,40 @@
   ],
   "provider_groups": [
     {
+      "slug": "888-denmark-limited",
+      "name": "888 Denmark Limited"
+    },
+    {
+      "slug": "888-eire-limited",
+      "name": "888 Eire Limited"
+    },
+    {
+      "slug": "888-germany-limited",
+      "name": "888 Germany Limited"
+    },
+    {
       "slug": "888-holdings-plc",
       "name": "888 Holdings PLC"
+    },
+    {
+      "slug": "888-italia-limited",
+      "name": "888 Italia Limited"
+    },
+    {
+      "slug": "888-online-games-espana-sa",
+      "name": "888 Online Games España S.A."
+    },
+    {
+      "slug": "888-portugal-limited",
+      "name": "888 Portugal Limited"
+    },
+    {
+      "slug": "888-sweden-limited",
+      "name": "888 Sweden Limited"
+    },
+    {
+      "slug": "888-uk-limited",
+      "name": "888 UK Limited"
     },
     {
       "slug": "ace-gaming-limited",
@@ -1374,6 +1406,10 @@
       "name": "Netbet Enterprises LTD"
     },
     {
+      "slug": "new-gambling-solutions-srl",
+      "name": "New Gambling Solutions S.R.L."
+    },
+    {
       "slug": "nsus",
       "name": "NSUS"
     },
@@ -1470,8 +1506,16 @@
       "name": "VF2011 Limited"
     },
     {
+      "slug": "vhl-ontario-limited",
+      "name": "VHL Ontario Limited"
+    },
+    {
       "slug": "viral-interactive-limited",
       "name": "Viral Interactive Limited"
+    },
+    {
+      "slug": "virtual-digital-services-limited",
+      "name": "Virtual Digital Services Limited"
     },
     {
       "slug": "virtual-global-digital-services-ltd",
@@ -1758,7 +1802,7 @@
     "evidence": {
       "primary_source_url": "https://operator.example/promotion",
       "terms_source_url": "https://operator.example/promotion-terms",
-      "source_checked_at": "2026-11-17T03:57:18+00:00",
+      "source_checked_at": "2026-11-17T16:08:52+00:00",
       "research_status": "verified",
       "notes": null
     }
@@ -1766,7 +1810,7 @@
   "root_shape": {
     "schema_version": "1.4",
     "brand_id": 123,
-    "researched_at": "2026-11-17T03:57:18+00:00",
+    "researched_at": "2026-11-17T16:08:52+00:00",
     "taxonomy_additions": {
       "promotion_type": [],
       "eligible_game": []

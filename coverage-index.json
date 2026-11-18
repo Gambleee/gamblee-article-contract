@@ -2,8 +2,278 @@
   "contract": "gamblee-article-coverage-index",
   "schema_version": 1,
   "source": "https://www.gamblee.com/wp-json/gamblee-core/v1/articles/coverage-index",
-  "total": 331,
+  "total": 340,
   "articles": [
+    {
+      "id": 89659,
+      "date": "2026-11-18T10:52:31+00:00",
+      "modified": "2026-11-18T10:52:31+00:00",
+      "title": "Curaçao Court Closes BC.Game Company Bankruptcies After Finding No Assets for Creditors",
+      "slug": "bc-game-curacao-bankruptcies-closed-no-assets-2026",
+      "url": "https://www.gamblee.com/articles/bc-game-curacao-bankruptcies-closed-no-assets-2026/",
+      "excerpt": "Curaçao court orders have ended bankruptcy proceedings involving two companies connected to BC.Game after the trustee reported no distributable assets.",
+      "verticals": [
+        "casino"
+      ],
+      "geographies": [
+        "global"
+      ],
+      "topics": [
+        "insolvency-administration",
+        "litigation",
+        "player-funds"
+      ],
+      "subjects": [],
+      "entities": [
+        "brand-bc-game"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89655,
+      "date": "2026-11-18T10:50:11+00:00",
+      "modified": "2026-11-18T10:51:40+00:00",
+      "title": "Alberta Authorises Potential PlayAlberta Sale With 90-Day Player Data Opt-Out",
+      "slug": "alberta-potential-playalberta-sale-player-data-opt-out-2026",
+      "url": "https://www.gamblee.com/articles/alberta-potential-playalberta-sale-player-data-opt-out-2026/",
+      "excerpt": "Alberta has cleared a possible sale of PlayAlberta, including player records, while requiring advance notification and a 90-day opt-out opportunity.",
+      "verticals": [
+        "casino",
+        "sports-betting"
+      ],
+      "geographies": [
+        "ca-ab"
+      ],
+      "topics": [
+        "ownership",
+        "player-funds"
+      ],
+      "subjects": [],
+      "entities": [
+        "regulator-alberta-gaming-liquor-and-cannabis-aglc"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89652,
+      "date": "2026-11-18T10:49:43+00:00",
+      "modified": "2026-11-18T10:49:43+00:00",
+      "title": "Evolution Reaches Partial Settlement in Playtech-Linked Defamation Dispute",
+      "slug": "evolution-settlement-calcagni-kanefsky-playtech-dispute-2026",
+      "url": "https://www.gamblee.com/articles/evolution-settlement-calcagni-kanefsky-playtech-dispute-2026/",
+      "excerpt": "Evolution has settled with litigation firm Calcagni & Kanefsky in a New Jersey defamation case linked to a disputed 2021 report about the supplier.",
+      "verticals": [
+        "casino",
+        "live-casino"
+      ],
+      "geographies": [
+        "us-nj"
+      ],
+      "topics": [
+        "litigation",
+        "software-supplier"
+      ],
+      "subjects": [],
+      "entities": [
+        "other-evolution",
+        "provider-playtech"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89649,
+      "date": "2026-11-18T10:47:41+00:00",
+      "modified": "2026-11-18T10:47:58+00:00",
+      "title": "Finland’s Gambling Licence Register Reaches 25 Ahead of July 2027 Opening",
+      "slug": "finland-gambling-licence-register-25-operators-2027",
+      "url": "https://www.gamblee.com/articles/finland-gambling-licence-register-25-operators-2027/",
+      "excerpt": "Finland’s National Police Board now lists 25 approved gambling licensees, with the country’s competitive licensing framework beginning on 1 July 2027.",
+      "verticals": [
+        "casino",
+        "sports-betting"
+      ],
+      "geographies": [
+        "fi"
+      ],
+      "topics": [
+        "licensing",
+        "market-entry"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89646,
+      "date": "2026-11-18T10:47:12+00:00",
+      "modified": "2026-11-18T10:47:12+00:00",
+      "title": "Nevada Finalises Revised Gaming Technology Standards Effective 13 December",
+      "slug": "nevada-finalises-gaming-technical-standards-december-2026",
+      "url": "https://www.gamblee.com/articles/nevada-finalises-gaming-technical-standards-december-2026/",
+      "excerpt": "Nevada’s Gaming Control Board has finalised changes to technical standards covering gaming devices and associated equipment, effective 13 December 2026.",
+      "verticals": [
+        "bingo",
+        "casino",
+        "sports-betting"
+      ],
+      "geographies": [
+        "us-nv"
+      ],
+      "topics": [
+        "regulation-law",
+        "software-supplier"
+      ],
+      "subjects": [],
+      "entities": [
+        "regulator-nevada-gaming-commission"
+      ],
+      "channels": [
+        "hybrid"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89643,
+      "date": "2026-11-18T10:46:45+00:00",
+      "modified": "2026-11-18T10:46:45+00:00",
+      "title": "Amazon Restricts UK Gambling Ads to 9pm–6am Under Updated Advertising Policy",
+      "slug": "amazon-uk-gambling-advertising-9pm-6am-policy-2026",
+      "url": "https://www.gamblee.com/articles/amazon-uk-gambling-advertising-9pm-6am-policy-2026/",
+      "excerpt": "Amazon’s updated gambling advertising policy introduces a 9pm–6am UK scheduling restriction, with additional age and placement requirements.",
+      "verticals": [
+        "casino",
+        "gambling",
+        "sports-betting"
+      ],
+      "geographies": [
+        "gb"
+      ],
+      "topics": [
+        "advertising-marketing",
+        "advertising-rules"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89640,
+      "date": "2026-11-18T10:46:22+00:00",
+      "modified": "2026-11-18T10:46:22+00:00",
+      "title": "CFTC Halts Kalshi Contracts Predicting Trump’s Words Pending Manipulation Review",
+      "slug": "cftc-halts-kalshi-trump-word-prediction-markets-2026",
+      "url": "https://www.gamblee.com/articles/cftc-halts-kalshi-trump-word-prediction-markets-2026/",
+      "excerpt": "The CFTC has stayed specified Kalshi contracts tied to words Donald Trump might say, giving the exchange until 11 December to defend its certification.",
+      "verticals": [
+        "prediction-markets"
+      ],
+      "geographies": [
+        "us"
+      ],
+      "topics": [
+        "enforcement",
+        "integrity-crime"
+      ],
+      "subjects": [],
+      "entities": [
+        "government-cftc",
+        "other-kalshi"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89637,
+      "date": "2026-11-18T10:45:51+00:00",
+      "modified": "2026-11-18T10:45:51+00:00",
+      "title": "FDJ United Takes Meta to Court Over Fake Online Casino Advertising",
+      "slug": "fdj-united-meta-fake-casino-advertising-lawsuit-2026",
+      "url": "https://www.gamblee.com/articles/fdj-united-meta-fake-casino-advertising-lawsuit-2026/",
+      "excerpt": "FDJ United has filed urgent legal proceedings against Meta over online casino advertisements that allegedly copied its brands on Facebook and Instagram.",
+      "verticals": [
+        "casino",
+        "lottery"
+      ],
+      "geographies": [
+        "fr"
+      ],
+      "topics": [
+        "advertising-rules",
+        "illegal-gambling",
+        "litigation"
+      ],
+      "subjects": [],
+      "entities": [
+        "company-fdj-united"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89634,
+      "date": "2026-11-18T09:18:17+00:00",
+      "modified": "2026-11-18T09:18:17+00:00",
+      "title": "UK Gambling Commission Sets Out Next Steps for Financial Risk Assessments",
+      "slug": "uk-gambling-financial-risk-assessments-implementation-update-november-2026",
+      "url": "https://www.gamblee.com/articles/uk-gambling-financial-risk-assessments-implementation-update-november-2026/",
+      "excerpt": "The UK Gambling Commission has formed two implementation groups for financial risk assessments and will confirm its first rollout timetable by the end of 2026.",
+      "verticals": [
+        "bingo",
+        "casino",
+        "gambling",
+        "poker",
+        "sports-betting"
+      ],
+      "geographies": [
+        "gb"
+      ],
+      "topics": [
+        "affordability"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
     {
       "id": 89607,
       "date": "2026-11-17T10:55:00+00:00",

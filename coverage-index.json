@@ -2,8 +2,65 @@
   "contract": "gamblee-article-coverage-index",
   "schema_version": 1,
   "source": "https://www.gamblee.com/wp-json/gamblee-core/v1/articles/coverage-index",
-  "total": 340,
+  "total": 342,
   "articles": [
+    {
+      "id": 89666,
+      "date": "2026-11-18T23:11:12+00:00",
+      "modified": "2026-11-18T23:11:12+00:00",
+      "title": "PokerStars, Betsson, Betfred and Tombola Named in Optimizely Malware Attack",
+      "slug": "optimizely-malware-attack-pokerstars-betsson-betfred-tombola",
+      "url": "https://www.gamblee.com/articles/optimizely-malware-attack-pokerstars-betsson-betfred-tombola/",
+      "excerpt": "A breach of Optimizely's website experimentation service exposed scripts associated with four major gambling brands to malicious code designed to intercept payment details and redirect cryptocurrency transfers. The provider says the vulnerability has been fixed.",
+      "verticals": [
+        "casino",
+        "gambling",
+        "sports-betting"
+      ],
+      "geographies": [
+        "global"
+      ],
+      "topics": [
+        "integrity-crime"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89663,
+      "date": "2026-11-18T23:10:38+00:00",
+      "modified": "2026-11-18T23:10:38+00:00",
+      "title": "Australia Sets January 2027 Start for Illegal Gambling Payment Blocks",
+      "slug": "australia-illegal-online-gambling-payment-blocking-january-2027",
+      "url": "https://www.gamblee.com/articles/australia-illegal-online-gambling-payment-blocking-january-2027/",
+      "excerpt": "Australian banks and payment-system participants will have to take reasonably practicable steps to stop funds reaching prohibited and unlicensed online gambling services from 1 January 2027, under reforms for which ACMA has now issued industry guidance.",
+      "verticals": [
+        "casino",
+        "gambling",
+        "sports-betting"
+      ],
+      "geographies": [
+        "au"
+      ],
+      "topics": [
+        "illegal-gambling",
+        "regulation-law"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
     {
       "id": 89659,
       "date": "2026-11-18T10:52:31+00:00",

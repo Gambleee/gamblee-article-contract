@@ -1802,7 +1802,7 @@
     "evidence": {
       "primary_source_url": "https://operator.example/promotion",
       "terms_source_url": "https://operator.example/promotion-terms",
-      "source_checked_at": "2026-11-18T11:51:02+00:00",
+      "source_checked_at": "2026-11-19T02:37:40+00:00",
       "research_status": "verified",
       "notes": null
     }
@@ -1810,7 +1810,7 @@
   "root_shape": {
     "schema_version": "1.4",
     "brand_id": 123,
-    "researched_at": "2026-11-18T11:51:02+00:00",
+    "researched_at": "2026-11-19T02:37:40+00:00",
     "taxonomy_additions": {
       "promotion_type": [],
       "eligible_game": []

@@ -2,8 +2,87 @@
   "contract": "gamblee-article-coverage-index",
   "schema_version": 1,
   "source": "https://www.gamblee.com/wp-json/gamblee-core/v1/articles/coverage-index",
-  "total": 342,
+  "total": 345,
   "articles": [
+    {
+      "id": 89675,
+      "date": "2026-11-19T10:58:57+00:00",
+      "modified": "2026-11-19T10:58:57+00:00",
+      "title": "Ireland Proposes 1&#37; Gambling Levy to Fund Player Protection",
+      "slug": "ireland-proposes-one-percent-gambling-social-impact-fund-levy",
+      "url": "https://www.gamblee.com/articles/ireland-proposes-one-percent-gambling-social-impact-fund-levy/",
+      "excerpt": "Ireland has notified draft regulations setting a 1% annual turnover levy for commercial gambling licensees, with a proposed April 2027 start.",
+      "verticals": [
+        "gambling"
+      ],
+      "geographies": [
+        "ie"
+      ],
+      "topics": [
+        "taxation"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89672,
+      "date": "2026-11-19T10:57:58+00:00",
+      "modified": "2026-11-19T10:57:58+00:00",
+      "title": "Pennsylvania Online Casinos Set $278.8m Revenue Record as Poker Declines",
+      "slug": "pennsylvania-online-casino-october-2026-revenue-record",
+      "url": "https://www.gamblee.com/articles/pennsylvania-online-casino-october-2026-revenue-record/",
+      "excerpt": "Pennsylvania iGaming revenue reached a record $278.85 million in October 2026, led by slots, while online poker revenue declined 8.97% year on year.",
+      "verticals": [
+        "casino",
+        "poker"
+      ],
+      "geographies": [
+        "us"
+      ],
+      "topics": [
+        "market-data-research"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89669,
+      "date": "2026-11-19T10:33:37+00:00",
+      "modified": "2026-11-19T10:33:37+00:00",
+      "title": "43 State Attorneys General Challenge CFTC Sports Prediction-Market Proposal",
+      "slug": "state-attorneys-general-challenge-cftc-sports-prediction-market-rule",
+      "url": "https://www.gamblee.com/articles/state-attorneys-general-challenge-cftc-sports-prediction-market-rule/",
+      "excerpt": "A coalition of 43 state attorneys general and Washington, DC, urges the CFTC to withdraw its proposed treatment of sports prediction contracts as swaps.",
+      "verticals": [
+        "sports-betting"
+      ],
+      "geographies": [
+        "us"
+      ],
+      "topics": [
+        "regulation-law"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
     {
       "id": 89666,
       "date": "2026-11-18T23:11:12+00:00",

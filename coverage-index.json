@@ -2,8 +2,328 @@
   "contract": "gamblee-article-coverage-index",
   "schema_version": 1,
   "source": "https://www.gamblee.com/wp-json/gamblee-core/v1/articles/coverage-index",
-  "total": 345,
+  "total": 356,
   "articles": [
+    {
+      "id": 89778,
+      "date": "2026-11-20T11:38:11+00:00",
+      "modified": "2026-11-20T11:38:18+00:00",
+      "title": "Alberta Plans Under-25 VIP Host Ban and Gambling Bonus Restrictions",
+      "slug": "alberta-under-25-vip-host-bonus-restrictions-2026",
+      "url": "https://www.gamblee.com/articles/alberta-under-25-vip-host-bonus-restrictions-2026/",
+      "excerpt": "Alberta iGaming Corporation announced draft protections for players under 25, including restrictions on VIP hosts and offers targeting inactive accounts, expected in spring 2027.",
+      "verticals": [
+        "casino",
+        "sports-betting"
+      ],
+      "geographies": [
+        "ca-ab"
+      ],
+      "topics": [
+        "player-protection",
+        "responsible-gambling"
+      ],
+      "subjects": [
+        "loyalty-vip-loyalty-vip"
+      ],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89775,
+      "date": "2026-11-20T11:36:48+00:00",
+      "modified": "2026-11-20T11:36:48+00:00",
+      "title": "Nevada Board Recommends Bally&#8217;s Acquisition of Evoke as Review Advances",
+      "slug": "nevada-board-recommends-ballys-acquisition-of-evoke-2026",
+      "url": "https://www.gamblee.com/articles/nevada-board-recommends-ballys-acquisition-of-evoke-2026/",
+      "excerpt": "Nevada's Gaming Control Board recommended approval of Bally's acquisition-of-control application for Evoke on 19 November, subject to conditions and further regulatory action.",
+      "verticals": [
+        "betting",
+        "casino"
+      ],
+      "geographies": [
+        "us-nv"
+      ],
+      "topics": [
+        "mergers-acquisitions",
+        "ownership"
+      ],
+      "subjects": [],
+      "entities": [
+        "brand-william-hill",
+        "company-ballys-corporation",
+        "company-ballys-intralot-s-a",
+        "company-evoke-plc"
+      ],
+      "channels": [
+        "hybrid"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89772,
+      "date": "2026-11-20T11:35:20+00:00",
+      "modified": "2026-11-20T11:35:20+00:00",
+      "title": "Isle of Man Plans Personal AML Penalties for Gambling Executives From December",
+      "slug": "isle-of-man-gambling-executive-aml-penalties-december-2026",
+      "url": "https://www.gamblee.com/articles/isle-of-man-gambling-executive-aml-penalties-december-2026/",
+      "excerpt": "The Isle of Man gambling regulator has set out expected December changes to executive accountability, suitability checks and licence surrender.",
+      "verticals": [
+        "gambling"
+      ],
+      "geographies": [
+        "im"
+      ],
+      "topics": [
+        "aml-kyc",
+        "licensing"
+      ],
+      "subjects": [],
+      "entities": [
+        "regulator-isle-of-man-gambling-supervision-commission"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89769,
+      "date": "2026-11-20T11:33:31+00:00",
+      "modified": "2026-11-20T11:33:31+00:00",
+      "title": "EU Advocate General Says Italy Should Have Notified Gambling Advertising Ban",
+      "slug": "eu-advocate-general-leovegas-italy-gambling-ad-ban-notification-2026",
+      "url": "https://www.gamblee.com/articles/eu-advocate-general-leovegas-italy-gambling-ad-ban-notification-2026/",
+      "excerpt": "An EU Advocate General says Italy should have notified its blanket gambling advertising restrictions to the European Commission in draft form.",
+      "verticals": [
+        "gambling"
+      ],
+      "geographies": [
+        "it"
+      ],
+      "topics": [
+        "advertising-rules",
+        "litigation"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89766,
+      "date": "2026-11-20T11:32:43+00:00",
+      "modified": "2026-11-20T11:32:43+00:00",
+      "title": "German Gambling Regulator Prohibits Ron Bielecki From Promoting Illegal Casinos",
+      "slug": "germany-ggl-ron-bielecki-illegal-gambling-advertising-ban-2026",
+      "url": "https://www.gamblee.com/articles/germany-ggl-ron-bielecki-illegal-gambling-advertising-ban-2026/",
+      "excerpt": "Germany’s gambling authority has barred Malta-based streamer Ron Bielecki from advertising unlicensed online gambling to German viewers.",
+      "verticals": [
+        "casino"
+      ],
+      "geographies": [
+        "de"
+      ],
+      "topics": [
+        "advertising-rules",
+        "enforcement",
+        "illegal-gambling"
+      ],
+      "subjects": [],
+      "entities": [
+        "regulator-gemeinsame-glucksspielbehorde-der-lander-ggl"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89763,
+      "date": "2026-11-20T11:31:29+00:00",
+      "modified": "2026-11-20T11:31:29+00:00",
+      "title": "Two Former NCAA Basketball Players Sentenced in Multimillion-Dollar Point-Shaving Case",
+      "slug": "ncaa-point-shaving-isaiah-adams-dyquavion-short-sentenced-2026",
+      "url": "https://www.gamblee.com/articles/ncaa-point-shaving-isaiah-adams-dyquavion-short-sentenced-2026/",
+      "excerpt": "Former Buffalo player Isaiah Adams received six months in prison and former New Orleans player Dyquavion Short received one day for sports bribery.",
+      "verticals": [
+        "sports-betting"
+      ],
+      "geographies": [
+        "us"
+      ],
+      "topics": [
+        "enforcement",
+        "match-fixing"
+      ],
+      "subjects": [
+        "basketball"
+      ],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89760,
+      "date": "2026-11-20T11:30:50+00:00",
+      "modified": "2026-11-20T11:30:50+00:00",
+      "title": "BMM Testlabs and eCOGRA Name Leadership of Combined Gambling Certification Group",
+      "slug": "bmm-testlabs-ecogra-name-combined-group-leadership-2026",
+      "url": "https://www.gamblee.com/articles/bmm-testlabs-ecogra-name-combined-group-leadership-2026/",
+      "excerpt": "Will Shuckburgh is taking charge as group CEO of the combined BMM Testlabs and eCOGRA business, with Martin Storm moving to executive chairman.",
+      "verticals": [
+        "gambling"
+      ],
+      "geographies": [
+        "global"
+      ],
+      "topics": [
+        "mergers-acquisitions",
+        "software-supplier"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "hybrid"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89757,
+      "date": "2026-11-20T11:29:04+00:00",
+      "modified": "2026-11-20T11:29:04+00:00",
+      "title": "Leicester City Ends BC.Game Shirt Sponsorship After Two and a Half Years",
+      "slug": "leicester-city-ends-bc-game-shirt-sponsorship-2026",
+      "url": "https://www.gamblee.com/articles/leicester-city-ends-bc-game-shirt-sponsorship-2026/",
+      "excerpt": "Leicester City and BC.Game have ended their front-of-shirt sponsorship by mutual agreement. Fans who recently bought branded shirts can seek refunds.",
+      "verticals": [
+        "casino",
+        "sports-betting"
+      ],
+      "geographies": [
+        "gb"
+      ],
+      "topics": [
+        "sponsorship"
+      ],
+      "subjects": [
+        "football"
+      ],
+      "entities": [
+        "brand-bc-game"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89754,
+      "date": "2026-11-20T11:27:42+00:00",
+      "modified": "2026-11-20T11:27:42+00:00",
+      "title": "Washington, DC Online Casino Bill Advances After 3–1 Committee Vote",
+      "slug": "washington-dc-online-casino-bill-committee-vote-november-2026",
+      "url": "https://www.gamblee.com/articles/washington-dc-online-casino-bill-committee-vote-november-2026/",
+      "excerpt": "Washington, DC lawmakers advanced an online casino legalisation bill on 18 November, bringing proposed licences, taxation and safer-gambling requirements before the full Council.",
+      "verticals": [
+        "casino",
+        "poker"
+      ],
+      "geographies": [
+        "us-dc"
+      ],
+      "topics": [
+        "legislation",
+        "market-entry"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89751,
+      "date": "2026-11-20T11:25:27+00:00",
+      "modified": "2026-11-20T11:28:00+00:00",
+      "title": "Bulgaria’s Gambling Ad Ban Bills Pass First Reading as Affiliate Curbs Advance",
+      "slug": "bulgaria-gambling-advertising-affiliate-bills-first-reading-2026",
+      "url": "https://www.gamblee.com/articles/bulgaria-gambling-advertising-affiliate-bills-first-reading-2026/",
+      "excerpt": "Bulgarian lawmakers advanced three gambling reform bills on 18 November, including proposals for sweeping advertising restrictions and an end to affiliate operations.",
+      "verticals": [
+        "gambling"
+      ],
+      "geographies": [
+        "bg"
+      ],
+      "topics": [
+        "advertising-rules",
+        "legislation",
+        "taxation"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "hybrid"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89749,
+      "date": "2026-11-20T11:23:45+00:00",
+      "modified": "2026-11-20T11:23:45+00:00",
+      "title": "EU Court Declines to Rule on Malta’s Bill 55 in Austrian Gambling Case",
+      "slug": "eu-court-malta-bill-55-case-inadmissible-november-2026",
+      "url": "https://www.gamblee.com/articles/eu-court-malta-bill-55-case-inadmissible-november-2026/",
+      "excerpt": "The EU Court of Justice has declared an Austrian reference concerning Malta’s gambling judgment shield inadmissible, leaving the EU-law dispute unresolved.",
+      "verticals": [
+        "betting",
+        "casino"
+      ],
+      "geographies": [
+        "at",
+        "mt"
+      ],
+      "topics": [
+        "litigation"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
     {
       "id": 89675,
       "date": "2026-11-19T10:58:57+00:00",

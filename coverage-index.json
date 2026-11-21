@@ -2,8 +2,91 @@
   "contract": "gamblee-article-coverage-index",
   "schema_version": 1,
   "source": "https://www.gamblee.com/wp-json/gamblee-core/v1/articles/coverage-index",
-  "total": 356,
+  "total": 359,
   "articles": [
+    {
+      "id": 89788,
+      "date": "2026-11-20T13:42:47+00:00",
+      "modified": "2026-11-20T13:42:47+00:00",
+      "title": "Dutch Regulator Threatens €75,000 Penalty Over Illegal Casino Influencer Ads",
+      "slug": "dutch-ksa-influencer-illegal-gambling-advertising-75000-2026",
+      "url": "https://www.gamblee.com/articles/dutch-ksa-influencer-illegal-gambling-advertising-75000-2026/",
+      "excerpt": "The Dutch KSA ordered an Instagram influencer to stop promoting unlicensed gambling and warned of penalties of €25,000 per violation, capped at €75,000.",
+      "verticals": [
+        "gambling"
+      ],
+      "geographies": [
+        "nl"
+      ],
+      "topics": [
+        "advertising-rules",
+        "enforcement"
+      ],
+      "subjects": [],
+      "entities": [
+        "regulator-kansspelautoriteit-ksa"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89785,
+      "date": "2026-11-20T13:41:51+00:00",
+      "modified": "2026-11-20T13:41:51+00:00",
+      "title": "Brazil Freezes R$2.3bn in Betting Probe Linked to Esportes da Sorte",
+      "slug": "brazil-operation-cash-out-esportes-da-sorte-assets-frozen-2026",
+      "url": "https://www.gamblee.com/articles/brazil-operation-cash-out-esportes-da-sorte-assets-frozen-2026/",
+      "excerpt": "Brazilian authorities ordered the freezing of more than R$2.3 billion during Operation Cash Out, an investigation in which Esportes da Sorte has been named in news reporting.",
+      "verticals": [
+        "betting"
+      ],
+      "geographies": [
+        "br"
+      ],
+      "topics": [
+        "enforcement",
+        "financial-crime"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89781,
+      "date": "2026-11-20T13:38:58+00:00",
+      "modified": "2026-11-20T13:39:39+00:00",
+      "title": "UK Rejects Gambling Affiliate Licensing and Blanket Advertising Ban",
+      "slug": "uk-rejects-gambling-affiliate-licensing-advertising-ban-2026",
+      "url": "https://www.gamblee.com/articles/uk-rejects-gambling-affiliate-licensing-advertising-ban-2026/",
+      "excerpt": "The UK government rejected proposals for separate gambling affiliate licences and a comprehensive advertising ban, while leaving current ASA and operator oversight in place.",
+      "verticals": [
+        "gambling"
+      ],
+      "geographies": [
+        "gb"
+      ],
+      "topics": [
+        "advertising-rules",
+        "legislation"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
     {
       "id": 89778,
       "date": "2026-11-20T11:38:11+00:00",

@@ -2,7 +2,7 @@
   "contract": "gamblee-article-vocabulary-snapshot",
   "schema_version": "1.1",
   "dimension": "entities",
-  "total": 1299,
+  "total": 1301,
   "source": "https://www.gamblee.com/wp-json/gamblee-core/v1/articles/vocabulary/entities",
   "items": [
     {
@@ -283,7 +283,7 @@
     {
       "slug": "brand-ahti-games",
       "name": "AHTI Games",
-      "entity_type": "brand"
+      "entity_type": "other"
     },
     {
       "slug": "provider-ainsworth",
@@ -1802,8 +1802,8 @@
     },
     {
       "slug": "brand-drueckglueck",
-      "name": "Drueckglueck",
-      "entity_type": "brand"
+      "name": "DrückGlück",
+      "entity_type": "other"
     },
     {
       "slug": "brand-dukes-casino",
@@ -4943,7 +4943,7 @@
     {
       "slug": "brand-redkings",
       "name": "RedKings",
-      "entity_type": "brand"
+      "entity_type": "other"
     },
     {
       "slug": "provider-redstone",
@@ -5176,6 +5176,11 @@
       "entity_type": "provider"
     },
     {
+      "slug": "regulator-schleswig-holstein-ministry-of-the-interior",
+      "name": "Schleswig-Holstein Ministry of the Interior",
+      "entity_type": "regulator"
+    },
+    {
       "slug": "provider-scientific-games-sg",
       "name": "Scientific Games (SG)",
       "entity_type": "provider"
@@ -5263,6 +5268,11 @@
     {
       "slug": "company-skill-on-net-ltd",
       "name": "Skill On Net Ltd",
+      "entity_type": "company"
+    },
+    {
+      "slug": "company-skill-on-net-s-a",
+      "name": "Skill On Net, S.A.",
       "entity_type": "company"
     },
     {
@@ -5368,7 +5378,7 @@
     {
       "slug": "brand-slotsmagic",
       "name": "SlotsMagic",
-      "entity_type": "brand"
+      "entity_type": "other"
     },
     {
       "slug": "provider-slotvision",
@@ -5933,7 +5943,7 @@
     {
       "slug": "brand-turbonino",
       "name": "Turbonino",
-      "entity_type": "brand"
+      "entity_type": "other"
     },
     {
       "slug": "provider-tvbet",

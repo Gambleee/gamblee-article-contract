@@ -17,7 +17,7 @@
     "schema_gaps is reserved only for genuine Promo-classified campaigns whose mechanics cannot be represented by this contract. Never report a Bonus- or Event-classified item as a Promotion schema gap.",
     "One promotion object may cover multiple confirmed markets and verticals when reward, qualification and schedule mechanics are materially identical.",
     "Split promotions when terms, reward mechanics, qualification rules or schedule differ materially by market or vertical.",
-    "MARKETS AND CAMPAIGN IDENTITY: For NEW Bonus and Promotion research, focus on GB, IE, CA, US and AU betting; existing other-market records remain historical context and retain their IDs. The standalone Event workflow keeps its separate historical market policy. Existing lists are reconciliation context, not output quotas. Record only explicitly named campaign markets; otherwise use market=\"\" for Bonus or markets=[] for Promotion/Event and populate currencies[] from the advertised OFFER denominations. Gamblee derives listing visibility from those currencies, using the five commercial-market currency map; independent confirmation of every inferred country is NOT required for research, JSON creation or import. Missing explicit country coverage is never a reason to omit an otherwise supported campaign. Do not write derived countries into explicit market fields or brand availability, and never derive offer currencies from generic account/payment methods. GLOBAL is permitted only for explicitly documented broad coverage; known restrictions still apply. EUR infers Ireland for Bonus/Promotion commercial listings. Exact ISO USD can infer the US for approved-brand campaign records, while an unlabelled dollar symbol needs Canadian/US context and must never silently default to USD. Preserve the existing campaign ID and stable key when adding currencies or market evidence. One campaign with identical numeric rewards, conditions and schedule stays one record; return its complete advertised currency list. Split materially different rewards/conditions/schedules, never currency labels alone. A single amount applies to every listed currency: do not merge differing currency-specific amounts or invent conversions. Reuse verified existing campaign IDs; ambiguous candidate matches require review, never a new duplicate. No inference overrides explicit exclusions, product restrictions or publication policy.",
+    "MARKETS AND CAMPAIGN IDENTITY: For NEW Bonus and Promotion research focus on approved GB, IE, CA, US and AU betting; out-of-scope records are historical and must not be retired by omission. BONUS v1.6 ONLY: one explicit supported market per Bonus, one independently substantiated currency, and one applicable set of qualification and wagering terms per offer. Closely related Bonus regional variants can share optional campaign_family_id, but must have distinct offer_key and bonus_id. No market=empty, GLOBAL Bonus or multi-currency Bonus import. A permitted brand market is a RESEARCH CANDIDATE, not proof that a campaign applies or that its conditions match another region. Verify first-party regional financial terms; if uncertain, mark research incomplete and avoid creating that Bonus. Never assume a UK 10x wagering term simply because the UKGC cap exists. PROMOTION v1.4 and EVENT: preserve their native grouping model (markets=[] when not operator-explicit and multiple advertised currencies when mechanics match). A denomination is not conclusive country evidence; distinguish GBP/GB, EUR/IE, CAD/CA, USD with operator context, and preserve CA/US province/state restrictions. Do not invent converted amounts, revise licences, override country exclusions or replace an existing ID without matching the exact regional variant.",
     "Do not author derived availability, editorial Featured state or Pretty Link destinations.",
     "CAMPAIGN IDENTITY: Use campaign_family_id + campaign_variant_id for every shared campaign. Select a known family and variant from the owner-group registry when the same named campaign and material mechanics are independently verified; otherwise propose stable new lowercase-hyphen identifiers. campaign_family_id names the official campaign family, NEVER the generic promotion_type. campaign_variant_id distinguishes materially different rewards, qualification, wagering, schedule, code or eligible markets. The importer checks exact IDs and actual mechanic fingerprints; identical IDs do not override conflicting evidence.",
     "NETWORK COVERAGE: A canonical shared campaign has one record per identical reward, wagering, eligibility and schedule variant. Set network_campaign=true. Each participating operator requires its own official source_url and explicit market list. Owner-group membership never automatically authorizes display. Software-provider networks may span owners and have provider_group=null.",
@@ -1136,6 +1136,10 @@
       "name": "the trials of asgard"
     },
     {
+      "slug": "thor",
+      "name": "Thor"
+    },
+    {
       "slug": "thor-and-the-trials-of-asgard",
       "name": "Thor and the Trials of Asgard"
     },
@@ -1810,7 +1814,7 @@
     "evidence": {
       "primary_source_url": "https://operator.example/promotion",
       "terms_source_url": "https://operator.example/promotion-terms",
-      "source_checked_at": "2026-11-23T01:47:33+00:00",
+      "source_checked_at": "2026-11-23T12:59:23+00:00",
       "research_status": "verified",
       "notes": null
     }
@@ -1818,7 +1822,7 @@
   "root_shape": {
     "schema_version": "1.4",
     "brand_id": 123,
-    "researched_at": "2026-11-23T01:47:33+00:00",
+    "researched_at": "2026-11-23T12:59:23+00:00",
     "taxonomy_additions": {
       "promotion_type": [],
       "eligible_game": []

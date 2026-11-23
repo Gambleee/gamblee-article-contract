@@ -20,7 +20,7 @@
     "Use limited_time only for fixed events with verified start_time and end_time. On-demand or recurring events must not claim Limited Time without a modelled campaign end. Existing undated events remain editable but are suppressed in ordinary public listings until dates are verified.",
     "Prefer first-party sources for event identity, primary prize and schedule. Current specific reliable secondary sources may clarify ancillary details. When eligible countries are unstated, use markets=[] and event-advertised currencies[] for normal inferred listing scope; no per-country proof gate. Only add explicit market codes supported by the operator; known exclusions override inference.",
     "One event record should cover all verified markets in markets[] when the same competition, schedule and qualification apply; do not clone per market alone.",
-    "MARKETS AND CAMPAIGN IDENTITY: For NEW Bonus and Promotion research, focus on GB, IE, CA, US and AU betting; existing other-market records remain historical context and retain their IDs. The standalone Event workflow keeps its separate historical market policy. Existing lists are reconciliation context, not output quotas. Record only explicitly named campaign markets; otherwise use market=\"\" for Bonus or markets=[] for Promotion/Event and populate currencies[] from the advertised OFFER denominations. Gamblee derives listing visibility from those currencies, using the five commercial-market currency map; independent confirmation of every inferred country is NOT required for research, JSON creation or import. Missing explicit country coverage is never a reason to omit an otherwise supported campaign. Do not write derived countries into explicit market fields or brand availability, and never derive offer currencies from generic account/payment methods. GLOBAL is permitted only for explicitly documented broad coverage; known restrictions still apply. EUR infers Ireland for Bonus/Promotion commercial listings. Exact ISO USD can infer the US for approved-brand campaign records, while an unlabelled dollar symbol needs Canadian/US context and must never silently default to USD. Preserve the existing campaign ID and stable key when adding currencies or market evidence. One campaign with identical numeric rewards, conditions and schedule stays one record; return its complete advertised currency list. Split materially different rewards/conditions/schedules, never currency labels alone. A single amount applies to every listed currency: do not merge differing currency-specific amounts or invent conversions. Reuse verified existing campaign IDs; ambiguous candidate matches require review, never a new duplicate. No inference overrides explicit exclusions, product restrictions or publication policy.",
+    "MARKETS AND CAMPAIGN IDENTITY: For NEW Bonus and Promotion research focus on approved GB, IE, CA, US and AU betting; out-of-scope records are historical and must not be retired by omission. BONUS v1.6 ONLY: one explicit supported market per Bonus, one independently substantiated currency, and one applicable set of qualification and wagering terms per offer. Closely related Bonus regional variants can share optional campaign_family_id, but must have distinct offer_key and bonus_id. No market=empty, GLOBAL Bonus or multi-currency Bonus import. A permitted brand market is a RESEARCH CANDIDATE, not proof that a campaign applies or that its conditions match another region. Verify first-party regional financial terms; if uncertain, mark research incomplete and avoid creating that Bonus. Never assume a UK 10x wagering term simply because the UKGC cap exists. PROMOTION v1.4 and EVENT: preserve their native grouping model (markets=[] when not operator-explicit and multiple advertised currencies when mechanics match). A denomination is not conclusive country evidence; distinguish GBP/GB, EUR/IE, CAD/CA, USD with operator context, and preserve CA/US province/state restrictions. Do not invent converted amounts, revise licences, override country exclusions or replace an existing ID without matching the exact regional variant.",
     "provider_group is optional and uses the provider taxonomy. When set, the event may cover that provider group; event_brand remains the CTA owner.",
     "Do not use Events for prize draws, giveaways or other random-winner campaigns merely because they have dates.",
     "Prefer current first-party evidence. Current specific secondary evidence may fill commercial mechanics when first-party material is unavailable or inaccessible.",
@@ -978,6 +978,10 @@
     {
       "slug": "the-trials-of-asgard",
       "name": "the trials of asgard"
+    },
+    {
+      "slug": "thor",
+      "name": "Thor"
     },
     {
       "slug": "thor-and-the-trials-of-asgard",
@@ -3951,14 +3955,14 @@
     "evidence": {
       "primary_source_url": "https://operator.example/event",
       "terms_source_url": "https://operator.example/event-terms",
-      "source_checked_at": "2026-11-23T01:47:33+00:00",
+      "source_checked_at": "2026-11-23T12:59:24+00:00",
       "notes": null
     }
   },
   "root_shape": {
     "schema_version": "1.0",
     "brand_id": 123,
-    "researched_at": "2026-11-23T01:47:33+00:00",
+    "researched_at": "2026-11-23T12:59:24+00:00",
     "taxonomy_additions": {
       "event_category": [],
       "eligible_game": []

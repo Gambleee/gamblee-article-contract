@@ -2,8 +2,93 @@
   "contract": "gamblee-article-coverage-index",
   "schema_version": 1,
   "source": "https://www.gamblee.com/wp-json/gamblee-core/v1/articles/coverage-index",
-  "total": 359,
+  "total": 362,
   "articles": [
+    {
+      "id": 89832,
+      "date": "2026-11-23T13:39:14+00:00",
+      "modified": "2026-11-23T13:39:14+00:00",
+      "title": "UK Statistics Watchdog Says Gambling Survey Still Needs Further Work",
+      "slug": "uk-osr-gambling-survey-six-recommendations-met-three-outstanding-2026",
+      "url": "https://www.gamblee.com/articles/uk-osr-gambling-survey-six-recommendations-met-three-outstanding-2026/",
+      "excerpt": "The Office for Statistics Regulation says the Gambling Commission met six of nine 2025 survey recommendations, with three partly met and one new recommendation added.",
+      "verticals": [
+        "gambling"
+      ],
+      "geographies": [
+        "gb"
+      ],
+      "topics": [
+        "market-data-research",
+        "responsible-gambling"
+      ],
+      "subjects": [],
+      "entities": [
+        "regulator-united-kingdom-gambling-commission"
+      ],
+      "channels": [
+        "channel-neutral"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89829,
+      "date": "2026-11-23T13:36:37+00:00",
+      "modified": "2026-11-23T13:36:37+00:00",
+      "title": "Grandstand Shares Fall 43&#37; as Gambling.com Owner Cuts Forecasts",
+      "slug": "grandstand-shares-fall-43-percent-2026-guidance-cut-strategic-review",
+      "url": "https://www.gamblee.com/articles/grandstand-shares-fall-43-percent-2026-guidance-cut-strategic-review/",
+      "excerpt": "Grandstand, formerly Gambling.com Group, cut its 2026 revenue and EBITDA forecasts and hired Jefferies for a strategic review. Shares fell about 43% the next trading day.",
+      "verticals": [
+        "gambling"
+      ],
+      "geographies": [
+        "global"
+      ],
+      "topics": [
+        "financial-results"
+      ],
+      "subjects": [],
+      "entities": [],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
+    {
+      "id": 89826,
+      "date": "2026-11-23T13:31:27+00:00",
+      "modified": "2026-11-23T13:31:27+00:00",
+      "title": "Nearly 30 Casino Websites Misuse UK Gambling Researchers’ Identities",
+      "slug": "uk-gambling-researchers-identities-misused-casino-websites-2026",
+      "url": "https://www.gamblee.com/articles/uk-gambling-researchers-identities-misused-casino-websites-2026/",
+      "excerpt": "A Guardian investigation found 28 websites using the names and images of at least six UK gambling-harm academics without permission to promote casino services.",
+      "verticals": [
+        "casino"
+      ],
+      "geographies": [
+        "gb"
+      ],
+      "topics": [
+        "advertising-marketing",
+        "fraud",
+        "illegal-gambling"
+      ],
+      "subjects": [],
+      "entities": [
+        "regulator-united-kingdom-gambling-commission"
+      ],
+      "channels": [
+        "online"
+      ],
+      "editorial_types": [
+        "news"
+      ]
+    },
     {
       "id": 89788,
       "date": "2026-11-20T13:42:47+00:00",
